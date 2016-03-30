@@ -1,5 +1,7 @@
 # Get started with the Microsoft Graph SDK for Android
 
+[ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)[![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-android.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-android)
+
 ## Overview
 
 This client library is a release candidate and is still in preview status, please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-android/issues/new) as we iterate towards a production supported library.
