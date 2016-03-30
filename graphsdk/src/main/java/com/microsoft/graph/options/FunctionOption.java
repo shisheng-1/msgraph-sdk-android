@@ -10,6 +10,6 @@ public class FunctionOption extends Option {
      * @param value The value of the option.
      */
     public FunctionOption(String name, Object value) {
-        super(name, value.toString());
+        super(name, value != null ? value.toString() : null);
     }
 }

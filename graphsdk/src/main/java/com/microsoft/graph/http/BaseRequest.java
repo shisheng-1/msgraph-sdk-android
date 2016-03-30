@@ -140,16 +140,15 @@ public abstract class BaseRequest implements IHttpRequest {
         String requestUrl = addFunctionParameters();
         Uri baseUrl = Uri.parse(requestUrl);
         final Uri.Builder uriBuilder = baseUrl.buildUpon();
-        String urlString = baseUrl.buildUpon().toString();
 
         for (final QueryOption option : mQueryOptions) {
             uriBuilder.appendQueryParameter(option.getName(), option.getValue());
         }
 
         try {
-            return new URL(urlString);
+            return new URL(uriBuilder.toString());
         } catch (final MalformedURLException e) {
-            throw new ClientException("Invalid URL: " + urlString, e, GraphErrorCodes.InvalidRequest);
+            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e, GraphErrorCodes.InvalidRequest);
         }
     }
 
