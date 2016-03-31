@@ -23,4 +23,10 @@ import java.util.List;
  */
 public interface IDriveItemRequestBuilder extends IBaseDriveItemRequestBuilder {
 
+    /**
+     * Gets the item request builder for the specified item path
+     * @param path The path to the item
+     * @return The request builder for the specified item
+     */
+    IDriveItemRequestBuilder getItemWithPath(final String path);
 }
