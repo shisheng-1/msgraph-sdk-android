@@ -28,7 +28,7 @@ public class DriveItemDeltaCollectionPage extends BaseDriveItemDeltaCollectionPa
      * @param response The serialized BaseDriveItemDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemDeltaCollectionPage(final BaseDriveItemDeltaCollectionResponse response, final IDriveItemDeltaRequestBuilder builder) {
+    public DriveItemDeltaCollectionPage(final BaseDriveItemDeltaCollectionResponse response, final IDriveItemDeltaCollectionRequestBuilder builder) {
         super(response, builder);
     }
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Drive Recent Collection Page.
  */
-public class BaseDriveRecentCollectionPage extends BaseCollectionPage<Drive, IDriveRecentRequestBuilder> implements IBaseDriveRecentCollectionPage {
+public class BaseDriveRecentCollectionPage extends BaseCollectionPage<Drive, IDriveRecentCollectionRequestBuilder> implements IBaseDriveRecentCollectionPage {
 
     /**
      * A collection page for DriveRecent.
@@ -31,7 +31,7 @@ public class BaseDriveRecentCollectionPage extends BaseCollectionPage<Drive, IDr
      * @param response The serialized BaseDriveRecentCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDriveRecentCollectionPage(final BaseDriveRecentCollectionResponse response, final IDriveRecentRequestBuilder builder) {
+    public BaseDriveRecentCollectionPage(final BaseDriveRecentCollectionResponse response, final IDriveRecentCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

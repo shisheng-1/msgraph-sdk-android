@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Directory Object Get Member Objects Collection Page.
  */
-public class BaseDirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectGetMemberObjectsRequestBuilder> implements IBaseDirectoryObjectGetMemberObjectsCollectionPage {
+public class BaseDirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectGetMemberObjectsCollectionRequestBuilder> implements IBaseDirectoryObjectGetMemberObjectsCollectionPage {
 
     /**
      * A collection page for DirectoryObjectGetMemberObjects.
@@ -31,7 +31,7 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionPage extends BaseColle
      * @param response The serialized BaseDirectoryObjectGetMemberObjectsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDirectoryObjectGetMemberObjectsCollectionPage(final BaseDirectoryObjectGetMemberObjectsCollectionResponse response, final IDirectoryObjectGetMemberObjectsRequestBuilder builder) {
+    public BaseDirectoryObjectGetMemberObjectsCollectionPage(final BaseDirectoryObjectGetMemberObjectsCollectionResponse response, final IDirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

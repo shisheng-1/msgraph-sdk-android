@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Drive Shared With Me Collection Page.
  */
-public class BaseDriveSharedWithMeCollectionPage extends BaseCollectionPage<Drive, IDriveSharedWithMeRequestBuilder> implements IBaseDriveSharedWithMeCollectionPage {
+public class BaseDriveSharedWithMeCollectionPage extends BaseCollectionPage<Drive, IDriveSharedWithMeCollectionRequestBuilder> implements IBaseDriveSharedWithMeCollectionPage {
 
     /**
      * A collection page for DriveSharedWithMe.
@@ -31,7 +31,7 @@ public class BaseDriveSharedWithMeCollectionPage extends BaseCollectionPage<Driv
      * @param response The serialized BaseDriveSharedWithMeCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDriveSharedWithMeCollectionPage(final BaseDriveSharedWithMeCollectionResponse response, final IDriveSharedWithMeRequestBuilder builder) {
+    public BaseDriveSharedWithMeCollectionPage(final BaseDriveSharedWithMeCollectionResponse response, final IDriveSharedWithMeCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

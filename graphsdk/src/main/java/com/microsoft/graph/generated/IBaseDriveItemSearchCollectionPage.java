@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base Drive Item Search Collection Page.
  */
-public interface IBaseDriveItemSearchCollectionPage extends IBaseCollectionPage<DriveItem, IDriveItemSearchRequestBuilder> {
+public interface IBaseDriveItemSearchCollectionPage extends IBaseCollectionPage<DriveItem, IDriveItemSearchCollectionRequestBuilder> {
 }

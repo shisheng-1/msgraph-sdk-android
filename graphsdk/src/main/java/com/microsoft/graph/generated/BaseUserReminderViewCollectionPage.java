@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base User Reminder View Collection Page.
  */
-public class BaseUserReminderViewCollectionPage extends BaseCollectionPage<User, IUserReminderViewRequestBuilder> implements IBaseUserReminderViewCollectionPage {
+public class BaseUserReminderViewCollectionPage extends BaseCollectionPage<User, IUserReminderViewCollectionRequestBuilder> implements IBaseUserReminderViewCollectionPage {
 
     /**
      * A collection page for UserReminderView.
@@ -31,7 +31,7 @@ public class BaseUserReminderViewCollectionPage extends BaseCollectionPage<User,
      * @param response The serialized BaseUserReminderViewCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseUserReminderViewCollectionPage(final BaseUserReminderViewCollectionResponse response, final IUserReminderViewRequestBuilder builder) {
+    public BaseUserReminderViewCollectionPage(final BaseUserReminderViewCollectionResponse response, final IUserReminderViewCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

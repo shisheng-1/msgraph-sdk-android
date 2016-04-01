@@ -56,9 +56,9 @@ public class BaseDriveRecentCollectionRequest extends BaseCollectionRequest<Base
 
 
     public IDriveRecentCollectionPage buildFromResponse(final BaseDriveRecentCollectionResponse response) {
-        final IDriveRecentRequestBuilder builder;
+        final IDriveRecentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveRecentRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
+            builder = new DriveRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }

@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base Drive Item Delta Collection Page.
  */
-public interface IBaseDriveItemDeltaCollectionPage extends IBaseCollectionPage<DriveItem, IDriveItemDeltaRequestBuilder> {
+public interface IBaseDriveItemDeltaCollectionPage extends IBaseCollectionPage<DriveItem, IDriveItemDeltaCollectionRequestBuilder> {
 }

@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base Drive Shared With Me Collection Page.
  */
-public interface IBaseDriveSharedWithMeCollectionPage extends IBaseCollectionPage<Drive, IDriveSharedWithMeRequestBuilder> {
+public interface IBaseDriveSharedWithMeCollectionPage extends IBaseCollectionPage<Drive, IDriveSharedWithMeCollectionRequestBuilder> {
 }
