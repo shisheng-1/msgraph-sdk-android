@@ -81,7 +81,9 @@ public class DefaultLogger implements ILogger {
     public void logDebug(final String message) {
         switch (mLevel) {
             case Debug:
-                Log.d(getTag(), message);
+                for (final String line : message.split("\n")) {
+                    Log.d(getTag(), line);
+                }
             default:
             case Error:
         }
@@ -98,7 +100,10 @@ public class DefaultLogger implements ILogger {
             default:
             case Debug:
             case Error:
-                Log.e(getTag(), message, throwable);
+                for (final String line : message.split("\n")) {
+                    Log.e(getTag(), line);
+                }
+                Log.e(getTag(), "Throwable detail: ", throwable);
         }
     }
 }
