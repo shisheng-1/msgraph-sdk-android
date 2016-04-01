@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base User Reminder View Collection Page.
  */
-public interface IBaseUserReminderViewCollectionPage extends IBaseCollectionPage<User, IUserReminderViewRequestBuilder> {
+public interface IBaseUserReminderViewCollectionPage extends IBaseCollectionPage<User, IUserReminderViewCollectionRequestBuilder> {
 }

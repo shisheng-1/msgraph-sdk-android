@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Drive Item Search Collection Page.
  */
-public class BaseDriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemSearchRequestBuilder> implements IBaseDriveItemSearchCollectionPage {
+public class BaseDriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemSearchCollectionRequestBuilder> implements IBaseDriveItemSearchCollectionPage {
 
     /**
      * A collection page for DriveItemSearch.
@@ -31,7 +31,7 @@ public class BaseDriveItemSearchCollectionPage extends BaseCollectionPage<DriveI
      * @param response The serialized BaseDriveItemSearchCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDriveItemSearchCollectionPage(final BaseDriveItemSearchCollectionResponse response, final IDriveItemSearchRequestBuilder builder) {
+    public BaseDriveItemSearchCollectionPage(final BaseDriveItemSearchCollectionResponse response, final IDriveItemSearchCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

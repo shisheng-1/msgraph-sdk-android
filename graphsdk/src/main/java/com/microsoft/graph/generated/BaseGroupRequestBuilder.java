@@ -140,22 +140,22 @@ public class BaseGroupRequestBuilder extends DirectoryObjectRequestBuilder imple
     }
 
     public IGroupSubscribeByMailRequestBuilder getSubscribeByMail() {
-        return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.SubscribeByMail"), getClient(), null);
+        return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeByMail"), getClient(), null);
     }
 
     public IGroupUnsubscribeByMailRequestBuilder getUnsubscribeByMail() {
-        return new GroupUnsubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.UnsubscribeByMail"), getClient(), null);
+        return new GroupUnsubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubscribeByMail"), getClient(), null);
     }
 
     public IGroupAddFavoriteRequestBuilder getAddFavorite() {
-        return new GroupAddFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.AddFavorite"), getClient(), null);
+        return new GroupAddFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addFavorite"), getClient(), null);
     }
 
     public IGroupRemoveFavoriteRequestBuilder getRemoveFavorite() {
-        return new GroupRemoveFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.RemoveFavorite"), getClient(), null);
+        return new GroupRemoveFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeFavorite"), getClient(), null);
     }
 
     public IGroupResetUnseenCountRequestBuilder getResetUnseenCount() {
-        return new GroupResetUnseenCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ResetUnseenCount"), getClient(), null);
+        return new GroupResetUnseenCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetUnseenCount"), getClient(), null);
     }
 }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Directory Object Check Member Groups Collection Page.
  */
-public class BaseDirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectCheckMemberGroupsRequestBuilder> implements IBaseDirectoryObjectCheckMemberGroupsCollectionPage {
+public class BaseDirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder> implements IBaseDirectoryObjectCheckMemberGroupsCollectionPage {
 
     /**
      * A collection page for DirectoryObjectCheckMemberGroups.
@@ -31,7 +31,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionPage extends BaseColl
      * @param response The serialized BaseDirectoryObjectCheckMemberGroupsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDirectoryObjectCheckMemberGroupsCollectionPage(final BaseDirectoryObjectCheckMemberGroupsCollectionResponse response, final IDirectoryObjectCheckMemberGroupsRequestBuilder builder) {
+    public BaseDirectoryObjectCheckMemberGroupsCollectionPage(final BaseDirectoryObjectCheckMemberGroupsCollectionResponse response, final IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

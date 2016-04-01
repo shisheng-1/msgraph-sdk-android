@@ -28,7 +28,7 @@ public class DriveItemSearchCollectionPage extends BaseDriveItemSearchCollection
      * @param response The serialized BaseDriveItemSearchCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemSearchCollectionPage(final BaseDriveItemSearchCollectionResponse response, final IDriveItemSearchRequestBuilder builder) {
+    public DriveItemSearchCollectionPage(final BaseDriveItemSearchCollectionResponse response, final IDriveItemSearchCollectionRequestBuilder builder) {
         super(response, builder);
     }
 

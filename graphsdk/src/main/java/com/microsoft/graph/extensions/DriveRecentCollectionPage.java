@@ -28,7 +28,7 @@ public class DriveRecentCollectionPage extends BaseDriveRecentCollectionPage imp
      * @param response The serialized BaseDriveRecentCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveRecentCollectionPage(final BaseDriveRecentCollectionResponse response, final IDriveRecentRequestBuilder builder) {
+    public DriveRecentCollectionPage(final BaseDriveRecentCollectionResponse response, final IDriveRecentCollectionRequestBuilder builder) {
         super(response, builder);
     }
 

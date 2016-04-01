@@ -175,18 +175,18 @@ public class BaseUserRequestBuilder extends DirectoryObjectRequestBuilder implem
     }
 
     public IUserAssignLicenseRequestBuilder getAssignLicense(final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
-        return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.AssignLicense"), getClient(), null, addLicenses, removeLicenses);
+        return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
     public IUserChangePasswordRequestBuilder getChangePassword(final String currentPassword, final String newPassword) {
-        return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ChangePassword"), getClient(), null, currentPassword, newPassword);
+        return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, currentPassword, newPassword);
     }
 
     public IUserSendMailRequestBuilder getSendMail(final Message message, final Boolean saveToSentItems) {
-        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.SendMail"), getClient(), null, message, saveToSentItems);
+        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
 
     public IUserReminderViewCollectionRequestBuilder getReminderView(final String startDateTime, final String endDateTime) {
-        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ReminderView"), getClient(), null, startDateTime, endDateTime);
+        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
     }
 }

@@ -56,6 +56,6 @@ public class BaseConversationThreadRequestBuilder extends BaseRequestBuilder imp
     }
 
     public IConversationThreadReplyRequestBuilder getReply(final Post post) {
-        return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Reply"), getClient(), null, post);
+        return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }

@@ -57,9 +57,9 @@ public class BaseDriveItemSearchCollectionRequest extends BaseCollectionRequest<
 
 
     public IDriveItemSearchCollectionPage buildFromResponse(final BaseDriveItemSearchCollectionResponse response) {
-        final IDriveItemSearchRequestBuilder builder;
+        final IDriveItemSearchCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveItemSearchRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* q */ null);
+            builder = new DriveItemSearchCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* q */ null);
         } else {
             builder = null;
         }

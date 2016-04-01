@@ -61,9 +61,9 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequest extends BaseCol
 
 
     public IDirectoryObjectGetMemberGroupsCollectionPage buildFromResponse(final BaseDirectoryObjectGetMemberGroupsCollectionResponse response) {
-        final IDirectoryObjectGetMemberGroupsRequestBuilder builder;
+        final IDirectoryObjectGetMemberGroupsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DirectoryObjectGetMemberGroupsRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* securityEnabledOnly */ null);
+            builder = new DirectoryObjectGetMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* securityEnabledOnly */ null);
         } else {
             builder = null;
         }

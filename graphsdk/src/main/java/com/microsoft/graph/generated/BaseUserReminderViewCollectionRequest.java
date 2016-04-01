@@ -58,9 +58,9 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
 
 
     public IUserReminderViewCollectionPage buildFromResponse(final BaseUserReminderViewCollectionResponse response) {
-        final IUserReminderViewRequestBuilder builder;
+        final IUserReminderViewCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new UserReminderViewRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* startDateTime */ null, /* endDateTime */ null);
+            builder = new UserReminderViewCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* startDateTime */ null, /* endDateTime */ null);
         } else {
             builder = null;
         }

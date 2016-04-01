@@ -63,10 +63,10 @@ public class BaseMailFolderRequestBuilder extends BaseRequestBuilder implements 
     }
 
     public IMailFolderCopyRequestBuilder getCopy(final String destinationId) {
-        return new MailFolderCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Copy"), getClient(), null, destinationId);
+        return new MailFolderCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
     public IMailFolderMoveRequestBuilder getMove(final String destinationId) {
-        return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Move"), getClient(), null, destinationId);
+        return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 }

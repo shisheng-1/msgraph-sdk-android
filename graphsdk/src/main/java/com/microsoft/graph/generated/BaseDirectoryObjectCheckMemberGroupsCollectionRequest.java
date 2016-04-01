@@ -61,9 +61,9 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
 
 
     public IDirectoryObjectCheckMemberGroupsCollectionPage buildFromResponse(final BaseDirectoryObjectCheckMemberGroupsCollectionResponse response) {
-        final IDirectoryObjectCheckMemberGroupsRequestBuilder builder;
+        final IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DirectoryObjectCheckMemberGroupsRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* groupIds */ null);
+            builder = new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* groupIds */ null);
         } else {
             builder = null;
         }

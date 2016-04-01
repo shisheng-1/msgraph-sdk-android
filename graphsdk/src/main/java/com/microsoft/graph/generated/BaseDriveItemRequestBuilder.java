@@ -88,18 +88,18 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     public IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope) {
-        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.CreateLink"), getClient(), null, type, scope);
+        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope);
     }
 
     public IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference) {
-        return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Copy"), getClient(), null, name, parentReference);
+        return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
 
     public IDriveItemSearchCollectionRequestBuilder getSearch(final String q) {
-        return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Search"), getClient(), null, q);
+        return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder getDelta() {
-        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Delta"), getClient(), null);
+        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 }

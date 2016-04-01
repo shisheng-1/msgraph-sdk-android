@@ -283,7 +283,7 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         } catch (final GraphServiceException ex) {
             final boolean shouldLogVerbosely = mLogger.getLoggingLevel() == LoggerLevel.Debug;
-            mLogger.logError("Graph Service exception " + ex.getMessage(shouldLogVerbosely), ex);
+            mLogger.logError("Error during http request " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",

@@ -56,9 +56,9 @@ public class BaseDriveSharedWithMeCollectionRequest extends BaseCollectionReques
 
 
     public IDriveSharedWithMeCollectionPage buildFromResponse(final BaseDriveSharedWithMeCollectionResponse response) {
-        final IDriveSharedWithMeRequestBuilder builder;
+        final IDriveSharedWithMeCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveSharedWithMeRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
+            builder = new DriveSharedWithMeCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base Drive Item Delta Collection Page.
  */
-public class BaseDriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemDeltaRequestBuilder> implements IBaseDriveItemDeltaCollectionPage {
+public class BaseDriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemDeltaCollectionRequestBuilder> implements IBaseDriveItemDeltaCollectionPage {
 
     /**
      * A collection page for DriveItemDelta.
@@ -31,7 +31,7 @@ public class BaseDriveItemDeltaCollectionPage extends BaseCollectionPage<DriveIt
      * @param response The serialized BaseDriveItemDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public BaseDriveItemDeltaCollectionPage(final BaseDriveItemDeltaCollectionResponse response, final IDriveItemDeltaRequestBuilder builder) {
+    public BaseDriveItemDeltaCollectionPage(final BaseDriveItemDeltaCollectionResponse response, final IDriveItemDeltaCollectionRequestBuilder builder) {
        super(response.value, builder);
     }
 }

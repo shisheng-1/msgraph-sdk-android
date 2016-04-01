@@ -70,10 +70,10 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     public IDriveRecentCollectionRequestBuilder getRecent() {
-        return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Recent"), getClient(), null);
+        return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 
     public IDriveSharedWithMeCollectionRequestBuilder getSharedWithMe() {
-        return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.SharedWithMe"), getClient(), null);
+        return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);
     }
 }
