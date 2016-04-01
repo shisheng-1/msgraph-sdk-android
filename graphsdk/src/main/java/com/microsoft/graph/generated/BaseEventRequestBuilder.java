@@ -70,22 +70,22 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     public IEventAcceptRequestBuilder getAccept(final String comment, final Boolean sendResponse) {
-        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Accept"), getClient(), null, comment, sendResponse);
+        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
     public IEventDeclineRequestBuilder getDecline(final String comment, final Boolean sendResponse) {
-        return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Decline"), getClient(), null, comment, sendResponse);
+        return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
     }
 
     public IEventTentativelyAcceptRequestBuilder getTentativelyAccept(final String comment, final Boolean sendResponse) {
-        return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.TentativelyAccept"), getClient(), null, comment, sendResponse);
+        return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, comment, sendResponse);
     }
 
     public IEventSnoozeReminderRequestBuilder getSnoozeReminder(final DateTimeTimeZone newReminderTime) {
-        return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.SnoozeReminder"), getClient(), null, newReminderTime);
+        return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.snoozeReminder"), getClient(), null, newReminderTime);
     }
 
     public IEventDismissReminderRequestBuilder getDismissReminder() {
-        return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.DismissReminder"), getClient(), null);
+        return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismissReminder"), getClient(), null);
     }
 }

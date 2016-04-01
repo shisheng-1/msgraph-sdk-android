@@ -63,10 +63,10 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
     }
 
     public IPostForwardRequestBuilder getForward(final String comment, final List<Recipient> toRecipients) {
-        return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Forward"), getClient(), null, comment, toRecipients);
+        return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
     }
 
     public IPostReplyRequestBuilder getReply(final Post post) {
-        return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Reply"), getClient(), null, post);
+        return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }
