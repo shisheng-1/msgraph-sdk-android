@@ -31,8 +31,8 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-
 import com.microsoft.graph.logger.ILogger;
+import com.microsoft.graph.model.Date;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
@@ -52,12 +52,13 @@ final class GsonFactory {
 
     /**
      * Creates an instance of Gson.
+     *
      * @param logger The logger.
      * @return The new instance.
      */
     public static Gson getGsonInstance(final ILogger logger) {
 
-        final JsonSerializer<Calendar> dateJsonSerializer = new JsonSerializer<Calendar>() {
+        final JsonSerializer<Calendar> calendarJsonSerializer = new JsonSerializer<Calendar>() {
             @Override
             public JsonElement serialize(final Calendar src,
                                          final Type typeOfSrc,
@@ -74,7 +75,7 @@ final class GsonFactory {
             }
         };
 
-        final JsonDeserializer<Calendar> dateJsonDeserializer = new JsonDeserializer<Calendar>() {
+        final JsonDeserializer<Calendar> calendarJsonDeserializer = new JsonDeserializer<Calendar>() {
             @Override
             public Calendar deserialize(final JsonElement json,
                                         final Type typeOfT,
@@ -111,8 +112,8 @@ final class GsonFactory {
         final JsonDeserializer<byte[]> byteArrayJsonDeserializer = new JsonDeserializer<byte[]>() {
             @Override
             public byte[] deserialize(final JsonElement json,
-                                        final Type typeOfT,
-                                        final JsonDeserializationContext context) throws JsonParseException {
+                                      final Type typeOfT,
+                                      final JsonDeserializationContext context) throws JsonParseException {
                 if (json == null) {
                     return null;
                 }
@@ -125,13 +126,38 @@ final class GsonFactory {
             }
         };
 
+        final JsonSerializer<Date> dateJsonSerializer = new JsonSerializer<Date>() {
+            @Override
+            public JsonElement serialize(Date src, Type typeOfSrc, JsonSerializationContext context) {
+                if (src == null) {
+                    return null;
+                }
+                return new JsonPrimitive(DateSerializer.serialize(src));
+            }
+        };
+
+        final JsonDeserializer<Date> dateJsonDeserializer = new JsonDeserializer<Date>() {
+            @Override
+            public Date deserialize(JsonElement json,
+                                    Type typeOfT,
+                                    JsonDeserializationContext context) throws JsonParseException {
+                if (json == null) {
+                    return null;
+                }
+
+                return DateSerializer.deserialize(json.getAsString());
+            }
+        };
+
         return new GsonBuilder()
-                .registerTypeAdapter(Calendar.class, dateJsonSerializer)
-                .registerTypeAdapter(Calendar.class, dateJsonDeserializer)
-                .registerTypeAdapter(GregorianCalendar.class, dateJsonSerializer)
-                .registerTypeAdapter(GregorianCalendar.class, dateJsonDeserializer)
+                .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
+                .registerTypeAdapter(Calendar.class, calendarJsonDeserializer)
+                .registerTypeAdapter(GregorianCalendar.class, calendarJsonSerializer)
+                .registerTypeAdapter(GregorianCalendar.class, calendarJsonDeserializer)
                 .registerTypeAdapter(byte[].class, byteArrayJsonDeserializer)
                 .registerTypeAdapter(byte[].class, byteArrayJsonSerializer)
+                .registerTypeAdapter(Date.class, dateJsonSerializer)
+                .registerTypeAdapter(Date.class, dateJsonDeserializer)
                 .registerTypeAdapterFactory(new FallBackEnumTypeAdapter())
                 .create();
     }
