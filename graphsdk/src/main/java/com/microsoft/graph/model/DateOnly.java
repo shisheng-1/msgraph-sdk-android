@@ -6,7 +6,7 @@ import java.util.Locale;
 /**
  * A timezone-nonspecific date
  */
-public class Date {
+public class DateOnly {
 
     /**
      * Array indices for date parsing
@@ -31,7 +31,7 @@ public class Date {
      *
      * @param dateStr date string of the form <code>yyyy-mm-dd</code>
      */
-    public Date(String dateStr) {
+    public DateOnly(String dateStr) {
         // save the String from which this object is derived
         rawDateString = dateStr;
 

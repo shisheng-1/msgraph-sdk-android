@@ -7,7 +7,7 @@ package com.microsoft.graph.generated;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.extensions.RecurrenceRangeType;
-import com.microsoft.graph.model.Date;
+import com.microsoft.graph.model.DateOnly;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
@@ -35,13 +35,13 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
      * The Start Date.
      */
     @SerializedName("startDate")
-    public Date startDate;
+    public DateOnly startDate;
 
     /**
      * The End Date.
      */
     @SerializedName("endDate")
-    public Date endDate;
+    public DateOnly endDate;
 
     /**
      * The Recurrence Time Zone.

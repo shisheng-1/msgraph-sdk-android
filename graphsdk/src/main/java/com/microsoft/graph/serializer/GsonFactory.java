@@ -32,7 +32,7 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.microsoft.graph.logger.ILogger;
-import com.microsoft.graph.model.Date;
+import com.microsoft.graph.model.DateOnly;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
@@ -126,26 +126,26 @@ final class GsonFactory {
             }
         };
 
-        final JsonSerializer<Date> dateJsonSerializer = new JsonSerializer<Date>() {
+        final JsonSerializer<DateOnly> dateJsonSerializer = new JsonSerializer<DateOnly>() {
             @Override
-            public JsonElement serialize(Date src, Type typeOfSrc, JsonSerializationContext context) {
+            public JsonElement serialize(DateOnly src, Type typeOfSrc, JsonSerializationContext context) {
                 if (src == null) {
                     return null;
                 }
-                return new JsonPrimitive(DateSerializer.serialize(src));
+                return new JsonPrimitive(DateOnlySerializer.serialize(src));
             }
         };
 
-        final JsonDeserializer<Date> dateJsonDeserializer = new JsonDeserializer<Date>() {
+        final JsonDeserializer<DateOnly> dateJsonDeserializer = new JsonDeserializer<DateOnly>() {
             @Override
-            public Date deserialize(JsonElement json,
-                                    Type typeOfT,
-                                    JsonDeserializationContext context) throws JsonParseException {
+            public DateOnly deserialize(JsonElement json,
+                                        Type typeOfT,
+                                        JsonDeserializationContext context) throws JsonParseException {
                 if (json == null) {
                     return null;
                 }
 
-                return DateSerializer.deserialize(json.getAsString());
+                return DateOnlySerializer.deserialize(json.getAsString());
             }
         };
 
@@ -156,8 +156,8 @@ final class GsonFactory {
                 .registerTypeAdapter(GregorianCalendar.class, calendarJsonDeserializer)
                 .registerTypeAdapter(byte[].class, byteArrayJsonDeserializer)
                 .registerTypeAdapter(byte[].class, byteArrayJsonSerializer)
-                .registerTypeAdapter(Date.class, dateJsonSerializer)
-                .registerTypeAdapter(Date.class, dateJsonDeserializer)
+                .registerTypeAdapter(DateOnly.class, dateJsonSerializer)
+                .registerTypeAdapter(DateOnly.class, dateJsonDeserializer)
                 .registerTypeAdapterFactory(new FallBackEnumTypeAdapter())
                 .create();
     }
