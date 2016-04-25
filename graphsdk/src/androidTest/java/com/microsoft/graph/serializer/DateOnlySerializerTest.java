@@ -7,12 +7,12 @@ import com.microsoft.graph.model.DateOnly;
 public class DateOnlySerializerTest extends AndroidTestCase {
 
     public void testDateSerializer() throws Exception {
-        String strDate = DateOnlySerializer.serialize(new DateOnly("2016-04-27"));
+        String strDate = DateOnlySerializer.serialize(DateOnly.parse("2016-04-27"));
         assertEquals("2016-04-27", strDate);
     }
 
     public void testDateSerializerIndefinite() throws Exception {
-        String strDate = DateOnlySerializer.serialize(new DateOnly("0001-01-01"));
+        String strDate = DateOnlySerializer.serialize(DateOnly.parse("0001-01-01"));
         assertEquals("0001-01-01", strDate);
     }
 
