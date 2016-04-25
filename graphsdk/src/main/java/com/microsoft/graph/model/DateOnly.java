@@ -1,6 +1,7 @@
 package com.microsoft.graph.model;
 
 
+import java.text.ParseException;
 import java.util.Locale;
 
 /**
@@ -8,49 +9,47 @@ import java.util.Locale;
  */
 public class DateOnly {
 
-    /**
-     * Array indices for date parsing
-     */
-    private static final int
-            sYear = 0,
-            sMonth = 1,
-            sDay = 2;
-
-    /**
-     * The raw string source of this object
-     */
-    private final String rawDateString;
-
     private final int
             mYear,
             mMonth,
             mDay;
 
     /**
-     * Constructs a timezone-nonspecific <code>Date</code>
+     * Constructs a timezone-nonspecific DateOnly
      *
      * @param dateStr date string of the form <code>yyyy-mm-dd</code>
      */
-    public DateOnly(String dateStr) {
-        // save the String from which this object is derived
-        rawDateString = dateStr;
-
+    public DateOnly(String dateStr) throws ParseException {
         // break the date up into its constituent parts
-        String[] dateInfo = rawDateString.split("-");
+        String[] dateInfo = dateStr.split("-");
+
+        // validate our split datestring
+        if (dateInfo.length != 3) {
+            throw new ParseException("Datestring input didn't match format 'yyyy-mm-dd'", 0);
+        }
+
+        // array indices for date parsing
+        final int year = 0;
+        final int month = 1;
+        final int day = 2;
 
         // unpack this array
-        mYear = Integer.parseInt(dateInfo[sYear]);
-        mMonth = Integer.parseInt(dateInfo[sMonth]);
-        mDay = Integer.parseInt(dateInfo[sDay]);
+        mYear = Integer.parseInt(dateInfo[year]);
+        mMonth = Integer.parseInt(dateInfo[month]);
+        mDay = Integer.parseInt(dateInfo[day]);
     }
 
     /**
-     * Gets the source {@link String} data from which this object is derived
+     * Constructs a timezone-nonspecific DateOnly
      *
-     * @return source string data
+     * @param year  the year
+     * @param month 1-indexed month value (Jan == 1)
+     * @param day   day of the month
      */
-    public String getRawDateString() {
-        return rawDateString;
+    public DateOnly(int year, int month, int day) {
+        mYear = year;
+        mMonth = month;
+        mDay = day;
     }
 
     /**
@@ -83,7 +82,7 @@ public class DateOnly {
     @Override
     public String toString() {
         return String.format(
-                Locale.getDefault(),
+                Locale.ROOT,
                 "%04d-%02d-%02d", mYear, mMonth, mDay
         );
     }
