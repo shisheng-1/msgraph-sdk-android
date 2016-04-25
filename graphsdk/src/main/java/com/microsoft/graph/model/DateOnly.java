@@ -25,7 +25,9 @@ public class DateOnly {
 
         // validate our split datestring
         if (dateInfo.length != 3) {
-            throw new ParseException("Datestring input didn't match format 'yyyy-mm-dd'", 0);
+            throw new ParseException(
+                    "Expected datestring format 'yyyy-mm-dd' but found: " + dateStr, 0
+            );
         }
 
         // array indices for date parsing
