@@ -28,6 +28,7 @@ import com.microsoft.graph.extensions.Drive;
 import com.microsoft.graph.extensions.RecurrenceRangeType;
 import com.microsoft.graph.generated.BaseRecurrenceRange;
 import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.model.DateOnly;
 
 /**
  * Test cases for the {@see DefaultSerializer}
@@ -69,6 +70,16 @@ public class DefaultSerializerTests extends AndroidTestCase {
     }
 
     public void testRecurrenceRangeSerialization() throws Exception {
-
+        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"@odata.type\":\"microsoft.graph.recurrenceRange\",\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        BaseRecurrenceRange brr = new BaseRecurrenceRange();
+        brr.type = RecurrenceRangeType.endDate;
+        brr.startDate = new DateOnly(2016, 4, 25);
+        brr.endDate = new DateOnly(2016, 5, 25);
+        brr.recurrenceTimeZone = "PST";
+        brr.numberOfOccurrences = 4;
+        String jsonOut = serializer.serializeObject(brr);
+        assertNotNull(jsonOut);
+        assertEquals(jsonOut, expected);
     }
 }
