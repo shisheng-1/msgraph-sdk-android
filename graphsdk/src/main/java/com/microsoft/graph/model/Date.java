@@ -1,6 +1,8 @@
 package com.microsoft.graph.model;
 
 
+import java.util.Locale;
+
 /**
  * A timezone-nonspecific date
  */
@@ -78,40 +80,11 @@ public class Date {
         return mDay;
     }
 
-    private static String formatYear(int year) {
-        String strYear = String.valueOf(year);
-
-        if (year < 1000) {
-            strYear = "0" + strYear;
-        }
-
-        if (year < 100) {
-            strYear = "0" + strYear;
-        }
-
-        if (year < 10) {
-            strYear = "0" + strYear;
-        }
-
-        return strYear;
-    }
-
-    private static String formatMonthOrDay(int monthOrDay) {
-        String strmod = String.valueOf(monthOrDay);
-
-        if (monthOrDay < 10) {
-            strmod = "0" + strmod;
-        }
-
-        return strmod;
-    }
-
     @Override
     public String toString() {
-        return formatYear(mYear)
-                + "-"
-                + formatMonthOrDay(mMonth)
-                + "-"
-                + formatMonthOrDay(mDay);
+        return String.format(
+                Locale.getDefault(),
+                "%04d-%02d-%02d", mYear, mMonth, mDay
+        );
     }
 }
