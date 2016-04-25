@@ -23,7 +23,7 @@ public class DateOnlySerializerTest extends AndroidTestCase {
         assertEquals(27, date.getDay());
     }
 
-    public void testDateDeserializerIndefinite() {
+    public void testDateDeserializerIndefinite() throws Exception{
         DateOnly date = DateOnlySerializer.deserialize("0001-01-01");
         assertEquals(1, date.getYear());
         assertEquals(1, date.getMonth());
