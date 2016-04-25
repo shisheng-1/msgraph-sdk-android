@@ -19,7 +19,7 @@ public class DateOnly {
      *
      * @param dateStr date string of the form <code>yyyy-mm-dd</code>
      */
-    public DateOnly(String dateStr) throws ParseException {
+    public static DateOnly parse(String dateStr) throws ParseException {
         // break the date up into its constituent parts
         String[] dateInfo = dateStr.split("-");
 
@@ -31,14 +31,16 @@ public class DateOnly {
         }
 
         // array indices for date parsing
-        final int year = 0;
-        final int month = 1;
-        final int day = 2;
+        final int indYear = 0;
+        final int indMonth = 1;
+        final int indDay = 2;
 
         // unpack this array
-        mYear = Integer.parseInt(dateInfo[year]);
-        mMonth = Integer.parseInt(dateInfo[month]);
-        mDay = Integer.parseInt(dateInfo[day]);
+        int year = Integer.parseInt(dateInfo[indYear]);
+        int month = Integer.parseInt(dateInfo[indMonth]);
+        int day = Integer.parseInt(dateInfo[indDay]);
+
+        return new DateOnly(year, month, day);
     }
 
     /**
