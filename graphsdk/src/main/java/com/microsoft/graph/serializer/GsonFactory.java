@@ -128,26 +128,28 @@ final class GsonFactory {
 
         final JsonSerializer<DateOnly> dateJsonSerializer = new JsonSerializer<DateOnly>() {
             @Override
-            public JsonElement serialize(DateOnly src, Type typeOfSrc, JsonSerializationContext context) {
+            public JsonElement serialize(final DateOnly src,
+                                         final Type typeOfSrc,
+                                         final JsonSerializationContext context) {
                 if (src == null) {
                     return null;
                 }
-                return new JsonPrimitive(DateOnlySerializer.serialize(src));
+                return new JsonPrimitive(src.toString());
             }
         };
 
         final JsonDeserializer<DateOnly> dateJsonDeserializer = new JsonDeserializer<DateOnly>() {
             @Override
-            public DateOnly deserialize(JsonElement json,
-                                        Type typeOfT,
-                                        JsonDeserializationContext context) throws JsonParseException {
+            public DateOnly deserialize(final JsonElement json,
+                                        final Type typeOfT,
+                                        final JsonDeserializationContext context) throws JsonParseException {
                 if (json == null) {
                     return null;
                 }
 
                 try {
-                    return DateOnlySerializer.deserialize(json.getAsString());
-                } catch (ParseException e) {
+                    return DateOnly.parse(json.getAsString());
+                } catch (final ParseException e) {
                     logger.logError("Parsing issue on " + json.getAsString(), e);
                     return null;
                 }
