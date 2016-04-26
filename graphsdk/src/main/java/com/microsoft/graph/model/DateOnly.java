@@ -9,22 +9,35 @@ import java.util.Locale;
  */
 public class DateOnly {
 
-    private final int
-            mYear,
-            mMonth,
-            mDay;
+    /**
+     * The year
+     */
+    private final int mYear;
+
+    /**
+     * The month
+     */
+    private final int mMonth;
+
+    /**
+     * The day
+     */
+    private final int mDay;
 
     /**
      * Constructs a timezone-nonspecific DateOnly
      *
      * @param dateStr date string of the form <code>yyyy-mm-dd</code>
+     * @return the parsed DateOnly instance
+     * @exception ParseException If there was a failure parsing the dateStr
      */
-    public static DateOnly parse(String dateStr) throws ParseException {
+    public static DateOnly parse(final String dateStr) throws ParseException {
         // break the date up into its constituent parts
         String[] dateInfo = dateStr.split("-");
 
-        // validate our split datestring
-        if (dateInfo.length != 3) {
+        // validate the split date string
+        final int expectedLength = 3;
+        if (dateInfo.length != expectedLength) {
             throw new ParseException(
                     "Expected datestring format 'yyyy-mm-dd' but found: " + dateStr, 0
             );
@@ -50,7 +63,7 @@ public class DateOnly {
      * @param month 1-indexed month value (Jan == 1)
      * @param day   day of the month
      */
-    public DateOnly(int year, int month, int day) {
+    public DateOnly(final int year, final int month, final int day) {
         mYear = year;
         mMonth = month;
         mDay = day;
