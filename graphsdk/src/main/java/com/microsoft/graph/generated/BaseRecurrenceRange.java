@@ -42,13 +42,13 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
      * The Start Date.
      */
     @SerializedName("startDate")
-    public java.util.Calendar startDate;
+    public com.microsoft.graph.model.DateOnly startDate;
 
     /**
      * The End Date.
      */
     @SerializedName("endDate")
-    public java.util.Calendar endDate;
+    public com.microsoft.graph.model.DateOnly endDate;
 
     /**
      * The Recurrence Time Zone.

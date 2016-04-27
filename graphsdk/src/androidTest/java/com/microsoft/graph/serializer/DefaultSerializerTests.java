@@ -22,18 +22,22 @@
 
 package com.microsoft.graph.serializer;
 
-import com.microsoft.graph.extensions.Drive;
-import com.microsoft.graph.logger.DefaultLogger;
-
 import android.test.AndroidTestCase;
+
+import com.microsoft.graph.extensions.Drive;
+import com.microsoft.graph.extensions.RecurrenceRangeType;
+import com.microsoft.graph.generated.BaseRecurrenceRange;
+import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.model.DateOnly;
 
 /**
  * Test cases for the {@see DefaultSerializer}
  */
-public class DefaultSerializerTests extends AndroidTestCase  {
+public class DefaultSerializerTests extends AndroidTestCase {
 
     /**
      * Make sure that deserializing a Drive also returns members from BaseDrive
+     *
      * @throws Exception If there is an exception during the test
      */
     public void testDriveDeserialization() throws Exception {
@@ -45,5 +49,37 @@ public class DefaultSerializerTests extends AndroidTestCase  {
         assertEquals(Long.valueOf(983887466461L), result.quota.remaining);
         assertEquals("8bf6ae90006c4a4c", result.id);
 
+    }
+
+    public void testRecurrenceRangeDeserialization() throws Exception {
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        String source = "{\n" +
+                "    \"type\": \"noEnd\",\n" +
+                "    \"startDate\": \"2016-04-27\",\n" +
+                "    \"endDate\": \"0001-01-01\",\n" +
+                "    \"recurrenceTimeZone\": \"China Standard Time\",\n" +
+                "    \"numberOfOccurrences\": 0\n" +
+                "}";
+        BaseRecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, BaseRecurrenceRange.class);
+        assertNotNull(source);
+        assertEquals(baseRecurrenceRange.type, RecurrenceRangeType.noEnd);
+        assertEquals("2016-04-27", baseRecurrenceRange.startDate.toString());
+        assertEquals("0001-01-01", baseRecurrenceRange.endDate.toString());
+        assertEquals("China Standard Time", baseRecurrenceRange.recurrenceTimeZone);
+        assertEquals(Integer.valueOf(0), baseRecurrenceRange.numberOfOccurrences);
+    }
+
+    public void testRecurrenceRangeSerialization() throws Exception {
+        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"@odata.type\":\"microsoft.graph.recurrenceRange\",\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        BaseRecurrenceRange brr = new BaseRecurrenceRange();
+        brr.type = RecurrenceRangeType.endDate;
+        brr.startDate = new DateOnly(2016, 4, 25);
+        brr.endDate = new DateOnly(2016, 5, 25);
+        brr.recurrenceTimeZone = "PST";
+        brr.numberOfOccurrences = 4;
+        String jsonOut = serializer.serializeObject(brr);
+        assertNotNull(jsonOut);
+        assertEquals(jsonOut, expected);
     }
 }
