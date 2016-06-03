@@ -270,6 +270,7 @@ public abstract class BaseRequest implements IHttpRequest {
         final LinkedList<Option> list = new LinkedList<>();
         list.addAll(mHeadersOptions);
         list.addAll(mQueryOptions);
+        list.addAll(mFunctionOptions);
         return Collections.unmodifiableList(list);
     }
 
