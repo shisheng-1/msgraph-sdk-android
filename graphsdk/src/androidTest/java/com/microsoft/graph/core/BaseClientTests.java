@@ -19,7 +19,7 @@ import com.microsoft.graph.serializer.MockSerializer;
 public class BaseClientTests extends AndroidTestCase {
 
     public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
-    private String mEndpoint;
+    private String mEndpoint = DEFAULT_GRAPH_ENDPOINT;
     private BaseClient baseClient;
     private IAuthenticationProvider mAuthenticationProvider;
     private IExecutors mExecutors;
@@ -33,9 +33,6 @@ public class BaseClientTests extends AndroidTestCase {
         baseClient = new BaseClient() {
             @Override
             public String getServiceRoot() {
-                if(mEndpoint == null) {
-                    mEndpoint = DEFAULT_GRAPH_ENDPOINT;
-                }
                 return mEndpoint;
             }
 
@@ -60,32 +57,34 @@ public class BaseClientTests extends AndroidTestCase {
         assertNotNull(mSerializer);
     }
 
-    public void testValidate() {
+    public void testValidateThrowException() {
         Boolean success = false;
-        Boolean successEdit = false;
-        try{
+        try {
             baseClient.validate();
+        }catch (NullPointerException nEx){
             success = true;
-        }catch (Exception ex){
-            success = false;
         }
+        assertTrue(success);
+    }
+
+    public void testValidateSuccess() {
+        Boolean success = false;
         baseClient.setAuthenticationProvider(mAuthenticationProvider);
         baseClient.setExecutors(mExecutors);
         baseClient.setHttpProvider(mHttpProvider);
         baseClient.setSerializer(mSerializer);
         try{
             baseClient.validate();
-            successEdit = true;
-        }catch (Exception ex){
-            successEdit = false;
+            success = true;
+        }catch (NullPointerException nEx){
+            success = false;
         }
-        assertFalse(success);
-        assertTrue(successEdit);
+        assertTrue(success);
     }
 
     public void testEndPoint() {
         assertEquals(DEFAULT_GRAPH_ENDPOINT, baseClient.getServiceRoot());
-        String expectedServiceRoot = "https://graph.microsoft.com/v1.0/me";
+        String expectedServiceRoot = "https://foo.bar";
         baseClient.setServiceRoot(expectedServiceRoot);
         assertEquals(expectedServiceRoot, baseClient.getServiceRoot());
     }

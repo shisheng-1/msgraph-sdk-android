@@ -9,22 +9,20 @@ import java.io.IOException;
  */
 public class DefaultConnectionFactoryTests extends AndroidTestCase {
 
-    public void testCreateFromRequest() {
-        Boolean success = false;
-        Boolean failure = false;
-        IConnection connection = null;
-        DefaultConnectionFactory defaultConnectionFactory = new DefaultConnectionFactory();
-        try{
-            connection = defaultConnectionFactory.createFromRequest(new MockHttpRequest());
-            success = true;
-        }catch (IOException ex){
-            failure = true;
-        }
+    private IConnection mConnection;
 
-        assertTrue(success);
-        assertFalse(failure);
-        assertNotNull(connection);
-        assertEquals("GET", connection.getRequestMethod());
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mConnection = new DefaultConnectionFactory().createFromRequest(new MockHttpRequest());
+    }
+
+    public void testNotNull() {
+        assertNotNull(mConnection);
+    }
+
+    public void testDefaultRequestMethod() {
+        assertEquals("GET", mConnection.getRequestMethod());
     }
 
 }

@@ -13,11 +13,11 @@ import java.util.Map;
  */
 public class MockConnection implements IConnection {
 
-    private final ITestData mData;
+    private final ITestConnectionData mData;
     private HashMap<String, String> mHeaders = new HashMap<String, String>();
     private Boolean mFollowRedirects;
 
-    public MockConnection(ITestData data) {
+    public MockConnection(ITestConnectionData data) {
         mData = data;
     }
 
@@ -48,7 +48,7 @@ public class MockConnection implements IConnection {
 
     @Override
     public String getResponseMessage() throws IOException {
-        return "This is response message";
+        return mData.getJsonResponse();
     }
 
     @Override

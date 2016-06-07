@@ -1,5 +1,9 @@
 package com.microsoft.graph.http;
 
+import android.graphics.Path;
+
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 
@@ -12,32 +16,41 @@ import java.util.List;
  * Mock for {@see IHttpRequest}
  */
 public class MockHttpRequest implements IHttpRequest {
+
+    private HttpMethod mHttpMethod = HttpMethod.GET;
+    private List<HeaderOption> mHeaders = new ArrayList<HeaderOption>();
+    private List<Option> mOptions = new ArrayList<Option>();
+
     @Override
     public URL getRequestUrl() {
         try {
             return new URL("http://localhost");
-        } catch (final MalformedURLException ignored) {
+        } catch (final MalformedURLException ex) {
+            throw new ClientException("Invalid URL", ex, GraphErrorCodes.InvalidRequest);
         }
-        return null;
     }
 
     @Override
     public HttpMethod getHttpMethod() {
-        return HttpMethod.GET;
+        return mHttpMethod;
     }
 
     @Override
     public List<HeaderOption> getHeaders() {
-        return new ArrayList<>();
+        return mHeaders;
     }
 
     @Override
     public List<Option> getOptions() {
-        return new ArrayList<>();
+        return mOptions;
     }
 
     @Override
     public void addHeader(String header, String value) {
+        mHeaders.add(new HeaderOption(header,value));
+    }
 
+    public void setHttpMethod(HttpMethod method){
+        mHttpMethod = method;
     }
 }

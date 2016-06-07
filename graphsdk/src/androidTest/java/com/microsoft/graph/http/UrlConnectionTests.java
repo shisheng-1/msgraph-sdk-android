@@ -1,60 +1,38 @@
 package com.microsoft.graph.http;
 
 import android.test.AndroidTestCase;
-
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.HashMap;
+import java.lang.reflect.Field;
+import java.net.HttpURLConnection;
+import java.util.List;
 import java.util.Map;
+
 
 /**
  * Test cases for {@see UrlConnection}
  */
 public class UrlConnectionTests extends AndroidTestCase {
 
-    public void testUrlConnection(){
-        final ITestData data = new ITestData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
+    public void testRequestMethod() throws Exception{
+        MockHttpRequest request = new MockHttpRequest();
+        request.setHttpMethod(HttpMethod.POST);
+        UrlConnection connection = new UrlConnection(request);
+        assertEquals("POST", connection.getRequestMethod());
+    }
 
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-        IConnection connection = new MockConnection(data);
-        OutputStream outputStream = null;
-        InputStream inputStream = null;
-        int responseCode = 0;
-        String responseMessage = null;
-        Boolean success = false;
-        try{
-            outputStream = connection.getOutputStream();
-            inputStream = connection.getInputStream();
-            responseCode = connection.getResponseCode();
-            responseMessage = connection.getResponseMessage();
-            connection.close();
-            success = true;
-        }catch (Exception ex){
-            success = false;
-        }
-        assertTrue(success);
-        assertNotNull(connection);
-        assertEquals(1,connection.getHeaders().size());
-        assertNotNull(outputStream);
-        assertNotNull(inputStream);
-        assertEquals(15,connection.getContentLength());
-        assertEquals(200,responseCode);
-        assertEquals("This is response message",responseMessage);
-        assertEquals("GET",connection.getRequestMethod());
+    public void testRequestProperties() throws Exception {
+        MockHttpRequest request = new MockHttpRequest();
+        request.addHeader("header1","value1");
+        request.addHeader("test-header2","test-value2");
+        request.addHeader("test-header2","test-value23");
+        UrlConnection connection = new UrlConnection(request);
+        Field mConnectionField = UrlConnection.class.getDeclaredField("mConnection");
+        mConnectionField.setAccessible(true);
+        HttpURLConnection mConnection = (HttpURLConnection)mConnectionField.get(connection);
+        Map<String, List<String>> requestProperties = mConnection.getRequestProperties();
+        assertEquals(2, requestProperties.size());
+        assertEquals("value1",requestProperties.get("header1").get(0));
+        assertEquals("test-value2",requestProperties.get("test-header2").get(0));
+        assertEquals("test-value23",requestProperties.get("test-header2").get(1));
     }
 }
+

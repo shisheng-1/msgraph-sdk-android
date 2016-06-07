@@ -7,15 +7,15 @@ import android.test.AndroidTestCase;
  */
 public class ByteArraySerializerTests extends AndroidTestCase {
 
-    public void testByteArraySerializer() throws Exception {
-        byte[] expectedBytes = new byte[]{1,2,3,4};
+    public void testByteSerialization() throws Exception {
         String expectedString = "abcd";
-        String serializeString = ByteArraySerializer.serialize(expectedBytes);
-        byte[] deserializeBytes = ByteArraySerializer.deserialize(serializeString);
-        byte[] deserializeBytes2 = ByteArraySerializer.deserialize(expectedString);
-        String serializeString2 = ByteArraySerializer.serialize(deserializeBytes2);
-        assertEquals(expectedBytes.length, deserializeBytes.length);
-        assertEquals(expectedString, serializeString2);
+        String serializeString = ByteArraySerializer.serialize(new byte[]{105,-73,29});
+        assertEquals(expectedString, serializeString);
         assertFalse(ByteArraySerializer.serialize(new byte[]{1,2,3}).equals(ByteArraySerializer.serialize(new byte[]{1,2,3,4})));
+    }
+
+    public void testStringDeserialization() throws Exception {
+        byte[] deserializeBytes = ByteArraySerializer.deserialize("abcd");
+        assertEquals(3, deserializeBytes.length);
     }
 }

@@ -29,9 +29,8 @@ public class BaseStreamRequestTests extends AndroidTestCase {
         mBaseClient = new MockBaseClient();
     }
 
-    @SuppressWarnings("unchecked")
     public void testSend() {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -55,14 +54,13 @@ public class BaseStreamRequestTests extends AndroidTestCase {
                 new MockLogger());
         mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
         mBaseClient.setHttpProvider(mProvider);
-        final BaseStreamRequest request = new BaseStreamRequest("https://a.b.c", mBaseClient,null, null){};
+        final BaseStreamRequest request = new BaseStreamRequest<String>("https://a.b.c", mBaseClient,null, null){};
         request.send();
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
-    @SuppressWarnings("unchecked")
     public void testSendWithCallback() {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -99,16 +97,15 @@ public class BaseStreamRequestTests extends AndroidTestCase {
                 failure.set(true);
             }
         };
-        final BaseStreamRequest request = new BaseStreamRequest("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
         request.send(callback);
         assertTrue(success.get());
         assertFalse(failure.get());
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
-    @SuppressWarnings("unchecked")
     public void testSendWithContentAndCallback() {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -145,16 +142,15 @@ public class BaseStreamRequestTests extends AndroidTestCase {
                 failure.set(true);
             }
         };
-        final BaseStreamRequest request = new BaseStreamRequest("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4},callback);
         assertTrue(success.get());
         assertFalse(failure.get());
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
-    @SuppressWarnings("unchecked")
     public void testSendWithContent() {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -178,14 +174,13 @@ public class BaseStreamRequestTests extends AndroidTestCase {
                 new MockLogger());
         mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
         mBaseClient.setHttpProvider(mProvider);
-        final BaseStreamRequest request = new BaseStreamRequest("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4});
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
-    @SuppressWarnings("unchecked")
     public void testBaseMethod() {
-        final BaseStreamRequest request = new BaseStreamRequest("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
         assertEquals("https://a.b.c", request.getRequestUrl().toString());
         request.addHeader("header key", "header value");
         assertEquals(2,request.getHeaders().size());

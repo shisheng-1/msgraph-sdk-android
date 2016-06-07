@@ -30,13 +30,7 @@ import java.util.ArrayList;
 public class MockLogger implements ILogger {
 
     private LoggerLevel mLevel = LoggerLevel.Error;
-    private ArrayList<String> mLogMessage;
-
-    public MockLogger(){
-        if(mLogMessage == null){
-            mLogMessage = new ArrayList<String>();
-        }
-    }
+    private ArrayList<String> mLogMessage = new ArrayList<String>();
 
     @Override
     public void setLoggingLevel(final LoggerLevel level) {
@@ -62,22 +56,7 @@ public class MockLogger implements ILogger {
         return mLogMessage;
     }
 
-    public int getSizeByContent(final String message){
-        int size = 0;
-        if(isExist(message)){
-            for (int i = 0;i<mLogMessage.size();i++){
-                if(mLogMessage.get(i).equals(message)){
-                    size++;
-                }
-            }
-        }
-        return size;
-    }
-
-    public Boolean isExist(final String message){
-        if(mLogMessage.indexOf(message) > -1){
-            return true;
-        }
-        return false;
+    public Boolean hasMessage(final String message){
+        return mLogMessage.indexOf(message) > -1;
     }
 }

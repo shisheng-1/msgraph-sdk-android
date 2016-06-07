@@ -17,4 +17,10 @@ public class GraphErrorTests extends AndroidTestCase {
         assertTrue(error.isError(GraphErrorCodes.AccessDenied));
         assertEquals(expectedMessage, error.message);
     }
+
+    public void testIsNotError() {
+        GraphError error = new GraphError();
+        error.code = GraphErrorCodes.AccessDenied.toString();
+        assertFalse(error.isError(GraphErrorCodes.Unauthenticated));
+    }
 }

@@ -31,7 +31,7 @@ public class GraphServiceExceptionTests extends AndroidTestCase {
         GraphServiceException exception = null;
         Boolean success = false;
         Boolean failure = false;
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 401;

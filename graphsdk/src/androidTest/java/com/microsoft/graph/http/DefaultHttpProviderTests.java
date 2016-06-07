@@ -49,7 +49,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
     private DefaultHttpProvider mProvider;
 
     public void testNoContentType() throws Exception {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -81,7 +81,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
 
     public void testDriveResponse() throws Exception {
         final String driveId = "driveId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -111,7 +111,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
     }
 
     public void testBinaryResponse() throws Exception {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -137,7 +137,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
 
     public void testPostItem() throws Exception {
         final String itemId = "itemId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -169,7 +169,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
 
     public void testPostByte() throws Exception {
         final String itemId = "itemId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -229,7 +229,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         toSerialize.error.innererror = null;
 
         setDefaultHttpProvider(toSerialize);
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 415;
@@ -260,7 +260,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         final int[] codes = new int[] {204, 304 };
         final AtomicInteger currentCode = new AtomicInteger(0);
         setDefaultHttpProvider(null);
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return codes[currentCode.get()];
@@ -268,7 +268,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
 
             @Override
             public String getJsonResponse() {
-                throw new UnsupportedOperationException("Should not ever hit this");
+                return null;
             }
 
             @Override

@@ -1,5 +1,6 @@
 package com.microsoft.graph.concurrency;
 
+import android.os.Looper;
 import android.os.SystemClock;
 import android.test.AndroidTestCase;
 
@@ -20,6 +21,8 @@ public class SynchronousExecutorTests extends AndroidTestCase {
             }
         });
         SystemClock.sleep(1000);
+        new SimpleWaiter().signal();
+        assertFalse(Looper.getMainLooper().isCurrentThread());
         assertNotNull(synchronousExecutor);
         assertTrue(success.get());
         assertEquals(0, synchronousExecutor.getActiveCount());

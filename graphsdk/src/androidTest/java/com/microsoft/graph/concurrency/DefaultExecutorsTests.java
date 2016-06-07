@@ -1,5 +1,6 @@
 package com.microsoft.graph.concurrency;
 
+import android.os.Looper;
 import android.os.SystemClock;
 import android.test.AndroidTestCase;
 
@@ -15,8 +16,6 @@ public class DefaultExecutorsTests extends AndroidTestCase {
 
     private MockLogger mLogger;
     private DefaultExecutors defaultExecutors;
-    private String callbackResult;
-    private ClientException clientException;
 
     @Override
     protected void setUp() throws Exception {
@@ -41,35 +40,26 @@ public class DefaultExecutorsTests extends AndroidTestCase {
         });
         // sleep 1 second for background task
         SystemClock.sleep(1000);
+        new SimpleWaiter().signal();
+        assertFalse(Looper.getMainLooper().isCurrentThread());
         assertTrue(success.get());
         assertEquals(1,mLogger.getLogMessages().size());
-        assertTrue(mLogger.isExist(expectedLogMessage));
+        assertTrue(mLogger.hasMessage(expectedLogMessage));
     }
 
     public void testPerformOnForegroundWithResult() {
         String expectedResult = "result value";
         String expectedLogMessage = "Starting foreground task, current active count:0, with result result value";
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-        ICallback<String> callback = new ICallback<String>() {
-            @Override
-            public void success(String s) {
-                success.set(true);
-                callbackResult = s;
-            }
-
-            @Override
-            public void failure(ClientException ex) {
-                failure.set(true);
-            }
-        };
+        MockCallback callback = new MockCallback();
         defaultExecutors.performOnForeground(expectedResult,callback);
         SystemClock.sleep(1000);
-        assertTrue(success.get());
-        assertFalse(failure.get());
-        assertEquals(expectedResult, callbackResult);
+        new SimpleWaiter().signal();
+        assertFalse(Looper.getMainLooper().isCurrentThread());
+        assertTrue(callback.getSuccess());
+        assertFalse(callback.getFailure());
+        assertEquals(expectedResult, callback.getResult());
         assertEquals(1,mLogger.getLogMessages().size());
-        assertTrue(mLogger.isExist(expectedLogMessage));
+        assertTrue(mLogger.hasMessage(expectedLogMessage));
     }
 
     public void testPerformOnForegroundWithProgress() {
@@ -93,41 +83,66 @@ public class DefaultExecutorsTests extends AndroidTestCase {
                 failure.set(true);
             }
         };
-
         defaultExecutors.performOnForeground(1,1,callback);
         SystemClock.sleep(1000);
+        new SimpleWaiter().signal();
+        assertFalse(Looper.getMainLooper().isCurrentThread());
         assertTrue(progress.get());
         assertFalse(success.get());
         assertFalse(failure.get());
         assertEquals(1,mLogger.getLogMessages().size());
-        assertTrue(mLogger.isExist(expectedLogMessage));
+        assertTrue(mLogger.hasMessage(expectedLogMessage));
     }
 
     public void testPerformOnForegroundWithClientException() {
         String expectedExceptionMessage = "client exception message";
         String expectedLogMessage = "Starting foreground task, current active count:0, with exception com.microsoft.graph.core.ClientException: client exception message";
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-        ICallback<String> callback = new ICallback<String>() {
-            @Override
-            public void success(String s) {
-                success.set(true);
-            }
-
-            @Override
-            public void failure(ClientException ex) {
-                failure.set(true);
-                clientException = ex;
-            }
-        };
-
+        MockCallback callback = new MockCallback();
         defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.InvalidAcceptType),callback);
         SystemClock.sleep(1000);
-        assertFalse(success.get());
-        assertTrue(failure.get());
-        assertEquals(expectedExceptionMessage, clientException.getMessage());
-        assertTrue(clientException.isError(GraphErrorCodes.InvalidAcceptType));
+        new SimpleWaiter().signal();
+        assertFalse(Looper.getMainLooper().isCurrentThread());
+        assertFalse(callback.getSuccess());
+        assertTrue(callback.getFailure());
+        assertEquals(expectedExceptionMessage, callback.getException().getMessage());
+        assertTrue(callback.getException().isError(GraphErrorCodes.InvalidAcceptType));
         assertEquals(1,mLogger.getLogMessages().size());
-        assertTrue(mLogger.isExist(expectedLogMessage));
+        assertTrue(mLogger.hasMessage(expectedLogMessage));
+    }
+
+    private class MockCallback implements ICallback <String> {
+
+        Boolean success = false;
+        Boolean failure = false;
+        String result;
+        ClientException exception;
+
+        @Override
+        public void success(String string) {
+            success = true;
+            result = string;
+        }
+
+        @Override
+        public void failure(ClientException ex) {
+            failure = true;
+            exception = ex;
+        }
+
+        public Boolean getSuccess() {
+            return success;
+        }
+
+        public Boolean getFailure() {
+            return failure;
+        }
+
+        public String getResult() {
+            return result;
+        }
+
+        public ClientException getException() {
+            return exception;
+        }
     }
 }

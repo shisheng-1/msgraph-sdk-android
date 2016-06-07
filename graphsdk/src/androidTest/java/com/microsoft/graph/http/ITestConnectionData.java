@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Test data to use in configuring the mock connection object
  */
-public interface ITestData {
+public interface ITestConnectionData {
 
     int getRequestCode();
 
@@ -13,3 +13,4 @@ public interface ITestData {
 
     Map<String,String> getHeaders();
 }
+
