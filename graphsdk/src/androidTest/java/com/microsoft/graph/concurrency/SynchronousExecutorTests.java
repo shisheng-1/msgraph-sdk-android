@@ -1,7 +1,5 @@
 package com.microsoft.graph.concurrency;
 
-import android.os.Looper;
-import android.os.SystemClock;
 import android.test.AndroidTestCase;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -13,17 +11,16 @@ public class SynchronousExecutorTests extends AndroidTestCase {
 
     public void testExecute() {
         final AtomicBoolean success = new AtomicBoolean(false);
+        final SimpleWaiter simpleWaiter = new SimpleWaiter();
         SynchronousExecutor synchronousExecutor = new SynchronousExecutor();
         synchronousExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 success.set(true);
+                simpleWaiter.signal();
             }
         });
-        SystemClock.sleep(1000);
-        new SimpleWaiter().signal();
-        assertFalse(Looper.getMainLooper().isCurrentThread());
-        assertNotNull(synchronousExecutor);
+        simpleWaiter.waitForSignal();
         assertTrue(success.get());
         assertEquals(0, synchronousExecutor.getActiveCount());
     }

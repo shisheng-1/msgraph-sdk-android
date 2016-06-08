@@ -67,19 +67,12 @@ public class BaseClientTests extends AndroidTestCase {
         assertTrue(success);
     }
 
-    public void testValidateSuccess() {
-        Boolean success = false;
+    public void testValidateSuccess() throws Exception {
         baseClient.setAuthenticationProvider(mAuthenticationProvider);
         baseClient.setExecutors(mExecutors);
         baseClient.setHttpProvider(mHttpProvider);
         baseClient.setSerializer(mSerializer);
-        try{
-            baseClient.validate();
-            success = true;
-        }catch (NullPointerException nEx){
-            success = false;
-        }
-        assertTrue(success);
+        baseClient.validate();
     }
 
     public void testEndPoint() {
