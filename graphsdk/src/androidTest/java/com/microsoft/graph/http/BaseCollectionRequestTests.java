@@ -20,6 +20,7 @@ import java.util.Map;
  * Test cases for {@see BaseCollectionRequest}
  */
 public class BaseCollectionRequestTests extends AndroidTestCase {
+
     private MockAuthenticationProvider mAuthenticationProvider;
     private MockBaseClient mBaseClient;
     private BaseCollectionRequest request;

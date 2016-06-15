@@ -50,7 +50,6 @@ public class BaseCollectionPageTests extends AndroidTestCase {
 
     public void testNextPage() {
         assertEquals(mRequestBuilder, baseCollectionPage.getNextPage());
-        assertEquals(requestUrl, baseCollectionPage.getNextPage().getRequestUrl());
     }
 
     public void testRawObject() {

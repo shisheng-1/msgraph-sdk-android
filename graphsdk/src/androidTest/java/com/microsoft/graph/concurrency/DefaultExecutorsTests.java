@@ -54,7 +54,7 @@ public class DefaultExecutorsTests extends AndroidTestCase {
     public void testPerformOnForegroundWithResult() {
         final String expectedResult = "result value";
         final String expectedLogMessage = "Starting foreground task, current active count:0, with result result value";
-        final MockCallback<String> callback = new MockCallback<>();
+        final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
         defaultExecutors.performOnForeground(expectedResult,callback);
 
@@ -89,7 +89,7 @@ public class DefaultExecutorsTests extends AndroidTestCase {
     public void testPerformOnForegroundWithClientException() {
         final String expectedExceptionMessage = "client exception message";
         final String expectedLogMessage = "Starting foreground task, current active count:0, with exception com.microsoft.graph.core.ClientException: client exception message";
-        final MockCallback<String> callback = new MockCallback<>();
+        final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
         defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.InvalidAcceptType),
                 callback);
@@ -102,38 +102,6 @@ public class DefaultExecutorsTests extends AndroidTestCase {
         assertTrue(callback._exceptionResult.get().isError(GraphErrorCodes.InvalidAcceptType));
         assertEquals(1,mLogger.getLogMessages().size());
         assertTrue(mLogger.hasMessage(expectedLogMessage));
-    }
-
-    private class MockCallback<T> implements ICallback <T> {
-
-        SimpleWaiter _completionWaiter = new SimpleWaiter();
-        AtomicReference<CallingState> _callingState = new AtomicReference<>(CallingState.Unknown);
-
-        AtomicBoolean _successCalled = new AtomicBoolean(false);
-        AtomicReference<T> _successResult = new AtomicReference<>();
-
-        AtomicBoolean _failureCalled = new AtomicBoolean(false);
-        AtomicReference<ClientException> _exceptionResult = new AtomicReference<>();
-
-        @Override
-        public void success(T result) {
-            _successCalled.set(true);
-            _successResult.set(result);
-            _callingState.set(getCallingState());
-            _completionWaiter.signal();
-        }
-
-        @Override
-        public void failure(ClientException ex) {
-            _failureCalled.set(true);
-            _exceptionResult.set(ex);
-            _callingState.set(getCallingState());
-            _completionWaiter.signal();
-        }
-
-        private CallingState getCallingState(){
-            return Looper.getMainLooper().isCurrentThread() ? CallingState.Foreground : CallingState.Background;
-        }
     }
 
     private class ExecutorTestCallback<T> implements IProgressCallback<T> {
