@@ -31,22 +31,20 @@ public class DefaultExecutorsTests extends AndroidTestCase {
 
     public void testPerformOnBackground() {
         final String expectedLogMessage = "Starting background task, current active count: 0";
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final SimpleWaiter simpleWaiter = new SimpleWaiter();
-        final AtomicReference<CallingState> callingState = new AtomicReference<>(CallingState.Unknown);
+        final String expectedResult = "test perform on background success";
+        final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
         defaultExecutors.performOnBackground(new Runnable() {
             @Override
             public void run() {
-                success.set(true);
-                callingState.set(Looper.getMainLooper().isCurrentThread() ? CallingState.Foreground : CallingState.Background);
-                simpleWaiter.signal();
+                callback.success(expectedResult);
             }
         });
 
-        simpleWaiter.waitForSignal();
-        assertEquals(CallingState.Background, callingState.get());
-        assertTrue(success.get());
+        callback._completionWaiter.waitForSignal();
+        assertEquals(CallingState.Background,callback._callingState.get());
+        assertTrue(callback._successCalled.get());
+        assertEquals(expectedResult, callback._successResult.get());
         assertEquals(1,mLogger.getLogMessages().size());
         assertTrue(mLogger.hasMessage(expectedLogMessage));
     }
