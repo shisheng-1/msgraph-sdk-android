@@ -142,7 +142,7 @@ public class DefaultExecutorsTests extends AndroidTestCase {
         }
 
         private CallingState getCallingState(){
-            return Looper.getMainLooper().isCurrentThread() ? CallingState.Foreground : CallingState.Background;
+            return Looper.myLooper() == Looper.getMainLooper() ? CallingState.Foreground : CallingState.Background;
         }
     }
 

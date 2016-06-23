@@ -22,6 +22,5 @@ public class SynchronousExecutorTests extends AndroidTestCase {
         });
         simpleWaiter.waitForSignal();
         assertTrue(success.get());
-        assertEquals(0, synchronousExecutor.getActiveCount());
     }
 }
