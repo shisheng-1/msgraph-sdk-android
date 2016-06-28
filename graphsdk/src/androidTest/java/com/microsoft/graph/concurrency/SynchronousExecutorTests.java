@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class SynchronousExecutorTests extends AndroidTestCase {
 
-    public void testExecute() {
+    public void testExecute() throws Exception {
         final AtomicBoolean success = new AtomicBoolean(false);
         final SimpleWaiter simpleWaiter = new SimpleWaiter();
         SynchronousExecutor synchronousExecutor = new SynchronousExecutor();
@@ -21,6 +21,8 @@ public class SynchronousExecutorTests extends AndroidTestCase {
             }
         });
         simpleWaiter.waitForSignal();
+        Thread.sleep(2000);
         assertTrue(success.get());
+        assertEquals(0, synchronousExecutor.getActiveCount());
     }
 }
