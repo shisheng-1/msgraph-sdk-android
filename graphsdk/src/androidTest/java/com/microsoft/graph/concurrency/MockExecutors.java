@@ -25,7 +25,7 @@ package com.microsoft.graph.concurrency;
 import com.microsoft.graph.core.ClientException;
 
 /**
- * Mock {@see IExecutors}, everything runs on the current thread
+ * Mock for {@see IExecutors}
  */
 public class MockExecutors implements IExecutors {
 
