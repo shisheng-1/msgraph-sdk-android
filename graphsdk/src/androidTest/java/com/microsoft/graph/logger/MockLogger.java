@@ -22,28 +22,41 @@
 
 package com.microsoft.graph.logger;
 
+import java.util.ArrayList;
+
 /**
  * Mock {@see ILogger}, logs nothing
  */
 public class MockLogger implements ILogger {
 
+    private LoggerLevel mLevel = LoggerLevel.Error;
+    private ArrayList<String> mLogMessage = new ArrayList<String>();
+
     @Override
     public void setLoggingLevel(final LoggerLevel level) {
-
+        mLevel = level;
     }
 
     @Override
     public LoggerLevel getLoggingLevel() {
-        return null;
+        return mLevel;
     }
 
     @Override
     public void logDebug(final String message) {
-
+        mLogMessage.add(message);
     }
 
     @Override
     public void logError(final String message, final Throwable throwable) {
+        mLogMessage.add(message);
+    }
 
+    public ArrayList<String> getLogMessages() {
+        return mLogMessage;
+    }
+
+    public Boolean hasMessage(final String message){
+        return mLogMessage.indexOf(message) > -1;
     }
 }

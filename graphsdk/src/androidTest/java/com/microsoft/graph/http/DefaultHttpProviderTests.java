@@ -24,6 +24,7 @@ package com.microsoft.graph.http;
 
 import android.test.AndroidTestCase;
 
+import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -33,11 +34,7 @@ import com.microsoft.graph.extensions.DriveItem;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.MockSerializer;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -48,11 +45,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class DefaultHttpProviderTests extends AndroidTestCase {
 
-    private MockInterceptor mInterceptor;
+    private MockAuthenticationProvider mAuthenticationProvider;
     private DefaultHttpProvider mProvider;
 
     public void testNoContentType() throws Exception {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -69,22 +66,22 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
             }
         };
         setDefaultHttpProvider(null);
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
         try {
-            mProvider.send(new MockRequest(), Drive.class, null);
+            mProvider.send(new MockHttpRequest(), Drive.class, null);
             fail("Expected exception");
         } catch (final ClientException ce) {
             if (!(ce.getCause() instanceof NullPointerException)) {
                 fail("Wrong inner exception!");
             }
         }
-        assertEquals(1, mInterceptor.getInterceptionCount());
+        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     public void testDriveResponse() throws Exception {
         final String driveId = "driveId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -105,16 +102,16 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         final Drive expectedDrive = new Drive();
         expectedDrive.id = driveId;
         setDefaultHttpProvider(expectedDrive);
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
-        final Drive drive = mProvider.send(new MockRequest(), Drive.class, null);
+        final Drive drive = mProvider.send(new MockHttpRequest(), Drive.class, null);
 
         assertEquals(driveId, drive.id);
-        assertEquals(1, mInterceptor.getInterceptionCount());
+        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     public void testBinaryResponse() throws Exception {
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -133,14 +130,14 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
             }
         };
         setDefaultHttpProvider(null);
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
-        mProvider.send(new MockRequest(), InputStream.class, null);
-        assertEquals(1, mInterceptor.getInterceptionCount());
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+        mProvider.send(new MockHttpRequest(), InputStream.class, null);
+        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     public void testPostItem() throws Exception {
         final String itemId = "itemId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -162,17 +159,17 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         final DriveItem expectedItem = new DriveItem();
         expectedItem.id = itemId;
         setDefaultHttpProvider(expectedItem);
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
-        final DriveItem item = mProvider.send(new MockRequest(), DriveItem.class, new DriveItem());
+        final DriveItem item = mProvider.send(new MockHttpRequest(), DriveItem.class, new DriveItem());
 
         assertEquals(itemId, item.id);
-        assertEquals(1, mInterceptor.getInterceptionCount());
+        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     public void testPostByte() throws Exception {
         final String itemId = "itemId";
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 200;
@@ -193,7 +190,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         final DriveItem expectedItem = new DriveItem();
         expectedItem.id = itemId;
         setDefaultHttpProvider(expectedItem);
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
         final AtomicBoolean progress = new AtomicBoolean(false);
         final AtomicBoolean success = new AtomicBoolean(false);
@@ -215,11 +212,11 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
             }
         };
 
-        mProvider.send(new MockRequest(), progressCallback, DriveItem.class, new byte[]{1, 2, 3, 4});
+        mProvider.send(new MockHttpRequest(), progressCallback, DriveItem.class, new byte[]{1, 2, 3, 4});
 
         assertTrue(progress.get());
         assertTrue(success.get());
-        assertEquals(1, mInterceptor.getInterceptionCount());
+        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     public void testErrorResponse() throws Exception {
@@ -232,7 +229,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         toSerialize.error.innererror = null;
 
         setDefaultHttpProvider(toSerialize);
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return 415;
@@ -248,10 +245,10 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
                 return new HashMap<>();
             }
         };
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
         try {
-            mProvider.send(new MockRequest(), DriveItem.class, null);
+            mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
         } catch (final GraphServiceException e) {
             assertTrue(e.isError(expectedErrorCode));
@@ -263,7 +260,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
         final int[] codes = new int[] {204, 304 };
         final AtomicInteger currentCode = new AtomicInteger(0);
         setDefaultHttpProvider(null);
-        final ITestData data = new ITestData() {
+        final ITestConnectionData data = new ITestConnectionData() {
             @Override
             public int getRequestCode() {
                 return codes[currentCode.get()];
@@ -271,7 +268,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
 
             @Override
             public String getJsonResponse() {
-                throw new UnsupportedOperationException("Should not ever hit this");
+                return null;
             }
 
             @Override
@@ -279,87 +276,14 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
                 return new HashMap<>();
             }
         };
-        mProvider.setConnectionFactory(new MockSingleConnectionFactory(new TestDataConnection(data)));
+        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
         for (final int ignored : codes) {
-            DriveItem result = mProvider.send(new MockRequest(), DriveItem.class, null);
+            DriveItem result = mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             currentCode.incrementAndGet();
             assertNull(result);
         }
-        assertEquals(codes.length, mInterceptor.getInterceptionCount());
-    }
-
-    /**
-     * Mock {@see IConnection} backed with test data
-     */
-    private class TestDataConnection implements IConnection {
-
-        private final ITestData mData;
-
-        public TestDataConnection(ITestData data) {
-            mData = data;
-        }
-
-        @Override
-        public void setFollowRedirects(final boolean followRedirects) {
-
-        }
-
-        @Override
-        public void addRequestHeader(final String headerName, final String headerValue) {
-
-        }
-
-        @Override
-        public OutputStream getOutputStream() throws IOException {
-            return new ByteArrayOutputStream();
-        }
-
-        @Override
-        public InputStream getInputStream() throws IOException {
-            return new ByteArrayInputStream(mData.getJsonResponse().getBytes());
-        }
-
-        @Override
-        public int getResponseCode() throws IOException {
-            return mData.getRequestCode();
-        }
-
-        @Override
-        public String getResponseMessage() throws IOException {
-            return null;
-        }
-
-        @Override
-        public void close() {
-
-        }
-
-        @Override
-        public Map<String, String> getHeaders() {
-            return mData.getHeaders();
-        }
-
-        @Override
-        public String getRequestMethod() {
-            return null;
-        }
-
-        @Override
-        public int getContentLength() {
-            return 0;
-        }
-    }
-
-    /**
-     * Test data to use in configuring the mock connection object
-     */
-    private interface ITestData {
-        int getRequestCode();
-
-        String getJsonResponse();
-
-        Map<String,String> getHeaders();
+        assertEquals(codes.length, mAuthenticationProvider.getInterceptionCount());
     }
 
     /**
@@ -368,7 +292,7 @@ public class DefaultHttpProviderTests extends AndroidTestCase {
      */
     private void setDefaultHttpProvider(final Object toSerialize) {
         mProvider = new DefaultHttpProvider(new MockSerializer(toSerialize, ""),
-                mInterceptor = new MockInterceptor(),
+                mAuthenticationProvider = new MockAuthenticationProvider(),
                 new MockExecutors(),
                 new MockLogger());
     }
