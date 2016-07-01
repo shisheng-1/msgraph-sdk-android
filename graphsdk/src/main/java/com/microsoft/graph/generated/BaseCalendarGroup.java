@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseCalendarGroup extends Entity implements IJsonBackedObject {
 
 
-	public BaseCalendarGroup(){
-		oDataType = "microsoft.graph.calendarGroup";
-	}
-	
+    public BaseCalendarGroup() {
+        oDataType = "microsoft.graph.calendarGroup";
+    }
+
     /**
      * The Name.
      */

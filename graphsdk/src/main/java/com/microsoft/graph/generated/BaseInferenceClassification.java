@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseInferenceClassification extends Entity implements IJsonBackedObject {
 
 
-	public BaseInferenceClassification(){
-		oDataType = "microsoft.graph.inferenceClassification";
-	}
-	
+    public BaseInferenceClassification() {
+        oDataType = "microsoft.graph.inferenceClassification";
+    }
+
     /**
      * The Overrides.
      */

@@ -77,4 +77,3 @@ public class BaseUserReminderViewCollectionResponse implements IJsonBackedObject
         }
     }
 }
-	

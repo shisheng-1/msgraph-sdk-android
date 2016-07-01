@@ -32,4 +32,4 @@ public class ContactRequestBuilder extends BaseContactRequestBuilder implements 
     public ContactRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

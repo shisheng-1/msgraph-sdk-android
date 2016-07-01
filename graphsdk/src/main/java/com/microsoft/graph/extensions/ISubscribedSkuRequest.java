@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Subscribed Sku Request.
  */
 public interface ISubscribedSkuRequest extends IBaseSubscribedSkuRequest {
+
 }

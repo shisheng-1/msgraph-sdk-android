@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Drive Item Create Link Request.
  */
 public interface IDriveItemCreateLinkRequest extends IBaseDriveItemCreateLinkRequest {
+
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Post Reply Request.
  */
 public interface IPostReplyRequest extends IBasePostReplyRequest {
+
 }

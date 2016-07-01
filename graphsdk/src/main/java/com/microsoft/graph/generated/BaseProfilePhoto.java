@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseProfilePhoto extends Entity implements IJsonBackedObject {
 
 
-	public BaseProfilePhoto(){
-		oDataType = "microsoft.graph.profilePhoto";
-	}
-	
+    public BaseProfilePhoto() {
+        oDataType = "microsoft.graph.profilePhoto";
+    }
+
     /**
      * The Height.
      */

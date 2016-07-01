@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Organization Request.
  */
 public interface IOrganizationRequest extends IBaseOrganizationRequest {
+
 }

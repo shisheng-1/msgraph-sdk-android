@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseAudio implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseAudio(){
-		oDataType = "microsoft.graph.audio";
-	}
-	
+    public BaseAudio() {
+        oDataType = "microsoft.graph.audio";
+    }
+
     /**
      * The Album.
      */

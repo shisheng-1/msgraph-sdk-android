@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Create Forward Request.
  */
 public interface IMessageCreateForwardRequest extends IBaseMessageCreateForwardRequest {
+
 }

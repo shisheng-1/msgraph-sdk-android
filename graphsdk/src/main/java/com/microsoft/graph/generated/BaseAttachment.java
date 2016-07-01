@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseAttachment extends Entity implements IJsonBackedObject {
 
 
-	public BaseAttachment(){
-		oDataType = "microsoft.graph.attachment";
-	}
-	
+    public BaseAttachment() {
+        oDataType = "microsoft.graph.attachment";
+    }
+
     /**
      * The Last Modified Date Time.
      */

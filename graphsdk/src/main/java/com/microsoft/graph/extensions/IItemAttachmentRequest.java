@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Item Attachment Request.
  */
 public interface IItemAttachmentRequest extends IBaseItemAttachmentRequest {
+
 }

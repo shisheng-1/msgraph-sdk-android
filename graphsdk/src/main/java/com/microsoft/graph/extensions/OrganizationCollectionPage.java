@@ -31,5 +31,4 @@ public class OrganizationCollectionPage extends BaseOrganizationCollectionPage i
     public OrganizationCollectionPage(final BaseOrganizationCollectionResponse response, final IOrganizationCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

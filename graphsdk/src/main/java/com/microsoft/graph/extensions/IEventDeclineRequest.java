@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Event Decline Request.
  */
 public interface IEventDeclineRequest extends IBaseEventDeclineRequest {
+
 }

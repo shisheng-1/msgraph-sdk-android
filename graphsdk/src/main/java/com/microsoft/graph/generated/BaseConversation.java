@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseConversation extends Entity implements IJsonBackedObject {
 
 
-	public BaseConversation(){
-		oDataType = "microsoft.graph.conversation";
-	}
-	
+    public BaseConversation() {
+        oDataType = "microsoft.graph.conversation";
+    }
+
     /**
      * The Topic.
      */

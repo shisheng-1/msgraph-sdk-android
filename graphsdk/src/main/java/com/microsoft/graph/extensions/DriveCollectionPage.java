@@ -31,5 +31,4 @@ public class DriveCollectionPage extends BaseDriveCollectionPage implements IDri
     public DriveCollectionPage(final BaseDriveCollectionResponse response, final IDriveCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

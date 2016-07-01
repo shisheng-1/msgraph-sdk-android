@@ -32,4 +32,4 @@ public class EventMessageRequestBuilder extends BaseEventMessageRequestBuilder i
     public EventMessageRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

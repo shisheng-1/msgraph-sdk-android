@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Post Request.
  */
 public interface IPostRequest extends IBasePostRequest {
+
 }

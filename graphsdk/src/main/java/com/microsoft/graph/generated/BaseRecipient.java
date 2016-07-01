@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseRecipient implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseRecipient(){
-		oDataType = "microsoft.graph.recipient";
-	}
-	
+    public BaseRecipient() {
+        oDataType = "microsoft.graph.recipient";
+    }
+
     /**
      * The Email Address.
      */

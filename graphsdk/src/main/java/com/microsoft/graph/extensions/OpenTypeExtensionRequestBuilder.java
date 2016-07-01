@@ -32,4 +32,4 @@ public class OpenTypeExtensionRequestBuilder extends BaseOpenTypeExtensionReques
     public OpenTypeExtensionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

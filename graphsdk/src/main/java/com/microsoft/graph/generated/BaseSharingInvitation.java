@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseSharingInvitation implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseSharingInvitation(){
-		oDataType = "microsoft.graph.sharingInvitation";
-	}
-	
+    public BaseSharingInvitation() {
+        oDataType = "microsoft.graph.sharingInvitation";
+    }
+
     /**
      * The Email.
      */

@@ -31,5 +31,4 @@ public class ConversationCollectionPage extends BaseConversationCollectionPage i
     public ConversationCollectionPage(final BaseConversationCollectionResponse response, final IConversationCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

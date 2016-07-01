@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObject {
 
 
-	public BaseDirectoryRole(){
-		oDataType = "microsoft.graph.directoryRole";
-	}
-	
+    public BaseDirectoryRole() {
+        oDataType = "microsoft.graph.directoryRole";
+    }
+
     /**
      * The Description.
      */

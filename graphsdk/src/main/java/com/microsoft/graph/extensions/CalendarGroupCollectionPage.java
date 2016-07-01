@@ -31,5 +31,4 @@ public class CalendarGroupCollectionPage extends BaseCalendarGroupCollectionPage
     public CalendarGroupCollectionPage(final BaseCalendarGroupCollectionResponse response, final ICalendarGroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

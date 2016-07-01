@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseAssignedPlan implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseAssignedPlan(){
-		oDataType = "microsoft.graph.assignedPlan";
-	}
-	
+    public BaseAssignedPlan() {
+        oDataType = "microsoft.graph.assignedPlan";
+    }
+
     /**
      * The Assigned Date Time.
      */

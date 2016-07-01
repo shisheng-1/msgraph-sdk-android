@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
 
-	public BaseEvent(){
-		oDataType = "microsoft.graph.event";
-	}
-	
+    public BaseEvent() {
+        oDataType = "microsoft.graph.event";
+    }
+
     /**
      * The Original Start Time Zone.
      */

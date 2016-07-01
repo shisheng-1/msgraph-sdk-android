@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BasePasswordProfile implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BasePasswordProfile(){
-		oDataType = "microsoft.graph.passwordProfile";
-	}
-	
+    public BasePasswordProfile() {
+        oDataType = "microsoft.graph.passwordProfile";
+    }
+
     /**
      * The Password.
      */

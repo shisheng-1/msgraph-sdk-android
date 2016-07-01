@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseDateTimeTimeZone(){
-		oDataType = "microsoft.graph.dateTimeTimeZone";
-	}
-	
+    public BaseDateTimeTimeZone() {
+        oDataType = "microsoft.graph.dateTimeTimeZone";
+    }
+
     /**
      * The Date Time.
      */

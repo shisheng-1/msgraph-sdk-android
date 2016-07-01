@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
 
-	public BaseContact(){
-		oDataType = "microsoft.graph.contact";
-	}
-	
+    public BaseContact() {
+        oDataType = "microsoft.graph.contact";
+    }
+
     /**
      * The Parent Folder Id.
      */

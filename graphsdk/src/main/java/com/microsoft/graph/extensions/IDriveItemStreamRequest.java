@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Drive Item Stream Request.
  */
 public interface IDriveItemStreamRequest extends IBaseDriveItemStreamRequest {
+
 }

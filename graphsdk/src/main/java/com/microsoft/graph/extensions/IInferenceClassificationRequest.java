@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Inference Classification Request.
  */
 public interface IInferenceClassificationRequest extends IBaseInferenceClassificationRequest {
+
 }

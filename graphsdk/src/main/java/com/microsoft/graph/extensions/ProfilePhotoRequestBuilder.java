@@ -32,4 +32,4 @@ public class ProfilePhotoRequestBuilder extends BaseProfilePhotoRequestBuilder i
     public ProfilePhotoRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

@@ -31,5 +31,4 @@ public class UserReminderViewCollectionPage extends BaseUserReminderViewCollecti
     public UserReminderViewCollectionPage(final BaseUserReminderViewCollectionResponse response, final IUserReminderViewCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the User Change Password Request.
  */
 public interface IUserChangePasswordRequest extends IBaseUserChangePasswordRequest {
+
 }

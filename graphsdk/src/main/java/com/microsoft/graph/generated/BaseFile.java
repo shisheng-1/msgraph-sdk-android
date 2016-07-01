@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseFile implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseFile(){
-		oDataType = "microsoft.graph.file";
-	}
-	
+    public BaseFile() {
+        oDataType = "microsoft.graph.file";
+    }
+
     /**
      * The Hashes.
      */

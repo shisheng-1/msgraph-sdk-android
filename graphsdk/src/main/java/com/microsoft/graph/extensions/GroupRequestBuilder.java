@@ -32,4 +32,4 @@ public class GroupRequestBuilder extends BaseGroupRequestBuilder implements IGro
     public GroupRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

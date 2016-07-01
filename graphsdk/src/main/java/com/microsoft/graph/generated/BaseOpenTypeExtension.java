@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseOpenTypeExtension extends Extension implements IJsonBackedObject {
 
 
-	public BaseOpenTypeExtension(){
-		oDataType = "microsoft.graph.openTypeExtension";
-	}
-	
+    public BaseOpenTypeExtension() {
+        oDataType = "microsoft.graph.openTypeExtension";
+    }
+
     /**
      * The Extension Name.
      */

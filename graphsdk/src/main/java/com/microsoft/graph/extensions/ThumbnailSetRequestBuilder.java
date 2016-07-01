@@ -32,4 +32,4 @@ public class ThumbnailSetRequestBuilder extends BaseThumbnailSetRequestBuilder i
     public ThumbnailSetRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

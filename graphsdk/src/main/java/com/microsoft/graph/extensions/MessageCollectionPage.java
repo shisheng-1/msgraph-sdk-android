@@ -31,5 +31,4 @@ public class MessageCollectionPage extends BaseMessageCollectionPage implements 
     public MessageCollectionPage(final BaseMessageCollectionResponse response, final IMessageCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

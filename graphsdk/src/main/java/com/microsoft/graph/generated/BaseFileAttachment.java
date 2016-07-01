@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseFileAttachment extends Attachment implements IJsonBackedObject {
 
 
-	public BaseFileAttachment(){
-		oDataType = "microsoft.graph.fileAttachment";
-	}
-	
+    public BaseFileAttachment() {
+        oDataType = "microsoft.graph.fileAttachment";
+    }
+
     /**
      * The Content Id.
      */

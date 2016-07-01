@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Open Type Extension Request.
  */
 public interface IOpenTypeExtensionRequest extends IBaseOpenTypeExtensionRequest {
+
 }

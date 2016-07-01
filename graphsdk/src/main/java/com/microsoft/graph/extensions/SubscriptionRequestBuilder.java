@@ -32,4 +32,4 @@ public class SubscriptionRequestBuilder extends BaseSubscriptionRequestBuilder i
     public SubscriptionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

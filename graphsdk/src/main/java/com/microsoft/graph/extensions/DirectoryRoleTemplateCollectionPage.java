@@ -31,5 +31,4 @@ public class DirectoryRoleTemplateCollectionPage extends BaseDirectoryRoleTempla
     public DirectoryRoleTemplateCollectionPage(final BaseDirectoryRoleTemplateCollectionResponse response, final IDirectoryRoleTemplateCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

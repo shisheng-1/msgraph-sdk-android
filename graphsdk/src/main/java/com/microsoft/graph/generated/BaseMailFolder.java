@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
 
-	public BaseMailFolder(){
-		oDataType = "microsoft.graph.mailFolder";
-	}
-	
+    public BaseMailFolder() {
+        oDataType = "microsoft.graph.mailFolder";
+    }
+
     /**
      * The Display Name.
      */

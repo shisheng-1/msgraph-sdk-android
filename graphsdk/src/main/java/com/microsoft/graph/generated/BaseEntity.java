@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseEntity implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseEntity(){
-		oDataType = "microsoft.graph.entity";
-	}
-	
+    public BaseEntity() {
+        oDataType = "microsoft.graph.entity";
+    }
+
     /**
      * The Id.
      */

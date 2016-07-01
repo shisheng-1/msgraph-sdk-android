@@ -31,5 +31,4 @@ public class SubscriptionCollectionPage extends BaseSubscriptionCollectionPage i
     public SubscriptionCollectionPage(final BaseSubscriptionCollectionResponse response, final ISubscriptionCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

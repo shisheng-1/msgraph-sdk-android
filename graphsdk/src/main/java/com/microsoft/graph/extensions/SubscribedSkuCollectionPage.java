@@ -31,5 +31,4 @@ public class SubscribedSkuCollectionPage extends BaseSubscribedSkuCollectionPage
     public SubscribedSkuCollectionPage(final BaseSubscribedSkuCollectionResponse response, final ISubscribedSkuCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
 
-	public BaseUser(){
-		oDataType = "microsoft.graph.user";
-	}
-	
+    public BaseUser() {
+        oDataType = "microsoft.graph.user";
+    }
+
     /**
      * The Account Enabled.
      */

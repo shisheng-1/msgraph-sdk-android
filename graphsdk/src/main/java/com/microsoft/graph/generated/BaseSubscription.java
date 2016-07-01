@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseSubscription extends Entity implements IJsonBackedObject {
 
 
-	public BaseSubscription(){
-		oDataType = "microsoft.graph.subscription";
-	}
-	
+    public BaseSubscription() {
+        oDataType = "microsoft.graph.subscription";
+    }
+
     /**
      * The Resource.
      */

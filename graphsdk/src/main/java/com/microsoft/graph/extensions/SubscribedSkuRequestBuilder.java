@@ -32,4 +32,4 @@ public class SubscribedSkuRequestBuilder extends BaseSubscribedSkuRequestBuilder
     public SubscribedSkuRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

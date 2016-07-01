@@ -32,4 +32,4 @@ public class ProfilePhotoStreamRequestBuilder extends BaseProfilePhotoStreamRequ
     public ProfilePhotoStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

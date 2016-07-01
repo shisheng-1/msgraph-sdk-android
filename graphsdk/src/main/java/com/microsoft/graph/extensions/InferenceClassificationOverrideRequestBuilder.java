@@ -32,4 +32,4 @@ public class InferenceClassificationOverrideRequestBuilder extends BaseInference
     public InferenceClassificationOverrideRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

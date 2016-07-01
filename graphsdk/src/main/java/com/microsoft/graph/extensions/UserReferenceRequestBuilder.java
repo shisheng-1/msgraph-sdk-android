@@ -32,4 +32,4 @@ public class UserReferenceRequestBuilder extends BaseUserReferenceRequestBuilder
     public UserReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

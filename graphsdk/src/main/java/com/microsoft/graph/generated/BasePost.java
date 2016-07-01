@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BasePost extends OutlookItem implements IJsonBackedObject {
 
 
-	public BasePost(){
-		oDataType = "microsoft.graph.post";
-	}
-	
+    public BasePost() {
+        oDataType = "microsoft.graph.post";
+    }
+
     /**
      * The Body.
      */

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Create Reply All Request.
  */
 public interface IMessageCreateReplyAllRequest extends IBaseMessageCreateReplyAllRequest {
+
 }

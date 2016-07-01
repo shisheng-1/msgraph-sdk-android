@@ -32,4 +32,4 @@ public class EventRequestBuilder extends BaseEventRequestBuilder implements IEve
     public EventRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

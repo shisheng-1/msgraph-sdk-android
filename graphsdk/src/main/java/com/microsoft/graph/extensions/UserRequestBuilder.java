@@ -32,4 +32,4 @@ public class UserRequestBuilder extends BaseUserRequestBuilder implements IUserR
     public UserRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

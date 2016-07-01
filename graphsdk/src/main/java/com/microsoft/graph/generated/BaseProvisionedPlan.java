@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseProvisionedPlan implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseProvisionedPlan(){
-		oDataType = "microsoft.graph.provisionedPlan";
-	}
-	
+    public BaseProvisionedPlan() {
+        oDataType = "microsoft.graph.provisionedPlan";
+    }
+
     /**
      * The Capability Status.
      */

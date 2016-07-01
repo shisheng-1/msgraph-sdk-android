@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BasePermission extends Entity implements IJsonBackedObject {
 
 
-	public BasePermission(){
-		oDataType = "microsoft.graph.permission";
-	}
-	
+    public BasePermission() {
+        oDataType = "microsoft.graph.permission";
+    }
+
     /**
      * The Granted To.
      */

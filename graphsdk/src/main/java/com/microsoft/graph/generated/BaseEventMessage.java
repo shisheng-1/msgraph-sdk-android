@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseEventMessage extends Message implements IJsonBackedObject {
 
 
-	public BaseEventMessage(){
-		oDataType = "microsoft.graph.eventMessage";
-	}
-	
+    public BaseEventMessage() {
+        oDataType = "microsoft.graph.eventMessage";
+    }
+
     /**
      * The Meeting Message Type.
      */

@@ -32,4 +32,4 @@ public class DirectoryObjectReferenceRequestBuilder extends BaseDirectoryObjectR
     public DirectoryObjectReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

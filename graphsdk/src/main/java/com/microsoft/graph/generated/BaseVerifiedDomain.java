@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseVerifiedDomain implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseVerifiedDomain(){
-		oDataType = "microsoft.graph.verifiedDomain";
-	}
-	
+    public BaseVerifiedDomain() {
+        oDataType = "microsoft.graph.verifiedDomain";
+    }
+
     /**
      * The Capabilities.
      */

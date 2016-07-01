@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Calendar Request.
  */
 public interface ICalendarRequest extends IBaseCalendarRequest {
+
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Event Dismiss Reminder Request.
  */
 public interface IEventDismissReminderRequest extends IBaseEventDismissReminderRequest {
+
 }

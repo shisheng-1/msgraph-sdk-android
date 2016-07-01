@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Post Forward Request.
  */
 public interface IPostForwardRequest extends IBasePostForwardRequest {
+
 }

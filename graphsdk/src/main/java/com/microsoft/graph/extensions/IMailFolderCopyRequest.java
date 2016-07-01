@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Mail Folder Copy Request.
  */
 public interface IMailFolderCopyRequest extends IBaseMailFolderCopyRequest {
+
 }

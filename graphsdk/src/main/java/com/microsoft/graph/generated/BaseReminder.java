@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseReminder implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseReminder(){
-		oDataType = "microsoft.graph.reminder";
-	}
-	
+    public BaseReminder() {
+        oDataType = "microsoft.graph.reminder";
+    }
+
     /**
      * The Event Id.
      */

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Extension Request.
  */
 public interface IExtensionRequest extends IBaseExtensionRequest {
+
 }

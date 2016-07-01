@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Group Reset Unseen Count Request.
  */
 public interface IGroupResetUnseenCountRequest extends IBaseGroupResetUnseenCountRequest {
+
 }

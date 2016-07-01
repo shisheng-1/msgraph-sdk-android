@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Device Request.
  */
 public interface IDeviceRequest extends IBaseDeviceRequest {
+
 }

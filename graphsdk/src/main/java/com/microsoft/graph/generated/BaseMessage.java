@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
 
-	public BaseMessage(){
-		oDataType = "microsoft.graph.message";
-	}
-	
+    public BaseMessage() {
+        oDataType = "microsoft.graph.message";
+    }
+
     /**
      * The Received Date Time.
      */

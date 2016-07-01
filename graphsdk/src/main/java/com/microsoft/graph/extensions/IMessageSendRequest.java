@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Send Request.
  */
 public interface IMessageSendRequest extends IBaseMessageSendRequest {
+
 }

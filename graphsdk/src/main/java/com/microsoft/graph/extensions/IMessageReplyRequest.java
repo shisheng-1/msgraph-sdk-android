@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Reply Request.
  */
 public interface IMessageReplyRequest extends IBaseMessageReplyRequest {
+
 }

@@ -31,5 +31,4 @@ public class DriveItemCollectionPage extends BaseDriveItemCollectionPage impleme
     public DriveItemCollectionPage(final BaseDriveItemCollectionResponse response, final IDriveItemCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

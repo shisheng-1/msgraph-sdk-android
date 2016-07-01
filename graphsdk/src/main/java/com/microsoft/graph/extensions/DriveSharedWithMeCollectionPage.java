@@ -31,5 +31,4 @@ public class DriveSharedWithMeCollectionPage extends BaseDriveSharedWithMeCollec
     public DriveSharedWithMeCollectionPage(final BaseDriveSharedWithMeCollectionResponse response, final IDriveSharedWithMeCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

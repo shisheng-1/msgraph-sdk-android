@@ -31,5 +31,4 @@ public class PostCollectionPage extends BasePostCollectionPage implements IPostC
     public PostCollectionPage(final BasePostCollectionResponse response, final IPostCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

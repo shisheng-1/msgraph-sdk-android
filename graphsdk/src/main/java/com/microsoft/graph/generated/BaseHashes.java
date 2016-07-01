@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseHashes implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseHashes(){
-		oDataType = "microsoft.graph.hashes";
-	}
-	
+    public BaseHashes() {
+        oDataType = "microsoft.graph.hashes";
+    }
+
     /**
      * The Crc32Hash.
      */

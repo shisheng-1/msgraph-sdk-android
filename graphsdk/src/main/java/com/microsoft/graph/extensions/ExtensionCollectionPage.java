@@ -31,5 +31,4 @@ public class ExtensionCollectionPage extends BaseExtensionCollectionPage impleme
     public ExtensionCollectionPage(final BaseExtensionCollectionResponse response, final IExtensionCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

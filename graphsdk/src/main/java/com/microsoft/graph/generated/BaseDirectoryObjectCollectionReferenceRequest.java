@@ -60,5 +60,4 @@ public class BaseDirectoryObjectCollectionReferenceRequest extends BaseCollectio
         addQueryOption(new QueryOption("$top", value + ""));
         return (DirectoryObjectCollectionReferenceRequest)this;
     }
-
 }

@@ -31,5 +31,4 @@ public class GroupCollectionPage extends BaseGroupCollectionPage implements IGro
     public GroupCollectionPage(final BaseGroupCollectionResponse response, final IGroupCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

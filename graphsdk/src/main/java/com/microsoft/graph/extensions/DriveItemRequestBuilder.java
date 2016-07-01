@@ -32,4 +32,4 @@ public class DriveItemRequestBuilder extends BaseDriveItemRequestBuilder impleme
     public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

@@ -32,4 +32,4 @@ public class ItemAttachmentRequestBuilder extends BaseItemAttachmentRequestBuild
     public ItemAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

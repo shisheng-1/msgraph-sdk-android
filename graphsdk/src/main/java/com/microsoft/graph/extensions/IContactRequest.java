@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Contact Request.
  */
 public interface IContactRequest extends IBaseContactRequest {
+
 }

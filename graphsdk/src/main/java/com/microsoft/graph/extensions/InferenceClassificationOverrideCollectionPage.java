@@ -31,5 +31,4 @@ public class InferenceClassificationOverrideCollectionPage extends BaseInference
     public InferenceClassificationOverrideCollectionPage(final BaseInferenceClassificationOverrideCollectionResponse response, final IInferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

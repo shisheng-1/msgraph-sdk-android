@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseDirectoryObject extends Entity implements IJsonBackedObject {
 
 
-	public BaseDirectoryObject(){
-		oDataType = "microsoft.graph.directoryObject";
-	}
-	
+    public BaseDirectoryObject() {
+        oDataType = "microsoft.graph.directoryObject";
+    }
+
 
     /**
      * The raw representation of this class

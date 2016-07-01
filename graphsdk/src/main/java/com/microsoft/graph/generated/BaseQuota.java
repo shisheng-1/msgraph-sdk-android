@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseQuota implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseQuota(){
-		oDataType = "microsoft.graph.quota";
-	}
-	
+    public BaseQuota() {
+        oDataType = "microsoft.graph.quota";
+    }
+
     /**
      * The Deleted.
      */

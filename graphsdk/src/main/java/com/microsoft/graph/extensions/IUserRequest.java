@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the User Request.
  */
 public interface IUserRequest extends IBaseUserRequest {
+
 }

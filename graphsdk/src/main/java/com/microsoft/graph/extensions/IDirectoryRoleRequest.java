@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Directory Role Request.
  */
 public interface IDirectoryRoleRequest extends IBaseDirectoryRoleRequest {
+
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Permission Request.
  */
 public interface IPermissionRequest extends IBasePermissionRequest {
+
 }

@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
 
-	public BaseOutlookItem(){
-		oDataType = "microsoft.graph.outlookItem";
-	}
-	
+    public BaseOutlookItem() {
+        oDataType = "microsoft.graph.outlookItem";
+    }
+
     /**
      * The Created Date Time.
      */

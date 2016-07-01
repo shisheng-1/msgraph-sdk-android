@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseItemReference implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseItemReference(){
-		oDataType = "microsoft.graph.itemReference";
-	}
-	
+    public BaseItemReference() {
+        oDataType = "microsoft.graph.itemReference";
+    }
+
     /**
      * The Drive Id.
      */
