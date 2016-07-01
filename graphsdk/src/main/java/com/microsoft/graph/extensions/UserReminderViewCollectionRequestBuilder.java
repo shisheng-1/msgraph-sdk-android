@@ -14,6 +14,7 @@ import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
 import java.util.List;
+
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -31,5 +32,4 @@ public class UserReminderViewCollectionRequestBuilder extends BaseUserReminderVi
     public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String startDateTime, final String endDateTime) {
         super(requestUrl, client, options, startDateTime, endDateTime);
     }
-
 }

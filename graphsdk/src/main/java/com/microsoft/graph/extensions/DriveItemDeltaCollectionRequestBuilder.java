@@ -14,6 +14,7 @@ import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
 import java.util.List;
+
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -42,5 +43,4 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
     public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

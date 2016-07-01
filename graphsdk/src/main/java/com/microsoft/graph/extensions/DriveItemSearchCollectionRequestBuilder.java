@@ -14,6 +14,7 @@ import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
 import java.util.List;
+
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -31,5 +32,4 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseDriveItemSearch
     public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String q) {
         super(requestUrl, client, options, q);
     }
-
 }
