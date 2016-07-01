@@ -16,7 +16,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.List;
 
-
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
