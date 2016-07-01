@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,11 +31,9 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseEventDeclineRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
+    public BaseEventDeclineRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new EventDeclineBody();
-        mBody.comment = comment;
-        mBody.sendResponse = sendResponse;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +51,7 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      * @return The updated request
      */
     public IEventDeclineRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (EventDeclineRequest)this;
     }
 
@@ -63,7 +62,7 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      * @return The updated request
      */
     public IEventDeclineRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (EventDeclineRequest)this;
     }
 
@@ -74,7 +73,8 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      * @return The updated request
      */
     public IEventDeclineRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (EventDeclineRequest)this;
     }
+
 }

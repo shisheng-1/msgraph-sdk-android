@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -52,4 +53,5 @@ public interface IBaseDriveItemSearchCollectionRequest {
      * @return The updated request
      */
     IDriveItemSearchCollectionRequest top(final int value);
+
 }

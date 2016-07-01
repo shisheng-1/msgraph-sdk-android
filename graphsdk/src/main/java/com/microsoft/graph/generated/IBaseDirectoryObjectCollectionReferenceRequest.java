@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityCollectionReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -26,7 +27,6 @@ public interface IBaseDirectoryObjectCollectionReferenceRequest {
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 
-    IDirectoryObjectCollectionReferenceRequest select(final String value);
-
     IDirectoryObjectCollectionReferenceRequest top(final int value);
+
 }

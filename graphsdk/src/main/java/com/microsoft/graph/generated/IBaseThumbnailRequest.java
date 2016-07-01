@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -92,4 +93,5 @@ public interface IBaseThumbnailRequest extends IHttpRequest {
      * @return The updated request
      */
     IBaseThumbnailRequest expand(final String value);
+
 }

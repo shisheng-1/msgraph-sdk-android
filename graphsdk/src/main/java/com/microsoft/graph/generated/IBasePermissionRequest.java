@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Permission Request.
  */
-public interface IBasePermissionRequest extends IEntityRequest {
+public interface IBasePermissionRequest extends IHttpRequest {
 
     /**
      * Gets the Permission from the service
@@ -92,4 +93,5 @@ public interface IBasePermissionRequest extends IEntityRequest {
      * @return The updated request
      */
     IBasePermissionRequest expand(final String value);
+
 }

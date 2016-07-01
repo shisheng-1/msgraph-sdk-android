@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ public class BaseMessageCreateReplyRequest extends BaseRequest implements IBaseM
      * @return The updated request
      */
     public IMessageCreateReplyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageCreateReplyRequest)this;
     }
 
@@ -71,7 +72,8 @@ public class BaseMessageCreateReplyRequest extends BaseRequest implements IBaseM
      * @return The updated request
      */
     public IMessageCreateReplyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageCreateReplyRequest)this;
     }
+
 }

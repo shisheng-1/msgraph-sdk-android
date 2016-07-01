@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Directory Role Template Request Builder.
  */
-public class BaseDirectoryRoleTemplateRequestBuilder extends DirectoryObjectRequestBuilder implements IBaseDirectoryRoleTemplateRequestBuilder {
+public class BaseDirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder implements IBaseDirectoryRoleTemplateRequestBuilder {
 
     /**
      * The request builder for the DirectoryRoleTemplate

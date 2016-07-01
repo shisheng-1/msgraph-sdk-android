@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -33,10 +34,9 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequest extends BaseCo
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDirectoryObjectGetMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
+    public BaseDirectoryObjectGetMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, BaseDirectoryObjectGetMemberObjectsCollectionResponse.class, IDirectoryObjectGetMemberObjectsCollectionPage.class);
         mBody = new DirectoryObjectGetMemberObjectsBody();
-        mBody.securityEnabledOnly = securityEnabledOnly;
     }
 
 
@@ -79,7 +79,7 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequest extends BaseCo
      * @return The updated request
      */
     public IDirectoryObjectGetMemberObjectsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
     }
 
@@ -90,7 +90,7 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequest extends BaseCo
      * @return The updated request
      */
     public IDirectoryObjectGetMemberObjectsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
     }
 
@@ -101,7 +101,8 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequest extends BaseCo
      * @return The updated request
      */
     public IDirectoryObjectGetMemberObjectsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
     }
+
 }

@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class UserAssignLicenseRequest extends BaseUserAssignLicenseRequest imple
      * @param client The service client
      * @param options The options for this request
      */
-    public UserAssignLicenseRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
-        super(requestUrl, client, options, addLicenses, removeLicenses);
+    public UserAssignLicenseRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

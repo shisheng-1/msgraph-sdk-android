@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,6 +31,10 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
      * Creates the request with specific options instead of the existing options
      */
     IPostRequest buildRequest(final List<Option> options);
+
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
 
     /**
      * Gets the request builder for Post.

@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -14,7 +15,6 @@ import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
 import java.util.List;
-
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -29,7 +29,19 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
      * @param client The service client
      * @param options The options for this request
      */
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String token) {
+        super(requestUrl, client, options, token);
+    }
+
+    /**
+     * The request builder for this collection of DriveItem
+     *
+     * @param requestUrl The request url
+     * @param client The service client
+     * @param options The options for this request
+     */
     public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
+
 }

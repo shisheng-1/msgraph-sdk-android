@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseDirecto
      * @param client The service client
      * @param options The options for this request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
-        super(requestUrl, client, options, securityEnabledOnly);
+    public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

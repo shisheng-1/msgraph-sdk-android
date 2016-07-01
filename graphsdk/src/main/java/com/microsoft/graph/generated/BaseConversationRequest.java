@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Conversation Request.
  */
-public class BaseConversationRequest extends EntityRequest implements IBaseConversationRequest {
+public class BaseConversationRequest extends BaseRequest implements IBaseConversationRequest {
 
     /**
      * The request for the Conversation
@@ -115,7 +116,7 @@ public class BaseConversationRequest extends EntityRequest implements IBaseConve
      * @return The updated request
      */
      public IConversationRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ConversationRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseConversationRequest extends EntityRequest implements IBaseConve
      * @return The updated request
      */
      public IConversationRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ConversationRequest)this;
      }
+
 }

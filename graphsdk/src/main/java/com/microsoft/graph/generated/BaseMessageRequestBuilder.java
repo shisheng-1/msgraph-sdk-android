@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -50,6 +51,13 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
 
     public IEventMessageRequestBuilder eventMessage() {
         return new EventMessageRequestBuilder(getRequestUrlWithAdditionalSegment("eventMessage"), getClient(), null);
+    }
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     public IAttachmentCollectionRequestBuilder getAttachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);

@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,10 +31,9 @@ public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageM
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
+    public BaseMessageMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Message.class);
         mBody = new MessageMoveBody();
-        mBody.destinationId = destinationId;
     }
 
     public void post(final ICallback<Message> callback) {
@@ -51,7 +51,7 @@ public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageM
      * @return The updated request
      */
     public IMessageMoveRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageMoveRequest)this;
     }
 
@@ -62,7 +62,7 @@ public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageM
      * @return The updated request
      */
     public IMessageMoveRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MessageMoveRequest)this;
     }
 
@@ -73,7 +73,8 @@ public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageM
      * @return The updated request
      */
     public IMessageMoveRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageMoveRequest)this;
     }
+
 }

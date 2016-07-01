@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -53,12 +54,20 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IContactFolderRequestBuilder contactFolder();
 
+    IInferenceClassificationRequestBuilder inferenceClassification();
+
     IAttachmentRequestBuilder attachment();
+
+    IExtensionRequestBuilder extension();
+
+    IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride();
 
     IDriveItemRequestBuilder driveItem();
 
     IPermissionRequestBuilder permission();
 
     IThumbnailSetRequestBuilder thumbnailSet();
+
+    ISubscriptionRequestBuilder subscription();
 
 }

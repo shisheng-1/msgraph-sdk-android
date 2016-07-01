@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Calendar Group Request.
  */
-public interface IBaseCalendarGroupRequest extends IEntityRequest {
+public interface IBaseCalendarGroupRequest extends IHttpRequest {
 
     /**
      * Gets the CalendarGroup from the service
@@ -92,4 +93,5 @@ public interface IBaseCalendarGroupRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseCalendarGroupRequest expand(final String value);
+
 }

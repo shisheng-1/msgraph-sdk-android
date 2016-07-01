@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,11 +31,9 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseUserChangePasswordRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String currentPassword, final String newPassword) {
+    public BaseUserChangePasswordRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new UserChangePasswordBody();
-        mBody.currentPassword = currentPassword;
-        mBody.newPassword = newPassword;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +51,7 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      * @return The updated request
      */
     public IUserChangePasswordRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (UserChangePasswordRequest)this;
     }
 
@@ -63,7 +62,7 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      * @return The updated request
      */
     public IUserChangePasswordRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (UserChangePasswordRequest)this;
     }
 
@@ -74,7 +73,8 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      * @return The updated request
      */
     public IUserChangePasswordRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (UserChangePasswordRequest)this;
     }
+
 }

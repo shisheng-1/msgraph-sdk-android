@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Item Attachment Request.
  */
-public interface IBaseItemAttachmentRequest extends IAttachmentRequest {
+public interface IBaseItemAttachmentRequest extends IHttpRequest {
 
     /**
      * Gets the ItemAttachment from the service
@@ -92,4 +93,5 @@ public interface IBaseItemAttachmentRequest extends IAttachmentRequest {
      * @return The updated request
      */
     IBaseItemAttachmentRequest expand(final String value);
+
 }

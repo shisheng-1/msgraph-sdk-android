@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class PostForwardRequest extends BasePostForwardRequest implements IPostF
      * @param client The service client
      * @param options The options for this request
      */
-    public PostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
-        super(requestUrl, client, options, comment, toRecipients);
+    public PostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

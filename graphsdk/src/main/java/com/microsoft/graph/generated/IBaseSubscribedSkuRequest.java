@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Subscribed Sku Request.
  */
-public interface IBaseSubscribedSkuRequest extends IEntityRequest {
+public interface IBaseSubscribedSkuRequest extends IHttpRequest {
 
     /**
      * Gets the SubscribedSku from the service
@@ -77,19 +78,4 @@ public interface IBaseSubscribedSkuRequest extends IEntityRequest {
      */
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseSubscribedSkuRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseSubscribedSkuRequest expand(final String value);
 }

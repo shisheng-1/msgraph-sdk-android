@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityWithReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,9 +30,5 @@ public interface IBaseUserWithReferenceRequest extends IHttpRequest {
     void get(final ICallback<User> callback);
 
     User get() throws ClientException;
-
-    IBaseUserWithReferenceRequest select(final String value);
-
-    IBaseUserWithReferenceRequest expand(final String value);
 
 }

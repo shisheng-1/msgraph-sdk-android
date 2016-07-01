@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class DriveItemCreateLinkRequest extends BaseDriveItemCreateLinkRequest i
      * @param client The service client
      * @param options The options for this request
      */
-    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
-        super(requestUrl, client, options, type, scope);
+    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

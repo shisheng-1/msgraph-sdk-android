@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Message Request.
  */
-public class BaseMessageRequest extends OutlookItemRequest implements IBaseMessageRequest {
+public class BaseMessageRequest extends BaseRequest implements IBaseMessageRequest {
 
     /**
      * The request for the Message
@@ -115,7 +116,7 @@ public class BaseMessageRequest extends OutlookItemRequest implements IBaseMessa
      * @return The updated request
      */
      public IMessageRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (MessageRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseMessageRequest extends OutlookItemRequest implements IBaseMessa
      * @return The updated request
      */
      public IMessageRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (MessageRequest)this;
      }
+
 }

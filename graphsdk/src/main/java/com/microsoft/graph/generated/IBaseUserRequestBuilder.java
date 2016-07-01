@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base User Request Builder.
  */
-public interface IBaseUserRequestBuilder extends IDirectoryObjectRequestBuilder {
+public interface IBaseUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      */
@@ -96,6 +97,11 @@ public interface IBaseUserRequestBuilder extends IDirectoryObjectRequestBuilder 
     IContactFolderCollectionRequestBuilder getContactFolders();
 
     IContactFolderRequestBuilder getContactFolders(final String id);
+
+    /**
+     * Gets the request builder for InferenceClassification.
+     */
+    IInferenceClassificationRequestBuilder getInferenceClassification();
 
     /**
      * Gets the request builder for ProfilePhoto.

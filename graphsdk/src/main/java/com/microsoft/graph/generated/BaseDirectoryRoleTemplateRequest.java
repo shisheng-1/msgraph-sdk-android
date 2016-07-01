@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Directory Role Template Request.
  */
-public class BaseDirectoryRoleTemplateRequest extends DirectoryObjectRequest implements IBaseDirectoryRoleTemplateRequest {
+public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBaseDirectoryRoleTemplateRequest {
 
     /**
      * The request for the DirectoryRoleTemplate
@@ -108,25 +109,4 @@ public class BaseDirectoryRoleTemplateRequest extends DirectoryObjectRequest imp
         return send(HttpMethod.POST, newDirectoryRoleTemplate);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-     public IDirectoryRoleTemplateRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
-         return (DirectoryRoleTemplateRequest)this;
-     }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-     public IDirectoryRoleTemplateRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
-         return (DirectoryRoleTemplateRequest)this;
-     }
 }

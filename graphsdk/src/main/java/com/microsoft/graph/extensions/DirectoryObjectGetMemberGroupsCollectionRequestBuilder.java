@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -14,7 +15,6 @@ import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
 import java.util.List;
-
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -32,4 +32,5 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
     public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
         super(requestUrl, client, options, securityEnabledOnly);
     }
+
 }

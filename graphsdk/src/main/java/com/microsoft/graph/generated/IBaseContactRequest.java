@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Contact Request.
  */
-public interface IBaseContactRequest extends IOutlookItemRequest {
+public interface IBaseContactRequest extends IHttpRequest {
 
     /**
      * Gets the Contact from the service
@@ -92,4 +93,5 @@ public interface IBaseContactRequest extends IOutlookItemRequest {
      * @return The updated request
      */
     IBaseContactRequest expand(final String value);
+
 }

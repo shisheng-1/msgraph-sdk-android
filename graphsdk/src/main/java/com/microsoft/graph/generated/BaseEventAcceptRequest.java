@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,11 +31,9 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseEventAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
+    public BaseEventAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new EventAcceptBody();
-        mBody.comment = comment;
-        mBody.sendResponse = sendResponse;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +51,7 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      * @return The updated request
      */
     public IEventAcceptRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (EventAcceptRequest)this;
     }
 
@@ -63,7 +62,7 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      * @return The updated request
      */
     public IEventAcceptRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (EventAcceptRequest)this;
     }
 
@@ -74,7 +73,8 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      * @return The updated request
      */
     public IEventAcceptRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (EventAcceptRequest)this;
     }
+
 }

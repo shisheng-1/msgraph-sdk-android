@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Mail Folder Request.
  */
-public class BaseMailFolderRequest extends EntityRequest implements IBaseMailFolderRequest {
+public class BaseMailFolderRequest extends BaseRequest implements IBaseMailFolderRequest {
 
     /**
      * The request for the MailFolder
@@ -115,7 +116,7 @@ public class BaseMailFolderRequest extends EntityRequest implements IBaseMailFol
      * @return The updated request
      */
      public IMailFolderRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (MailFolderRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseMailFolderRequest extends EntityRequest implements IBaseMailFol
      * @return The updated request
      */
      public IMailFolderRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (MailFolderRequest)this;
      }
+
 }

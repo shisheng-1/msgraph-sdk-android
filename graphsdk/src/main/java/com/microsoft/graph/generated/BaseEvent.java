@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntity.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -204,6 +205,11 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
     public transient EventCollectionPage instances;
 
     /**
+     * The Extensions.
+     */
+    public transient ExtensionCollectionPage extensions;
+
+    /**
      * The Attachments.
      */
     public transient AttachmentCollectionPage attachments;
@@ -260,6 +266,22 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             instances = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("attachments")) {

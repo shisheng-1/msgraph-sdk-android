@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -68,35 +69,13 @@ public class BaseOrganizationCollectionRequest extends BaseCollectionRequest<Bas
     }
 
     /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IOrganizationCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
-        return (OrganizationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IOrganizationCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
-        return (OrganizationCollectionRequest)this;
-    }
-
-    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return
      * @return The updated request
      */
     public IOrganizationCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (OrganizationCollectionRequest)this;
     }
 

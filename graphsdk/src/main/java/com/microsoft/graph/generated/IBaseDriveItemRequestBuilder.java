@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -58,6 +59,8 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference);
 
     IDriveItemSearchCollectionRequestBuilder getSearch(final String q);
+
+    IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
 
     IDriveItemDeltaCollectionRequestBuilder getDelta();
 

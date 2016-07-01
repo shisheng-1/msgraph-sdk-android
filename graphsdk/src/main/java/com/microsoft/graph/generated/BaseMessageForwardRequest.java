@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,11 +31,9 @@ public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessa
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
+    public BaseMessageForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new MessageForwardBody();
-        mBody.comment = comment;
-        mBody.toRecipients = toRecipients;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +51,7 @@ public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessa
      * @return The updated request
      */
     public IMessageForwardRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageForwardRequest)this;
     }
 
@@ -63,7 +62,7 @@ public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessa
      * @return The updated request
      */
     public IMessageForwardRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MessageForwardRequest)this;
     }
 
@@ -74,7 +73,8 @@ public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessa
      * @return The updated request
      */
     public IMessageForwardRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageForwardRequest)this;
     }
+
 }

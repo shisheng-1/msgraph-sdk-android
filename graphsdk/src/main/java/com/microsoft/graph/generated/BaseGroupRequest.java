@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Group Request.
  */
-public class BaseGroupRequest extends DirectoryObjectRequest implements IBaseGroupRequest {
+public class BaseGroupRequest extends BaseRequest implements IBaseGroupRequest {
 
     /**
      * The request for the Group
@@ -108,25 +109,4 @@ public class BaseGroupRequest extends DirectoryObjectRequest implements IBaseGro
         return send(HttpMethod.POST, newGroup);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-     public IGroupRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
-         return (GroupRequest)this;
-     }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-     public IGroupRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
-         return (GroupRequest)this;
-     }
 }

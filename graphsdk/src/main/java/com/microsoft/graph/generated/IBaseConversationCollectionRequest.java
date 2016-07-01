@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -53,4 +54,5 @@ public interface IBaseConversationCollectionRequest {
      * @return The updated request
      */
     IConversationCollectionRequest top(final int value);
+
 }

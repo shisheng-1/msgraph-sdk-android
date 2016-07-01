@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/EntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -31,10 +32,5 @@ public class ThumbnailSetRequestBuilder extends BaseThumbnailSetRequestBuilder i
      */
     public ThumbnailSetRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
-    }
-
-    @Override
-    public IThumbnailRequestBuilder getThumbnailSize(final String size) {
-        return new ThumbnailRequestBuilder(getRequestUrlWithAdditionalSegment(size), getClient(), /* options */ null);
     }
  }

@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityWithReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,9 +30,5 @@ public interface IBaseDirectoryObjectWithReferenceRequest extends IHttpRequest {
     void get(final ICallback<DirectoryObject> callback);
 
     DirectoryObject get() throws ClientException;
-
-    IBaseDirectoryObjectWithReferenceRequest select(final String value);
-
-    IBaseDirectoryObjectWithReferenceRequest expand(final String value);
 
 }

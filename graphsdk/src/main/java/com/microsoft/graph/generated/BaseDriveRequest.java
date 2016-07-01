@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Drive Request.
  */
-public class BaseDriveRequest extends EntityRequest implements IBaseDriveRequest {
+public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * The request for the Drive
@@ -115,7 +116,7 @@ public class BaseDriveRequest extends EntityRequest implements IBaseDriveRequest
      * @return The updated request
      */
      public IDriveRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (DriveRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseDriveRequest extends EntityRequest implements IBaseDriveRequest
      * @return The updated request
      */
      public IDriveRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (DriveRequest)this;
      }
+
 }

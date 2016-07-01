@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The interface for the Base Post Request.
  */
-public interface IBasePostRequest extends IOutlookItemRequest {
+public interface IBasePostRequest extends IHttpRequest {
 
     /**
      * Gets the Post from the service
@@ -92,4 +93,5 @@ public interface IBasePostRequest extends IOutlookItemRequest {
      * @return The updated request
      */
     IBasePostRequest expand(final String value);
+
 }

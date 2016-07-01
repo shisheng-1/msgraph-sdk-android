@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -25,21 +26,5 @@ public interface IBaseUserReferenceRequest extends IHttpRequest {
     void delete(final ICallback<User> callback);
 
     User delete() throws ClientException;
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseUserReferenceRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseUserReferenceRequest expand(final String value);
 
 }

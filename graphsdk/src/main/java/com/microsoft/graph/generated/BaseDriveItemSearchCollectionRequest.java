@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,9 +31,8 @@ public class BaseDriveItemSearchCollectionRequest extends BaseCollectionRequest<
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String q) {
+    public BaseDriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, BaseDriveItemSearchCollectionResponse.class, IDriveItemSearchCollectionPage.class);
-        addFunctionOption(new FunctionOption("q", q));
     }
 
 
@@ -75,7 +75,7 @@ public class BaseDriveItemSearchCollectionRequest extends BaseCollectionRequest<
      * @return The updated request
      */
     public IDriveItemSearchCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDriveItemSearchCollectionRequest)this;
     }
 
@@ -86,7 +86,7 @@ public class BaseDriveItemSearchCollectionRequest extends BaseCollectionRequest<
      * @return The updated request
      */
     public IDriveItemSearchCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDriveItemSearchCollectionRequest)this;
     }
 
@@ -97,7 +97,8 @@ public class BaseDriveItemSearchCollectionRequest extends BaseCollectionRequest<
      * @return The updated request
      */
     public IDriveItemSearchCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDriveItemSearchCollectionRequest)this;
     }
+
 }

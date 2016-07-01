@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Attachment Request.
  */
-public class BaseAttachmentRequest extends EntityRequest implements IBaseAttachmentRequest {
+public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmentRequest {
 
     /**
      * The request for the Attachment
@@ -115,7 +116,7 @@ public class BaseAttachmentRequest extends EntityRequest implements IBaseAttachm
      * @return The updated request
      */
      public IAttachmentRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (AttachmentRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseAttachmentRequest extends EntityRequest implements IBaseAttachm
      * @return The updated request
      */
      public IAttachmentRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (AttachmentRequest)this;
      }
+
 }

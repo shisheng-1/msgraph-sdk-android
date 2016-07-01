@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -58,7 +59,7 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
     public IDriveItemDeltaCollectionPage buildFromResponse(final BaseDriveItemDeltaCollectionResponse response) {
         final IDriveItemDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
+            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* token */ null);
         } else {
             builder = null;
         }
@@ -74,7 +75,7 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
      * @return The updated request
      */
     public IDriveItemDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDriveItemDeltaCollectionRequest)this;
     }
 
@@ -85,7 +86,7 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
      * @return The updated request
      */
     public IDriveItemDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDriveItemDeltaCollectionRequest)this;
     }
 
@@ -96,7 +97,8 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
      * @return The updated request
      */
     public IDriveItemDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDriveItemDeltaCollectionRequest)this;
     }
+
 }

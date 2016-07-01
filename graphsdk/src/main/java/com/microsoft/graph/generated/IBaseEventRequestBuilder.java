@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -39,6 +40,10 @@ public interface IBaseEventRequestBuilder extends IRequestBuilder {
     IEventCollectionRequestBuilder getInstances();
 
     IEventRequestBuilder getInstances(final String id);
+
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
 
     IAttachmentCollectionRequestBuilder getAttachments();
 

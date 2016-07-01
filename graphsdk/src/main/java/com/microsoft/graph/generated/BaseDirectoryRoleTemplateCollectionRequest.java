@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -65,39 +66,6 @@ public class BaseDirectoryRoleTemplateCollectionRequest extends BaseCollectionRe
         return new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest()
             .post(newDirectoryRoleTemplate);
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IDirectoryRoleTemplateCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
-        return (DirectoryRoleTemplateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IDirectoryRoleTemplateCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
-        return (DirectoryRoleTemplateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value The max number of items to return
-     * @return The updated request
-     */
-    public IDirectoryRoleTemplateCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
-        return (DirectoryRoleTemplateCollectionRequest)this;
     }
 
     public IDirectoryRoleTemplateCollectionPage buildFromResponse(final BaseDirectoryRoleTemplateCollectionResponse response) {

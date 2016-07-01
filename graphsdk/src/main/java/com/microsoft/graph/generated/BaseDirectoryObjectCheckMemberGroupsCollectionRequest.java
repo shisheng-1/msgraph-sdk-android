@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -33,10 +34,9 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final List<String> groupIds) {
+    public BaseDirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, BaseDirectoryObjectCheckMemberGroupsCollectionResponse.class, IDirectoryObjectCheckMemberGroupsCollectionPage.class);
         mBody = new DirectoryObjectCheckMemberGroupsBody();
-        mBody.groupIds = groupIds;
     }
 
 
@@ -79,7 +79,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      * @return The updated request
      */
     public IDirectoryObjectCheckMemberGroupsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
 
@@ -90,7 +90,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      * @return The updated request
      */
     public IDirectoryObjectCheckMemberGroupsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
 
@@ -101,7 +101,8 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      * @return The updated request
      */
     public IDirectoryObjectCheckMemberGroupsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
+
 }

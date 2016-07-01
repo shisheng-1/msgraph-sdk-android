@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntity.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -357,6 +358,12 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Contact Folders.
      */
     public transient ContactFolderCollectionPage contactFolders;
+
+    /**
+     * The Inference Classification.
+     */
+    @SerializedName("inferenceClassification")
+    public InferenceClassification inferenceClassification;
 
     /**
      * The Photo.

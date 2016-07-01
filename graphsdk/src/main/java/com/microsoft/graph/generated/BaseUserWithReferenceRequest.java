@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityWithReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -51,28 +52,6 @@ public class BaseUserWithReferenceRequest extends BaseRequest implements IBaseUs
 
     public User get() throws ClientException {
        return send(HttpMethod.GET, null);
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IUserWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
-        return (IUserWithReferenceRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IUserWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
-        return (UserWithReferenceRequest)this;
     }
 
 }

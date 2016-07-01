@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class MessageForwardRequest extends BaseMessageForwardRequest implements 
      * @param client The service client
      * @param options The options for this request
      */
-    public MessageForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
-        super(requestUrl, client, options, comment, toRecipients);
+    public MessageForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

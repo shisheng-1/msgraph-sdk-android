@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/extensions/MethodRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ public class ConversationThreadReplyRequest extends BaseConversationThreadReplyR
      * @param client The service client
      * @param options The options for this request
      */
-    public ConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
-        super(requestUrl, client, options, post);
+    public ConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

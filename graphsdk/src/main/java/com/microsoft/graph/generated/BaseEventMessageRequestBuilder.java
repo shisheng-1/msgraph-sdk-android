@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Event Message Request Builder.
  */
-public class BaseEventMessageRequestBuilder extends MessageRequestBuilder implements IBaseEventMessageRequestBuilder {
+public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implements IBaseEventMessageRequestBuilder {
 
     /**
      * The request builder for the EventMessage

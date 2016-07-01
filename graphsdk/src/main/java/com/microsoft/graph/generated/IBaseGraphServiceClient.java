@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseClient.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -156,6 +157,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return The request builder for the Drives object
      */
     IDriveRequestBuilder getDrives(final String id);
+
+    /**
+     * Gets the collection of Subscriptions objects.
+     *
+     * @return The request builder for the collection of Subscriptions objects
+     */
+    ISubscriptionCollectionRequestBuilder getSubscriptions();
+
+    /**
+     * Gets a single Subscriptions.
+     *
+     * @param id The id of the Subscriptions to retrieve.
+     * @return The request builder for the Subscriptions object
+     */
+    ISubscriptionRequestBuilder getSubscriptions(final String id);
 
     /**
      * Gets GraphServiceRequestBuilder.

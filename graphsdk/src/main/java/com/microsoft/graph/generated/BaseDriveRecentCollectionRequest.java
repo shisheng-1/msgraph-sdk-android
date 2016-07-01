@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -74,7 +75,7 @@ public class BaseDriveRecentCollectionRequest extends BaseCollectionRequest<Base
      * @return The updated request
      */
     public IDriveRecentCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDriveRecentCollectionRequest)this;
     }
 
@@ -85,7 +86,7 @@ public class BaseDriveRecentCollectionRequest extends BaseCollectionRequest<Base
      * @return The updated request
      */
     public IDriveRecentCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDriveRecentCollectionRequest)this;
     }
 
@@ -96,7 +97,8 @@ public class BaseDriveRecentCollectionRequest extends BaseCollectionRequest<Base
      * @return The updated request
      */
     public IDriveRecentCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDriveRecentCollectionRequest)this;
     }
+
 }

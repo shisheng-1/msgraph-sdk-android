@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Contact Folder Request.
  */
-public class BaseContactFolderRequest extends EntityRequest implements IBaseContactFolderRequest {
+public class BaseContactFolderRequest extends BaseRequest implements IBaseContactFolderRequest {
 
     /**
      * The request for the ContactFolder
@@ -115,7 +116,7 @@ public class BaseContactFolderRequest extends EntityRequest implements IBaseCont
      * @return The updated request
      */
      public IContactFolderRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ContactFolderRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseContactFolderRequest extends EntityRequest implements IBaseCont
      * @return The updated request
      */
      public IContactFolderRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ContactFolderRequest)this;
      }
+
 }

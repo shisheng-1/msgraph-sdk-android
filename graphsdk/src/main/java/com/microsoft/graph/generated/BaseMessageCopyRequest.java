@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,10 +31,9 @@ public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageC
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
+    public BaseMessageCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Message.class);
         mBody = new MessageCopyBody();
-        mBody.destinationId = destinationId;
     }
 
     public void post(final ICallback<Message> callback) {
@@ -51,7 +51,7 @@ public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageC
      * @return The updated request
      */
     public IMessageCopyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageCopyRequest)this;
     }
 
@@ -62,7 +62,7 @@ public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageC
      * @return The updated request
      */
     public IMessageCopyRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MessageCopyRequest)this;
     }
 
@@ -73,7 +73,8 @@ public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageC
      * @return The updated request
      */
     public IMessageCopyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageCopyRequest)this;
     }
+
 }

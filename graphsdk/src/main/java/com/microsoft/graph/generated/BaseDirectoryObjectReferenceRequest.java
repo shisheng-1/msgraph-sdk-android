@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -41,25 +42,4 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
        return send(HttpMethod.DELETE, null);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IDirectoryObjectReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
-        return (DirectoryObjectReferenceRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IDirectoryObjectReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
-        return (DirectoryObjectReferenceRequest)this;
-    }
 }

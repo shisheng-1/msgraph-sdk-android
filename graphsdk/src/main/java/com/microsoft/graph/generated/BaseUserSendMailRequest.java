@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,11 +31,9 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseUserSendMailRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Message message, final Boolean saveToSentItems) {
+    public BaseUserSendMailRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new UserSendMailBody();
-        mBody.message = message;
-        mBody.saveToSentItems = saveToSentItems;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +51,7 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
      * @return The updated request
      */
     public IUserSendMailRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (UserSendMailRequest)this;
     }
 
@@ -63,7 +62,7 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
      * @return The updated request
      */
     public IUserSendMailRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (UserSendMailRequest)this;
     }
 
@@ -74,7 +73,8 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
      * @return The updated request
      */
     public IUserSendMailRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (UserSendMailRequest)this;
     }
+
 }

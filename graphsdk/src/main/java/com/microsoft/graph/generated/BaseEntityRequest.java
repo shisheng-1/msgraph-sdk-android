@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -44,7 +45,7 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
      * @return The updated request
      */
      public IEntityRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (EntityRequest)this;
      }
 
@@ -55,7 +56,8 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
      * @return The updated request
      */
      public IEntityRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (EntityRequest)this;
      }
+
 }

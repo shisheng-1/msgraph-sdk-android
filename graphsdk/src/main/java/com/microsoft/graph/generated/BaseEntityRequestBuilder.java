@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -92,8 +93,20 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolder"), getClient(), null);
     }
 
+    public IInferenceClassificationRequestBuilder inferenceClassification() {
+        return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
+    }
+
     public IAttachmentRequestBuilder attachment() {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachment"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder extension() {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extension"), getClient(), null);
+    }
+
+    public IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride() {
+        return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassificationOverride"), getClient(), null);
     }
 
     public IDriveItemRequestBuilder driveItem() {
@@ -106,5 +119,9 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     public IThumbnailSetRequestBuilder thumbnailSet() {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnailSet"), getClient(), null);
+    }
+
+    public ISubscriptionRequestBuilder subscription() {
+        return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscription"), getClient(), null);
     }
 }

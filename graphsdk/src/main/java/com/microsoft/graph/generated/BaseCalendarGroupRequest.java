@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * The class for the Base Calendar Group Request.
  */
-public class BaseCalendarGroupRequest extends EntityRequest implements IBaseCalendarGroupRequest {
+public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalendarGroupRequest {
 
     /**
      * The request for the CalendarGroup
@@ -115,7 +116,7 @@ public class BaseCalendarGroupRequest extends EntityRequest implements IBaseCale
      * @return The updated request
      */
      public ICalendarGroupRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (CalendarGroupRequest)this;
      }
 
@@ -126,7 +127,8 @@ public class BaseCalendarGroupRequest extends EntityRequest implements IBaseCale
      * @return The updated request
      */
      public ICalendarGroupRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (CalendarGroupRequest)this;
      }
+
 }

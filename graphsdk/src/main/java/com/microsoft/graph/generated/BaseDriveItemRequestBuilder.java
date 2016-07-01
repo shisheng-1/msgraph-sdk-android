@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -97,6 +98,10 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     public IDriveItemSearchCollectionRequestBuilder getSearch(final String q) {
         return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
+    }
+
+    public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
+        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder getDelta() {

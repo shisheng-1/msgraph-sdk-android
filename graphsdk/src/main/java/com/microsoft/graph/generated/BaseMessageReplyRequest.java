@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseMethodBodyRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -30,10 +31,9 @@ public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessage
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
+    public BaseMessageReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new MessageReplyBody();
-        mBody.comment = comment;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -51,7 +51,7 @@ public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessage
      * @return The updated request
      */
     public IMessageReplyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageReplyRequest)this;
     }
 
@@ -62,7 +62,7 @@ public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessage
      * @return The updated request
      */
     public IMessageReplyRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MessageReplyRequest)this;
     }
 
@@ -73,7 +73,8 @@ public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessage
      * @return The updated request
      */
     public IMessageReplyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageReplyRequest)this;
     }
+
 }

@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityCollectionWithReferencesRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -52,19 +53,9 @@ public class BaseDirectoryObjectCollectionWithReferencesRequest extends BaseColl
         final BaseDirectoryObjectCollectionResponse response = send();
         return buildFromResponse(response);
     }
-    
-    public IDirectoryObjectCollectionWithReferencesRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
-    }
-
-    public IDirectoryObjectCollectionWithReferencesRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
-    }
 
     public IDirectoryObjectCollectionWithReferencesRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (DirectoryObjectCollectionWithReferencesRequest)this;
     }
 

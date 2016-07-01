@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/IBaseEntityReferenceRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -25,21 +26,5 @@ public interface IBaseDirectoryObjectReferenceRequest extends IHttpRequest {
     void delete(final ICallback<DirectoryObject> callback);
 
     DirectoryObject delete() throws ClientException;
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectReferenceRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectReferenceRequest expand(final String value);
 
 }

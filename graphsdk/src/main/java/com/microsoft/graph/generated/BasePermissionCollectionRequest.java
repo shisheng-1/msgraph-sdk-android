@@ -1,3 +1,4 @@
+// Template Source: Templates/Android/generated/BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -74,7 +75,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (PermissionCollectionRequest)this;
     }
 
@@ -85,7 +86,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (PermissionCollectionRequest)this;
     }
 
@@ -96,7 +97,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (PermissionCollectionRequest)this;
     }
 
