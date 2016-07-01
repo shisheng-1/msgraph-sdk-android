@@ -49,12 +49,12 @@ public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseGetMethodReque
      */
     public IGroupUnsubscribeByMailRequest buildRequest(final List<Option> options) {
         GroupUnsubscribeByMailRequest request = new GroupUnsubscribeByMailRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

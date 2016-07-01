@@ -49,12 +49,12 @@ public class BaseGroupRemoveFavoriteRequestBuilder extends BaseGetMethodRequestB
      */
     public IGroupRemoveFavoriteRequest buildRequest(final List<Option> options) {
         GroupRemoveFavoriteRequest request = new GroupRemoveFavoriteRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

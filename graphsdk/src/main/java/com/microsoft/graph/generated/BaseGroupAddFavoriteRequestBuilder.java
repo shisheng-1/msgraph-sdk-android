@@ -49,12 +49,12 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseGetMethodRequestBuil
      */
     public IGroupAddFavoriteRequest buildRequest(final List<Option> options) {
         GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

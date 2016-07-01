@@ -31,7 +31,7 @@ public class BaseMailFolderCopyRequestBuilder extends BasePostMethodRequestBuild
     public BaseMailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options);
         mBodyParams.put("destinationId", destinationId);
-      }
+    }
 
     /**
      * Creates the IMailFolderCopyRequest
@@ -50,15 +50,15 @@ public class BaseMailFolderCopyRequestBuilder extends BasePostMethodRequestBuild
      */
     public IMailFolderCopyRequest buildRequest(final List<Option> options) {
         MailFolderCopyRequest request = new MailFolderCopyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("destinationId")) {
             request.mBody.destinationId = getParameter("destinationId");
         }
-  
-      return request;
+
+        return request;
     }
 }

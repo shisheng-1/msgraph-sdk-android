@@ -49,12 +49,12 @@ public class BaseMessageCreateReplyAllRequestBuilder extends BaseGetMethodReques
      */
     public IMessageCreateReplyAllRequest buildRequest(final List<Option> options) {
         MessageCreateReplyAllRequest request = new MessageCreateReplyAllRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

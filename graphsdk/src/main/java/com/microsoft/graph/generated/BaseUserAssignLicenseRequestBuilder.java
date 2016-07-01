@@ -31,8 +31,8 @@ public class BaseUserAssignLicenseRequestBuilder extends BasePostMethodRequestBu
     public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
         super(requestUrl, client, options);
         mBodyParams.put("addLicenses", addLicenses);
-          mBodyParams.put("removeLicenses", removeLicenses);
-      }
+        mBodyParams.put("removeLicenses", removeLicenses);
+    }
 
     /**
      * Creates the IUserAssignLicenseRequest
@@ -51,18 +51,18 @@ public class BaseUserAssignLicenseRequestBuilder extends BasePostMethodRequestBu
      */
     public IUserAssignLicenseRequest buildRequest(final List<Option> options) {
         UserAssignLicenseRequest request = new UserAssignLicenseRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("addLicenses")) {
             request.mBody.addLicenses = getParameter("addLicenses");
         }
-          if (hasParameter("removeLicenses")) {
+        if (hasParameter("removeLicenses")) {
             request.mBody.removeLicenses = getParameter("removeLicenses");
         }
-  
-      return request;
+
+        return request;
     }
 }

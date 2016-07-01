@@ -49,12 +49,12 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseGetMethodRequest
      */
     public IGroupSubscribeByMailRequest buildRequest(final List<Option> options) {
         GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

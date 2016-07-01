@@ -31,7 +31,7 @@ public class BaseMessageReplyRequestBuilder extends BasePostMethodRequestBuilder
     public BaseMessageReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
         super(requestUrl, client, options);
         mBodyParams.put("comment", comment);
-      }
+    }
 
     /**
      * Creates the IMessageReplyRequest
@@ -50,15 +50,15 @@ public class BaseMessageReplyRequestBuilder extends BasePostMethodRequestBuilder
      */
     public IMessageReplyRequest buildRequest(final List<Option> options) {
         MessageReplyRequest request = new MessageReplyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
-  
-      return request;
+
+        return request;
     }
 }

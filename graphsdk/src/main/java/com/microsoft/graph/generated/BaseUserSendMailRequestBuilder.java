@@ -31,8 +31,8 @@ public class BaseUserSendMailRequestBuilder extends BasePostMethodRequestBuilder
     public BaseUserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Message message, final Boolean saveToSentItems) {
         super(requestUrl, client, options);
         mBodyParams.put("message", message);
-          mBodyParams.put("saveToSentItems", saveToSentItems);
-      }
+        mBodyParams.put("saveToSentItems", saveToSentItems);
+    }
 
     /**
      * Creates the IUserSendMailRequest
@@ -51,18 +51,18 @@ public class BaseUserSendMailRequestBuilder extends BasePostMethodRequestBuilder
      */
     public IUserSendMailRequest buildRequest(final List<Option> options) {
         UserSendMailRequest request = new UserSendMailRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("message")) {
             request.mBody.message = getParameter("message");
         }
-          if (hasParameter("saveToSentItems")) {
+        if (hasParameter("saveToSentItems")) {
             request.mBody.saveToSentItems = getParameter("saveToSentItems");
         }
-  
-      return request;
+
+        return request;
     }
 }

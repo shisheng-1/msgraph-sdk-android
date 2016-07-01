@@ -49,12 +49,12 @@ public class BaseEventDismissReminderRequestBuilder extends BaseGetMethodRequest
      */
     public IEventDismissReminderRequest buildRequest(final List<Option> options) {
         EventDismissReminderRequest request = new EventDismissReminderRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

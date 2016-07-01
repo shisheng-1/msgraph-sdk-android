@@ -31,8 +31,8 @@ public class BaseMessageForwardRequestBuilder extends BasePostMethodRequestBuild
     public BaseMessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
         super(requestUrl, client, options);
         mBodyParams.put("comment", comment);
-          mBodyParams.put("toRecipients", toRecipients);
-      }
+        mBodyParams.put("toRecipients", toRecipients);
+    }
 
     /**
      * Creates the IMessageForwardRequest
@@ -51,18 +51,18 @@ public class BaseMessageForwardRequestBuilder extends BasePostMethodRequestBuild
      */
     public IMessageForwardRequest buildRequest(final List<Option> options) {
         MessageForwardRequest request = new MessageForwardRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
-          if (hasParameter("toRecipients")) {
+        if (hasParameter("toRecipients")) {
             request.mBody.toRecipients = getParameter("toRecipients");
         }
-  
-      return request;
+
+        return request;
     }
 }

@@ -49,12 +49,12 @@ public class BaseGroupResetUnseenCountRequestBuilder extends BaseGetMethodReques
      */
     public IGroupResetUnseenCountRequest buildRequest(final List<Option> options) {
         GroupResetUnseenCountRequest request = new GroupResetUnseenCountRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

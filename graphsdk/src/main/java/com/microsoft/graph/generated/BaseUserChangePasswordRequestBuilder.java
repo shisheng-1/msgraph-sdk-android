@@ -31,8 +31,8 @@ public class BaseUserChangePasswordRequestBuilder extends BasePostMethodRequestB
     public BaseUserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String currentPassword, final String newPassword) {
         super(requestUrl, client, options);
         mBodyParams.put("currentPassword", currentPassword);
-          mBodyParams.put("newPassword", newPassword);
-      }
+        mBodyParams.put("newPassword", newPassword);
+    }
 
     /**
      * Creates the IUserChangePasswordRequest
@@ -51,18 +51,18 @@ public class BaseUserChangePasswordRequestBuilder extends BasePostMethodRequestB
      */
     public IUserChangePasswordRequest buildRequest(final List<Option> options) {
         UserChangePasswordRequest request = new UserChangePasswordRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("currentPassword")) {
             request.mBody.currentPassword = getParameter("currentPassword");
         }
-          if (hasParameter("newPassword")) {
+        if (hasParameter("newPassword")) {
             request.mBody.newPassword = getParameter("newPassword");
         }
-  
-      return request;
+
+        return request;
     }
 }

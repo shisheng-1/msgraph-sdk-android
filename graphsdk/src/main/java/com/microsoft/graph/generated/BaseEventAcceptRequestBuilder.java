@@ -31,8 +31,8 @@ public class BaseEventAcceptRequestBuilder extends BasePostMethodRequestBuilder 
     public BaseEventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, options);
         mBodyParams.put("comment", comment);
-          mBodyParams.put("sendResponse", sendResponse);
-      }
+        mBodyParams.put("sendResponse", sendResponse);
+    }
 
     /**
      * Creates the IEventAcceptRequest
@@ -51,18 +51,18 @@ public class BaseEventAcceptRequestBuilder extends BasePostMethodRequestBuilder 
      */
     public IEventAcceptRequest buildRequest(final List<Option> options) {
         EventAcceptRequest request = new EventAcceptRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
-          if (hasParameter("sendResponse")) {
+        if (hasParameter("sendResponse")) {
             request.mBody.sendResponse = getParameter("sendResponse");
         }
-  
-      return request;
+
+        return request;
     }
 }

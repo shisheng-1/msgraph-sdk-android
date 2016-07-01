@@ -31,7 +31,7 @@ public class BaseMessageReplyAllRequestBuilder extends BasePostMethodRequestBuil
     public BaseMessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
         super(requestUrl, client, options);
         mBodyParams.put("comment", comment);
-      }
+    }
 
     /**
      * Creates the IMessageReplyAllRequest
@@ -50,15 +50,15 @@ public class BaseMessageReplyAllRequestBuilder extends BasePostMethodRequestBuil
      */
     public IMessageReplyAllRequest buildRequest(final List<Option> options) {
         MessageReplyAllRequest request = new MessageReplyAllRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
-  
-      return request;
+
+        return request;
     }
 }

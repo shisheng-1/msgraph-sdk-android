@@ -31,8 +31,8 @@ public class BaseDriveItemCopyRequestBuilder extends BasePostMethodRequestBuilde
     public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String name, final ItemReference parentReference) {
         super(requestUrl, client, options);
         mBodyParams.put("name", name);
-          mBodyParams.put("parentReference", parentReference);
-      }
+        mBodyParams.put("parentReference", parentReference);
+    }
 
     /**
      * Creates the IDriveItemCopyRequest
@@ -51,18 +51,18 @@ public class BaseDriveItemCopyRequestBuilder extends BasePostMethodRequestBuilde
      */
     public IDriveItemCopyRequest buildRequest(final List<Option> options) {
         DriveItemCopyRequest request = new DriveItemCopyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("name")) {
             request.mBody.name = getParameter("name");
         }
-          if (hasParameter("parentReference")) {
+        if (hasParameter("parentReference")) {
             request.mBody.parentReference = getParameter("parentReference");
         }
-  
-      return request;
+
+        return request;
     }
 }

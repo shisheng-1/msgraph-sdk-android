@@ -49,12 +49,12 @@ public class BaseMessageCreateReplyRequestBuilder extends BaseGetMethodRequestBu
      */
     public IMessageCreateReplyRequest buildRequest(final List<Option> options) {
         MessageCreateReplyRequest request = new MessageCreateReplyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

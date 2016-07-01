@@ -49,12 +49,12 @@ public class BaseMessageSendRequestBuilder extends BaseGetMethodRequestBuilder {
      */
     public IMessageSendRequest buildRequest(final List<Option> options) {
         MessageSendRequest request = new MessageSendRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
 
-      return request;
+        return request;
     }
 }

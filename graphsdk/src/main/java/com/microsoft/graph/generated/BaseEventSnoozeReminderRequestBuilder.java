@@ -31,7 +31,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BasePostMethodRequest
     public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, options);
         mBodyParams.put("newReminderTime", newReminderTime);
-      }
+    }
 
     /**
      * Creates the IEventSnoozeReminderRequest
@@ -50,15 +50,15 @@ public class BaseEventSnoozeReminderRequestBuilder extends BasePostMethodRequest
      */
     public IEventSnoozeReminderRequest buildRequest(final List<Option> options) {
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("newReminderTime")) {
             request.mBody.newReminderTime = getParameter("newReminderTime");
         }
-  
-      return request;
+
+        return request;
     }
 }

@@ -31,8 +31,8 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BasePostMethodRequest
     public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
         super(requestUrl, client, options);
         mBodyParams.put("type", type);
-          mBodyParams.put("scope", scope);
-      }
+        mBodyParams.put("scope", scope);
+    }
 
     /**
      * Creates the IDriveItemCreateLinkRequest
@@ -51,18 +51,18 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BasePostMethodRequest
      */
     public IDriveItemCreateLinkRequest buildRequest(final List<Option> options) {
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
-          if (hasParameter("scope")) {
+        if (hasParameter("scope")) {
             request.mBody.scope = getParameter("scope");
         }
-  
-      return request;
+
+        return request;
     }
 }

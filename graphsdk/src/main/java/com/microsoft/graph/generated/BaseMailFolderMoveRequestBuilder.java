@@ -31,7 +31,7 @@ public class BaseMailFolderMoveRequestBuilder extends BasePostMethodRequestBuild
     public BaseMailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options);
         mBodyParams.put("destinationId", destinationId);
-      }
+    }
 
     /**
      * Creates the IMailFolderMoveRequest
@@ -50,15 +50,15 @@ public class BaseMailFolderMoveRequestBuilder extends BasePostMethodRequestBuild
      */
     public IMailFolderMoveRequest buildRequest(final List<Option> options) {
         MailFolderMoveRequest request = new MailFolderMoveRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("destinationId")) {
             request.mBody.destinationId = getParameter("destinationId");
         }
-  
-      return request;
+
+        return request;
     }
 }

@@ -31,7 +31,7 @@ public class BaseMessageCopyRequestBuilder extends BasePostMethodRequestBuilder 
     public BaseMessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options);
         mBodyParams.put("destinationId", destinationId);
-      }
+    }
 
     /**
      * Creates the IMessageCopyRequest
@@ -50,15 +50,15 @@ public class BaseMessageCopyRequestBuilder extends BasePostMethodRequestBuilder 
      */
     public IMessageCopyRequest buildRequest(final List<Option> options) {
         MessageCopyRequest request = new MessageCopyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("destinationId")) {
             request.mBody.destinationId = getParameter("destinationId");
         }
-  
-      return request;
+
+        return request;
     }
 }

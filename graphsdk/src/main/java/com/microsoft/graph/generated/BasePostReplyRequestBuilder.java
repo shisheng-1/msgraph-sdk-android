@@ -31,7 +31,7 @@ public class BasePostReplyRequestBuilder extends BasePostMethodRequestBuilder {
     public BasePostReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
         super(requestUrl, client, options);
         mBodyParams.put("post", post);
-      }
+    }
 
     /**
      * Creates the IPostReplyRequest
@@ -50,15 +50,15 @@ public class BasePostReplyRequestBuilder extends BasePostMethodRequestBuilder {
      */
     public IPostReplyRequest buildRequest(final List<Option> options) {
         PostReplyRequest request = new PostReplyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("post")) {
             request.mBody.post = getParameter("post");
         }
-  
-      return request;
+
+        return request;
     }
 }

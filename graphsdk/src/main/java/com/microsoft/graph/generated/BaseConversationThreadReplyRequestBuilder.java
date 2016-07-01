@@ -31,7 +31,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BasePostMethodReq
     public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
         super(requestUrl, client, options);
         mBodyParams.put("post", post);
-      }
+    }
 
     /**
      * Creates the IConversationThreadReplyRequest
@@ -50,15 +50,15 @@ public class BaseConversationThreadReplyRequestBuilder extends BasePostMethodReq
      */
     public IConversationThreadReplyRequest buildRequest(final List<Option> options) {
         ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("post")) {
             request.mBody.post = getParameter("post");
         }
-  
-      return request;
+
+        return request;
     }
 }

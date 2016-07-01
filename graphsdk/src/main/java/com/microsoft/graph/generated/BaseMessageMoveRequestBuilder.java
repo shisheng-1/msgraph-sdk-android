@@ -31,7 +31,7 @@ public class BaseMessageMoveRequestBuilder extends BasePostMethodRequestBuilder 
     public BaseMessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options);
         mBodyParams.put("destinationId", destinationId);
-      }
+    }
 
     /**
      * Creates the IMessageMoveRequest
@@ -50,15 +50,15 @@ public class BaseMessageMoveRequestBuilder extends BasePostMethodRequestBuilder 
      */
     public IMessageMoveRequest buildRequest(final List<Option> options) {
         MessageMoveRequest request = new MessageMoveRequest(
-            getRequestUrl(), 
-            getClient(), 
-            options
+                getRequestUrl(),
+                getClient(),
+                options
         );
 
         if (hasParameter("destinationId")) {
             request.mBody.destinationId = getParameter("destinationId");
         }
-  
-      return request;
+
+        return request;
     }
 }
