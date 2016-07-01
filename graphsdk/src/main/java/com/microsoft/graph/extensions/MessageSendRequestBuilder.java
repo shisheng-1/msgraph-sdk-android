@@ -32,5 +32,4 @@ public class MessageSendRequestBuilder extends BaseMessageSendRequestBuilder imp
     public MessageSendRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

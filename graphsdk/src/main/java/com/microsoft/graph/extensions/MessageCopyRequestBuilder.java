@@ -32,5 +32,4 @@ public class MessageCopyRequestBuilder extends BaseMessageCopyRequestBuilder imp
     public MessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options, destinationId);
     }
-
 }

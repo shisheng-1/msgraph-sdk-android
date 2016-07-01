@@ -32,5 +32,4 @@ public class MessageCreateForwardRequestBuilder extends BaseMessageCreateForward
     public MessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

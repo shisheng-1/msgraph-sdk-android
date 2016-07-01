@@ -32,5 +32,4 @@ public class UserSendMailRequestBuilder extends BaseUserSendMailRequestBuilder i
     public UserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Message message, final Boolean saveToSentItems) {
         super(requestUrl, client, options, message, saveToSentItems);
     }
-
 }

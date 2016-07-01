@@ -32,5 +32,4 @@ public class EventDismissReminderRequestBuilder extends BaseEventDismissReminder
     public EventDismissReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

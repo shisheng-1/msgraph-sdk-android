@@ -32,5 +32,4 @@ public class PostForwardRequestBuilder extends BasePostForwardRequestBuilder imp
     public PostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
         super(requestUrl, client, options, comment, toRecipients);
     }
-
 }

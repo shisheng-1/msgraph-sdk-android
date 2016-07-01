@@ -32,5 +32,4 @@ public class MailFolderMoveRequestBuilder extends BaseMailFolderMoveRequestBuild
     public MailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options, destinationId);
     }
-
 }

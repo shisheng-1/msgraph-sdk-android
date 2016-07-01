@@ -32,5 +32,4 @@ public class GroupRemoveFavoriteRequestBuilder extends BaseGroupRemoveFavoriteRe
     public GroupRemoveFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

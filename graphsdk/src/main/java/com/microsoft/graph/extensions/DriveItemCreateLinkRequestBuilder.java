@@ -32,5 +32,4 @@ public class DriveItemCreateLinkRequestBuilder extends BaseDriveItemCreateLinkRe
     public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
         super(requestUrl, client, options, type, scope);
     }
-
 }

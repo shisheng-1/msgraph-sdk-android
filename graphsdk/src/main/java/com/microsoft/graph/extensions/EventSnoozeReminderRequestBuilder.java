@@ -32,5 +32,4 @@ public class EventSnoozeReminderRequestBuilder extends BaseEventSnoozeReminderRe
     public EventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, options, newReminderTime);
     }
-
 }

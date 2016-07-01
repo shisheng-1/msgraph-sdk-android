@@ -32,5 +32,4 @@ public class MessageMoveRequestBuilder extends BaseMessageMoveRequestBuilder imp
     public MessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
         super(requestUrl, client, options, destinationId);
     }
-
 }

@@ -32,5 +32,4 @@ public class EventTentativelyAcceptRequestBuilder extends BaseEventTentativelyAc
     public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, options, comment, sendResponse);
     }
-
 }

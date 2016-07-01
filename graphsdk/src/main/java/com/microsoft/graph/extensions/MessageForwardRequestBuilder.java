@@ -32,5 +32,4 @@ public class MessageForwardRequestBuilder extends BaseMessageForwardRequestBuild
     public MessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
         super(requestUrl, client, options, comment, toRecipients);
     }
-
 }

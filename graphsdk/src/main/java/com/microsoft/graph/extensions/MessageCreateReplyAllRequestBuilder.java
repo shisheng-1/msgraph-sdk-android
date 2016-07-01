@@ -32,5 +32,4 @@ public class MessageCreateReplyAllRequestBuilder extends BaseMessageCreateReplyA
     public MessageCreateReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

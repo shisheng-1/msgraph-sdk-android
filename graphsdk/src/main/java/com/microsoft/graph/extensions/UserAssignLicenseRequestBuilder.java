@@ -32,5 +32,4 @@ public class UserAssignLicenseRequestBuilder extends BaseUserAssignLicenseReques
     public UserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
         super(requestUrl, client, options, addLicenses, removeLicenses);
     }
-
 }

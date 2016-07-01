@@ -32,5 +32,4 @@ public class MessageReplyRequestBuilder extends BaseMessageReplyRequestBuilder i
     public MessageReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
         super(requestUrl, client, options, comment);
     }
-
 }

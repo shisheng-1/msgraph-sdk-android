@@ -32,5 +32,4 @@ public class UserChangePasswordRequestBuilder extends BaseUserChangePasswordRequ
     public UserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String currentPassword, final String newPassword) {
         super(requestUrl, client, options, currentPassword, newPassword);
     }
-
 }

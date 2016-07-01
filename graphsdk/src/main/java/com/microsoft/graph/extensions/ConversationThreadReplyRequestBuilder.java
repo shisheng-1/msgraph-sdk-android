@@ -32,5 +32,4 @@ public class ConversationThreadReplyRequestBuilder extends BaseConversationThrea
     public ConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
         super(requestUrl, client, options, post);
     }
-
 }

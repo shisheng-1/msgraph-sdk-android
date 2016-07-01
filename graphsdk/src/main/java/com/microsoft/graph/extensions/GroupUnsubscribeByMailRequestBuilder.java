@@ -32,5 +32,4 @@ public class GroupUnsubscribeByMailRequestBuilder extends BaseGroupUnsubscribeBy
     public GroupUnsubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
-
 }

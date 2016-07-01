@@ -32,5 +32,4 @@ public class EventAcceptRequestBuilder extends BaseEventAcceptRequestBuilder imp
     public EventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, options, comment, sendResponse);
     }
-
 }
