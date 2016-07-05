@@ -31,5 +31,4 @@ public class UserCollectionPage extends BaseUserCollectionPage implements IUserC
     public UserCollectionPage(final BaseUserCollectionResponse response, final IUserCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

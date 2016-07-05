@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base User Request.
  */
-public interface IBaseUserRequest extends IDirectoryObjectRequest {
+public interface IBaseUserRequest extends IHttpRequest {
 
     /**
      * Gets the User from the service
@@ -77,19 +77,4 @@ public interface IBaseUserRequest extends IDirectoryObjectRequest {
      */
     User post(final User newUser) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseUserRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseUserRequest expand(final String value);
 }

@@ -74,7 +74,7 @@ public class BasePostCollectionRequest extends BaseCollectionRequest<BasePostCol
      * @return The updated request
      */
     public IPostCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (PostCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BasePostCollectionRequest extends BaseCollectionRequest<BasePostCol
      * @return The updated request
      */
     public IPostCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (PostCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BasePostCollectionRequest extends BaseCollectionRequest<BasePostCol
      * @return The updated request
      */
     public IPostCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (PostCollectionRequest)this;
     }
 

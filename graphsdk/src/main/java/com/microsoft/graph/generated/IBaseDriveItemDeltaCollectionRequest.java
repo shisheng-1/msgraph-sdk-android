@@ -52,4 +52,5 @@ public interface IBaseDriveItemDeltaCollectionRequest {
      * @return The updated request
      */
     IDriveItemDeltaCollectionRequest top(final int value);
+
 }

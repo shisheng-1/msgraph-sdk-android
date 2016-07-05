@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Permission Request.
  */
-public class BasePermissionRequest extends EntityRequest implements IBasePermissionRequest {
+public class BasePermissionRequest extends BaseRequest implements IBasePermissionRequest {
 
     /**
      * The request for the Permission
@@ -115,7 +115,7 @@ public class BasePermissionRequest extends EntityRequest implements IBasePermiss
      * @return The updated request
      */
      public IPermissionRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (PermissionRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BasePermissionRequest extends EntityRequest implements IBasePermiss
      * @return The updated request
      */
      public IPermissionRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (PermissionRequest)this;
      }
+
 }

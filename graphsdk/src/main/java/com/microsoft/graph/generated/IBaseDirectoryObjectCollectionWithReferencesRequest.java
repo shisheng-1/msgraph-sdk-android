@@ -26,9 +26,6 @@ public interface IBaseDirectoryObjectCollectionWithReferencesRequest {
 
     IDirectoryObjectCollectionWithReferencesPage get() throws ClientException;
 
-    IDirectoryObjectCollectionWithReferencesRequest expand(final String value);
-
-    IDirectoryObjectCollectionWithReferencesRequest select(final String value);
-
     IDirectoryObjectCollectionWithReferencesRequest top(final int value);
+
 }

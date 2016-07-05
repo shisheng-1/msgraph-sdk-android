@@ -52,4 +52,5 @@ public interface IBaseDriveSharedWithMeCollectionRequest {
      * @return The updated request
      */
     IDriveSharedWithMeCollectionRequest top(final int value);
+
 }

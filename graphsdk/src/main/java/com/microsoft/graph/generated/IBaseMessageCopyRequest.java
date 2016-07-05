@@ -52,4 +52,5 @@ public interface IBaseMessageCopyRequest {
      * @return The updated request
      */
     IMessageCopyRequest expand(final String value);
+
 }

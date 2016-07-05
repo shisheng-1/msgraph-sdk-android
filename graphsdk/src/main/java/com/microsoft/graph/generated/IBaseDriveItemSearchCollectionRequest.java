@@ -52,4 +52,5 @@ public interface IBaseDriveItemSearchCollectionRequest {
      * @return The updated request
      */
     IDriveItemSearchCollectionRequest top(final int value);
+
 }

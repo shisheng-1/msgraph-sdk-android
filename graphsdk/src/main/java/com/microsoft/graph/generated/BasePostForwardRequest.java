@@ -30,11 +30,9 @@ public class BasePostForwardRequest extends BaseRequest implements IBasePostForw
      * @param client The service client
      * @param options The options for this request
      */
-    public BasePostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
+    public BasePostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new PostForwardBody();
-        mBody.comment = comment;
-        mBody.toRecipients = toRecipients;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -52,7 +50,7 @@ public class BasePostForwardRequest extends BaseRequest implements IBasePostForw
      * @return The updated request
      */
     public IPostForwardRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (PostForwardRequest)this;
     }
 
@@ -63,7 +61,7 @@ public class BasePostForwardRequest extends BaseRequest implements IBasePostForw
      * @return The updated request
      */
     public IPostForwardRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (PostForwardRequest)this;
     }
 
@@ -74,7 +72,8 @@ public class BasePostForwardRequest extends BaseRequest implements IBasePostForw
      * @return The updated request
      */
     public IPostForwardRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (PostForwardRequest)this;
     }
+
 }

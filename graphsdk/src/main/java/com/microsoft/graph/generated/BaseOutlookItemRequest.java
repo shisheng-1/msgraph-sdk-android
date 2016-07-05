@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Outlook Item Request.
  */
-public class BaseOutlookItemRequest extends EntityRequest implements IBaseOutlookItemRequest {
+public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookItemRequest {
 
     /**
      * The request for the OutlookItem
@@ -115,7 +115,7 @@ public class BaseOutlookItemRequest extends EntityRequest implements IBaseOutloo
      * @return The updated request
      */
      public IOutlookItemRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (OutlookItemRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseOutlookItemRequest extends EntityRequest implements IBaseOutloo
      * @return The updated request
      */
      public IOutlookItemRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (OutlookItemRequest)this;
      }
+
 }

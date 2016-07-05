@@ -61,6 +61,13 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
     public IEventRequestBuilder getInstances(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
     public IAttachmentCollectionRequestBuilder getAttachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }

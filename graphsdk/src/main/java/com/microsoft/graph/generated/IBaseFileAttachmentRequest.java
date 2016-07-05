@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base File Attachment Request.
  */
-public interface IBaseFileAttachmentRequest extends IAttachmentRequest {
+public interface IBaseFileAttachmentRequest extends IHttpRequest {
 
     /**
      * Gets the FileAttachment from the service
@@ -92,4 +92,5 @@ public interface IBaseFileAttachmentRequest extends IAttachmentRequest {
      * @return The updated request
      */
     IBaseFileAttachmentRequest expand(final String value);
+
 }

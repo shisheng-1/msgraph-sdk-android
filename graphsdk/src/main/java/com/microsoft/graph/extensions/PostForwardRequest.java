@@ -29,7 +29,7 @@ public class PostForwardRequest extends BasePostForwardRequest implements IPostF
      * @param client The service client
      * @param options The options for this request
      */
-    public PostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
-        super(requestUrl, client, options, comment, toRecipients);
+    public PostForwardRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

@@ -29,7 +29,7 @@ public class MailFolderCopyRequest extends BaseMailFolderCopyRequest implements 
      * @param client The service client
      * @param options The options for this request
      */
-    public MailFolderCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options, destinationId);
+    public MailFolderCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

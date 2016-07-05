@@ -53,4 +53,5 @@ public interface IBasePostCollectionRequest {
      * @return The updated request
      */
     IPostCollectionRequest top(final int value);
+
 }

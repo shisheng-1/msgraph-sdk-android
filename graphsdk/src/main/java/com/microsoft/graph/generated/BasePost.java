@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BasePost extends OutlookItem implements IJsonBackedObject {
 
 
-	public BasePost(){
-		oDataType = "microsoft.graph.post";
-	}
-	
+    public BasePost() {
+        oDataType = "microsoft.graph.post";
+    }
+
     /**
      * The Body.
      */
@@ -79,6 +79,11 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
     public String conversationId;
 
     /**
+     * The Extensions.
+     */
+    public transient ExtensionCollectionPage extensions;
+
+    /**
      * The In Reply To.
      */
     @SerializedName("inReplyTo")
@@ -126,6 +131,22 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
         mSerializer = serializer;
         mRawObject = json;
 
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
+        }
 
         if (json.has("attachments")) {
             final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();

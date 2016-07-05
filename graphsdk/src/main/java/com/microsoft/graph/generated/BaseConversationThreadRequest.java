@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Conversation Thread Request.
  */
-public class BaseConversationThreadRequest extends EntityRequest implements IBaseConversationThreadRequest {
+public class BaseConversationThreadRequest extends BaseRequest implements IBaseConversationThreadRequest {
 
     /**
      * The request for the ConversationThread
@@ -115,7 +115,7 @@ public class BaseConversationThreadRequest extends EntityRequest implements IBas
      * @return The updated request
      */
      public IConversationThreadRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ConversationThreadRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseConversationThreadRequest extends EntityRequest implements IBas
      * @return The updated request
      */
      public IConversationThreadRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ConversationThreadRequest)this;
      }
+
 }

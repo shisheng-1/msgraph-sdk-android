@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Calendar Request.
  */
-public class BaseCalendarRequest extends EntityRequest implements IBaseCalendarRequest {
+public class BaseCalendarRequest extends BaseRequest implements IBaseCalendarRequest {
 
     /**
      * The request for the Calendar
@@ -115,7 +115,7 @@ public class BaseCalendarRequest extends EntityRequest implements IBaseCalendarR
      * @return The updated request
      */
      public ICalendarRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (CalendarRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseCalendarRequest extends EntityRequest implements IBaseCalendarR
      * @return The updated request
      */
      public ICalendarRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (CalendarRequest)this;
      }
+
 }

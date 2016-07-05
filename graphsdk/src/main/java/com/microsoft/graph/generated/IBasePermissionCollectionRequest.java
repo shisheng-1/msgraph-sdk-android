@@ -53,4 +53,5 @@ public interface IBasePermissionCollectionRequest {
      * @return The updated request
      */
     IPermissionCollectionRequest top(final int value);
+
 }

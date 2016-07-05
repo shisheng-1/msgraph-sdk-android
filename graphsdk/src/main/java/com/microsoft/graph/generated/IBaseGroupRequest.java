@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Group Request.
  */
-public interface IBaseGroupRequest extends IDirectoryObjectRequest {
+public interface IBaseGroupRequest extends IHttpRequest {
 
     /**
      * Gets the Group from the service
@@ -77,19 +77,4 @@ public interface IBaseGroupRequest extends IDirectoryObjectRequest {
      */
     Group post(final Group newGroup) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseGroupRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseGroupRequest expand(final String value);
 }

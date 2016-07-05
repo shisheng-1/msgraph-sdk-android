@@ -31,5 +31,4 @@ public class DirectoryObjectGetMemberGroupsCollectionPage extends BaseDirectoryO
     public DirectoryObjectGetMemberGroupsCollectionPage(final BaseDirectoryObjectGetMemberGroupsCollectionResponse response, final IDirectoryObjectGetMemberGroupsCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

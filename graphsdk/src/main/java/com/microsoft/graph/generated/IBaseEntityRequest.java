@@ -37,4 +37,5 @@ public interface IBaseEntityRequest extends IHttpRequest {
      * @return The updated request
      */
     IBaseEntityRequest expand(final String value);
+
 }

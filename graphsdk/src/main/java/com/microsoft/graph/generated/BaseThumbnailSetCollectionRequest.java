@@ -74,7 +74,7 @@ public class BaseThumbnailSetCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IThumbnailSetCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (ThumbnailSetCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseThumbnailSetCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IThumbnailSetCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (ThumbnailSetCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseThumbnailSetCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IThumbnailSetCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (ThumbnailSetCollectionRequest)this;
     }
 

@@ -52,4 +52,5 @@ public interface IBaseEventDeclineRequest {
      * @return The updated request
      */
     IEventDeclineRequest expand(final String value);
+
 }

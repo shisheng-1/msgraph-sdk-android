@@ -33,6 +33,10 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
 
     IEventMessageRequestBuilder eventMessage();
 
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
+
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);

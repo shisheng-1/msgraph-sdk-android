@@ -31,26 +31,11 @@ public interface IBaseDeviceCollectionRequest {
     Device post(final Device newDevice) throws ClientException;
 
     /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IDeviceCollectionRequest expand(final String value);
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IDeviceCollectionRequest select(final String value);
-
-    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return
      * @return The updated request
      */
     IDeviceCollectionRequest top(final int value);
+
 }

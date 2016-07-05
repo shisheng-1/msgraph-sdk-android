@@ -52,4 +52,5 @@ public interface IBaseMailFolderMoveRequest {
      * @return The updated request
      */
     IMailFolderMoveRequest expand(final String value);
+
 }

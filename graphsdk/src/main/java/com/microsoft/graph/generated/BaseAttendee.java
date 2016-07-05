@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseAttendee extends Recipient implements IJsonBackedObject {
 
 
-	public BaseAttendee(){
-		oDataType = "microsoft.graph.attendee";
-	}
-	
+    public BaseAttendee() {
+        oDataType = "microsoft.graph.attendee";
+    }
+
     /**
      * The Status.
      */

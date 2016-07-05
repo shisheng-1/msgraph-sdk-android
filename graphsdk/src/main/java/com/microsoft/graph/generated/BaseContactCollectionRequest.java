@@ -74,7 +74,7 @@ public class BaseContactCollectionRequest extends BaseCollectionRequest<BaseCont
      * @return The updated request
      */
     public IContactCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (ContactCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseContactCollectionRequest extends BaseCollectionRequest<BaseCont
      * @return The updated request
      */
     public IContactCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (ContactCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseContactCollectionRequest extends BaseCollectionRequest<BaseCont
      * @return The updated request
      */
     public IContactCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (ContactCollectionRequest)this;
     }
 

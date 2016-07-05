@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Copy Request.
  */
 public interface IMessageCopyRequest extends IBaseMessageCopyRequest {
+
 }

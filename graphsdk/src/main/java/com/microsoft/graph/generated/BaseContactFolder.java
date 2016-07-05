@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
 
-	public BaseContactFolder(){
-		oDataType = "microsoft.graph.contactFolder";
-	}
-	
+    public BaseContactFolder() {
+        oDataType = "microsoft.graph.contactFolder";
+    }
+
     /**
      * The Parent Folder Id.
      */

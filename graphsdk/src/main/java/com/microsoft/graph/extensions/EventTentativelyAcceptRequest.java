@@ -29,7 +29,7 @@ public class EventTentativelyAcceptRequest extends BaseEventTentativelyAcceptReq
      * @param client The service client
      * @param options The options for this request
      */
-    public EventTentativelyAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
-        super(requestUrl, client, options, comment, sendResponse);
+    public EventTentativelyAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

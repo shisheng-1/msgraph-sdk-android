@@ -31,5 +31,4 @@ public class ConversationThreadCollectionPage extends BaseConversationThreadColl
     public ConversationThreadCollectionPage(final BaseConversationThreadCollectionResponse response, final IConversationThreadCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

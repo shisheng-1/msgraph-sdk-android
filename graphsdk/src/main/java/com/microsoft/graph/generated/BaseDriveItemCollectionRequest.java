@@ -74,7 +74,7 @@ public class BaseDriveItemCollectionRequest extends BaseCollectionRequest<BaseDr
      * @return The updated request
      */
     public IDriveItemCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (DriveItemCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseDriveItemCollectionRequest extends BaseCollectionRequest<BaseDr
      * @return The updated request
      */
     public IDriveItemCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (DriveItemCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseDriveItemCollectionRequest extends BaseCollectionRequest<BaseDr
      * @return The updated request
      */
     public IDriveItemCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (DriveItemCollectionRequest)this;
     }
 

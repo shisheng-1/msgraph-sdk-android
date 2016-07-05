@@ -29,7 +29,7 @@ public class MessageCopyRequest extends BaseMessageCopyRequest implements IMessa
      * @param client The service client
      * @param options The options for this request
      */
-    public MessageCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options, destinationId);
+    public MessageCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

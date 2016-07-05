@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Directory Role Template Request.
  */
 public interface IDirectoryRoleTemplateRequest extends IBaseDirectoryRoleTemplateRequest {
+
 }

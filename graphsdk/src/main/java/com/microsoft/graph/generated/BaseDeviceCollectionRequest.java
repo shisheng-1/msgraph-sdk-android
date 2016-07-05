@@ -68,35 +68,13 @@ public class BaseDeviceCollectionRequest extends BaseCollectionRequest<BaseDevic
     }
 
     /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IDeviceCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
-        return (DeviceCollectionRequest)this;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IDeviceCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
-        return (DeviceCollectionRequest)this;
-    }
-
-    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return
      * @return The updated request
      */
     public IDeviceCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (DeviceCollectionRequest)this;
     }
 

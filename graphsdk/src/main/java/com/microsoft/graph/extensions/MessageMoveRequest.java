@@ -29,7 +29,7 @@ public class MessageMoveRequest extends BaseMessageMoveRequest implements IMessa
      * @param client The service client
      * @param options The options for this request
      */
-    public MessageMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options, destinationId);
+    public MessageMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

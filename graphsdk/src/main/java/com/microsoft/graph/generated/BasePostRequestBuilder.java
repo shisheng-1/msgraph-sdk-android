@@ -47,6 +47,13 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
         return new PostRequest(getRequestUrl(), getClient(), options);
     }
 
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Post.

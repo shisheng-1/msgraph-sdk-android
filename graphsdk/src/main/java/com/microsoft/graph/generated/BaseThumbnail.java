@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseThumbnail implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseThumbnail(){
-		oDataType = "microsoft.graph.thumbnail";
-	}
-	
+    public BaseThumbnail() {
+        oDataType = "microsoft.graph.thumbnail";
+    }
+
     /**
      * The Height.
      */

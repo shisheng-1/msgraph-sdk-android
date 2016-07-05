@@ -60,7 +60,7 @@ public class BaseMessageCreateForwardRequest extends BaseRequest implements IBas
      * @return The updated request
      */
     public IMessageCreateForwardRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageCreateForwardRequest)this;
     }
 
@@ -71,7 +71,8 @@ public class BaseMessageCreateForwardRequest extends BaseRequest implements IBas
      * @return The updated request
      */
     public IMessageCreateForwardRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageCreateForwardRequest)this;
     }
+
 }

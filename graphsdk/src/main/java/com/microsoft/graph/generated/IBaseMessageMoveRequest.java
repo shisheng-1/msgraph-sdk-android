@@ -52,4 +52,5 @@ public interface IBaseMessageMoveRequest {
      * @return The updated request
      */
     IMessageMoveRequest expand(final String value);
+
 }

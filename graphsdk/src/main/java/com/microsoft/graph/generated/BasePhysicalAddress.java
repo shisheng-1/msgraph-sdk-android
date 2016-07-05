@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BasePhysicalAddress implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BasePhysicalAddress(){
-		oDataType = "microsoft.graph.physicalAddress";
-	}
-	
+    public BasePhysicalAddress() {
+        oDataType = "microsoft.graph.physicalAddress";
+    }
+
     /**
      * The Street.
      */

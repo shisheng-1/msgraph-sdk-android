@@ -31,5 +31,4 @@ public class ContactCollectionPage extends BaseContactCollectionPage implements 
     public ContactCollectionPage(final BaseContactCollectionResponse response, final IContactCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

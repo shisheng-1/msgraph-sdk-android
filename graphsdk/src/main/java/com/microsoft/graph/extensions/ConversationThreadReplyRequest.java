@@ -29,7 +29,7 @@ public class ConversationThreadReplyRequest extends BaseConversationThreadReplyR
      * @param client The service client
      * @param options The options for this request
      */
-    public ConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
-        super(requestUrl, client, options, post);
+    public ConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

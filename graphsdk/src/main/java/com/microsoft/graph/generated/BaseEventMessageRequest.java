@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Event Message Request.
  */
-public class BaseEventMessageRequest extends MessageRequest implements IBaseEventMessageRequest {
+public class BaseEventMessageRequest extends BaseRequest implements IBaseEventMessageRequest {
 
     /**
      * The request for the EventMessage
@@ -115,7 +115,7 @@ public class BaseEventMessageRequest extends MessageRequest implements IBaseEven
      * @return The updated request
      */
      public IEventMessageRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (EventMessageRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseEventMessageRequest extends MessageRequest implements IBaseEven
      * @return The updated request
      */
      public IEventMessageRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (EventMessageRequest)this;
      }
+
 }

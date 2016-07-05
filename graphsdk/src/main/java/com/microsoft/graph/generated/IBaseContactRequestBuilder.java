@@ -31,6 +31,10 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
      */
     IContactRequest buildRequest(final List<Option> options);
 
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
+
     /**
      * Gets the request builder for ProfilePhoto.
      */

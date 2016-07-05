@@ -74,7 +74,7 @@ public class BaseConversationThreadCollectionRequest extends BaseCollectionReque
      * @return The updated request
      */
     public IConversationThreadCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (ConversationThreadCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseConversationThreadCollectionRequest extends BaseCollectionReque
      * @return The updated request
      */
     public IConversationThreadCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (ConversationThreadCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseConversationThreadCollectionRequest extends BaseCollectionReque
      * @return The updated request
      */
     public IConversationThreadCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (ConversationThreadCollectionRequest)this;
     }
 

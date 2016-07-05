@@ -29,7 +29,7 @@ public class EventSnoozeReminderRequest extends BaseEventSnoozeReminderRequest i
      * @param client The service client
      * @param options The options for this request
      */
-    public EventSnoozeReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final DateTimeTimeZone newReminderTime) {
-        super(requestUrl, client, options, newReminderTime);
+    public EventSnoozeReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Message Move Request.
  */
 public interface IMessageMoveRequest extends IBaseMessageMoveRequest {
+
 }

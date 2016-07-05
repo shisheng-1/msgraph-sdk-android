@@ -26,7 +26,6 @@ public interface IBaseDirectoryObjectCollectionReferenceRequest {
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 
-    IDirectoryObjectCollectionReferenceRequest select(final String value);
-
     IDirectoryObjectCollectionReferenceRequest top(final int value);
+
 }

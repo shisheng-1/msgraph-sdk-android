@@ -92,4 +92,5 @@ public interface IBaseThumbnailRequest extends IHttpRequest {
      * @return The updated request
      */
     IBaseThumbnailRequest expand(final String value);
+
 }

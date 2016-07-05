@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Entity Request.
  */
 public interface IEntityRequest extends IBaseEntityRequest {
+
 }

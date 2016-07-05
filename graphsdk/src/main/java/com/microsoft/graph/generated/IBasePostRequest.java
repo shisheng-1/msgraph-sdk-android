@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Post Request.
  */
-public interface IBasePostRequest extends IOutlookItemRequest {
+public interface IBasePostRequest extends IHttpRequest {
 
     /**
      * Gets the Post from the service
@@ -92,4 +92,5 @@ public interface IBasePostRequest extends IOutlookItemRequest {
      * @return The updated request
      */
     IBasePostRequest expand(final String value);
+
 }

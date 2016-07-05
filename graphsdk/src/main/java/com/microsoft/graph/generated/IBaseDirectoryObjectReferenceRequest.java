@@ -26,20 +26,4 @@ public interface IBaseDirectoryObjectReferenceRequest extends IHttpRequest {
 
     DirectoryObject delete() throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectReferenceRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectReferenceRequest expand(final String value);
-
 }

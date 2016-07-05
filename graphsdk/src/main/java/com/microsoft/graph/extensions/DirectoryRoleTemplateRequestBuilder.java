@@ -32,4 +32,4 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseDirectoryRoleTempla
     public DirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

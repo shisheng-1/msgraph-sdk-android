@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Event Message Request Builder.
  */
-public interface IBaseEventMessageRequestBuilder extends IMessageRequestBuilder {
+public interface IBaseEventMessageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      */

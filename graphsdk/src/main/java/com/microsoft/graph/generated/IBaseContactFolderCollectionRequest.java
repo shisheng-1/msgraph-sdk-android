@@ -53,4 +53,5 @@ public interface IBaseContactFolderCollectionRequest {
      * @return The updated request
      */
     IContactFolderCollectionRequest top(final int value);
+
 }

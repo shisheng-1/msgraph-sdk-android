@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
 
-	public BaseGroup(){
-		oDataType = "microsoft.graph.group";
-	}
-	
+    public BaseGroup() {
+        oDataType = "microsoft.graph.group";
+    }
+
     /**
      * The Description.
      */

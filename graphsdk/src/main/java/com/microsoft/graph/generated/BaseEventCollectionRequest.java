@@ -74,7 +74,7 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
      * @return The updated request
      */
     public IEventCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (EventCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
      * @return The updated request
      */
     public IEventCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (EventCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
      * @return The updated request
      */
     public IEventCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (EventCollectionRequest)this;
     }
 

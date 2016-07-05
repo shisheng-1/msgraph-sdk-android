@@ -53,26 +53,4 @@ public class BaseDirectoryObjectWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IDirectoryObjectWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
-        return (IDirectoryObjectWithReferenceRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IDirectoryObjectWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
-        return (DirectoryObjectWithReferenceRequest)this;
-    }
-
 }

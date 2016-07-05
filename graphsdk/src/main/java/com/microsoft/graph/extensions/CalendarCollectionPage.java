@@ -31,5 +31,4 @@ public class CalendarCollectionPage extends BaseCalendarCollectionPage implement
     public CalendarCollectionPage(final BaseCalendarCollectionResponse response, final ICalendarCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

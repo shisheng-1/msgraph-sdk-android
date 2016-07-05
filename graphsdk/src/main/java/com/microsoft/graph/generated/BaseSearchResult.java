@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseSearchResult implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseSearchResult(){
-		oDataType = "microsoft.graph.searchResult";
-	}
-	
+    public BaseSearchResult() {
+        oDataType = "microsoft.graph.searchResult";
+    }
+
     /**
      * The On Click Telemetry Url.
      */

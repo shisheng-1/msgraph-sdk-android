@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseVideo implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseVideo(){
-		oDataType = "microsoft.graph.video";
-	}
-	
+    public BaseVideo() {
+        oDataType = "microsoft.graph.video";
+    }
+
     /**
      * The Bitrate.
      */

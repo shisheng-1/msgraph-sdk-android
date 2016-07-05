@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseRemoteItem implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseRemoteItem(){
-		oDataType = "microsoft.graph.remoteItem";
-	}
-	
+    public BaseRemoteItem() {
+        oDataType = "microsoft.graph.remoteItem";
+    }
+
     /**
      * The File.
      */

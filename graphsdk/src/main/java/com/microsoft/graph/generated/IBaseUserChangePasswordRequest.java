@@ -52,4 +52,5 @@ public interface IBaseUserChangePasswordRequest {
      * @return The updated request
      */
     IUserChangePasswordRequest expand(final String value);
+
 }

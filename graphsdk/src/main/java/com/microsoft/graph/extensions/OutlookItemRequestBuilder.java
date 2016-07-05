@@ -32,4 +32,4 @@ public class OutlookItemRequestBuilder extends BaseOutlookItemRequestBuilder imp
     public OutlookItemRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

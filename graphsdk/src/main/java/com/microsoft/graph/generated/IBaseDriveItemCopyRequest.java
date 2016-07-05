@@ -52,4 +52,5 @@ public interface IBaseDriveItemCopyRequest {
      * @return The updated request
      */
     IDriveItemCopyRequest expand(final String value);
+
 }

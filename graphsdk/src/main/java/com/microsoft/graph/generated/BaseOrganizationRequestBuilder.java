@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Organization Request Builder.
  */
-public class BaseOrganizationRequestBuilder extends DirectoryObjectRequestBuilder implements IBaseOrganizationRequestBuilder {
+public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implements IBaseOrganizationRequestBuilder {
 
     /**
      * The request builder for the Organization

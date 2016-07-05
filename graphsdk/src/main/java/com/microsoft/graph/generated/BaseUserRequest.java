@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base User Request.
  */
-public class BaseUserRequest extends DirectoryObjectRequest implements IBaseUserRequest {
+public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * The request for the User
@@ -108,25 +108,4 @@ public class BaseUserRequest extends DirectoryObjectRequest implements IBaseUser
         return send(HttpMethod.POST, newUser);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-     public IUserRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
-         return (UserRequest)this;
-     }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-     public IUserRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
-         return (UserRequest)this;
-     }
 }

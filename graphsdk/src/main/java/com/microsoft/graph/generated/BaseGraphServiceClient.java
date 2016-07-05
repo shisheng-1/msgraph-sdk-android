@@ -217,6 +217,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Subscriptions objects.
+     *
+     * @return The request builder for the collection of Subscriptions objects
+     */
+    public ISubscriptionCollectionRequestBuilder getSubscriptions() {
+        return new SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Subscriptions.
+     *
+     * @param id The id of the Subscriptions to retrieve.
+     * @return The request builder for the Subscriptions object
+     */
+    public ISubscriptionRequestBuilder getSubscriptions(final String id) {
+        return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the User.

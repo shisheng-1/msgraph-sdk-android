@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Organization Request.
  */
-public class BaseOrganizationRequest extends DirectoryObjectRequest implements IBaseOrganizationRequest {
+public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganizationRequest {
 
     /**
      * The request for the Organization
@@ -108,25 +108,4 @@ public class BaseOrganizationRequest extends DirectoryObjectRequest implements I
         return send(HttpMethod.POST, newOrganization);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-     public IOrganizationRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
-         return (OrganizationRequest)this;
-     }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-     public IOrganizationRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
-         return (OrganizationRequest)this;
-     }
 }

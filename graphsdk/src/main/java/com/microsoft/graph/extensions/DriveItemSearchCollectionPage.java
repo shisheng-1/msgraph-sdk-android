@@ -31,5 +31,4 @@ public class DriveItemSearchCollectionPage extends BaseDriveItemSearchCollection
     public DriveItemSearchCollectionPage(final BaseDriveItemSearchCollectionResponse response, final IDriveItemSearchCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Conversation Request.
  */
 public interface IConversationRequest extends IBaseConversationRequest {
+
 }

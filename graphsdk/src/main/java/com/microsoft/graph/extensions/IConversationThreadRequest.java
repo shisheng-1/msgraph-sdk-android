@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Conversation Thread Request.
  */
 public interface IConversationThreadRequest extends IBaseConversationThreadRequest {
+
 }

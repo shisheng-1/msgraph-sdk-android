@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseDrive extends Entity implements IJsonBackedObject {
 
 
-	public BaseDrive(){
-		oDataType = "microsoft.graph.drive";
-	}
-	
+    public BaseDrive() {
+        oDataType = "microsoft.graph.drive";
+    }
+
     /**
      * The Drive Type.
      */

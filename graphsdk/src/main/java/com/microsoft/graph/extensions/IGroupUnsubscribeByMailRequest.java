@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Group Unsubscribe By Mail Request.
  */
 public interface IGroupUnsubscribeByMailRequest extends IBaseGroupUnsubscribeByMailRequest {
+
 }

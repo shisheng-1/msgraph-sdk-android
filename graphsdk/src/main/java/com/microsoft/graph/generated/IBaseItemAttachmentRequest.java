@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Item Attachment Request.
  */
-public interface IBaseItemAttachmentRequest extends IAttachmentRequest {
+public interface IBaseItemAttachmentRequest extends IHttpRequest {
 
     /**
      * Gets the ItemAttachment from the service
@@ -92,4 +92,5 @@ public interface IBaseItemAttachmentRequest extends IAttachmentRequest {
      * @return The updated request
      */
     IBaseItemAttachmentRequest expand(final String value);
+
 }

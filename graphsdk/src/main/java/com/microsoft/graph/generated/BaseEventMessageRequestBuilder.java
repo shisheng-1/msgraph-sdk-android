@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Event Message Request Builder.
  */
-public class BaseEventMessageRequestBuilder extends MessageRequestBuilder implements IBaseEventMessageRequestBuilder {
+public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implements IBaseEventMessageRequestBuilder {
 
     /**
      * The request builder for the EventMessage

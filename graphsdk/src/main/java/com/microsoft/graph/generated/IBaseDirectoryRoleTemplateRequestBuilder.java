@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Directory Role Template Request Builder.
  */
-public interface IBaseDirectoryRoleTemplateRequestBuilder extends IDirectoryObjectRequestBuilder {
+public interface IBaseDirectoryRoleTemplateRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      */

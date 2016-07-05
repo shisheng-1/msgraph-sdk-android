@@ -77,4 +77,3 @@ public class BaseDriveItemDeltaCollectionResponse implements IJsonBackedObject {
         }
     }
 }
-	

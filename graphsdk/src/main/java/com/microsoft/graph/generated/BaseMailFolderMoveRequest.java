@@ -30,10 +30,9 @@ public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailF
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMailFolderMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
+    public BaseMailFolderMoveRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, MailFolder.class);
         mBody = new MailFolderMoveBody();
-        mBody.destinationId = destinationId;
     }
 
     public void post(final ICallback<MailFolder> callback) {
@@ -51,7 +50,7 @@ public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderMoveRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MailFolderMoveRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderMoveRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MailFolderMoveRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderMoveRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MailFolderMoveRequest)this;
     }
+
 }

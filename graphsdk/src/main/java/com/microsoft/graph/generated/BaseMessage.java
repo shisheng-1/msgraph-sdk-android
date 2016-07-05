@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
 
-	public BaseMessage(){
-		oDataType = "microsoft.graph.message";
-	}
-	
+    public BaseMessage() {
+        oDataType = "microsoft.graph.message";
+    }
+
     /**
      * The Received Date Time.
      */
@@ -163,6 +163,17 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     public String webLink;
 
     /**
+     * The Inference Classification.
+     */
+    @SerializedName("inferenceClassification")
+    public InferenceClassificationType inferenceClassification;
+
+    /**
+     * The Extensions.
+     */
+    public transient ExtensionCollectionPage extensions;
+
+    /**
      * The Attachments.
      */
     public transient AttachmentCollectionPage attachments;
@@ -204,6 +215,22 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
         mSerializer = serializer;
         mRawObject = json;
 
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
+        }
 
         if (json.has("attachments")) {
             final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();

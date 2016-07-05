@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseSharingLink implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseSharingLink(){
-		oDataType = "microsoft.graph.sharingLink";
-	}
-	
+    public BaseSharingLink() {
+        oDataType = "microsoft.graph.sharingLink";
+    }
+
     /**
      * The Application.
      */

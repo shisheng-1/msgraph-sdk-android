@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseLocation implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseLocation(){
-		oDataType = "microsoft.graph.location";
-	}
-	
+    public BaseLocation() {
+        oDataType = "microsoft.graph.location";
+    }
+
     /**
      * The Display Name.
      */

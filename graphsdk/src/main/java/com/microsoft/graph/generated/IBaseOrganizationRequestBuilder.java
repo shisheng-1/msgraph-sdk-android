@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Organization Request Builder.
  */
-public interface IBaseOrganizationRequestBuilder extends IDirectoryObjectRequestBuilder {
+public interface IBaseOrganizationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      */

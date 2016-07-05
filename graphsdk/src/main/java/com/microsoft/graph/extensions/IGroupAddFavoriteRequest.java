@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Group Add Favorite Request.
  */
 public interface IGroupAddFavoriteRequest extends IBaseGroupAddFavoriteRequest {
+
 }

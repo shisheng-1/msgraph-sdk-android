@@ -30,10 +30,9 @@ public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBase
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseEventSnoozeReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final DateTimeTimeZone newReminderTime) {
+    public BaseEventSnoozeReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new EventSnoozeReminderBody();
-        mBody.newReminderTime = newReminderTime;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -51,7 +50,7 @@ public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IEventSnoozeReminderRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (EventSnoozeReminderRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IEventSnoozeReminderRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (EventSnoozeReminderRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IEventSnoozeReminderRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (EventSnoozeReminderRequest)this;
     }
+
 }

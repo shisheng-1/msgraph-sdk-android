@@ -30,11 +30,9 @@ public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBase
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
+    public BaseDriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Permission.class);
         mBody = new DriveItemCreateLinkBody();
-        mBody.type = type;
-        mBody.scope = scope;
     }
 
     public void post(final ICallback<Permission> callback) {
@@ -52,7 +50,7 @@ public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IDriveItemCreateLinkRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (DriveItemCreateLinkRequest)this;
     }
 
@@ -63,7 +61,7 @@ public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IDriveItemCreateLinkRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (DriveItemCreateLinkRequest)this;
     }
 
@@ -74,7 +72,8 @@ public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBase
      * @return The updated request
      */
     public IDriveItemCreateLinkRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (DriveItemCreateLinkRequest)this;
     }
+
 }

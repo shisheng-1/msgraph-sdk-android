@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the User Send Mail Request.
  */
 public interface IUserSendMailRequest extends IBaseUserSendMailRequest {
+
 }

@@ -53,4 +53,5 @@ public interface IBaseAttachmentCollectionRequest {
      * @return The updated request
      */
     IAttachmentCollectionRequest top(final int value);
+
 }

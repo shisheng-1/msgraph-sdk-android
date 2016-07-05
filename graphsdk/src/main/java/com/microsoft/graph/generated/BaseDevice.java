@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
 
-	public BaseDevice(){
-		oDataType = "microsoft.graph.device";
-	}
-	
+    public BaseDevice() {
+        oDataType = "microsoft.graph.device";
+    }
+
     /**
      * The Account Enabled.
      */

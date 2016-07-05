@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Thumbnail Set Request.
  */
-public interface IBaseThumbnailSetRequest extends IEntityRequest {
+public interface IBaseThumbnailSetRequest extends IHttpRequest {
 
     /**
      * Gets the ThumbnailSet from the service
@@ -92,4 +92,5 @@ public interface IBaseThumbnailSetRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseThumbnailSetRequest expand(final String value);
+
 }

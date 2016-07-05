@@ -1,4 +1,3 @@
-
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -23,10 +22,4 @@ import java.util.List;
  */
 public interface IThumbnailSetRequestBuilder extends IBaseThumbnailSetRequestBuilder {
 
-    /**
-     * Gets a request for a thumbnail of a specific size
-     * @param size The size to request (typically: small, medium, large)
-     * @return The request builder for that thumbnail size
-     */
-    IThumbnailRequestBuilder getThumbnailSize(final String size);
 }

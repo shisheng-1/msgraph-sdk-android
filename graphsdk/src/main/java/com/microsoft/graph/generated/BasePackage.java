@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BasePackage implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BasePackage(){
-		oDataType = "microsoft.graph.package";
-	}
-	
+    public BasePackage() {
+        oDataType = "microsoft.graph.package";
+    }
+
     /**
      * The Type.
      */

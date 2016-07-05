@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Directory Object Request.
  */
-public interface IBaseDirectoryObjectRequest extends IEntityRequest {
+public interface IBaseDirectoryObjectRequest extends IHttpRequest {
 
     /**
      * Gets the DirectoryObject from the service
@@ -77,19 +77,4 @@ public interface IBaseDirectoryObjectRequest extends IEntityRequest {
      */
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseDirectoryObjectRequest expand(final String value);
 }

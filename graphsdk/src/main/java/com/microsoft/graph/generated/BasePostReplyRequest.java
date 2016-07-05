@@ -30,10 +30,9 @@ public class BasePostReplyRequest extends BaseRequest implements IBasePostReplyR
      * @param client The service client
      * @param options The options for this request
      */
-    public BasePostReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
+    public BasePostReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new PostReplyBody();
-        mBody.post = post;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -51,7 +50,7 @@ public class BasePostReplyRequest extends BaseRequest implements IBasePostReplyR
      * @return The updated request
      */
     public IPostReplyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (PostReplyRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BasePostReplyRequest extends BaseRequest implements IBasePostReplyR
      * @return The updated request
      */
     public IPostReplyRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (PostReplyRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BasePostReplyRequest extends BaseRequest implements IBasePostReplyR
      * @return The updated request
      */
     public IPostReplyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (PostReplyRequest)this;
     }
+
 }

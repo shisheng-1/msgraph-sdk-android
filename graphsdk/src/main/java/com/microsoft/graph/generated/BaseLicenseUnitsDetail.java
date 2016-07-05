@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseLicenseUnitsDetail(){
-		oDataType = "microsoft.graph.licenseUnitsDetail";
-	}
-	
+    public BaseLicenseUnitsDetail() {
+        oDataType = "microsoft.graph.licenseUnitsDetail";
+    }
+
     /**
      * The Enabled.
      */

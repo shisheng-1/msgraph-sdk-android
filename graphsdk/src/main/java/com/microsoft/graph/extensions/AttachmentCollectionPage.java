@@ -31,5 +31,4 @@ public class AttachmentCollectionPage extends BaseAttachmentCollectionPage imple
     public AttachmentCollectionPage(final BaseAttachmentCollectionResponse response, final IAttachmentCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

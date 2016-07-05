@@ -52,4 +52,5 @@ public interface IBaseDirectoryObjectGetMemberGroupsCollectionRequest {
      * @return The updated request
      */
     IDirectoryObjectGetMemberGroupsCollectionRequest top(final int value);
+
 }

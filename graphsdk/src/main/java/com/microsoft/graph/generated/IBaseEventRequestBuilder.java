@@ -40,6 +40,10 @@ public interface IBaseEventRequestBuilder extends IRequestBuilder {
 
     IEventRequestBuilder getInstances(final String id);
 
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
+
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);

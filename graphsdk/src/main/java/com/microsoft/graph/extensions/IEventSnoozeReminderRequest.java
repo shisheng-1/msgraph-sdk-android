@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Event Snooze Reminder Request.
  */
 public interface IEventSnoozeReminderRequest extends IBaseEventSnoozeReminderRequest {
+
 }

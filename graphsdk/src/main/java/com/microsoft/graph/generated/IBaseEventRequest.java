@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Event Request.
  */
-public interface IBaseEventRequest extends IOutlookItemRequest {
+public interface IBaseEventRequest extends IHttpRequest {
 
     /**
      * Gets the Event from the service
@@ -92,4 +92,5 @@ public interface IBaseEventRequest extends IOutlookItemRequest {
      * @return The updated request
      */
     IBaseEventRequest expand(final String value);
+
 }

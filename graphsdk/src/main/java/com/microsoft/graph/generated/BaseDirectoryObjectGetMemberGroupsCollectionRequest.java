@@ -33,10 +33,9 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequest extends BaseCol
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
+    public BaseDirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, BaseDirectoryObjectGetMemberGroupsCollectionResponse.class, IDirectoryObjectGetMemberGroupsCollectionPage.class);
         mBody = new DirectoryObjectGetMemberGroupsBody();
-        mBody.securityEnabledOnly = securityEnabledOnly;
     }
 
 
@@ -79,7 +78,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequest extends BaseCol
      * @return The updated request
      */
     public IDirectoryObjectGetMemberGroupsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
@@ -90,7 +89,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequest extends BaseCol
      * @return The updated request
      */
     public IDirectoryObjectGetMemberGroupsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
@@ -101,7 +100,8 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequest extends BaseCol
      * @return The updated request
      */
     public IDirectoryObjectGetMemberGroupsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
+
 }

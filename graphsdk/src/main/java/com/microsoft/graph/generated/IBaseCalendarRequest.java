@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Calendar Request.
  */
-public interface IBaseCalendarRequest extends IEntityRequest {
+public interface IBaseCalendarRequest extends IHttpRequest {
 
     /**
      * Gets the Calendar from the service
@@ -92,4 +92,5 @@ public interface IBaseCalendarRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseCalendarRequest expand(final String value);
+
 }

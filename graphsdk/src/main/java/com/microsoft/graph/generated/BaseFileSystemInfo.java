@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseFileSystemInfo implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseFileSystemInfo(){
-		oDataType = "microsoft.graph.fileSystemInfo";
-	}
-	
+    public BaseFileSystemInfo() {
+        oDataType = "microsoft.graph.fileSystemInfo";
+    }
+
     /**
      * The Created Date Time.
      */

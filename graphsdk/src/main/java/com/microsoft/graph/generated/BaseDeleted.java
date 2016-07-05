@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseDeleted implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseDeleted(){
-		oDataType = "microsoft.graph.deleted";
-	}
-	
+    public BaseDeleted() {
+        oDataType = "microsoft.graph.deleted";
+    }
+
     /**
      * The State.
      */

@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Organization Request.
  */
-public interface IBaseOrganizationRequest extends IDirectoryObjectRequest {
+public interface IBaseOrganizationRequest extends IHttpRequest {
 
     /**
      * Gets the Organization from the service
@@ -77,19 +77,4 @@ public interface IBaseOrganizationRequest extends IDirectoryObjectRequest {
      */
     Organization post(final Organization newOrganization) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseOrganizationRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseOrganizationRequest expand(final String value);
 }

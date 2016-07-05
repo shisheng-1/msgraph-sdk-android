@@ -53,4 +53,5 @@ public interface IBaseMailFolderCollectionRequest {
      * @return The updated request
      */
     IMailFolderCollectionRequest top(final int value);
+
 }

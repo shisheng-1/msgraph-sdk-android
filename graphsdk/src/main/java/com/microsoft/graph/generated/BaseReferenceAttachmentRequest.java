@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Reference Attachment Request.
  */
-public class BaseReferenceAttachmentRequest extends AttachmentRequest implements IBaseReferenceAttachmentRequest {
+public class BaseReferenceAttachmentRequest extends BaseRequest implements IBaseReferenceAttachmentRequest {
 
     /**
      * The request for the ReferenceAttachment
@@ -115,7 +115,7 @@ public class BaseReferenceAttachmentRequest extends AttachmentRequest implements
      * @return The updated request
      */
      public IReferenceAttachmentRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ReferenceAttachmentRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseReferenceAttachmentRequest extends AttachmentRequest implements
      * @return The updated request
      */
      public IReferenceAttachmentRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ReferenceAttachmentRequest)this;
      }
+
 }

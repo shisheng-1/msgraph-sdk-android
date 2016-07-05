@@ -77,4 +77,3 @@ public class BaseDriveRecentCollectionResponse implements IJsonBackedObject {
         }
     }
 }
-	

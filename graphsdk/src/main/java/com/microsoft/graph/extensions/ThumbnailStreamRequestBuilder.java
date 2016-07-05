@@ -32,4 +32,4 @@ public class ThumbnailStreamRequestBuilder extends BaseThumbnailStreamRequestBui
     public ThumbnailStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

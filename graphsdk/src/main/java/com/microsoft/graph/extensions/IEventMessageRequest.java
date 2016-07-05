@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Event Message Request.
  */
 public interface IEventMessageRequest extends IBaseEventMessageRequest {
+
 }

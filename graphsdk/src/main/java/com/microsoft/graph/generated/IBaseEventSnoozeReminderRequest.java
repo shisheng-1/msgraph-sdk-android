@@ -52,4 +52,5 @@ public interface IBaseEventSnoozeReminderRequest {
      * @return The updated request
      */
     IEventSnoozeReminderRequest expand(final String value);
+
 }

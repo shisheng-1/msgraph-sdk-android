@@ -52,4 +52,5 @@ public interface IBaseUserAssignLicenseRequest {
      * @return The updated request
      */
     IUserAssignLicenseRequest expand(final String value);
+
 }

@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseResponseStatus implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseResponseStatus(){
-		oDataType = "microsoft.graph.responseStatus";
-	}
-	
+    public BaseResponseStatus() {
+        oDataType = "microsoft.graph.responseStatus";
+    }
+
     /**
      * The Response.
      */

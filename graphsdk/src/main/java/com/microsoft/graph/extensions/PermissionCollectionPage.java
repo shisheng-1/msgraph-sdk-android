@@ -31,5 +31,4 @@ public class PermissionCollectionPage extends BasePermissionCollectionPage imple
     public PermissionCollectionPage(final BasePermissionCollectionResponse response, final IPermissionCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseSpecialFolder implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseSpecialFolder(){
-		oDataType = "microsoft.graph.specialFolder";
-	}
-	
+    public BaseSpecialFolder() {
+        oDataType = "microsoft.graph.specialFolder";
+    }
+
     /**
      * The Name.
      */

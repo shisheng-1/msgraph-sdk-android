@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseFolder implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseFolder(){
-		oDataType = "microsoft.graph.folder";
-	}
-	
+    public BaseFolder() {
+        oDataType = "microsoft.graph.folder";
+    }
+
     /**
      * The Child Count.
      */

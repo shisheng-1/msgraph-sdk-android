@@ -52,4 +52,5 @@ public interface IBaseDriveItemCreateLinkRequest {
      * @return The updated request
      */
     IDriveItemCreateLinkRequest expand(final String value);
+
 }

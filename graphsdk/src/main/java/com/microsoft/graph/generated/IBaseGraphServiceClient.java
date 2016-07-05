@@ -158,6 +158,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IDriveRequestBuilder getDrives(final String id);
 
     /**
+     * Gets the collection of Subscriptions objects.
+     *
+     * @return The request builder for the collection of Subscriptions objects
+     */
+    ISubscriptionCollectionRequestBuilder getSubscriptions();
+
+    /**
+     * Gets a single Subscriptions.
+     *
+     * @param id The id of the Subscriptions to retrieve.
+     * @return The request builder for the Subscriptions object
+     */
+    ISubscriptionRequestBuilder getSubscriptions(final String id);
+
+    /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the User.

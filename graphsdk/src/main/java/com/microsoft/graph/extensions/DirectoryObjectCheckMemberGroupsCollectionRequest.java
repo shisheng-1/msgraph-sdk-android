@@ -29,7 +29,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseDirec
      * @param client The service client
      * @param options The options for this request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final List<String> groupIds) {
-        super(requestUrl, client, options, groupIds);
+    public DirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

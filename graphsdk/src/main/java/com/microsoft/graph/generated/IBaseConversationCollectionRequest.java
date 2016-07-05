@@ -53,4 +53,5 @@ public interface IBaseConversationCollectionRequest {
      * @return The updated request
      */
     IConversationCollectionRequest top(final int value);
+
 }

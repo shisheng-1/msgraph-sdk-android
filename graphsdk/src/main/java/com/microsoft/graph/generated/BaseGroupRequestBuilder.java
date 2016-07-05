@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Group Request Builder.
  */
-public class BaseGroupRequestBuilder extends DirectoryObjectRequestBuilder implements IBaseGroupRequestBuilder {
+public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBaseGroupRequestBuilder {
 
     /**
      * The request builder for the Group

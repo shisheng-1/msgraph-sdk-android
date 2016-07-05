@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Thumbnail Set Request.
  */
-public class BaseThumbnailSetRequest extends EntityRequest implements IBaseThumbnailSetRequest {
+public class BaseThumbnailSetRequest extends BaseRequest implements IBaseThumbnailSetRequest {
 
     /**
      * The request for the ThumbnailSet
@@ -115,7 +115,7 @@ public class BaseThumbnailSetRequest extends EntityRequest implements IBaseThumb
      * @return The updated request
      */
      public IThumbnailSetRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ThumbnailSetRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseThumbnailSetRequest extends EntityRequest implements IBaseThumb
      * @return The updated request
      */
      public IThumbnailSetRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ThumbnailSetRequest)this;
      }
+
 }

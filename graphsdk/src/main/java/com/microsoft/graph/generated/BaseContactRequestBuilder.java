@@ -47,6 +47,13 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
         return new ContactRequest(getRequestUrl(), getClient(), options);
     }
 
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for ProfilePhoto.

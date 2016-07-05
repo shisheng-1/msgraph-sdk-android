@@ -53,4 +53,5 @@ public interface IBaseThumbnailSetCollectionRequest {
      * @return The updated request
      */
     IThumbnailSetCollectionRequest top(final int value);
+
 }

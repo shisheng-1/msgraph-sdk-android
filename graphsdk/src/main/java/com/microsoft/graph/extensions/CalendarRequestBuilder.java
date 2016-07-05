@@ -32,4 +32,4 @@ public class CalendarRequestBuilder extends BaseCalendarRequestBuilder implement
     public CalendarRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

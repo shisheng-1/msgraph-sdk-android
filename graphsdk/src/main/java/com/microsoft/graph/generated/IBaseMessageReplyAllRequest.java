@@ -52,4 +52,5 @@ public interface IBaseMessageReplyAllRequest {
      * @return The updated request
      */
     IMessageReplyAllRequest expand(final String value);
+
 }

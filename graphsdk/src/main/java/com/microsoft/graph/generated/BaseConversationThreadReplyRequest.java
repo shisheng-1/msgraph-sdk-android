@@ -30,10 +30,9 @@ public class BaseConversationThreadReplyRequest extends BaseRequest implements I
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
+    public BaseConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new ConversationThreadReplyBody();
-        mBody.post = post;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -51,7 +50,7 @@ public class BaseConversationThreadReplyRequest extends BaseRequest implements I
      * @return The updated request
      */
     public IConversationThreadReplyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (ConversationThreadReplyRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BaseConversationThreadReplyRequest extends BaseRequest implements I
      * @return The updated request
      */
     public IConversationThreadReplyRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (ConversationThreadReplyRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BaseConversationThreadReplyRequest extends BaseRequest implements I
      * @return The updated request
      */
     public IConversationThreadReplyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (ConversationThreadReplyRequest)this;
     }
+
 }

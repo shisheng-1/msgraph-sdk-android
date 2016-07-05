@@ -53,4 +53,5 @@ public interface IBaseCalendarGroupCollectionRequest {
      * @return The updated request
      */
     ICalendarGroupCollectionRequest top(final int value);
+
 }

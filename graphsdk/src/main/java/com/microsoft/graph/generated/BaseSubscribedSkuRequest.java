@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Subscribed Sku Request.
  */
-public class BaseSubscribedSkuRequest extends EntityRequest implements IBaseSubscribedSkuRequest {
+public class BaseSubscribedSkuRequest extends BaseRequest implements IBaseSubscribedSkuRequest {
 
     /**
      * The request for the SubscribedSku
@@ -108,25 +108,4 @@ public class BaseSubscribedSkuRequest extends EntityRequest implements IBaseSubs
         return send(HttpMethod.POST, newSubscribedSku);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-     public ISubscribedSkuRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
-         return (SubscribedSkuRequest)this;
-     }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-     public ISubscribedSkuRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
-         return (SubscribedSkuRequest)this;
-     }
 }

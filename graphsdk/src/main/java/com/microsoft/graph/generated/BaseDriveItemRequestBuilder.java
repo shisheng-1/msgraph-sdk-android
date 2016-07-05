@@ -99,6 +99,10 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
         return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
+    public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
+        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
+    }
+
     public IDriveItemDeltaCollectionRequestBuilder getDelta() {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }

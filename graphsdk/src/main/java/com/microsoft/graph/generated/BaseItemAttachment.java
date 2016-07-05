@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseItemAttachment extends Attachment implements IJsonBackedObject {
 
 
-	public BaseItemAttachment(){
-		oDataType = "microsoft.graph.itemAttachment";
-	}
-	
+    public BaseItemAttachment() {
+        oDataType = "microsoft.graph.itemAttachment";
+    }
+
     /**
      * The Item.
      */

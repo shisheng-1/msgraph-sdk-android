@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Event Accept Request.
  */
 public interface IEventAcceptRequest extends IBaseEventAcceptRequest {
+
 }

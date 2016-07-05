@@ -32,4 +32,4 @@ public class DeviceRequestBuilder extends BaseDeviceRequestBuilder implements ID
     public DeviceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

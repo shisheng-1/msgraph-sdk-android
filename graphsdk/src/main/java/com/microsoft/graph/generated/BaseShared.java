@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseShared implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseShared(){
-		oDataType = "microsoft.graph.shared";
-	}
-	
+    public BaseShared() {
+        oDataType = "microsoft.graph.shared";
+    }
+
     /**
      * The Owner.
      */

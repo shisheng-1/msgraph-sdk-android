@@ -29,7 +29,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseDirecto
      * @param client The service client
      * @param options The options for this request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
-        super(requestUrl, client, options, securityEnabledOnly);
+    public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

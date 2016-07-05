@@ -30,10 +30,9 @@ public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailF
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMailFolderCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
+    public BaseMailFolderCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, MailFolder.class);
         mBody = new MailFolderCopyBody();
-        mBody.destinationId = destinationId;
     }
 
     public void post(final ICallback<MailFolder> callback) {
@@ -51,7 +50,7 @@ public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderCopyRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MailFolderCopyRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderCopyRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MailFolderCopyRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailF
      * @return The updated request
      */
     public IMailFolderCopyRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MailFolderCopyRequest)this;
     }
+
 }

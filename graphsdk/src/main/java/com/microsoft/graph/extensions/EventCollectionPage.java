@@ -31,5 +31,4 @@ public class EventCollectionPage extends BaseEventCollectionPage implements IEve
     public EventCollectionPage(final BaseEventCollectionResponse response, final IEventCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

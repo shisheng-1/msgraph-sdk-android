@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Event Message Request.
  */
-public interface IBaseEventMessageRequest extends IMessageRequest {
+public interface IBaseEventMessageRequest extends IHttpRequest {
 
     /**
      * Gets the EventMessage from the service
@@ -92,4 +92,5 @@ public interface IBaseEventMessageRequest extends IMessageRequest {
      * @return The updated request
      */
     IBaseEventMessageRequest expand(final String value);
+
 }

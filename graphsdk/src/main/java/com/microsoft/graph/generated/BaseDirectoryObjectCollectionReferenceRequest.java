@@ -51,36 +51,13 @@ public class BaseDirectoryObjectCollectionReferenceRequest extends BaseCollectio
     }
 
     /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IDirectoryObjectCollectionReferenceRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
-        return (DirectoryObjectCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IDirectoryObjectCollectionReferenceRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
-        return (DirectoryObjectCollectionReferenceRequest)this;
-    }
-
-    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return
      * @return The updated request
      */
     public IDirectoryObjectCollectionReferenceRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (DirectoryObjectCollectionReferenceRequest)this;
     }
-
 }

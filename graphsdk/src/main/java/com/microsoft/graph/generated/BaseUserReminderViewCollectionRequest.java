@@ -30,10 +30,8 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseUserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String startDateTime, final String endDateTime) {
+    public BaseUserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, BaseUserReminderViewCollectionResponse.class, IUserReminderViewCollectionPage.class);
-        addFunctionOption(new FunctionOption("startDateTime", startDateTime));
-        addFunctionOption(new FunctionOption("endDateTime", endDateTime));
     }
 
 
@@ -76,7 +74,7 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
      * @return The updated request
      */
     public IUserReminderViewCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (IUserReminderViewCollectionRequest)this;
     }
 
@@ -87,7 +85,7 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
      * @return The updated request
      */
     public IUserReminderViewCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value+""));
+        addQueryOption(new QueryOption("$top", value+""));
         return (IUserReminderViewCollectionRequest)this;
     }
 
@@ -98,7 +96,8 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
      * @return The updated request
      */
     public IUserReminderViewCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (IUserReminderViewCollectionRequest)this;
     }
+
 }

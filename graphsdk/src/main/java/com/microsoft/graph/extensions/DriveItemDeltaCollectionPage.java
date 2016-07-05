@@ -31,5 +31,4 @@ public class DriveItemDeltaCollectionPage extends BaseDriveItemDeltaCollectionPa
     public DriveItemDeltaCollectionPage(final BaseDriveItemDeltaCollectionResponse response, final IDriveItemDeltaCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

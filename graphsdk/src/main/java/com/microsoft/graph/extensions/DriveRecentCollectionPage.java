@@ -31,5 +31,4 @@ public class DriveRecentCollectionPage extends BaseDriveRecentCollectionPage imp
     public DriveRecentCollectionPage(final BaseDriveRecentCollectionResponse response, final IDriveRecentCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

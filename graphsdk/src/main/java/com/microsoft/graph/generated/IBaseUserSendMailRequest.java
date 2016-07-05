@@ -52,4 +52,5 @@ public interface IBaseUserSendMailRequest {
      * @return The updated request
      */
     IUserSendMailRequest expand(final String value);
+
 }

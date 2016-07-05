@@ -31,5 +31,4 @@ public class MailFolderCollectionPage extends BaseMailFolderCollectionPage imple
     public MailFolderCollectionPage(final BaseMailFolderCollectionResponse response, final IMailFolderCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

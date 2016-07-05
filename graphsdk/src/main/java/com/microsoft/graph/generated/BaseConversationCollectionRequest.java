@@ -74,7 +74,7 @@ public class BaseConversationCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IConversationCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (ConversationCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseConversationCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IConversationCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (ConversationCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseConversationCollectionRequest extends BaseCollectionRequest<Bas
      * @return The updated request
      */
     public IConversationCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (ConversationCollectionRequest)this;
     }
 

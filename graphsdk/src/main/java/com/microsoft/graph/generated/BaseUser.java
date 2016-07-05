@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
 
-	public BaseUser(){
-		oDataType = "microsoft.graph.user";
-	}
-	
+    public BaseUser() {
+        oDataType = "microsoft.graph.user";
+    }
+
     /**
      * The Account Enabled.
      */
@@ -357,6 +357,12 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Contact Folders.
      */
     public transient ContactFolderCollectionPage contactFolders;
+
+    /**
+     * The Inference Classification.
+     */
+    @SerializedName("inferenceClassification")
+    public InferenceClassification inferenceClassification;
 
     /**
      * The Photo.

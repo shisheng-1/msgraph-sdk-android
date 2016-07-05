@@ -29,7 +29,7 @@ public class DriveItemCreateLinkRequest extends BaseDriveItemCreateLinkRequest i
      * @param client The service client
      * @param options The options for this request
      */
-    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
-        super(requestUrl, client, options, type, scope);
+    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

@@ -41,25 +41,4 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
        return send(HttpMethod.DELETE, null);
     }
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    public IUserReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
-        return (UserReferenceRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    public IUserReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
-        return (UserReferenceRequest)this;
-    }
 }

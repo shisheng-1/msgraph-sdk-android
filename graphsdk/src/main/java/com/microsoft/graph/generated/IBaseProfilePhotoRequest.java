@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Profile Photo Request.
  */
-public interface IBaseProfilePhotoRequest extends IEntityRequest {
+public interface IBaseProfilePhotoRequest extends IHttpRequest {
 
     /**
      * Gets the ProfilePhoto from the service
@@ -92,4 +92,5 @@ public interface IBaseProfilePhotoRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseProfilePhotoRequest expand(final String value);
+
 }

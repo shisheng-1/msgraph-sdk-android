@@ -59,6 +59,8 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
 
     IDriveItemSearchCollectionRequestBuilder getSearch(final String q);
 
+    IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
+
     IDriveItemDeltaCollectionRequestBuilder getDelta();
 
 }

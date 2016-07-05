@@ -60,7 +60,7 @@ public class BaseMessageCreateReplyAllRequest extends BaseRequest implements IBa
      * @return The updated request
      */
     public IMessageCreateReplyAllRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageCreateReplyAllRequest)this;
     }
 
@@ -71,7 +71,8 @@ public class BaseMessageCreateReplyAllRequest extends BaseRequest implements IBa
      * @return The updated request
      */
     public IMessageCreateReplyAllRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageCreateReplyAllRequest)this;
     }
+
 }

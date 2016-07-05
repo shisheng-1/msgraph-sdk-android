@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Group Remove Favorite Request.
  */
 public interface IGroupRemoveFavoriteRequest extends IBaseGroupRemoveFavoriteRequest {
+
 }

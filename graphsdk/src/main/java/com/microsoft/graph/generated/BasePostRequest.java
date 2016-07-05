@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Post Request.
  */
-public class BasePostRequest extends OutlookItemRequest implements IBasePostRequest {
+public class BasePostRequest extends BaseRequest implements IBasePostRequest {
 
     /**
      * The request for the Post
@@ -115,7 +115,7 @@ public class BasePostRequest extends OutlookItemRequest implements IBasePostRequ
      * @return The updated request
      */
      public IPostRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (PostRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BasePostRequest extends OutlookItemRequest implements IBasePostRequ
      * @return The updated request
      */
      public IPostRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (PostRequest)this;
      }
+
 }

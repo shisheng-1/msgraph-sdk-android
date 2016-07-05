@@ -53,4 +53,5 @@ public interface IBaseMessageCollectionRequest {
      * @return The updated request
      */
     IMessageCollectionRequest top(final int value);
+
 }

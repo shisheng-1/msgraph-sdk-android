@@ -29,7 +29,7 @@ public class UserSendMailRequest extends BaseUserSendMailRequest implements IUse
      * @param client The service client
      * @param options The options for this request
      */
-    public UserSendMailRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final Message message, final Boolean saveToSentItems) {
-        super(requestUrl, client, options, message, saveToSentItems);
+    public UserSendMailRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

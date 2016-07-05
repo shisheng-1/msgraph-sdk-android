@@ -31,5 +31,4 @@ public class DeviceCollectionPage extends BaseDeviceCollectionPage implements ID
     public DeviceCollectionPage(final BaseDeviceCollectionResponse response, final IDeviceCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Outlook Item Request.
  */
 public interface IOutlookItemRequest extends IBaseOutlookItemRequest {
+
 }

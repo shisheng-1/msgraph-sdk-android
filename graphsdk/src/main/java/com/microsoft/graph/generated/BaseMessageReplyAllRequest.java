@@ -30,10 +30,9 @@ public class BaseMessageReplyAllRequest extends BaseRequest implements IBaseMess
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageReplyAllRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
+    public BaseMessageReplyAllRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options, Void.class);
         mBody = new MessageReplyAllBody();
-        mBody.comment = comment;
     }
 
     public void post(final ICallback<Void> callback) {
@@ -51,7 +50,7 @@ public class BaseMessageReplyAllRequest extends BaseRequest implements IBaseMess
      * @return The updated request
      */
     public IMessageReplyAllRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("select", value));
+        getQueryOptions().add(new QueryOption("$select", value));
         return (MessageReplyAllRequest)this;
     }
 
@@ -62,7 +61,7 @@ public class BaseMessageReplyAllRequest extends BaseRequest implements IBaseMess
      * @return The updated request
      */
     public IMessageReplyAllRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("top", value+""));
+        getQueryOptions().add(new QueryOption("$top", value+""));
         return (MessageReplyAllRequest)this;
     }
 
@@ -73,7 +72,8 @@ public class BaseMessageReplyAllRequest extends BaseRequest implements IBaseMess
      * @return The updated request
      */
     public IMessageReplyAllRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("expand", value));
+        getQueryOptions().add(new QueryOption("$expand", value));
         return (MessageReplyAllRequest)this;
     }
+
 }

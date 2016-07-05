@@ -30,27 +30,4 @@ public interface IBaseDirectoryRoleCollectionRequest {
 
     DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException;
 
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IDirectoryRoleCollectionRequest expand(final String value);
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IDirectoryRoleCollectionRequest select(final String value);
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value The max number of items to return
-     * @return The updated request
-     */
-    IDirectoryRoleCollectionRequest top(final int value);
 }

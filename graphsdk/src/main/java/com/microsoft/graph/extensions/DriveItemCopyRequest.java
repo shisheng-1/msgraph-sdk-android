@@ -29,7 +29,7 @@ public class DriveItemCopyRequest extends BaseDriveItemCopyRequest implements ID
      * @param client The service client
      * @param options The options for this request
      */
-    public DriveItemCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String name, final ItemReference parentReference) {
-        super(requestUrl, client, options, name, parentReference);
+    public DriveItemCopyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

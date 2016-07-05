@@ -32,4 +32,4 @@ public class UserWithReferenceRequestBuilder extends BaseUserWithReferenceReques
     public UserWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseRecurrencePattern implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseRecurrencePattern(){
-		oDataType = "microsoft.graph.recurrencePattern";
-	}
-	
+    public BaseRecurrencePattern() {
+        oDataType = "microsoft.graph.recurrencePattern";
+    }
+
     /**
      * The Type.
      */

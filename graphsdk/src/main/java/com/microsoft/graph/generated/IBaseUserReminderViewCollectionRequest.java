@@ -52,4 +52,5 @@ public interface IBaseUserReminderViewCollectionRequest {
      * @return The updated request
      */
     IUserReminderViewCollectionRequest top(final int value);
+
 }

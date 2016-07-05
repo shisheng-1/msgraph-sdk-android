@@ -53,4 +53,5 @@ public interface IBaseEventCollectionRequest {
      * @return The updated request
      */
     IEventCollectionRequest top(final int value);
+
 }

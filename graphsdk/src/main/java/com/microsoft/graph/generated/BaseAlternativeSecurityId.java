@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseAlternativeSecurityId(){
-		oDataType = "microsoft.graph.alternativeSecurityId";
-	}
-	
+    public BaseAlternativeSecurityId() {
+        oDataType = "microsoft.graph.alternativeSecurityId";
+    }
+
     /**
      * The Type.
      */

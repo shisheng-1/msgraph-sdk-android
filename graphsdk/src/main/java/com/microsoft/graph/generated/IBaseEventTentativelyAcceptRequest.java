@@ -52,4 +52,5 @@ public interface IBaseEventTentativelyAcceptRequest {
      * @return The updated request
      */
     IEventTentativelyAcceptRequest expand(final String value);
+
 }

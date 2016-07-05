@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Drive Item Request.
  */
-public interface IBaseDriveItemRequest extends IEntityRequest {
+public interface IBaseDriveItemRequest extends IHttpRequest {
 
     /**
      * Gets the DriveItem from the service
@@ -92,4 +92,5 @@ public interface IBaseDriveItemRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseDriveItemRequest expand(final String value);
+
 }

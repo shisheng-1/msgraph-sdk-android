@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Directory Role Template Request.
  */
-public interface IBaseDirectoryRoleTemplateRequest extends IDirectoryObjectRequest {
+public interface IBaseDirectoryRoleTemplateRequest extends IHttpRequest {
 
     /**
      * Gets the DirectoryRoleTemplate from the service
@@ -77,19 +77,4 @@ public interface IBaseDirectoryRoleTemplateRequest extends IDirectoryObjectReque
      */
     DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseDirectoryRoleTemplateRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseDirectoryRoleTemplateRequest expand(final String value);
 }

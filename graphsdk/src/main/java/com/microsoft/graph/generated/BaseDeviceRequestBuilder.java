@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Device Request Builder.
  */
-public class BaseDeviceRequestBuilder extends DirectoryObjectRequestBuilder implements IBaseDeviceRequestBuilder {
+public class BaseDeviceRequestBuilder extends BaseRequestBuilder implements IBaseDeviceRequestBuilder {
 
     /**
      * The request builder for the Device

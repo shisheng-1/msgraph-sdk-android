@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Reference Attachment Request.
  */
-public interface IBaseReferenceAttachmentRequest extends IAttachmentRequest {
+public interface IBaseReferenceAttachmentRequest extends IHttpRequest {
 
     /**
      * Gets the ReferenceAttachment from the service
@@ -92,4 +92,5 @@ public interface IBaseReferenceAttachmentRequest extends IAttachmentRequest {
      * @return The updated request
      */
     IBaseReferenceAttachmentRequest expand(final String value);
+
 }

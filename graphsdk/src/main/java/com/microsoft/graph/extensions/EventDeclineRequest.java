@@ -29,7 +29,7 @@ public class EventDeclineRequest extends BaseEventDeclineRequest implements IEve
      * @param client The service client
      * @param options The options for this request
      */
-    public EventDeclineRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
-        super(requestUrl, client, options, comment, sendResponse);
+    public EventDeclineRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

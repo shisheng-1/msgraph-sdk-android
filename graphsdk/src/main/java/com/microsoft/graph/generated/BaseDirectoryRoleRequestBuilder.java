@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Directory Role Request Builder.
  */
-public class BaseDirectoryRoleRequestBuilder extends DirectoryObjectRequestBuilder implements IBaseDirectoryRoleRequestBuilder {
+public class BaseDirectoryRoleRequestBuilder extends BaseRequestBuilder implements IBaseDirectoryRoleRequestBuilder {
 
     /**
      * The request builder for the DirectoryRole

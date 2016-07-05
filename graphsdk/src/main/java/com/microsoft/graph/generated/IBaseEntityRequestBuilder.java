@@ -53,12 +53,20 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IContactFolderRequestBuilder contactFolder();
 
+    IInferenceClassificationRequestBuilder inferenceClassification();
+
     IAttachmentRequestBuilder attachment();
+
+    IExtensionRequestBuilder extension();
+
+    IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride();
 
     IDriveItemRequestBuilder driveItem();
 
     IPermissionRequestBuilder permission();
 
     IThumbnailSetRequestBuilder thumbnailSet();
+
+    ISubscriptionRequestBuilder subscription();
 
 }

@@ -115,7 +115,7 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
      * @return The updated request
      */
      public IThumbnailRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (ThumbnailRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
      * @return The updated request
      */
      public IThumbnailRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (ThumbnailRequest)this;
      }
+
 }

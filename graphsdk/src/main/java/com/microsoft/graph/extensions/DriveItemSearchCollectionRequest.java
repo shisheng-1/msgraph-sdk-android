@@ -29,7 +29,7 @@ public class DriveItemSearchCollectionRequest extends BaseDriveItemSearchCollect
      * @param client The service client
      * @param options The options for this request
      */
-    public DriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String q) {
-        super(requestUrl, client, options, q);
+    public DriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

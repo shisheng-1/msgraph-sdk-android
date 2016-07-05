@@ -74,7 +74,7 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
      * @return The updated request
      */
     public ICalendarGroupCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (CalendarGroupCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
      * @return The updated request
      */
     public ICalendarGroupCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (CalendarGroupCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
      * @return The updated request
      */
     public ICalendarGroupCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (CalendarGroupCollectionRequest)this;
     }
 

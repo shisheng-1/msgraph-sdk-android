@@ -74,7 +74,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (PermissionCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (PermissionCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @return The updated request
      */
     public IPermissionCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (PermissionCollectionRequest)this;
     }
 

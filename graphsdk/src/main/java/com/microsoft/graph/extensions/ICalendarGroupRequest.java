@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Calendar Group Request.
  */
 public interface ICalendarGroupRequest extends IBaseCalendarGroupRequest {
+
 }

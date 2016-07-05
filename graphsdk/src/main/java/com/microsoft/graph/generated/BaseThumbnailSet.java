@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseThumbnailSet extends Entity implements IJsonBackedObject {
 
 
-	public BaseThumbnailSet(){
-		oDataType = "microsoft.graph.thumbnailSet";
-	}
-	
+    public BaseThumbnailSet() {
+        oDataType = "microsoft.graph.thumbnailSet";
+    }
+
     /**
      * The Large.
      */

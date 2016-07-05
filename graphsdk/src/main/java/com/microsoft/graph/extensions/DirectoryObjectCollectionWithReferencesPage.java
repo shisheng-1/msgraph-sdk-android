@@ -31,5 +31,4 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseDirectoryOb
     public DirectoryObjectCollectionWithReferencesPage(final BaseDirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response, builder);
     }
-
 }

@@ -77,4 +77,3 @@ public class BaseDriveItemSearchCollectionResponse implements IJsonBackedObject 
         }
     }
 }
-	

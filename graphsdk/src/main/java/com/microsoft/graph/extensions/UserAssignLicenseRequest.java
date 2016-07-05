@@ -29,7 +29,7 @@ public class UserAssignLicenseRequest extends BaseUserAssignLicenseRequest imple
      * @param client The service client
      * @param options The options for this request
      */
-    public UserAssignLicenseRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
-        super(requestUrl, client, options, addLicenses, removeLicenses);
+    public UserAssignLicenseRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

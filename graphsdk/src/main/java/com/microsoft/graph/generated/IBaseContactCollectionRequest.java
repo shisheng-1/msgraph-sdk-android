@@ -53,4 +53,5 @@ public interface IBaseContactCollectionRequest {
      * @return The updated request
      */
     IContactCollectionRequest top(final int value);
+
 }

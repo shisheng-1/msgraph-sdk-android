@@ -29,7 +29,7 @@ public class MessageReplyRequest extends BaseMessageReplyRequest implements IMes
      * @param client The service client
      * @param options The options for this request
      */
-    public MessageReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
-        super(requestUrl, client, options, comment);
+    public MessageReplyRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

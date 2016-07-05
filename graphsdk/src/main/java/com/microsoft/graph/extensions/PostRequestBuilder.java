@@ -32,4 +32,4 @@ public class PostRequestBuilder extends BasePostRequestBuilder implements IPostR
     public PostRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
         super(requestUrl, client, options);
     }
- }
+}

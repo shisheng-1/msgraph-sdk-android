@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The class for the Base Event Request.
  */
-public class BaseEventRequest extends OutlookItemRequest implements IBaseEventRequest {
+public class BaseEventRequest extends BaseRequest implements IBaseEventRequest {
 
     /**
      * The request for the Event
@@ -115,7 +115,7 @@ public class BaseEventRequest extends OutlookItemRequest implements IBaseEventRe
      * @return The updated request
      */
      public IEventRequest select(final String value) {
-         getQueryOptions().add(new QueryOption("select", value));
+         getQueryOptions().add(new QueryOption("$select", value));
          return (EventRequest)this;
      }
 
@@ -126,7 +126,8 @@ public class BaseEventRequest extends OutlookItemRequest implements IBaseEventRe
      * @return The updated request
      */
      public IEventRequest expand(final String value) {
-         getQueryOptions().add(new QueryOption("expand", value));
+         getQueryOptions().add(new QueryOption("$expand", value));
          return (EventRequest)this;
      }
+
 }

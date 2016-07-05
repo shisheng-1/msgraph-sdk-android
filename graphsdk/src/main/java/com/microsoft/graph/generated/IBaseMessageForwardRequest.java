@@ -52,4 +52,5 @@ public interface IBaseMessageForwardRequest {
      * @return The updated request
      */
     IMessageForwardRequest expand(final String value);
+
 }

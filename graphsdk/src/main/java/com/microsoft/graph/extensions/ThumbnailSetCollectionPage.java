@@ -31,5 +31,4 @@ public class ThumbnailSetCollectionPage extends BaseThumbnailSetCollectionPage i
     public ThumbnailSetCollectionPage(final BaseThumbnailSetCollectionResponse response, final IThumbnailSetCollectionRequestBuilder builder) {
         super(response, builder);
     }
-
 }

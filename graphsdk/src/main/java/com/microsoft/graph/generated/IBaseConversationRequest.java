@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Conversation Request.
  */
-public interface IBaseConversationRequest extends IEntityRequest {
+public interface IBaseConversationRequest extends IHttpRequest {
 
     /**
      * Gets the Conversation from the service
@@ -92,4 +92,5 @@ public interface IBaseConversationRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseConversationRequest expand(final String value);
+
 }

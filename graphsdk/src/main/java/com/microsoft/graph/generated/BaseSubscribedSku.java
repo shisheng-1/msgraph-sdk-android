@@ -26,10 +26,10 @@ import com.google.gson.annotations.*;
 public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
 
-	public BaseSubscribedSku(){
-		oDataType = "microsoft.graph.subscribedSku";
-	}
-	
+    public BaseSubscribedSku() {
+        oDataType = "microsoft.graph.subscribedSku";
+    }
+
     /**
      * The Capability Status.
      */

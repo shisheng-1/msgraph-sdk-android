@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Contact Folder Request.
  */
 public interface IContactFolderRequest extends IBaseContactFolderRequest {
+
 }

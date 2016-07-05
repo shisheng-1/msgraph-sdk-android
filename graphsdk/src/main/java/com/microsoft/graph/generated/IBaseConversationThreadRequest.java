@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Conversation Thread Request.
  */
-public interface IBaseConversationThreadRequest extends IEntityRequest {
+public interface IBaseConversationThreadRequest extends IHttpRequest {
 
     /**
      * Gets the ConversationThread from the service
@@ -92,4 +92,5 @@ public interface IBaseConversationThreadRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseConversationThreadRequest expand(final String value);
+
 }

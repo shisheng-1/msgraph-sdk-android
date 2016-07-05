@@ -52,4 +52,5 @@ public interface IBaseMailFolderCopyRequest {
      * @return The updated request
      */
     IMailFolderCopyRequest expand(final String value);
+
 }

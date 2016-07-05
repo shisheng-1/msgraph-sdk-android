@@ -21,4 +21,5 @@ import java.util.List;
  * The interface for the Profile Photo Request.
  */
 public interface IProfilePhotoRequest extends IBaseProfilePhotoRequest {
+
 }

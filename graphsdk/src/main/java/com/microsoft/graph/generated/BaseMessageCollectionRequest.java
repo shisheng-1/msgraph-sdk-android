@@ -74,7 +74,7 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
      * @return The updated request
      */
     public IMessageCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("expand", value));
+        addQueryOption(new QueryOption("$expand", value));
         return (MessageCollectionRequest)this;
     }
 
@@ -85,7 +85,7 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
      * @return The updated request
      */
     public IMessageCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("select", value));
+        addQueryOption(new QueryOption("$select", value));
         return (MessageCollectionRequest)this;
     }
 
@@ -96,7 +96,7 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
      * @return The updated request
      */
     public IMessageCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("top", value + ""));
+        addQueryOption(new QueryOption("$top", value + ""));
         return (MessageCollectionRequest)this;
     }
 

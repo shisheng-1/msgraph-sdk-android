@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BasePhoto implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BasePhoto(){
-		oDataType = "microsoft.graph.photo";
-	}
-	
+    public BasePhoto() {
+        oDataType = "microsoft.graph.photo";
+    }
+
     /**
      * The Camera Make.
      */

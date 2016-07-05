@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Directory Role Request.
  */
-public interface IBaseDirectoryRoleRequest extends IDirectoryObjectRequest {
+public interface IBaseDirectoryRoleRequest extends IHttpRequest {
 
     /**
      * Gets the DirectoryRole from the service
@@ -77,19 +77,4 @@ public interface IBaseDirectoryRoleRequest extends IDirectoryObjectRequest {
      */
     DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException;
 
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value The select clause
-     * @return The updated request
-     */
-    IBaseDirectoryRoleRequest select(final String value);
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value The expand clause
-     * @return The updated request
-     */
-    IBaseDirectoryRoleRequest expand(final String value);
 }

@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * The interface for the Base Outlook Item Request.
  */
-public interface IBaseOutlookItemRequest extends IEntityRequest {
+public interface IBaseOutlookItemRequest extends IHttpRequest {
 
     /**
      * Gets the OutlookItem from the service
@@ -92,4 +92,5 @@ public interface IBaseOutlookItemRequest extends IEntityRequest {
      * @return The updated request
      */
     IBaseOutlookItemRequest expand(final String value);
+
 }

@@ -29,7 +29,7 @@ public class UserChangePasswordRequest extends BaseUserChangePasswordRequest imp
      * @param client The service client
      * @param options The options for this request
      */
-    public UserChangePasswordRequest(final String requestUrl, final IBaseClient client, final List<Option> options, final String currentPassword, final String newPassword) {
-        super(requestUrl, client, options, currentPassword, newPassword);
+    public UserChangePasswordRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
+        super(requestUrl, client, options);
     }
 }

@@ -25,13 +25,13 @@ import com.google.gson.annotations.*;
  */
 public class BaseImage implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    public String oDataType;
 
-	public BaseImage(){
-		oDataType = "microsoft.graph.image";
-	}
-	
+    public BaseImage() {
+        oDataType = "microsoft.graph.image";
+    }
+
     /**
      * The Height.
      */
