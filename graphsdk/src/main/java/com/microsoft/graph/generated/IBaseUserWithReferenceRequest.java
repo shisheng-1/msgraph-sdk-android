@@ -30,4 +30,8 @@ public interface IBaseUserWithReferenceRequest extends IHttpRequest {
 
     User get() throws ClientException;
 
+    IBaseUserWithReferenceRequest select(final String value);
+
+    IBaseUserWithReferenceRequest expand(final String value);
+
 }

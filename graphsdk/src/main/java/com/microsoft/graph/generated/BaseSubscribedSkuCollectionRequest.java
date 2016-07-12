@@ -67,6 +67,39 @@ public class BaseSubscribedSkuCollectionRequest extends BaseCollectionRequest<Ba
             .post(newSubscribedSku);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    public ISubscribedSkuCollectionRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (SubscribedSkuCollectionRequest)this;
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    public ISubscribedSkuCollectionRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (SubscribedSkuCollectionRequest)this;
+    }
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value The max number of items to return
+     * @return The updated request
+     */
+    public ISubscribedSkuCollectionRequest top(final int value) {
+        addQueryOption(new QueryOption("$top", value + ""));
+        return (SubscribedSkuCollectionRequest)this;
+    }
+
     public ISubscribedSkuCollectionPage buildFromResponse(final BaseSubscribedSkuCollectionResponse response) {
         final ISubscribedSkuCollectionRequestBuilder builder;
         if (response.nextLink != null) {

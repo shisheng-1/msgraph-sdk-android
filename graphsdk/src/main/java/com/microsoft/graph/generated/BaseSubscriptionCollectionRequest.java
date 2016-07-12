@@ -67,6 +67,39 @@ public class BaseSubscriptionCollectionRequest extends BaseCollectionRequest<Bas
             .post(newSubscription);
     }
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    public ISubscriptionCollectionRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (SubscriptionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    public ISubscriptionCollectionRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (SubscriptionCollectionRequest)this;
+    }
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value The max number of items to return
+     * @return The updated request
+     */
+    public ISubscriptionCollectionRequest top(final int value) {
+        addQueryOption(new QueryOption("$top", value + ""));
+        return (SubscriptionCollectionRequest)this;
+    }
+
     public ISubscriptionCollectionPage buildFromResponse(final BaseSubscriptionCollectionResponse response) {
         final ISubscriptionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

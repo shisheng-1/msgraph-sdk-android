@@ -77,4 +77,20 @@ public interface IBaseSubscriptionRequest extends IHttpRequest {
      */
     Subscription post(final Subscription newSubscription) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseSubscriptionRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseSubscriptionRequest expand(final String value);
+
 }

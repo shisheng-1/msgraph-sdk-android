@@ -77,4 +77,20 @@ public interface IBaseDirectoryRoleTemplateRequest extends IHttpRequest {
      */
     DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseDirectoryRoleTemplateRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseDirectoryRoleTemplateRequest expand(final String value);
+
 }

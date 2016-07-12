@@ -30,4 +30,8 @@ public interface IBaseDirectoryObjectWithReferenceRequest extends IHttpRequest {
 
     DirectoryObject get() throws ClientException;
 
+    IBaseDirectoryObjectWithReferenceRequest select(final String value);
+
+    IBaseDirectoryObjectWithReferenceRequest expand(final String value);
+
 }

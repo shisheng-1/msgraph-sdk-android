@@ -68,6 +68,28 @@ public class BaseGroupCollectionRequest extends BaseCollectionRequest<BaseGroupC
     }
 
     /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    public IGroupCollectionRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (GroupCollectionRequest)this;
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    public IGroupCollectionRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (GroupCollectionRequest)this;
+    }
+
+    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return

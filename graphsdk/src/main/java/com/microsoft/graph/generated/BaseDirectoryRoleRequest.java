@@ -108,4 +108,26 @@ public class BaseDirectoryRoleRequest extends BaseRequest implements IBaseDirect
         return send(HttpMethod.POST, newDirectoryRole);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public IDirectoryRoleRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (DirectoryRoleRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public IDirectoryRoleRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (DirectoryRoleRequest)this;
+     }
+
 }

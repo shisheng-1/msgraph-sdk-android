@@ -108,4 +108,26 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
         return send(HttpMethod.POST, newDirectoryRoleTemplate);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public IDirectoryRoleTemplateRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (DirectoryRoleTemplateRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public IDirectoryRoleTemplateRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (DirectoryRoleTemplateRequest)this;
+     }
+
 }

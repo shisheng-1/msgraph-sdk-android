@@ -108,4 +108,26 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
         return send(HttpMethod.POST, newDevice);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public IDeviceRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (DeviceRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public IDeviceRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (DeviceRequest)this;
+     }
+
 }
