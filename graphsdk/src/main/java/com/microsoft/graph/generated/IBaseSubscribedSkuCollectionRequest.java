@@ -30,4 +30,28 @@ public interface IBaseSubscribedSkuCollectionRequest {
 
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    ISubscribedSkuCollectionRequest expand(final String value);
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    ISubscribedSkuCollectionRequest select(final String value);
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value The max number of items to return
+     * @return The updated request
+     */
+    ISubscribedSkuCollectionRequest top(final int value);
+
 }

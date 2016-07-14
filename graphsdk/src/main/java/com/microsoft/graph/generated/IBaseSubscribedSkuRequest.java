@@ -77,4 +77,20 @@ public interface IBaseSubscribedSkuRequest extends IHttpRequest {
      */
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseSubscribedSkuRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseSubscribedSkuRequest expand(final String value);
+
 }

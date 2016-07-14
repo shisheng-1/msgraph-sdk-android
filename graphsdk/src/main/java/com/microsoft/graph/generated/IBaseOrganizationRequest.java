@@ -77,4 +77,20 @@ public interface IBaseOrganizationRequest extends IHttpRequest {
      */
     Organization post(final Organization newOrganization) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseOrganizationRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseOrganizationRequest expand(final String value);
+
 }

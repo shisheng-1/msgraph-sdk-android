@@ -108,4 +108,26 @@ public class BaseSubscriptionRequest extends BaseRequest implements IBaseSubscri
         return send(HttpMethod.POST, newSubscription);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public ISubscriptionRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (SubscriptionRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public ISubscriptionRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (SubscriptionRequest)this;
+     }
+
 }

@@ -68,6 +68,28 @@ public class BaseUserCollectionRequest extends BaseCollectionRequest<BaseUserCol
     }
 
     /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    public IUserCollectionRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (UserCollectionRequest)this;
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    public IUserCollectionRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (UserCollectionRequest)this;
+    }
+
+    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return

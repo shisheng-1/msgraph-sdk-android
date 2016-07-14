@@ -53,6 +53,16 @@ public class BaseDirectoryObjectCollectionWithReferencesRequest extends BaseColl
         return buildFromResponse(response);
     }
 
+    public IDirectoryObjectCollectionWithReferencesRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (DirectoryObjectCollectionWithReferencesRequest)this;
+    }
+
+    public IDirectoryObjectCollectionWithReferencesRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (DirectoryObjectCollectionWithReferencesRequest)this;
+    }
+
     public IDirectoryObjectCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value + ""));
         return (DirectoryObjectCollectionWithReferencesRequest)this;

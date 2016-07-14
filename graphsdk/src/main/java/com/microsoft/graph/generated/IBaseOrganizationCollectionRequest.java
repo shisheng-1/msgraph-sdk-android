@@ -31,6 +31,22 @@ public interface IBaseOrganizationCollectionRequest {
     Organization post(final Organization newOrganization) throws ClientException;
 
     /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IOrganizationCollectionRequest expand(final String value);
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IOrganizationCollectionRequest select(final String value);
+
+    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return

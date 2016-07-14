@@ -108,4 +108,26 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
         return send(HttpMethod.POST, newDirectoryObject);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public IDirectoryObjectRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (DirectoryObjectRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public IDirectoryObjectRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (DirectoryObjectRequest)this;
+     }
+
 }

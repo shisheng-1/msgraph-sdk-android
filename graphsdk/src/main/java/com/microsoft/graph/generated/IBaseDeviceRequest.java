@@ -77,4 +77,20 @@ public interface IBaseDeviceRequest extends IHttpRequest {
      */
     Device post(final Device newDevice) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseDeviceRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseDeviceRequest expand(final String value);
+
 }

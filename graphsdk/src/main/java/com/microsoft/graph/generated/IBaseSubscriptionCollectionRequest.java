@@ -30,4 +30,28 @@ public interface IBaseSubscriptionCollectionRequest {
 
     Subscription post(final Subscription newSubscription) throws ClientException;
 
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    ISubscriptionCollectionRequest expand(final String value);
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    ISubscriptionCollectionRequest select(final String value);
+
+    /**
+     * Sets the top value for the request
+     *
+     * @param value The max number of items to return
+     * @return The updated request
+     */
+    ISubscriptionCollectionRequest top(final int value);
+
 }

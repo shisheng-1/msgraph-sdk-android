@@ -77,4 +77,20 @@ public interface IBaseUserRequest extends IHttpRequest {
      */
     User post(final User newUser) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseUserRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseUserRequest expand(final String value);
+
 }

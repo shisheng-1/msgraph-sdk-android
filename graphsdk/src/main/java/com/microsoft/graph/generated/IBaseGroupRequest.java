@@ -77,4 +77,20 @@ public interface IBaseGroupRequest extends IHttpRequest {
      */
     Group post(final Group newGroup) throws ClientException;
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    IBaseGroupRequest select(final String value);
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    IBaseGroupRequest expand(final String value);
+
 }

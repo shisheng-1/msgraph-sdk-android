@@ -108,4 +108,26 @@ public class BaseSubscribedSkuRequest extends BaseRequest implements IBaseSubscr
         return send(HttpMethod.POST, newSubscribedSku);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public ISubscribedSkuRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (SubscribedSkuRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public ISubscribedSkuRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (SubscribedSkuRequest)this;
+     }
+
 }

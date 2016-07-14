@@ -68,6 +68,28 @@ public class BaseDirectoryObjectCollectionRequest extends BaseCollectionRequest<
     }
 
     /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+    public IDirectoryObjectCollectionRequest expand(final String value) {
+        addQueryOption(new QueryOption("$expand", value));
+        return (DirectoryObjectCollectionRequest)this;
+    }
+
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+    public IDirectoryObjectCollectionRequest select(final String value) {
+        addQueryOption(new QueryOption("$select", value));
+        return (DirectoryObjectCollectionRequest)this;
+    }
+
+    /**
      * Sets the top value for the request
      *
      * @param value The max number of items to return

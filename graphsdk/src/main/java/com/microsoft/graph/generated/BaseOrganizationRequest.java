@@ -108,4 +108,26 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
         return send(HttpMethod.POST, newOrganization);
     }
 
+    /**
+     * Sets the select clause for the request
+     *
+     * @param value The select clause
+     * @return The updated request
+     */
+     public IOrganizationRequest select(final String value) {
+         getQueryOptions().add(new QueryOption("$select", value));
+         return (OrganizationRequest)this;
+     }
+
+    /**
+     * Sets the expand clause for the request
+     *
+     * @param value The expand clause
+     * @return The updated request
+     */
+     public IOrganizationRequest expand(final String value) {
+         getQueryOptions().add(new QueryOption("$expand", value));
+         return (OrganizationRequest)this;
+     }
+
 }
