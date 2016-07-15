@@ -27,7 +27,7 @@ import com.google.gson.annotations.*;
 public class BaseDriveRecentCollectionResponse implements IJsonBackedObject {
 
     @SerializedName("value")
-    public List<Drive> value;
+    public List<DriveItem> value;
 
     @SerializedName("@odata.nextLink")
     public String nextLink;

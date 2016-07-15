@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base Drive Recent Collection Page.
  */
-public interface IBaseDriveRecentCollectionPage extends IBaseCollectionPage<Drive, IDriveRecentCollectionRequestBuilder> {
+public interface IBaseDriveRecentCollectionPage extends IBaseCollectionPage<DriveItem, IDriveRecentCollectionRequestBuilder> {
 }

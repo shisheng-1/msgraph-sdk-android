@@ -27,7 +27,7 @@ import com.google.gson.annotations.*;
 public class BaseUserReminderViewCollectionResponse implements IJsonBackedObject {
 
     @SerializedName("value")
-    public List<User> value;
+    public List<Reminder> value;
 
     @SerializedName("@odata.nextLink")
     public String nextLink;
