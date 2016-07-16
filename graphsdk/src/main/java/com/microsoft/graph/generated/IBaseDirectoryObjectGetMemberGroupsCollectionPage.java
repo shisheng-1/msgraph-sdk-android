@@ -22,5 +22,5 @@ import com.google.gson.JsonObject;
 /**
  * The interface for the Base Directory Object Get Member Groups Collection Page.
  */
-public interface IBaseDirectoryObjectGetMemberGroupsCollectionPage extends IBaseCollectionPage<DirectoryObject, IDirectoryObjectGetMemberGroupsCollectionRequestBuilder> {
+public interface IBaseDirectoryObjectGetMemberGroupsCollectionPage extends IBaseCollectionPage<String, IDirectoryObjectGetMemberGroupsCollectionRequestBuilder> {
 }

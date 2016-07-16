@@ -27,7 +27,7 @@ import com.google.gson.annotations.*;
 public class BaseDirectoryObjectCheckMemberGroupsCollectionResponse implements IJsonBackedObject {
 
     @SerializedName("value")
-    public List<DirectoryObject> value;
+    public List<String> value;
 
     @SerializedName("@odata.nextLink")
     public String nextLink;
@@ -68,12 +68,5 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionResponse implements I
         mSerializer = serializer;
         mRawObject = json;
 
-
-        if (json.has("value")) {
-            final JsonArray array = json.getAsJsonArray("value");
-            for (int i = 0; i < array.size(); i++) {
-                value.get(i).setRawObject(mSerializer, (JsonObject) array.get(i));
-            }
-        }
     }
 }
