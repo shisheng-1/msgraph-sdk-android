@@ -2,12 +2,7 @@
 
 [ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)[![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-android.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-android)
 
-## Overview
-
-This client library is a release candidate and is still in preview status, please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-android/issues/new) as we iterate towards a production supported library.
-
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Android application!
-
 
 ## 1. Installation
 ### 1.1 Install AAR via Gradle
