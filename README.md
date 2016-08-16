@@ -2,16 +2,11 @@
 
 [ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)[![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-android.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-android)
 
-## Overview
-
-This client library is a release candidate and is still in preview status, please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-android/issues/new) as we iterate towards a production supported library.
-
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Android application!
-
 
 ## 1. Installation
 ### 1.1 Install AAR via Gradle
-Add the maven central repository to your projects build.gradle file then add a compile dependency for com.microsoft.graph:msgraph-sdk-android:0.9.+
+Add the JCenter repository and a compile dependency for `msgraph-sdk-android` to your project's `build.gradle`
 
 ```gradle
 repository {
@@ -20,7 +15,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-android:0.9.+')
+    compile('com.microsoft.graph:msgraph-sdk-android:1.0.+')
 
     // Include the gson dependency
     compile('com.google.code.gson:gson:2.3.1')
@@ -47,7 +42,8 @@ For an example of authentication in a client application see the [MSGraph SDK An
 Once you have set the correct application Id and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
 
 ```java
-final IClientConfig mCLientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
+final IClientConfig mCLientConfig = DefaultClientConfig
+                                        .createWithAuthenticationProvider(mAuthenticationProvider);
 
 final IGraphServiceClient mClient = new GraphServiceClient
                                             .Builder()
