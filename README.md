@@ -6,7 +6,7 @@ Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-sta
 
 ## 1. Installation
 ### 1.1 Install AAR via Gradle
-Add the maven central repository to your projects build.gradle file then add a compile dependency for com.microsoft.graph:msgraph-sdk-android:0.9.+
+Add the JCenter repository and a compile dependency for `msgraph-sdk-android` to your project's `build.gradle`
 
 ```gradle
 repository {
@@ -15,7 +15,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-android:0.9.+')
+    compile('com.microsoft.graph:msgraph-sdk-android:1.0.+')
 
     // Include the gson dependency
     compile('com.google.code.gson:gson:2.3.1')
