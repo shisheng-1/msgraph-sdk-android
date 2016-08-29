@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * The base method request builder class used for POST actions.
  */
-public class BasePostMethodRequestBuilder extends BaseRequestBuilder {
+public class BaseActionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The body params to add to this request
@@ -22,13 +22,13 @@ public class BasePostMethodRequestBuilder extends BaseRequestBuilder {
     protected Map<String, Object> mBodyParams = new HashMap<>();
 
     /**
-     * Constructs a new {@link BasePostMethodRequestBuilder}
+     * Constructs a new {@link BaseActionRequestBuilder}
      *
      * @param requestUrl the URL for the request
      * @param client     the {@link IBaseClient} for handling requests
      * @param options    {@link List} of {@link Option}s to add to this request
      */
-    public BasePostMethodRequestBuilder(
+    public BaseActionRequestBuilder(
             String requestUrl,
             IBaseClient client,
             List<Option> options
@@ -40,7 +40,7 @@ public class BasePostMethodRequestBuilder extends BaseRequestBuilder {
      * Checks if the parameter map contains a object accessible by the supplied key
      *
      * @param name The key used to access the stored body param
-     * @return true, if {@link BasePostMethodRequestBuilder#mBodyParams} contains the key, otherwise false
+     * @return true, if {@link BaseActionRequestBuilder#mBodyParams} contains the key, otherwise false
      */
     protected boolean hasParameter(String name) {
         return mBodyParams.containsKey(name);

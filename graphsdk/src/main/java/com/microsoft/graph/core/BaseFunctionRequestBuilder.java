@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * The base method request builder class.
  */
-public class BaseGetMethodRequestBuilder extends BaseRequestBuilder {
+public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The {@link FunctionOption}s to add to this request
@@ -22,13 +22,13 @@ public class BaseGetMethodRequestBuilder extends BaseRequestBuilder {
     protected List<FunctionOption> mFunctionOptions = new ArrayList<>();
 
     /**
-     * Constructs a new {@link BaseGetMethodRequestBuilder}
+     * Constructs a new {@link BaseFunctionRequestBuilder}
      *
      * @param requestUrl the URL for the request
      * @param client     the {@link IBaseClient} for handling requests
      * @param options    {@link List} of {@link Option}s to add to this request
      */
-    public BaseGetMethodRequestBuilder(
+    public BaseFunctionRequestBuilder(
             String requestUrl,
             IBaseClient client,
             List<Option> options
