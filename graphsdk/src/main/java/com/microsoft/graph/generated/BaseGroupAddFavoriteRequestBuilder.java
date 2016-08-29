@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Group Add Favorite Request Builder.
  */
-public class BaseGroupAddFavoriteRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseGroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupAddFavorite
@@ -53,10 +53,6 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseFunctionRequestBuild
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

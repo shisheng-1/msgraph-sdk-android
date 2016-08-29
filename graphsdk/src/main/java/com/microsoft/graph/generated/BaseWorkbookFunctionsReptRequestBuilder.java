@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsReptRequestBuilder extends BaseActionRequestBu
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("numberTimes")) {
             request.mBody.numberTimes = getParameter("numberTimes");
         }
-  
+
         return request;
     }
 }

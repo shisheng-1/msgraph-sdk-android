@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionR
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
+
         if (hasParameter("beta")) {
             request.mBody.beta = getParameter("beta");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

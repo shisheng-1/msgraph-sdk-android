@@ -59,10 +59,11 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("message")) {
             request.mBody.message = getParameter("message");
         }
+
         if (hasParameter("saveToSentItems")) {
             request.mBody.saveToSentItems = getParameter("saveToSentItems");
         }
-  
+
         return request;
     }
 }

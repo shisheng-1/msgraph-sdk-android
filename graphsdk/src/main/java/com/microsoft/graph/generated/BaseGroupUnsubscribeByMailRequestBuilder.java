@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Group Unsubscribe By Mail Request Builder.
  */
-public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupUnsubscribeByMail
@@ -53,10 +53,6 @@ public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

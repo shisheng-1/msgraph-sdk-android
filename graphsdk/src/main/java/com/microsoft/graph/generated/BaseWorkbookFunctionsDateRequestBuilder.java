@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsDateRequestBuilder extends BaseActionRequestBu
         if (hasParameter("year")) {
             request.mBody.year = getParameter("year");
         }
+
         if (hasParameter("month")) {
             request.mBody.month = getParameter("month");
         }
+
         if (hasParameter("day")) {
             request.mBody.day = getParameter("day");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
         if (hasParameter("z")) {
             request.mBody.z = getParameter("z");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

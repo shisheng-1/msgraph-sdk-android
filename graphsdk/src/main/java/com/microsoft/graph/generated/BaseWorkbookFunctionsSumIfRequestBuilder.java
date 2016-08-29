@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestB
         if (hasParameter("range")) {
             request.mBody.range = getParameter("range");
         }
+
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
+
         if (hasParameter("sumRange")) {
             request.mBody.sumRange = getParameter("sumRange");
         }
-  
+
         return request;
     }
 }

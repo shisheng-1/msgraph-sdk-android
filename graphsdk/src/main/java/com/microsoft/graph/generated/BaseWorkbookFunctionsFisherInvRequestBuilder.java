@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequ
         if (hasParameter("y")) {
             request.mBody.y = getParameter("y");
         }
-  
+
         return request;
     }
 }

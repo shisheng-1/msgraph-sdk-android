@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsWeekNumRequestBuilder extends BaseActionReques
         if (hasParameter("serialNumber")) {
             request.mBody.serialNumber = getParameter("serialNumber");
         }
+
         if (hasParameter("returnType")) {
             request.mBody.returnType = getParameter("returnType");
         }
-  
+
         return request;
     }
 }

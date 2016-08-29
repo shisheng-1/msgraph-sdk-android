@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsFindRequestBuilder extends BaseActionRequestBu
         if (hasParameter("findText")) {
             request.mBody.findText = getParameter("findText");
         }
+
         if (hasParameter("withinText")) {
             request.mBody.withinText = getParameter("withinText");
         }
+
         if (hasParameter("startNum")) {
             request.mBody.startNum = getParameter("startNum");
         }
-  
+
         return request;
     }
 }

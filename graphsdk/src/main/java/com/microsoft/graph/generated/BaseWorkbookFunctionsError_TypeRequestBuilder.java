@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsError_TypeRequestBuilder extends BaseActionReq
         if (hasParameter("errorVal")) {
             request.mBody.errorVal = getParameter("errorVal");
         }
-  
+
         return request;
     }
 }

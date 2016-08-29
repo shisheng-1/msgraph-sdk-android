@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyBottomItemsFilterRequestBuilder extends Base
         if (hasParameter("count")) {
             request.mBody.count = getParameter("count");
         }
-  
+
         return request;
     }
 }

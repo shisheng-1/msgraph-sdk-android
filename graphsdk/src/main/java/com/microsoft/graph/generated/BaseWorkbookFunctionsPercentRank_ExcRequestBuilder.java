@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("significance")) {
             request.mBody.significance = getParameter("significance");
         }
-  
+
         return request;
     }
 }

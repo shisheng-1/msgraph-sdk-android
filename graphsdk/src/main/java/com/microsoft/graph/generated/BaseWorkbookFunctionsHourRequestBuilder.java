@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsHourRequestBuilder extends BaseActionRequestBu
         if (hasParameter("serialNumber")) {
             request.mBody.serialNumber = getParameter("serialNumber");
         }
-  
+
         return request;
     }
 }

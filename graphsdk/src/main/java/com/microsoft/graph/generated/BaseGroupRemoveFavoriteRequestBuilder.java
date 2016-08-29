@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Group Remove Favorite Request Builder.
  */
-public class BaseGroupRemoveFavoriteRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseGroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupRemoveFavorite
@@ -53,10 +53,6 @@ public class BaseGroupRemoveFavoriteRequestBuilder extends BaseFunctionRequestBu
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

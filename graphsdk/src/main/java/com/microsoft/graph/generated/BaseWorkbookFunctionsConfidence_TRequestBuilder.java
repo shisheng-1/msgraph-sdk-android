@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsConfidence_TRequestBuilder extends BaseActionR
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
+
         if (hasParameter("standardDev")) {
             request.mBody.standardDev = getParameter("standardDev");
         }
+
         if (hasParameter("size")) {
             request.mBody.size = getParameter("size");
         }
-  
+
         return request;
     }
 }

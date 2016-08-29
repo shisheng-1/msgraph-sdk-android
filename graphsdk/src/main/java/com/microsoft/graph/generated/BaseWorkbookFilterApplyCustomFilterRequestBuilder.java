@@ -60,13 +60,15 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
         if (hasParameter("criteria1")) {
             request.mBody.criteria1 = getParameter("criteria1");
         }
+
         if (hasParameter("criteria2")) {
             request.mBody.criteria2 = getParameter("criteria2");
         }
+
         if (hasParameter("oper")) {
             request.mBody.oper = getParameter("oper");
         }
-  
+
         return request;
     }
 }

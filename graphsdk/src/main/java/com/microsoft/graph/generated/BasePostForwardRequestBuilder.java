@@ -59,10 +59,11 @@ public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
+
         if (hasParameter("toRecipients")) {
             request.mBody.toRecipients = getParameter("toRecipients");
         }
-  
+
         return request;
     }
 }

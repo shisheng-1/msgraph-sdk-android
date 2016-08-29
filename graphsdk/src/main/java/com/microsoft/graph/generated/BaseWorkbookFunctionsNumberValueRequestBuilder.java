@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("decimalSeparator")) {
             request.mBody.decimalSeparator = getParameter("decimalSeparator");
         }
+
         if (hasParameter("groupSeparator")) {
             request.mBody.groupSeparator = getParameter("groupSeparator");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsImLog10RequestBuilder extends BaseActionReques
         if (hasParameter("inumber")) {
             request.mBody.inumber = getParameter("inumber");
         }
-  
+
         return request;
     }
 }

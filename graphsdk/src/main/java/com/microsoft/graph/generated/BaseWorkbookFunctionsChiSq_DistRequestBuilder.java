@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionReq
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("degFreedom")) {
             request.mBody.degFreedom = getParameter("degFreedom");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsRoundRequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("numDigits")) {
             request.mBody.numDigits = getParameter("numDigits");
         }
-  
+
         return request;
     }
 }

@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsReceivedRequestBuilder extends BaseActionReque
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("investment")) {
             request.mBody.investment = getParameter("investment");
         }
+
         if (hasParameter("discount")) {
             request.mBody.discount = getParameter("discount");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseMessageReplyAllRequestBuilder extends BaseActionRequestBuilder 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
-  
+
         return request;
     }
 }

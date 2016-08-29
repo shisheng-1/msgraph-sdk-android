@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsFisherRequestBuilder extends BaseActionRequest
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

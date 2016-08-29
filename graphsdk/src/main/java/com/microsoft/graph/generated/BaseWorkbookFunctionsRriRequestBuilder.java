@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsRriRequestBuilder extends BaseActionRequestBui
         if (hasParameter("nper")) {
             request.mBody.nper = getParameter("nper");
         }
+
         if (hasParameter("pv")) {
             request.mBody.pv = getParameter("pv");
         }
+
         if (hasParameter("fv")) {
             request.mBody.fv = getParameter("fv");
         }
-  
+
         return request;
     }
 }

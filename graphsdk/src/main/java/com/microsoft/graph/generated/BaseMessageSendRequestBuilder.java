@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Message Send Request Builder.
  */
-public class BaseMessageSendRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseMessageSendRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageSend
@@ -53,10 +53,6 @@ public class BaseMessageSendRequestBuilder extends BaseFunctionRequestBuilder {
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

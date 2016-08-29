@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsBitrshiftRequestBuilder extends BaseActionRequ
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("shiftAmount")) {
             request.mBody.shiftAmount = getParameter("shiftAmount");
         }
-  
+
         return request;
     }
 }

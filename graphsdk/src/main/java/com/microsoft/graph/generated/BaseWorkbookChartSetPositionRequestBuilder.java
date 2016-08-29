@@ -59,10 +59,11 @@ public class BaseWorkbookChartSetPositionRequestBuilder extends BaseActionReques
         if (hasParameter("startCell")) {
             request.mBody.startCell = getParameter("startCell");
         }
+
         if (hasParameter("endCell")) {
             request.mBody.endCell = getParameter("endCell");
         }
-  
+
         return request;
     }
 }

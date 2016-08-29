@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("multiple")) {
             request.mBody.multiple = getParameter("multiple");
         }
-  
+
         return request;
     }
 }

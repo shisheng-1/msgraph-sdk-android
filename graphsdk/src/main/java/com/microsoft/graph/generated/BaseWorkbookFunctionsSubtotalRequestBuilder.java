@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
         if (hasParameter("functionNum")) {
             request.mBody.functionNum = getParameter("functionNum");
         }
+
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

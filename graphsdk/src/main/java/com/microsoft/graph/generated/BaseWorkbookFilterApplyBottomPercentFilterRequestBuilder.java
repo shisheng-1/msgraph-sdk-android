@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
         if (hasParameter("percent")) {
             request.mBody.percent = getParameter("percent");
         }
-  
+
         return request;
     }
 }

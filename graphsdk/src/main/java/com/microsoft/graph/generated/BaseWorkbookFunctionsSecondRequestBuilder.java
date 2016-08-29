@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsSecondRequestBuilder extends BaseActionRequest
         if (hasParameter("serialNumber")) {
             request.mBody.serialNumber = getParameter("serialNumber");
         }
-  
+
         return request;
     }
 }

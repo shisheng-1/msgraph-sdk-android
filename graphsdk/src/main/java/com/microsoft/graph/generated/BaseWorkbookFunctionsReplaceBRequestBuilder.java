@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
         if (hasParameter("oldText")) {
             request.mBody.oldText = getParameter("oldText");
         }
+
         if (hasParameter("startNum")) {
             request.mBody.startNum = getParameter("startNum");
         }
+
         if (hasParameter("numBytes")) {
             request.mBody.numBytes = getParameter("numBytes");
         }
+
         if (hasParameter("newText")) {
             request.mBody.newText = getParameter("newText");
         }
-  
+
         return request;
     }
 }

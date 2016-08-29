@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsT_Dist_2TRequestBuilder extends BaseActionRequ
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("degFreedom")) {
             request.mBody.degFreedom = getParameter("degFreedom");
         }
-  
+
         return request;
     }
 }

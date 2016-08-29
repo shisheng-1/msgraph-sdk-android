@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequ
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("mean")) {
             request.mBody.mean = getParameter("mean");
         }
+
         if (hasParameter("standardDev")) {
             request.mBody.standardDev = getParameter("standardDev");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

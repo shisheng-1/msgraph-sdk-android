@@ -64,25 +64,31 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
         if (hasParameter("cost")) {
             request.mBody.cost = getParameter("cost");
         }
+
         if (hasParameter("salvage")) {
             request.mBody.salvage = getParameter("salvage");
         }
+
         if (hasParameter("life")) {
             request.mBody.life = getParameter("life");
         }
+
         if (hasParameter("startPeriod")) {
             request.mBody.startPeriod = getParameter("startPeriod");
         }
+
         if (hasParameter("endPeriod")) {
             request.mBody.endPeriod = getParameter("endPeriod");
         }
+
         if (hasParameter("factor")) {
             request.mBody.factor = getParameter("factor");
         }
+
         if (hasParameter("noSwitch")) {
             request.mBody.noSwitch = getParameter("noSwitch");
         }
-  
+
         return request;
     }
 }

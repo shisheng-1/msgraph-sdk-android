@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
         if (hasParameter("text1")) {
             request.mBody.text1 = getParameter("text1");
         }
+
         if (hasParameter("text2")) {
             request.mBody.text2 = getParameter("text2");
         }
-  
+
         return request;
     }
 }

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Table Sort Reapply Request Builder.
  */
-public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableSortReapply
@@ -53,10 +53,6 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseFunctionRequ
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

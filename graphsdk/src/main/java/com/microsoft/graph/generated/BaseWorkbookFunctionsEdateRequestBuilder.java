@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsEdateRequestBuilder extends BaseActionRequestB
         if (hasParameter("startDate")) {
             request.mBody.startDate = getParameter("startDate");
         }
+
         if (hasParameter("months")) {
             request.mBody.months = getParameter("months");
         }
-  
+
         return request;
     }
 }

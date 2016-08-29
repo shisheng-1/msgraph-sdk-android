@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsImSumRequestBuilder extends BaseActionRequestB
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

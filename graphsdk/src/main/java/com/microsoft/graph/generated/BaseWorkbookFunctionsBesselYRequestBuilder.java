@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsBesselYRequestBuilder extends BaseActionReques
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("n")) {
             request.mBody.n = getParameter("n");
         }
-  
+
         return request;
     }
 }

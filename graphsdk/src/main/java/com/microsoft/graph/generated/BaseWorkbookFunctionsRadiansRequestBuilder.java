@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
         if (hasParameter("angle")) {
             request.mBody.angle = getParameter("angle");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActi
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("significance")) {
             request.mBody.significance = getParameter("significance");
         }
-  
+
         return request;
     }
 }

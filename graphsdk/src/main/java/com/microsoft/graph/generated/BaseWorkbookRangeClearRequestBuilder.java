@@ -58,7 +58,7 @@ public class BaseWorkbookRangeClearRequestBuilder extends BaseActionRequestBuild
         if (hasParameter("applyTo")) {
             request.mBody.applyTo = getParameter("applyTo");
         }
-  
+
         return request;
     }
 }

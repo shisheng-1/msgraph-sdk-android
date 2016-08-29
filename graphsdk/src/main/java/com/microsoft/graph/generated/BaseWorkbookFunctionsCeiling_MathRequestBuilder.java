@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionR
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("significance")) {
             request.mBody.significance = getParameter("significance");
         }
+
         if (hasParameter("mode")) {
             request.mBody.mode = getParameter("mode");
         }
-  
+
         return request;
     }
 }

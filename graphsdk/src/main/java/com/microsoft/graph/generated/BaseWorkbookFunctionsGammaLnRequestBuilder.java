@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsGammaLnRequestBuilder extends BaseActionReques
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

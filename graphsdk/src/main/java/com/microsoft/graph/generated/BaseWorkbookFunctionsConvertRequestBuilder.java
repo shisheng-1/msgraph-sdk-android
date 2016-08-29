@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("fromUnit")) {
             request.mBody.fromUnit = getParameter("fromUnit");
         }
+
         if (hasParameter("toUnit")) {
             request.mBody.toUnit = getParameter("toUnit");
         }
-  
+
         return request;
     }
 }

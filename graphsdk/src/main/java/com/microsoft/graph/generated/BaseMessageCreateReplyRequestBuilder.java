@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Message Create Reply Request Builder.
  */
-public class BaseMessageCreateReplyRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseMessageCreateReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCreateReply
@@ -53,10 +53,6 @@ public class BaseMessageCreateReplyRequestBuilder extends BaseFunctionRequestBui
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

@@ -63,22 +63,27 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
+
         if (hasParameter("beta")) {
             request.mBody.beta = getParameter("beta");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
+
         if (hasParameter("a")) {
             request.mBody.a = getParameter("a");
         }
+
         if (hasParameter("b")) {
             request.mBody.b = getParameter("b");
         }
-  
+
         return request;
     }
 }

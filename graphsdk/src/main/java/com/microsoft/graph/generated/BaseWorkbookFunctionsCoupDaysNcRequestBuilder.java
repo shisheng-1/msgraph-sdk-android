@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsCoupDaysNcRequestBuilder extends BaseActionReq
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("frequency")) {
             request.mBody.frequency = getParameter("frequency");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

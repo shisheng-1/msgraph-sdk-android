@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsCombinaRequestBuilder extends BaseActionReques
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("numberChosen")) {
             request.mBody.numberChosen = getParameter("numberChosen");
         }
-  
+
         return request;
     }
 }

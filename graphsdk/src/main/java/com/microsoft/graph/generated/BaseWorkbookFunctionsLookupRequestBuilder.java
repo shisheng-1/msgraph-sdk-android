@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
         if (hasParameter("lookupValue")) {
             request.mBody.lookupValue = getParameter("lookupValue");
         }
+
         if (hasParameter("lookupVector")) {
             request.mBody.lookupVector = getParameter("lookupVector");
         }
+
         if (hasParameter("resultVector")) {
             request.mBody.resultVector = getParameter("resultVector");
         }
-  
+
         return request;
     }
 }

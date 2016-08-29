@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
         if (hasParameter("numberF")) {
             request.mBody.numberF = getParameter("numberF");
         }
+
         if (hasParameter("numberS")) {
             request.mBody.numberS = getParameter("numberS");
         }
+
         if (hasParameter("probabilityS")) {
             request.mBody.probabilityS = getParameter("probabilityS");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

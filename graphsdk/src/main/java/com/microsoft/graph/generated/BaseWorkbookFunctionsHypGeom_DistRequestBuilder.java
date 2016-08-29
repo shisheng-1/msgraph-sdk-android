@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
         if (hasParameter("sampleS")) {
             request.mBody.sampleS = getParameter("sampleS");
         }
+
         if (hasParameter("numberSample")) {
             request.mBody.numberSample = getParameter("numberSample");
         }
+
         if (hasParameter("populationS")) {
             request.mBody.populationS = getParameter("populationS");
         }
+
         if (hasParameter("numberPop")) {
             request.mBody.numberPop = getParameter("numberPop");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

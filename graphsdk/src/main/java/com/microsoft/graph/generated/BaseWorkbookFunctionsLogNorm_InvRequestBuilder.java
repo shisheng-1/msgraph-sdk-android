@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRe
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
+
         if (hasParameter("mean")) {
             request.mBody.mean = getParameter("mean");
         }
+
         if (hasParameter("standardDev")) {
             request.mBody.standardDev = getParameter("standardDev");
         }
-  
+
         return request;
     }
 }

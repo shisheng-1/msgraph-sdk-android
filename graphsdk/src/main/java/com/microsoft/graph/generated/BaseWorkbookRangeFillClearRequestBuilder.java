@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Range Fill Clear Request Builder.
  */
-public class BaseWorkbookRangeFillClearRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookRangeFillClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeFillClear
@@ -53,10 +53,6 @@ public class BaseWorkbookRangeFillClearRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

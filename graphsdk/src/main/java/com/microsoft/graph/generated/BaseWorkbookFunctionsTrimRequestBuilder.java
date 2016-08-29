@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBu
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
-  
+
         return request;
     }
 }

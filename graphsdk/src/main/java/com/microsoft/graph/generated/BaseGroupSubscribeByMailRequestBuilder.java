@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Group Subscribe By Mail Request Builder.
  */
-public class BaseGroupSubscribeByMailRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupSubscribeByMail
@@ -53,10 +53,6 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseFunctionRequestB
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

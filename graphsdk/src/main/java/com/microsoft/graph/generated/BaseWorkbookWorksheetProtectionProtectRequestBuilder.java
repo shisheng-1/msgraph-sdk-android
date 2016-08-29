@@ -58,7 +58,7 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
         if (hasParameter("options")) {
             request.mBody.options = getParameter("options");
         }
-  
+
         return request;
     }
 }

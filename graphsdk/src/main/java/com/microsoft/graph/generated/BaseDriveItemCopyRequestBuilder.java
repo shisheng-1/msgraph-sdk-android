@@ -59,10 +59,11 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("name")) {
             request.mBody.name = getParameter("name");
         }
+
         if (hasParameter("parentReference")) {
             request.mBody.parentReference = getParameter("parentReference");
         }
-  
+
         return request;
     }
 }

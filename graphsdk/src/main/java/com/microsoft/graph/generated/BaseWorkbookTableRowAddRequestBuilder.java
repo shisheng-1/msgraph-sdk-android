@@ -59,10 +59,11 @@ public class BaseWorkbookTableRowAddRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("index")) {
             request.mBody.index = getParameter("index");
         }
+
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

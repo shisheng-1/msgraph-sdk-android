@@ -58,7 +58,7 @@ public class BasePostReplyRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("post")) {
             request.mBody.post = getParameter("post");
         }
-  
+
         return request;
     }
 }

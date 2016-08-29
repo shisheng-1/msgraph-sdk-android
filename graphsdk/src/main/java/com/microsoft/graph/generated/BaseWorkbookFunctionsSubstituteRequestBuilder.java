@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("oldText")) {
             request.mBody.oldText = getParameter("oldText");
         }
+
         if (hasParameter("newText")) {
             request.mBody.newText = getParameter("newText");
         }
+
         if (hasParameter("instanceNum")) {
             request.mBody.instanceNum = getParameter("instanceNum");
         }
-  
+
         return request;
     }
 }

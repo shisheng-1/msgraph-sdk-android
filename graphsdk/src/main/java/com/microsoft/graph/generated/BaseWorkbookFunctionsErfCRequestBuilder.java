@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBu
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

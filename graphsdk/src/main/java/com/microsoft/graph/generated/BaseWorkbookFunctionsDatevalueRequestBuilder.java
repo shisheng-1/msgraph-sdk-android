@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsDatevalueRequestBuilder extends BaseActionRequ
         if (hasParameter("dateText")) {
             request.mBody.dateText = getParameter("dateText");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsDec2BinRequestBuilder extends BaseActionReques
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("places")) {
             request.mBody.places = getParameter("places");
         }
-  
+
         return request;
     }
 }

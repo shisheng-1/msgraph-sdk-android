@@ -63,22 +63,27 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
         if (hasParameter("nper")) {
             request.mBody.nper = getParameter("nper");
         }
+
         if (hasParameter("pmt")) {
             request.mBody.pmt = getParameter("pmt");
         }
+
         if (hasParameter("pv")) {
             request.mBody.pv = getParameter("pv");
         }
+
         if (hasParameter("fv")) {
             request.mBody.fv = getParameter("fv");
         }
+
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
+
         if (hasParameter("guess")) {
             request.mBody.guess = getParameter("guess");
         }
-  
+
         return request;
     }
 }

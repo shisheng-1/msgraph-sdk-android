@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyValuesFilterRequestBuilder extends BaseActio
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

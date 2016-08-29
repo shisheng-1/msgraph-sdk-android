@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsAtan2RequestBuilder extends BaseActionRequestB
         if (hasParameter("xNum")) {
             request.mBody.xNum = getParameter("xNum");
         }
+
         if (hasParameter("yNum")) {
             request.mBody.yNum = getParameter("yNum");
         }
-  
+
         return request;
     }
 }

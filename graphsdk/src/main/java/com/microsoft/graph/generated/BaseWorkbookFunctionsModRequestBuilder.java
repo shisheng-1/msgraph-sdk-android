@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsModRequestBuilder extends BaseActionRequestBui
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("divisor")) {
             request.mBody.divisor = getParameter("divisor");
         }
-  
+
         return request;
     }
 }

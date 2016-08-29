@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAc
         if (hasParameter("color")) {
             request.mBody.color = getParameter("color");
         }
-  
+
         return request;
     }
 }

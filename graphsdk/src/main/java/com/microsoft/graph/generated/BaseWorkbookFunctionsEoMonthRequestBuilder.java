@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsEoMonthRequestBuilder extends BaseActionReques
         if (hasParameter("startDate")) {
             request.mBody.startDate = getParameter("startDate");
         }
+
         if (hasParameter("months")) {
             request.mBody.months = getParameter("months");
         }
-  
+
         return request;
     }
 }

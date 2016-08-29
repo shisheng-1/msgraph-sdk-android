@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("mean")) {
             request.mBody.mean = getParameter("mean");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
         if (hasParameter("logical")) {
             request.mBody.logical = getParameter("logical");
         }
-  
+
         return request;
     }
 }

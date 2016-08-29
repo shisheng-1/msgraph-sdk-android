@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionR
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("significance")) {
             request.mBody.significance = getParameter("significance");
         }
-  
+
         return request;
     }
 }

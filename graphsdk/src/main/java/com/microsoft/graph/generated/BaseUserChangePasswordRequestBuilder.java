@@ -59,10 +59,11 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
         if (hasParameter("currentPassword")) {
             request.mBody.currentPassword = getParameter("currentPassword");
         }
+
         if (hasParameter("newPassword")) {
             request.mBody.newPassword = getParameter("newPassword");
         }
-  
+
         return request;
     }
 }

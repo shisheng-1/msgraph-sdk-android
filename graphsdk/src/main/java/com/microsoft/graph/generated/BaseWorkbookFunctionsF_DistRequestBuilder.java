@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("degFreedom1")) {
             request.mBody.degFreedom1 = getParameter("degFreedom1");
         }
+
         if (hasParameter("degFreedom2")) {
             request.mBody.degFreedom2 = getParameter("degFreedom2");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

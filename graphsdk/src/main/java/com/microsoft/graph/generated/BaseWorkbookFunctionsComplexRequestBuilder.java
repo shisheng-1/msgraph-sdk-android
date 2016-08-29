@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
         if (hasParameter("realNum")) {
             request.mBody.realNum = getParameter("realNum");
         }
+
         if (hasParameter("iNum")) {
             request.mBody.iNum = getParameter("iNum");
         }
+
         if (hasParameter("suffix")) {
             request.mBody.suffix = getParameter("suffix");
         }
-  
+
         return request;
     }
 }

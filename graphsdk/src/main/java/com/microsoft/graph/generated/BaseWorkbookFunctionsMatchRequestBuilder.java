@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
         if (hasParameter("lookupValue")) {
             request.mBody.lookupValue = getParameter("lookupValue");
         }
+
         if (hasParameter("lookupArray")) {
             request.mBody.lookupArray = getParameter("lookupArray");
         }
+
         if (hasParameter("matchType")) {
             request.mBody.matchType = getParameter("matchType");
         }
-  
+
         return request;
     }
 }

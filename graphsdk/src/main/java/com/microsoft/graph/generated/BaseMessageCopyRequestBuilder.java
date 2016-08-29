@@ -58,7 +58,7 @@ public class BaseMessageCopyRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("destinationId")) {
             request.mBody.destinationId = getParameter("destinationId");
         }
-  
+
         return request;
     }
 }

@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
+
         if (hasParameter("financeRate")) {
             request.mBody.financeRate = getParameter("financeRate");
         }
+
         if (hasParameter("reinvestRate")) {
             request.mBody.reinvestRate = getParameter("reinvestRate");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
-  
+
         return request;
     }
 }

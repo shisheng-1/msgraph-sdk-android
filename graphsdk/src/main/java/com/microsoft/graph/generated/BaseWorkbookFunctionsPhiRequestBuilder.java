@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBui
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsBitorRequestBuilder extends BaseActionRequestB
         if (hasParameter("number1")) {
             request.mBody.number1 = getParameter("number1");
         }
+
         if (hasParameter("number2")) {
             request.mBody.number2 = getParameter("number2");
         }
-  
+
         return request;
     }
 }

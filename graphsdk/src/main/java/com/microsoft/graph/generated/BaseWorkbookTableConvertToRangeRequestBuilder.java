@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Table Convert To Range Request Builder.
  */
-public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableConvertToRange
@@ -53,10 +53,6 @@ public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseFunctionR
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Worksheet Protection Unprotect Request Builder.
  */
-public class BaseWorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookWorksheetProtectionUnprotect
@@ -53,10 +53,6 @@ public class BaseWorkbookWorksheetProtectionUnprotectRequestBuilder extends Base
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

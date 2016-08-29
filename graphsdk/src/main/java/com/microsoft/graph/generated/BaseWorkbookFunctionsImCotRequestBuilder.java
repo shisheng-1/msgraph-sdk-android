@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsImCotRequestBuilder extends BaseActionRequestB
         if (hasParameter("inumber")) {
             request.mBody.inumber = getParameter("inumber");
         }
-  
+
         return request;
     }
 }

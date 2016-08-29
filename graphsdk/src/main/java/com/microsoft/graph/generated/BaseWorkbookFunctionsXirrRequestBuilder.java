@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBu
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
+
         if (hasParameter("dates")) {
             request.mBody.dates = getParameter("dates");
         }
+
         if (hasParameter("guess")) {
             request.mBody.guess = getParameter("guess");
         }
-  
+
         return request;
     }
 }

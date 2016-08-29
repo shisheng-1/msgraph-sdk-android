@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsLog10RequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
-  
+
         return request;
     }
 }

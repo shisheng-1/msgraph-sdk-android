@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
         if (hasParameter("value")) {
             request.mBody.value = getParameter("value");
         }
-  
+
         return request;
     }
 }

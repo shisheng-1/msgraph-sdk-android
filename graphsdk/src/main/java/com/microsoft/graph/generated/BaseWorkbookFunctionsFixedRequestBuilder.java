@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsFixedRequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("decimals")) {
             request.mBody.decimals = getParameter("decimals");
         }
+
         if (hasParameter("noCommas")) {
             request.mBody.noCommas = getParameter("noCommas");
         }
-  
+
         return request;
     }
 }

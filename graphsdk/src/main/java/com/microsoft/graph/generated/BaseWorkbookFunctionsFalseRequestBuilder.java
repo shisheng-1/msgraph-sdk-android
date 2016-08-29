@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Functions False Request Builder.
  */
-public class BaseWorkbookFunctionsFalseRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFalse
@@ -53,10 +53,6 @@ public class BaseWorkbookFunctionsFalseRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

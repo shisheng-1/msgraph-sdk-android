@@ -59,10 +59,11 @@ public class BaseWorkbookChartSetDataRequestBuilder extends BaseActionRequestBui
         if (hasParameter("sourceData")) {
             request.mBody.sourceData = getParameter("sourceData");
         }
+
         if (hasParameter("seriesBy")) {
             request.mBody.seriesBy = getParameter("seriesBy");
         }
-  
+
         return request;
     }
 }

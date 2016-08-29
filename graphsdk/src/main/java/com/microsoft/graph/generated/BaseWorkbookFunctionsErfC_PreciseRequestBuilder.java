@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsErfC_PreciseRequestBuilder extends BaseActionR
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

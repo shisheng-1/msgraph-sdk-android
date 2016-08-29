@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsWorkDayRequestBuilder extends BaseActionReques
         if (hasParameter("startDate")) {
             request.mBody.startDate = getParameter("startDate");
         }
+
         if (hasParameter("days")) {
             request.mBody.days = getParameter("days");
         }
+
         if (hasParameter("holidays")) {
             request.mBody.holidays = getParameter("holidays");
         }
-  
+
         return request;
     }
 }

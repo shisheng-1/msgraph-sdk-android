@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequ
         if (hasParameter("trials")) {
             request.mBody.trials = getParameter("trials");
         }
+
         if (hasParameter("probabilityS")) {
             request.mBody.probabilityS = getParameter("probabilityS");
         }
+
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
-  
+
         return request;
     }
 }

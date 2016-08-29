@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsDgetRequestBuilder extends BaseActionRequestBu
         if (hasParameter("database")) {
             request.mBody.database = getParameter("database");
         }
+
         if (hasParameter("field")) {
             request.mBody.field = getParameter("field");
         }
+
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
-  
+
         return request;
     }
 }

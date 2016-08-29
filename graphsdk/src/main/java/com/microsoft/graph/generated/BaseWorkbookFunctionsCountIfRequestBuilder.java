@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
         if (hasParameter("range")) {
             request.mBody.range = getParameter("range");
         }
+
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
-  
+
         return request;
     }
 }

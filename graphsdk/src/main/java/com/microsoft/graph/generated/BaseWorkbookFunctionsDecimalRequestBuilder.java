@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsDecimalRequestBuilder extends BaseActionReques
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("radix")) {
             request.mBody.radix = getParameter("radix");
         }
-  
+
         return request;
     }
 }

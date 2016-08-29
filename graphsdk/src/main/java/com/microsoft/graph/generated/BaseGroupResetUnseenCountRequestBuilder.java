@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Group Reset Unseen Count Request Builder.
  */
-public class BaseGroupResetUnseenCountRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseGroupResetUnseenCountRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupResetUnseenCount
@@ -53,10 +53,6 @@ public class BaseGroupResetUnseenCountRequestBuilder extends BaseFunctionRequest
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

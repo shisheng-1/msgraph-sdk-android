@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("step")) {
             request.mBody.step = getParameter("step");
         }
-  
+
         return request;
     }
 }

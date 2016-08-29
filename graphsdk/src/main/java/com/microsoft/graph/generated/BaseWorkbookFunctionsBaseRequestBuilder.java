@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("radix")) {
             request.mBody.radix = getParameter("radix");
         }
+
         if (hasParameter("minLength")) {
             request.mBody.minLength = getParameter("minLength");
         }
-  
+
         return request;
     }
 }

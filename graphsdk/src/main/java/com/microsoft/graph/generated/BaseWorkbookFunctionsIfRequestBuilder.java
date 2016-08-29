@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("logicalTest")) {
             request.mBody.logicalTest = getParameter("logicalTest");
         }
+
         if (hasParameter("valueIfTrue")) {
             request.mBody.valueIfTrue = getParameter("valueIfTrue");
         }
+
         if (hasParameter("valueIfFalse")) {
             request.mBody.valueIfFalse = getParameter("valueIfFalse");
         }
-  
+
         return request;
     }
 }

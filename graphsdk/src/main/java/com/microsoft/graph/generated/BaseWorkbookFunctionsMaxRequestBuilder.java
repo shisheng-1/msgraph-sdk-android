@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBui
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

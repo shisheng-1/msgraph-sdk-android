@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
         if (hasParameter("numberS")) {
             request.mBody.numberS = getParameter("numberS");
         }
+
         if (hasParameter("trials")) {
             request.mBody.trials = getParameter("trials");
         }
+
         if (hasParameter("probabilityS")) {
             request.mBody.probabilityS = getParameter("probabilityS");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

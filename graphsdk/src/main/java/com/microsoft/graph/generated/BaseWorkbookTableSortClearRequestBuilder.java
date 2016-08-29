@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Table Sort Clear Request Builder.
  */
-public class BaseWorkbookTableSortClearRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookTableSortClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableSortClear
@@ -53,10 +53,6 @@ public class BaseWorkbookTableSortClearRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

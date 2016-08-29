@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBu
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
+
         if (hasParameter("dates")) {
             request.mBody.dates = getParameter("dates");
         }
-  
+
         return request;
     }
 }

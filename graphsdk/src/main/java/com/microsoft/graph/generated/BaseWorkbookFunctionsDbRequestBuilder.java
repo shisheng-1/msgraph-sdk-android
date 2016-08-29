@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsDbRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("cost")) {
             request.mBody.cost = getParameter("cost");
         }
+
         if (hasParameter("salvage")) {
             request.mBody.salvage = getParameter("salvage");
         }
+
         if (hasParameter("life")) {
             request.mBody.life = getParameter("life");
         }
+
         if (hasParameter("period")) {
             request.mBody.period = getParameter("period");
         }
+
         if (hasParameter("month")) {
             request.mBody.month = getParameter("month");
         }
-  
+
         return request;
     }
 }

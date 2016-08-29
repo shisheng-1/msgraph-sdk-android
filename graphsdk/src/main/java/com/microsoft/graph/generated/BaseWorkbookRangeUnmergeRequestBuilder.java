@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Range Unmerge Request Builder.
  */
-public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeUnmerge
@@ -53,10 +53,6 @@ public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseFunctionRequestB
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

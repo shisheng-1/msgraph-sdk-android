@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
         if (hasParameter("lowerLimit")) {
             request.mBody.lowerLimit = getParameter("lowerLimit");
         }
+
         if (hasParameter("upperLimit")) {
             request.mBody.upperLimit = getParameter("upperLimit");
         }
-  
+
         return request;
     }
 }

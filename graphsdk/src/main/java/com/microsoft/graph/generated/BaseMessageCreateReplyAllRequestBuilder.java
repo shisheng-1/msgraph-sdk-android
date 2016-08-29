@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Message Create Reply All Request Builder.
  */
-public class BaseMessageCreateReplyAllRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseMessageCreateReplyAllRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCreateReplyAll
@@ -53,10 +53,6 @@ public class BaseMessageCreateReplyAllRequestBuilder extends BaseFunctionRequest
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

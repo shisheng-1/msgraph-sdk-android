@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("startNum")) {
             request.mBody.startNum = getParameter("startNum");
         }
+
         if (hasParameter("numBytes")) {
             request.mBody.numBytes = getParameter("numBytes");
         }
-  
+
         return request;
     }
 }

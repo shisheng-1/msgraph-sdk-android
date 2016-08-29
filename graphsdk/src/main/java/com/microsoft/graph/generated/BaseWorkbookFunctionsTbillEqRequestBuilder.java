@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsTbillEqRequestBuilder extends BaseActionReques
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("discount")) {
             request.mBody.discount = getParameter("discount");
         }
-  
+
         return request;
     }
 }

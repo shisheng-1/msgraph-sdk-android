@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsArabicRequestBuilder extends BaseActionRequest
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
-  
+
         return request;
     }
 }

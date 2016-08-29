@@ -58,7 +58,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("newReminderTime")) {
             request.mBody.newReminderTime = getParameter("newReminderTime");
         }
-  
+
         return request;
     }
 }

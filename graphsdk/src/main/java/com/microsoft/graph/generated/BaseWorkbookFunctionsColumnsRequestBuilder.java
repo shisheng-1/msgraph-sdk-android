@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsColumnsRequestBuilder extends BaseActionReques
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
-  
+
         return request;
     }
 }

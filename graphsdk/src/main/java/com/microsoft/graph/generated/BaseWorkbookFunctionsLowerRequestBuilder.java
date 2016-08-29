@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsLowerRequestBuilder extends BaseActionRequestB
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
-  
+
         return request;
     }
 }

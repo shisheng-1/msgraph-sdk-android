@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsSheetsRequestBuilder extends BaseActionRequest
         if (hasParameter("reference")) {
             request.mBody.reference = getParameter("reference");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequest
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

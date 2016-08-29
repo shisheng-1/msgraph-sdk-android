@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
         if (hasParameter("icon")) {
             request.mBody.icon = getParameter("icon");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsTextRequestBuilder extends BaseActionRequestBu
         if (hasParameter("value")) {
             request.mBody.value = getParameter("value");
         }
+
         if (hasParameter("formatText")) {
             request.mBody.formatText = getParameter("formatText");
         }
-  
+
         return request;
     }
 }

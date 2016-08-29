@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsMedianRequestBuilder extends BaseActionRequest
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsImDivRequestBuilder extends BaseActionRequestB
         if (hasParameter("inumber1")) {
             request.mBody.inumber1 = getParameter("inumber1");
         }
+
         if (hasParameter("inumber2")) {
             request.mBody.inumber2 = getParameter("inumber2");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsQuartile_ExcRequestBuilder extends BaseActionR
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("quart")) {
             request.mBody.quart = getParameter("quart");
         }
-  
+
         return request;
     }
 }

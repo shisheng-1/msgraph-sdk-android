@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

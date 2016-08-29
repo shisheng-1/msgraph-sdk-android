@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Table Reapply Filters Request Builder.
  */
-public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableReapplyFilters
@@ -53,10 +53,6 @@ public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseFunctionR
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

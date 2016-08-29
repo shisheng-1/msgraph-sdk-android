@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
+
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
+
         if (hasParameter("beta")) {
             request.mBody.beta = getParameter("beta");
         }
-  
+
         return request;
     }
 }

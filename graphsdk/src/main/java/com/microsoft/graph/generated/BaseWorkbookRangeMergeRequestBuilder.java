@@ -58,7 +58,7 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
         if (hasParameter("across")) {
             request.mBody.across = getParameter("across");
         }
-  
+
         return request;
     }
 }

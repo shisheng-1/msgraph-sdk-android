@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Functions True Request Builder.
  */
-public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTrue
@@ -53,10 +53,6 @@ public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseFunctionRequest
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

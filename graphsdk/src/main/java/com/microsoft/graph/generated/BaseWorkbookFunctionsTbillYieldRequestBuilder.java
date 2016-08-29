@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsTbillYieldRequestBuilder extends BaseActionReq
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("pr")) {
             request.mBody.pr = getParameter("pr");
         }
-  
+
         return request;
     }
 }

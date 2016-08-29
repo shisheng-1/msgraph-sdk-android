@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Chart Fill Clear Request Builder.
  */
-public class BaseWorkbookChartFillClearRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookChartFillClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartFillClear
@@ -53,10 +53,6 @@ public class BaseWorkbookChartFillClearRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

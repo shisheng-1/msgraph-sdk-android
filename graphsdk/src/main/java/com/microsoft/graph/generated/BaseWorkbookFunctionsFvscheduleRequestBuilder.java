@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsFvscheduleRequestBuilder extends BaseActionReq
         if (hasParameter("principal")) {
             request.mBody.principal = getParameter("principal");
         }
+
         if (hasParameter("schedule")) {
             request.mBody.schedule = getParameter("schedule");
         }
-  
+
         return request;
     }
 }

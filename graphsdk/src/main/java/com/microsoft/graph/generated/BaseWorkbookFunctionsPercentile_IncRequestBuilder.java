@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("k")) {
             request.mBody.k = getParameter("k");
         }
-  
+
         return request;
     }
 }

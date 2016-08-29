@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Close Session Request Builder.
  */
-public class BaseWorkbookCloseSessionRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookCloseSession
@@ -53,10 +53,6 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseFunctionRequestB
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

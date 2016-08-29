@@ -58,7 +58,7 @@ public class BaseWorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("shift")) {
             request.mBody.shift = getParameter("shift");
         }
-  
+
         return request;
     }
 }

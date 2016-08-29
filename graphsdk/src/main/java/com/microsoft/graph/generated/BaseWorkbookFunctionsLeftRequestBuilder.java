@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBu
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("numChars")) {
             request.mBody.numChars = getParameter("numChars");
         }
-  
+
         return request;
     }
 }

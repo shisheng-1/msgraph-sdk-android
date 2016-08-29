@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsRank_AvgRequestBuilder extends BaseActionReque
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("ref")) {
             request.mBody.ref = getParameter("ref");
         }
+
         if (hasParameter("order")) {
             request.mBody.order = getParameter("order");
         }
-  
+
         return request;
     }
 }

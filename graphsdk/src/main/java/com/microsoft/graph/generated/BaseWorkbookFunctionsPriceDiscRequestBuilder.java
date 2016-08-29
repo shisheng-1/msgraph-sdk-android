@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("discount")) {
             request.mBody.discount = getParameter("discount");
         }
+
         if (hasParameter("redemption")) {
             request.mBody.redemption = getParameter("redemption");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsIrrRequestBuilder extends BaseActionRequestBui
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
+
         if (hasParameter("guess")) {
             request.mBody.guess = getParameter("guess");
         }
-  
+
         return request;
     }
 }

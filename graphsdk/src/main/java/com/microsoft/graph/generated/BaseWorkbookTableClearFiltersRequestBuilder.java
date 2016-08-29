@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Table Clear Filters Request Builder.
  */
-public class BaseWorkbookTableClearFiltersRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookTableClearFiltersRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableClearFilters
@@ -53,10 +53,6 @@ public class BaseWorkbookTableClearFiltersRequestBuilder extends BaseFunctionReq
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

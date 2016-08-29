@@ -59,10 +59,11 @@ public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilde
         if (hasParameter("addLicenses")) {
             request.mBody.addLicenses = getParameter("addLicenses");
         }
+
         if (hasParameter("removeLicenses")) {
             request.mBody.removeLicenses = getParameter("removeLicenses");
         }
-  
+
         return request;
     }
 }

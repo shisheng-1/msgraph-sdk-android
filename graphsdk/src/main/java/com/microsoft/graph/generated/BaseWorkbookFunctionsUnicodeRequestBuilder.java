@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsUnicodeRequestBuilder extends BaseActionReques
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
-  
+
         return request;
     }
 }

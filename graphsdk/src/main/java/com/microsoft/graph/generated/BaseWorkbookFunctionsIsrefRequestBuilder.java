@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestB
         if (hasParameter("value")) {
             request.mBody.value = getParameter("value");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
-  
+
         return request;
     }
 }

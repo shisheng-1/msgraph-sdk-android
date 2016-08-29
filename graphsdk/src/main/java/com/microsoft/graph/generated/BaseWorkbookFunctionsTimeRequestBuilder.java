@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
         if (hasParameter("hour")) {
             request.mBody.hour = getParameter("hour");
         }
+
         if (hasParameter("minute")) {
             request.mBody.minute = getParameter("minute");
         }
+
         if (hasParameter("second")) {
             request.mBody.second = getParameter("second");
         }
-  
+
         return request;
     }
 }

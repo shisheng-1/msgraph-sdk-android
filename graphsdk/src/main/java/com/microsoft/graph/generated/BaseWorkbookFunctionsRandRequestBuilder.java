@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Functions Rand Request Builder.
  */
-public class BaseWorkbookFunctionsRandRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRand
@@ -53,10 +53,6 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseFunctionRequest
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

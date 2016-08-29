@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
         if (hasParameter("inumber")) {
             request.mBody.inumber = getParameter("inumber");
         }
+
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
-  
+
         return request;
     }
 }

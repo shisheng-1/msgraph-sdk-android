@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsImArgumentRequestBuilder extends BaseActionReq
         if (hasParameter("inumber")) {
             request.mBody.inumber = getParameter("inumber");
         }
-  
+
         return request;
     }
 }

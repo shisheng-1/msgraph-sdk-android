@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsStandardizeRequestBuilder extends BaseActionRe
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("mean")) {
             request.mBody.mean = getParameter("mean");
         }
+
         if (hasParameter("standardDev")) {
             request.mBody.standardDev = getParameter("standardDev");
         }
-  
+
         return request;
     }
 }

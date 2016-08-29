@@ -58,7 +58,7 @@ public class BaseWorkbookRangeInsertRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("shift")) {
             request.mBody.shift = getParameter("shift");
         }
-  
+
         return request;
     }
 }

@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsBeta_InvRequestBuilder extends BaseActionReque
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
+
         if (hasParameter("alpha")) {
             request.mBody.alpha = getParameter("alpha");
         }
+
         if (hasParameter("beta")) {
             request.mBody.beta = getParameter("beta");
         }
+
         if (hasParameter("a")) {
             request.mBody.a = getParameter("a");
         }
+
         if (hasParameter("b")) {
             request.mBody.b = getParameter("b");
         }
-  
+
         return request;
     }
 }

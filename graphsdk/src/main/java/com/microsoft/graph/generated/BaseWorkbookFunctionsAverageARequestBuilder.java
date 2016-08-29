@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsAverageARequestBuilder extends BaseActionReque
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

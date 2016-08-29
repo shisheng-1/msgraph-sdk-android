@@ -59,10 +59,11 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
         if (hasParameter("address")) {
             request.mBody.address = getParameter("address");
         }
+
         if (hasParameter("hasHeaders")) {
             request.mBody.hasHeaders = getParameter("hasHeaders");
         }
-  
+
         return request;
     }
 }

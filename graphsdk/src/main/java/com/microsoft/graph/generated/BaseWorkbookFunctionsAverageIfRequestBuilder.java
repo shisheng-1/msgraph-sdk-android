@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequ
         if (hasParameter("range")) {
             request.mBody.range = getParameter("range");
         }
+
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
+
         if (hasParameter("averageRange")) {
             request.mBody.averageRange = getParameter("averageRange");
         }
-  
+
         return request;
     }
 }

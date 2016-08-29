@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Event Dismiss Reminder Request Builder.
  */
-public class BaseEventDismissReminderRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseEventDismissReminderRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventDismissReminder
@@ -53,10 +53,6 @@ public class BaseEventDismissReminderRequestBuilder extends BaseFunctionRequestB
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

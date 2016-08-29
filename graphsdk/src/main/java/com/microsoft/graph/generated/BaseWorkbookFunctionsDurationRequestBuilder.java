@@ -63,22 +63,27 @@ public class BaseWorkbookFunctionsDurationRequestBuilder extends BaseActionReque
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("coupon")) {
             request.mBody.coupon = getParameter("coupon");
         }
+
         if (hasParameter("yld")) {
             request.mBody.yld = getParameter("yld");
         }
+
         if (hasParameter("frequency")) {
             request.mBody.frequency = getParameter("frequency");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

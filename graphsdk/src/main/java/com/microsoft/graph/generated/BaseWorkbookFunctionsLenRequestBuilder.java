@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsLenRequestBuilder extends BaseActionRequestBui
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
-  
+
         return request;
     }
 }

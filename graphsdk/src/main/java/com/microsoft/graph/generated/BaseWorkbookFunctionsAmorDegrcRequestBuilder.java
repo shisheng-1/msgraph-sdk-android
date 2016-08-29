@@ -64,25 +64,31 @@ public class BaseWorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequ
         if (hasParameter("cost")) {
             request.mBody.cost = getParameter("cost");
         }
+
         if (hasParameter("datePurchased")) {
             request.mBody.datePurchased = getParameter("datePurchased");
         }
+
         if (hasParameter("firstPeriod")) {
             request.mBody.firstPeriod = getParameter("firstPeriod");
         }
+
         if (hasParameter("salvage")) {
             request.mBody.salvage = getParameter("salvage");
         }
+
         if (hasParameter("period")) {
             request.mBody.period = getParameter("period");
         }
+
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

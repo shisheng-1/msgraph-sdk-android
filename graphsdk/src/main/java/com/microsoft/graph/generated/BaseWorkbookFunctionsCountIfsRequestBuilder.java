@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsCountIfsRequestBuilder extends BaseActionReque
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

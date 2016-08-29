@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsUsdollarRequestBuilder extends BaseActionReque
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("decimals")) {
             request.mBody.decimals = getParameter("decimals");
         }
-  
+
         return request;
     }
 }

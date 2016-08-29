@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsMidRequestBuilder extends BaseActionRequestBui
         if (hasParameter("text")) {
             request.mBody.text = getParameter("text");
         }
+
         if (hasParameter("startNum")) {
             request.mBody.startNum = getParameter("startNum");
         }
+
         if (hasParameter("numChars")) {
             request.mBody.numChars = getParameter("numChars");
         }
-  
+
         return request;
     }
 }

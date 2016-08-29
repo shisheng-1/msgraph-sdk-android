@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsChooseRequestBuilder extends BaseActionRequest
         if (hasParameter("indexNum")) {
             request.mBody.indexNum = getParameter("indexNum");
         }
+
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

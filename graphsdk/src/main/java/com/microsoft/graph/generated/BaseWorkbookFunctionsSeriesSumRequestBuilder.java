@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("n")) {
             request.mBody.n = getParameter("n");
         }
+
         if (hasParameter("m")) {
             request.mBody.m = getParameter("m");
         }
+
         if (hasParameter("coefficients")) {
             request.mBody.coefficients = getParameter("coefficients");
         }
-  
+
         return request;
     }
 }

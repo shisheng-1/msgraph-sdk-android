@@ -65,28 +65,35 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
         if (hasParameter("issue")) {
             request.mBody.issue = getParameter("issue");
         }
+
         if (hasParameter("firstInterest")) {
             request.mBody.firstInterest = getParameter("firstInterest");
         }
+
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("par")) {
             request.mBody.par = getParameter("par");
         }
+
         if (hasParameter("frequency")) {
             request.mBody.frequency = getParameter("frequency");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
+
         if (hasParameter("calcMethod")) {
             request.mBody.calcMethod = getParameter("calcMethod");
         }
-  
+
         return request;
     }
 }

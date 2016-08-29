@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
         if (hasParameter("range")) {
             request.mBody.range = getParameter("range");
         }
-  
+
         return request;
     }
 }

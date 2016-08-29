@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("form")) {
             request.mBody.form = getParameter("form");
         }
-  
+
         return request;
     }
 }

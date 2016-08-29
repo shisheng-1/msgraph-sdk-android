@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Refresh Session Request Builder.
  */
-public class BaseWorkbookRefreshSessionRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRefreshSession
@@ -53,10 +53,6 @@ public class BaseWorkbookRefreshSessionRequestBuilder extends BaseFunctionReques
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

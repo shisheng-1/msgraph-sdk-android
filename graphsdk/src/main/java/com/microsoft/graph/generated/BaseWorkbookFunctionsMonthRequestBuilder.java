@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsMonthRequestBuilder extends BaseActionRequestB
         if (hasParameter("serialNumber")) {
             request.mBody.serialNumber = getParameter("serialNumber");
         }
-  
+
         return request;
     }
 }

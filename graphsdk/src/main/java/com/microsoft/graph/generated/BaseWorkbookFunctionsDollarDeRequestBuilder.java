@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
         if (hasParameter("fractionalDollar")) {
             request.mBody.fractionalDollar = getParameter("fractionalDollar");
         }
+
         if (hasParameter("fraction")) {
             request.mBody.fraction = getParameter("fraction");
         }
-  
+
         return request;
     }
 }

@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Range Format Autofit Columns Request Builder.
  */
-public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeFormatAutofitColumns
@@ -53,10 +53,6 @@ public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseFun
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

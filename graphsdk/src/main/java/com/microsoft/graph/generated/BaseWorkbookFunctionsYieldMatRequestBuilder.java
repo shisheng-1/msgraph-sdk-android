@@ -63,22 +63,27 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("issue")) {
             request.mBody.issue = getParameter("issue");
         }
+
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("pr")) {
             request.mBody.pr = getParameter("pr");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

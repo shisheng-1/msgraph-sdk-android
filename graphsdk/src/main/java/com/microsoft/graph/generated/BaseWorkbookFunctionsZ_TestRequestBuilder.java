@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("sigma")) {
             request.mBody.sigma = getParameter("sigma");
         }
-  
+
         return request;
     }
 }

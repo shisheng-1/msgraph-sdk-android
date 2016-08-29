@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsTrimMeanRequestBuilder extends BaseActionReque
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("percent")) {
             request.mBody.percent = getParameter("percent");
         }
-  
+
         return request;
     }
 }

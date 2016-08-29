@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsDaysRequestBuilder extends BaseActionRequestBu
         if (hasParameter("endDate")) {
             request.mBody.endDate = getParameter("endDate");
         }
+
         if (hasParameter("startDate")) {
             request.mBody.startDate = getParameter("startDate");
         }
-  
+
         return request;
     }
 }

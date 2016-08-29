@@ -65,28 +65,35 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("lastInterest")) {
             request.mBody.lastInterest = getParameter("lastInterest");
         }
+
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("yld")) {
             request.mBody.yld = getParameter("yld");
         }
+
         if (hasParameter("redemption")) {
             request.mBody.redemption = getParameter("redemption");
         }
+
         if (hasParameter("frequency")) {
             request.mBody.frequency = getParameter("frequency");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

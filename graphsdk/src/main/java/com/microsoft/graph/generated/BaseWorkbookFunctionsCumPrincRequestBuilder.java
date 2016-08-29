@@ -63,22 +63,27 @@ public class BaseWorkbookFunctionsCumPrincRequestBuilder extends BaseActionReque
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("nper")) {
             request.mBody.nper = getParameter("nper");
         }
+
         if (hasParameter("pv")) {
             request.mBody.pv = getParameter("pv");
         }
+
         if (hasParameter("startPeriod")) {
             request.mBody.startPeriod = getParameter("startPeriod");
         }
+
         if (hasParameter("endPeriod")) {
             request.mBody.endPeriod = getParameter("endPeriod");
         }
+
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
-  
+
         return request;
     }
 }

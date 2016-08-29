@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsEffectRequestBuilder extends BaseActionRequest
         if (hasParameter("nominalRate")) {
             request.mBody.nominalRate = getParameter("nominalRate");
         }
+
         if (hasParameter("npery")) {
             request.mBody.npery = getParameter("npery");
         }
-  
+
         return request;
     }
 }

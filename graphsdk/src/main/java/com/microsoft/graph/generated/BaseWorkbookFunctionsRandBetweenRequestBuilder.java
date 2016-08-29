@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
         if (hasParameter("bottom")) {
             request.mBody.bottom = getParameter("bottom");
         }
+
         if (hasParameter("top")) {
             request.mBody.top = getParameter("top");
         }
-  
+
         return request;
     }
 }

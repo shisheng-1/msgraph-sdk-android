@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsChiSq_InvRequestBuilder extends BaseActionRequ
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
+
         if (hasParameter("degFreedom")) {
             request.mBody.degFreedom = getParameter("degFreedom");
         }
-  
+
         return request;
     }
 }

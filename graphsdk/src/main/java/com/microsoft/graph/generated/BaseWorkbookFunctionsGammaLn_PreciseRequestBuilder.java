@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
-  
+
         return request;
     }
 }

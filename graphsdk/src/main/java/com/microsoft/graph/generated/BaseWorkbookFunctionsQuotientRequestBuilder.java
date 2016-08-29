@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsQuotientRequestBuilder extends BaseActionReque
         if (hasParameter("numerator")) {
             request.mBody.numerator = getParameter("numerator");
         }
+
         if (hasParameter("denominator")) {
             request.mBody.denominator = getParameter("denominator");
         }
-  
+
         return request;
     }
 }

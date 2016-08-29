@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsT_InvRequestBuilder extends BaseActionRequestB
         if (hasParameter("probability")) {
             request.mBody.probability = getParameter("probability");
         }
+
         if (hasParameter("degFreedom")) {
             request.mBody.degFreedom = getParameter("degFreedom");
         }
-  
+
         return request;
     }
 }

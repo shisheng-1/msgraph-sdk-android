@@ -58,7 +58,7 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
         if (hasParameter("calculationType")) {
             request.mBody.calculationType = getParameter("calculationType");
         }
-  
+
         return request;
     }
 }

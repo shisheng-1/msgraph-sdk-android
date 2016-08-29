@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsPdurationRequestBuilder extends BaseActionRequ
         if (hasParameter("rate")) {
             request.mBody.rate = getParameter("rate");
         }
+
         if (hasParameter("pv")) {
             request.mBody.pv = getParameter("pv");
         }
+
         if (hasParameter("fv")) {
             request.mBody.fv = getParameter("fv");
         }
-  
+
         return request;
     }
 }

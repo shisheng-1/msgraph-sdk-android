@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBu
         if (hasParameter("values")) {
             request.mBody.values = getParameter("values");
         }
-  
+
         return request;
     }
 }

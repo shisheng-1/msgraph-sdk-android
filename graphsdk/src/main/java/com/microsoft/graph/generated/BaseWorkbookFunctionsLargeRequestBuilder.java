@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsLargeRequestBuilder extends BaseActionRequestB
         if (hasParameter("array")) {
             request.mBody.array = getParameter("array");
         }
+
         if (hasParameter("k")) {
             request.mBody.k = getParameter("k");
         }
-  
+
         return request;
     }
 }

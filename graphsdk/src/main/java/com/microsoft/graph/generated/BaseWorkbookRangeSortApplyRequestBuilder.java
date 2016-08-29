@@ -62,19 +62,23 @@ public class BaseWorkbookRangeSortApplyRequestBuilder extends BaseActionRequestB
         if (hasParameter("fields")) {
             request.mBody.fields = getParameter("fields");
         }
+
         if (hasParameter("matchCase")) {
             request.mBody.matchCase = getParameter("matchCase");
         }
+
         if (hasParameter("hasHeaders")) {
             request.mBody.hasHeaders = getParameter("hasHeaders");
         }
+
         if (hasParameter("orientation")) {
             request.mBody.orientation = getParameter("orientation");
         }
+
         if (hasParameter("method")) {
             request.mBody.method = getParameter("method");
         }
-  
+
         return request;
     }
 }

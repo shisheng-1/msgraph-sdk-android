@@ -58,7 +58,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
         if (hasParameter("persistChanges")) {
             request.mBody.persistChanges = getParameter("persistChanges");
         }
-  
+
         return request;
     }
 }

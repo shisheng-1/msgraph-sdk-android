@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsIsOddRequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
-  
+
         return request;
     }
 }

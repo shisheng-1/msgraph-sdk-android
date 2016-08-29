@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
         if (hasParameter("timeText")) {
             request.mBody.timeText = getParameter("timeText");
         }
-  
+
         return request;
     }
 }

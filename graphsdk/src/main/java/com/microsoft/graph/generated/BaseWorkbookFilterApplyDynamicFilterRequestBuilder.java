@@ -58,7 +58,7 @@ public class BaseWorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActi
         if (hasParameter("criteria")) {
             request.mBody.criteria = getParameter("criteria");
         }
-  
+
         return request;
     }
 }

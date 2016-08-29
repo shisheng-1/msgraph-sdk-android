@@ -58,7 +58,7 @@ public class BaseWorkbookProcessQueryRequestBuilder extends BaseActionRequestBui
         if (hasParameter("input")) {
             request.mBody.input = getParameter("input");
         }
-  
+
         return request;
     }
 }

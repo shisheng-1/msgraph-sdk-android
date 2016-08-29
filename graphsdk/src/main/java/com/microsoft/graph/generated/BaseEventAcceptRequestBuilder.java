@@ -59,10 +59,11 @@ public class BaseEventAcceptRequestBuilder extends BaseActionRequestBuilder {
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
+
         if (hasParameter("sendResponse")) {
             request.mBody.sendResponse = getParameter("sendResponse");
         }
-  
+
         return request;
     }
 }

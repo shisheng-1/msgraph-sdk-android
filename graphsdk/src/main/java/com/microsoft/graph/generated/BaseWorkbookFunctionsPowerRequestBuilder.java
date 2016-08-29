@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsPowerRequestBuilder extends BaseActionRequestB
         if (hasParameter("number")) {
             request.mBody.number = getParameter("number");
         }
+
         if (hasParameter("power")) {
             request.mBody.power = getParameter("power");
         }
-  
+
         return request;
     }
 }

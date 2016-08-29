@@ -59,10 +59,11 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
+
         if (hasParameter("scope")) {
             request.mBody.scope = getParameter("scope");
         }
-  
+
         return request;
     }
 }

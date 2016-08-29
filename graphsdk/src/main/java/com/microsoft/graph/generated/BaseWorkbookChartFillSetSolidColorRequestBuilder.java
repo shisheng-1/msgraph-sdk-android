@@ -58,7 +58,7 @@ public class BaseWorkbookChartFillSetSolidColorRequestBuilder extends BaseAction
         if (hasParameter("color")) {
             request.mBody.color = getParameter("color");
         }
-  
+
         return request;
     }
 }

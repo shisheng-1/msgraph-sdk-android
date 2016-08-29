@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("lambda")) {
             request.mBody.lambda = getParameter("lambda");
         }
+
         if (hasParameter("cumulative")) {
             request.mBody.cumulative = getParameter("cumulative");
         }
-  
+
         return request;
     }
 }

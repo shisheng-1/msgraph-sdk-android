@@ -60,13 +60,15 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
         if (hasParameter("startDate")) {
             request.mBody.startDate = getParameter("startDate");
         }
+
         if (hasParameter("endDate")) {
             request.mBody.endDate = getParameter("endDate");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

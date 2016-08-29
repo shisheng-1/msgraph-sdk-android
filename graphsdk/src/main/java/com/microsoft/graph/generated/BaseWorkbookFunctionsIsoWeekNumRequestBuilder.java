@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsIsoWeekNumRequestBuilder extends BaseActionReq
         if (hasParameter("date")) {
             request.mBody.date = getParameter("date");
         }
-  
+
         return request;
     }
 }

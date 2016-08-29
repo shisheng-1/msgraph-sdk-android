@@ -62,19 +62,23 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
         if (hasParameter("settlement")) {
             request.mBody.settlement = getParameter("settlement");
         }
+
         if (hasParameter("maturity")) {
             request.mBody.maturity = getParameter("maturity");
         }
+
         if (hasParameter("pr")) {
             request.mBody.pr = getParameter("pr");
         }
+
         if (hasParameter("redemption")) {
             request.mBody.redemption = getParameter("redemption");
         }
+
         if (hasParameter("basis")) {
             request.mBody.basis = getParameter("basis");
         }
-  
+
         return request;
     }
 }

@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
         if (hasParameter("serialNumber")) {
             request.mBody.serialNumber = getParameter("serialNumber");
         }
-  
+
         return request;
     }
 }

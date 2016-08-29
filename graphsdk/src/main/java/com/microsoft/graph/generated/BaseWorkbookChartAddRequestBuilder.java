@@ -60,13 +60,15 @@ public class BaseWorkbookChartAddRequestBuilder extends BaseActionRequestBuilder
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
+
         if (hasParameter("sourceData")) {
             request.mBody.sourceData = getParameter("sourceData");
         }
+
         if (hasParameter("seriesBy")) {
             request.mBody.seriesBy = getParameter("seriesBy");
         }
-  
+
         return request;
     }
 }

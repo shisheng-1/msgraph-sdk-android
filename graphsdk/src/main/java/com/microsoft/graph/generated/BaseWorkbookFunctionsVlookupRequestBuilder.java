@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
         if (hasParameter("lookupValue")) {
             request.mBody.lookupValue = getParameter("lookupValue");
         }
+
         if (hasParameter("tableArray")) {
             request.mBody.tableArray = getParameter("tableArray");
         }
+
         if (hasParameter("colIndexNum")) {
             request.mBody.colIndexNum = getParameter("colIndexNum");
         }
+
         if (hasParameter("rangeLookup")) {
             request.mBody.rangeLookup = getParameter("rangeLookup");
         }
-  
+
         return request;
     }
 }

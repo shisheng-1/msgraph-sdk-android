@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
         if (hasParameter("linkLocation")) {
             request.mBody.linkLocation = getParameter("linkLocation");
         }
+
         if (hasParameter("friendlyName")) {
             request.mBody.friendlyName = getParameter("friendlyName");
         }
-  
+
         return request;
     }
 }

@@ -59,10 +59,11 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
         if (hasParameter("x")) {
             request.mBody.x = getParameter("x");
         }
+
         if (hasParameter("degFreedom")) {
             request.mBody.degFreedom = getParameter("degFreedom");
         }
-  
+
         return request;
     }
 }

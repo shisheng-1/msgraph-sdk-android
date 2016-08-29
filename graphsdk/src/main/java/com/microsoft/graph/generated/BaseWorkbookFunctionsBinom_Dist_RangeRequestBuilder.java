@@ -61,16 +61,19 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
         if (hasParameter("trials")) {
             request.mBody.trials = getParameter("trials");
         }
+
         if (hasParameter("probabilityS")) {
             request.mBody.probabilityS = getParameter("probabilityS");
         }
+
         if (hasParameter("numberS")) {
             request.mBody.numberS = getParameter("numberS");
         }
+
         if (hasParameter("numberS2")) {
             request.mBody.numberS2 = getParameter("numberS2");
         }
-  
+
         return request;
     }
 }

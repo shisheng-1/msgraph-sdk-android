@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Functions Pi Request Builder.
  */
-public class BaseWorkbookFunctionsPiRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPi
@@ -53,10 +53,6 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseFunctionRequestBu
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

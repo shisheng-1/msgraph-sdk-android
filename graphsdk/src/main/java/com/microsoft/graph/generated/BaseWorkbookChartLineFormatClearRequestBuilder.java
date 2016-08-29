@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Workbook Chart Line Format Clear Request Builder.
  */
-public class BaseWorkbookChartLineFormatClearRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseWorkbookChartLineFormatClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartLineFormatClear
@@ -53,10 +53,6 @@ public class BaseWorkbookChartLineFormatClearRequestBuilder extends BaseFunction
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

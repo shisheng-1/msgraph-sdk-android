@@ -58,7 +58,7 @@ public class BaseWorkbookFunctionsImConjugateRequestBuilder extends BaseActionRe
         if (hasParameter("inumber")) {
             request.mBody.inumber = getParameter("inumber");
         }
-  
+
         return request;
     }
 }

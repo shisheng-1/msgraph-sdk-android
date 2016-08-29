@@ -19,7 +19,7 @@ import java.util.List;
 /**
  * The class for the Base Message Create Forward Request Builder.
  */
-public class BaseMessageCreateForwardRequestBuilder extends BaseFunctionRequestBuilder {
+public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCreateForward
@@ -53,10 +53,6 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseFunctionRequestB
                 getClient(),
                 requestOptions
         );
-
-      for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }
