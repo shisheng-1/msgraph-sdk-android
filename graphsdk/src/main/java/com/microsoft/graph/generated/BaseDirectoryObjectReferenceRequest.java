@@ -27,10 +27,10 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectReferenceRequest(String requestUrl, IBaseClient client, List<Option> options) {
-        super(requestUrl, client, options, DirectoryObject.class);
+    public BaseDirectoryObjectReferenceRequest(String requestUrl, IBaseClient client, List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
     public void delete(final ICallback<DirectoryObject> callback) {

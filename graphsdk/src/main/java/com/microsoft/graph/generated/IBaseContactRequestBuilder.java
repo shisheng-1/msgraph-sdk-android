@@ -29,7 +29,7 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IContactRequest buildRequest(final List<Option> options);
+    IContactRequest buildRequest(final List<Option> requestOptions);
 
     IExtensionCollectionRequestBuilder getExtensions();
 

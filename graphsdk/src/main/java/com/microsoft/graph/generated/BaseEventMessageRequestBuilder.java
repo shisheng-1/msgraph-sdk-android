@@ -27,10 +27,10 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventMessageRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseEventMessageRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IEventMessageRequest buildRequest(final List<Option> options) {
-        return new EventMessageRequest(getRequestUrl(), getClient(), options);
+    public IEventMessageRequest buildRequest(final List<Option> requestOptions) {
+        return new EventMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

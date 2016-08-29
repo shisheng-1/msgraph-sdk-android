@@ -30,8 +30,8 @@ public class BaseMailFolderCollectionRequest extends BaseCollectionRequest<BaseM
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMailFolderCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseMailFolderCollectionResponse.class, IMailFolderCollectionPage.class);
+    public BaseMailFolderCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseMailFolderCollectionResponse.class, IMailFolderCollectionPage.class);
     }
 
     public void get(final ICallback<IMailFolderCollectionPage> callback) {

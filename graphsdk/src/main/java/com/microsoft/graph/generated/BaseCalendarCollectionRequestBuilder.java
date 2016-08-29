@@ -27,18 +27,18 @@ public class BaseCalendarCollectionRequestBuilder extends BaseRequestBuilder imp
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseCalendarCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseCalendarCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public ICalendarCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public ICalendarCollectionRequest buildRequest(final List<Option> options) {
-        return new CalendarCollectionRequest(getRequestUrl(), getClient(), options);
+    public ICalendarCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new CalendarCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public ICalendarRequestBuilder byId(final String id) {

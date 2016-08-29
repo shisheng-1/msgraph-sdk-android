@@ -193,6 +193,12 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public User createdByUser;
 
     /**
+     * The Workbook.
+     */
+    @SerializedName("workbook")
+    public Workbook workbook;
+
+    /**
      * The Last Modified By User.
      */
     @SerializedName("lastModifiedByUser")

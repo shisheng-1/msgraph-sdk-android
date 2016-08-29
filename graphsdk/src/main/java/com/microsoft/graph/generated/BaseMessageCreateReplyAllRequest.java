@@ -27,11 +27,10 @@ public class BaseMessageCreateReplyAllRequest extends BaseRequest implements IBa
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMessageCreateReplyAllRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Message.class);
-
+    public BaseMessageCreateReplyAllRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Message.class);
     }
 
     /**

@@ -27,10 +27,10 @@ public class BaseThumbnailStreamRequestBuilder extends BaseRequestBuilder implem
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseThumbnailStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseThumbnailStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseThumbnailStreamRequestBuilder extends BaseRequestBuilder implem
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IThumbnailStreamRequest buildRequest(final List<Option> options) {
-        return new ThumbnailStreamRequest(getRequestUrl(), getClient(), options);
+    public IThumbnailStreamRequest buildRequest(final List<Option> requestOptions) {
+        return new ThumbnailStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 }

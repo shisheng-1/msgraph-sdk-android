@@ -24,7 +24,8 @@ public interface IBaseDirectoryObjectCollectionRequestBuilder extends IRequestBu
 
     IDirectoryObjectCollectionRequest buildRequest();
 
-    IDirectoryObjectCollectionRequest buildRequest(final List<Option> options);
+    IDirectoryObjectCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectRequestBuilder byId(final String id);
+
 }

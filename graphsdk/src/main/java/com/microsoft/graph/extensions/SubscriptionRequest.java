@@ -27,9 +27,9 @@ public class SubscriptionRequest extends BaseSubscriptionRequest implements ISub
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public SubscriptionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Subscription.class);
+    public SubscriptionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Subscription.class);
     }
 }

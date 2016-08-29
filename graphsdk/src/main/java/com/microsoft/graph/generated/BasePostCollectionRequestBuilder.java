@@ -27,18 +27,18 @@ public class BasePostCollectionRequestBuilder extends BaseRequestBuilder impleme
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BasePostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BasePostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IPostCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IPostCollectionRequest buildRequest(final List<Option> options) {
-        return new PostCollectionRequest(getRequestUrl(), getClient(), options);
+    public IPostCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new PostCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IPostRequestBuilder byId(final String id) {

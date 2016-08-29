@@ -32,8 +32,8 @@ public interface IBaseGroupRemoveFavoriteRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IGroupRemoveFavoriteRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupRemoveFavoriteRequest instance
      */
-    IGroupRemoveFavoriteRequest buildRequest(final List<Option> options);
+    IGroupRemoveFavoriteRequest buildRequest(final List<Option> requestOptions);
 }

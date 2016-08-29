@@ -27,10 +27,10 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String token) {
-        super(requestUrl, client, options, token);
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String token) {
+        super(requestUrl, client, requestOptions, token);
     }
 
     /**
@@ -38,9 +38,9 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 }

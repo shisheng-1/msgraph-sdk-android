@@ -29,6 +29,6 @@ public interface IBaseReferenceAttachmentRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IReferenceAttachmentRequest buildRequest(final List<Option> options);
+    IReferenceAttachmentRequest buildRequest(final List<Option> requestOptions);
 
 }

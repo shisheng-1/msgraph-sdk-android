@@ -30,8 +30,8 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseMessageCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseMessageCollectionResponse.class, IMessageCollectionPage.class);
+    public BaseMessageCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseMessageCollectionResponse.class, IMessageCollectionPage.class);
     }
 
     public void get(final ICallback<IMessageCollectionPage> callback) {

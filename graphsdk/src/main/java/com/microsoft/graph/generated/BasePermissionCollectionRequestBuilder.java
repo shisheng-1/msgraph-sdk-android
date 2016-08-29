@@ -27,18 +27,18 @@ public class BasePermissionCollectionRequestBuilder extends BaseRequestBuilder i
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BasePermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BasePermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IPermissionCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IPermissionCollectionRequest buildRequest(final List<Option> options) {
-        return new PermissionCollectionRequest(getRequestUrl(), getClient(), options);
+    public IPermissionCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new PermissionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IPermissionRequestBuilder byId(final String id) {

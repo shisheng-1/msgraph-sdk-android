@@ -27,9 +27,9 @@ public class CalendarGroupRequest extends BaseCalendarGroupRequest implements IC
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public CalendarGroupRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, CalendarGroup.class);
+    public CalendarGroupRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, CalendarGroup.class);
     }
 }

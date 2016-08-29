@@ -27,18 +27,18 @@ public class BaseConversationCollectionRequestBuilder extends BaseRequestBuilder
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseConversationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseConversationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IConversationCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IConversationCollectionRequest buildRequest(final List<Option> options) {
-        return new ConversationCollectionRequest(getRequestUrl(), getClient(), options);
+    public IConversationCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new ConversationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IConversationRequestBuilder byId(final String id) {

@@ -27,18 +27,18 @@ public class BaseAttachmentCollectionRequestBuilder extends BaseRequestBuilder i
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseAttachmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseAttachmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IAttachmentCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IAttachmentCollectionRequest buildRequest(final List<Option> options) {
-        return new AttachmentCollectionRequest(getRequestUrl(), getClient(), options);
+    public IAttachmentCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new AttachmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IAttachmentRequestBuilder byId(final String id) {

@@ -29,7 +29,7 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IMessageRequest buildRequest(final List<Option> options);
+    IMessageRequest buildRequest(final List<Option> requestOptions);
 
     IEventMessageRequestBuilder eventMessage();
 

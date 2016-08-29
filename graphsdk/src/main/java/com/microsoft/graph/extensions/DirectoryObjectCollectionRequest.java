@@ -27,9 +27,9 @@ public class DirectoryObjectCollectionRequest extends BaseDirectoryObjectCollect
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DirectoryObjectCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public DirectoryObjectCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 }

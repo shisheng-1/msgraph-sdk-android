@@ -29,7 +29,7 @@ public interface IBaseMailFolderRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IMailFolderRequest buildRequest(final List<Option> options);
+    IMailFolderRequest buildRequest(final List<Option> requestOptions);
 
     IMessageCollectionRequestBuilder getMessages();
 

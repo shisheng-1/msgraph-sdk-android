@@ -27,18 +27,18 @@ public class BaseExtensionCollectionRequestBuilder extends BaseRequestBuilder im
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IExtensionCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IExtensionCollectionRequest buildRequest(final List<Option> options) {
-        return new ExtensionCollectionRequest(getRequestUrl(), getClient(), options);
+    public IExtensionCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new ExtensionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IExtensionRequestBuilder byId(final String id) {

@@ -30,8 +30,8 @@ public class BaseDirectoryRoleTemplateCollectionRequest extends BaseCollectionRe
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDirectoryRoleTemplateCollectionResponse.class, IDirectoryRoleTemplateCollectionPage.class);
+    public BaseDirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDirectoryRoleTemplateCollectionResponse.class, IDirectoryRoleTemplateCollectionPage.class);
     }
 
     public void get(final ICallback<IDirectoryRoleTemplateCollectionPage> callback) {

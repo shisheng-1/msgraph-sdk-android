@@ -29,7 +29,7 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IGroupRequest buildRequest(final List<Option> options);
+    IGroupRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers();
 

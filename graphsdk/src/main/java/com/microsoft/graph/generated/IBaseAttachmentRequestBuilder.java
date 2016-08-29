@@ -29,7 +29,7 @@ public interface IBaseAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IAttachmentRequest buildRequest(final List<Option> options);
+    IAttachmentRequest buildRequest(final List<Option> requestOptions);
 
     IFileAttachmentRequestBuilder fileAttachment();
 

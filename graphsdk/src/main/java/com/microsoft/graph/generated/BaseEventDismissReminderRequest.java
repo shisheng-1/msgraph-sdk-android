@@ -27,15 +27,14 @@ public class BaseEventDismissReminderRequest extends BaseRequest implements IBas
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventDismissReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Void.class);
-
+    public BaseEventDismissReminderRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**
-     * Creates the Event
+     * Creates the Void
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -55,9 +54,9 @@ public class BaseEventDismissReminderRequest extends BaseRequest implements IBas
     }
 
     /**
-     * Creates the Event
+     * Creates the Void
      *
-     * @return The Event
+     * @return The Void
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     public void post() throws ClientException {

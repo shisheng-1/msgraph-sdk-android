@@ -30,7 +30,7 @@ public interface IBaseDirectoryObjectWithReferenceRequestBuilder extends IReques
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryObjectWithReferenceRequest buildRequest(final List<Option> options);
+    IDirectoryObjectWithReferenceRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectReferenceRequestBuilder reference();
 

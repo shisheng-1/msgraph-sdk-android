@@ -27,10 +27,10 @@ public class BaseCalendarRequestBuilder extends BaseRequestBuilder implements IB
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseCalendarRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseCalendarRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseCalendarRequestBuilder extends BaseRequestBuilder implements IB
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public ICalendarRequest buildRequest(final List<Option> options) {
-        return new CalendarRequest(getRequestUrl(), getClient(), options);
+    public ICalendarRequest buildRequest(final List<Option> requestOptions) {
+        return new CalendarRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IEventCollectionRequestBuilder getEvents() {

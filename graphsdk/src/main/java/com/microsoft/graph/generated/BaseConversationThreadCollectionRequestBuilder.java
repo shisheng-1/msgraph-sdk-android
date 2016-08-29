@@ -27,18 +27,18 @@ public class BaseConversationThreadCollectionRequestBuilder extends BaseRequestB
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IConversationThreadCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IConversationThreadCollectionRequest buildRequest(final List<Option> options) {
-        return new ConversationThreadCollectionRequest(getRequestUrl(), getClient(), options);
+    public IConversationThreadCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new ConversationThreadCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IConversationThreadRequestBuilder byId(final String id) {

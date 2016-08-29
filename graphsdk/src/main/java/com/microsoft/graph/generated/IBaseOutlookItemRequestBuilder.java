@@ -29,7 +29,7 @@ public interface IBaseOutlookItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOutlookItemRequest buildRequest(final List<Option> options);
+    IOutlookItemRequest buildRequest(final List<Option> requestOptions);
 
     IEventRequestBuilder event();
 

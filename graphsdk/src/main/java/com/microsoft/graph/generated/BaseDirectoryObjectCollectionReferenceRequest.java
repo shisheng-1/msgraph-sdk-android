@@ -30,8 +30,8 @@ public class BaseDirectoryObjectCollectionReferenceRequest extends BaseCollectio
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseDirectoryObjectCollectionReferenceRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
+    public BaseDirectoryObjectCollectionReferenceRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
     public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {

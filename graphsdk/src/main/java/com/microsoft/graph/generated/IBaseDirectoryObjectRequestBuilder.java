@@ -29,7 +29,7 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryObjectRequest buildRequest(final List<Option> options);
+    IDirectoryObjectRequest buildRequest(final List<Option> requestOptions);
 
     IDeviceRequestBuilder device();
 

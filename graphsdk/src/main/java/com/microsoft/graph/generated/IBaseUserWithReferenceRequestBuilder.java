@@ -30,7 +30,7 @@ public interface IBaseUserWithReferenceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IUserWithReferenceRequest buildRequest(final List<Option> options);
+    IUserWithReferenceRequest buildRequest(final List<Option> requestOptions);
 
     IUserReferenceRequestBuilder reference();
 

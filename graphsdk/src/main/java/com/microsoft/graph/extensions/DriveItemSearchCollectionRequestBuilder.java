@@ -27,9 +27,9 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseDriveItemSearch
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String q) {
-        super(requestUrl, client, options, q);
+    public DriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String q) {
+        super(requestUrl, client, requestOptions, q);
     }
 }

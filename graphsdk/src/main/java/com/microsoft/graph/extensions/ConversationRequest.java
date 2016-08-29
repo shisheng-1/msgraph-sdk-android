@@ -27,9 +27,9 @@ public class ConversationRequest extends BaseConversationRequest implements ICon
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public ConversationRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Conversation.class);
+    public ConversationRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Conversation.class);
     }
 }

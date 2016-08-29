@@ -30,8 +30,8 @@ public class BaseSubscriptionCollectionRequest extends BaseCollectionRequest<Bas
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseSubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseSubscriptionCollectionResponse.class, ISubscriptionCollectionPage.class);
+    public BaseSubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseSubscriptionCollectionResponse.class, ISubscriptionCollectionPage.class);
     }
 
     public void get(final ICallback<ISubscriptionCollectionPage> callback) {

@@ -27,9 +27,9 @@ public class ConversationThreadReplyRequestBuilder extends BaseConversationThrea
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public ConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
-        super(requestUrl, client, options, post);
+    public ConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Post post) {
+        super(requestUrl, client, requestOptions, post);
     }
 }

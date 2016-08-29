@@ -27,18 +27,18 @@ public class BaseEventCollectionRequestBuilder extends BaseRequestBuilder implem
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseEventCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IEventCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IEventCollectionRequest buildRequest(final List<Option> options) {
-        return new EventCollectionRequest(getRequestUrl(), getClient(), options);
+    public IEventCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new EventCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IEventRequestBuilder byId(final String id) {

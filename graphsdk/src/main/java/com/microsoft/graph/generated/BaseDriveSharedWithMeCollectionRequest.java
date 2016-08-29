@@ -28,10 +28,10 @@ public class BaseDriveSharedWithMeCollectionRequest extends BaseCollectionReques
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveSharedWithMeCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDriveSharedWithMeCollectionResponse.class, IDriveSharedWithMeCollectionPage.class);
+    public BaseDriveSharedWithMeCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDriveSharedWithMeCollectionResponse.class, IDriveSharedWithMeCollectionPage.class);
     }
 
 

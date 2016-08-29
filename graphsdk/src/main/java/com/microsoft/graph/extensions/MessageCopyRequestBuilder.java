@@ -27,9 +27,9 @@ public class MessageCopyRequestBuilder extends BaseMessageCopyRequestBuilder imp
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public MessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options, destinationId);
+    public MessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String destinationId) {
+        super(requestUrl, client, requestOptions, destinationId);
     }
 }

@@ -30,5 +30,5 @@ public interface IBaseDirectoryObjectReferenceRequestBuilder extends IRequestBui
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryObjectReferenceRequest buildRequest(final List<Option> options);
+    IDirectoryObjectReferenceRequest buildRequest(final List<Option> requestOptions);
 }

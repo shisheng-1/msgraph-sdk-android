@@ -30,8 +30,8 @@ public class BaseConversationThreadCollectionRequest extends BaseCollectionReque
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseConversationThreadCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseConversationThreadCollectionResponse.class, IConversationThreadCollectionPage.class);
+    public BaseConversationThreadCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseConversationThreadCollectionResponse.class, IConversationThreadCollectionPage.class);
     }
 
     public void get(final ICallback<IConversationThreadCollectionPage> callback) {

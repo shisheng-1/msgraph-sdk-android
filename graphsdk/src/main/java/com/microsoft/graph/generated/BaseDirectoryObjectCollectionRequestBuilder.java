@@ -27,18 +27,18 @@ public class BaseDirectoryObjectCollectionRequestBuilder extends BaseRequestBuil
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDirectoryObjectCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDirectoryObjectCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCollectionRequest buildRequest(final List<Option> options) {
-        return new DirectoryObjectCollectionRequest(getRequestUrl(), getClient(), options);
+    public IDirectoryObjectCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new DirectoryObjectCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IDirectoryObjectRequestBuilder byId(final String id) {

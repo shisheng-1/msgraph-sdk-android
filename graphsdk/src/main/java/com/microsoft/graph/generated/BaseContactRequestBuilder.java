@@ -27,10 +27,10 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseContactRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseContactRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IContactRequest buildRequest(final List<Option> options) {
-        return new ContactRequest(getRequestUrl(), getClient(), options);
+    public IContactRequest buildRequest(final List<Option> requestOptions) {
+        return new ContactRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IExtensionCollectionRequestBuilder getExtensions() {

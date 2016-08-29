@@ -29,12 +29,17 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDriveItemRequest buildRequest(final List<Option> options);
+    IDriveItemRequest buildRequest(final List<Option> requestOptions);
 
     /**
      * Gets the request builder for User.
      */
     IUserWithReferenceRequestBuilder getCreatedByUser();
+
+    /**
+     * Gets the request builder for Workbook.
+     */
+    IWorkbookRequestBuilder getWorkbook();
 
     /**
      * Gets the request builder for User.

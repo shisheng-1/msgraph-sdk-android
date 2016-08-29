@@ -32,8 +32,8 @@ public interface IBaseMessageMoveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageMoveRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMessageMoveRequest instance
      */
-    IMessageMoveRequest buildRequest(final List<Option> options);
+    IMessageMoveRequest buildRequest(final List<Option> requestOptions);
 }

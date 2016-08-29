@@ -26,16 +26,16 @@ import com.google.gson.annotations.*;
 public interface IBaseGroupAddFavoriteRequest {
 
     /**
-     * Creates the Group
+     * Creates the Void
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<Void> callback);
 
     /**
-     * Creates the Group
+     * Creates the Void
      *
-     * @return The Group
+     * @return The Void
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     void post() throws ClientException;

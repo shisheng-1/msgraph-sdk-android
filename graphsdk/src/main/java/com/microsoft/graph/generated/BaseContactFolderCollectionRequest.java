@@ -30,8 +30,8 @@ public class BaseContactFolderCollectionRequest extends BaseCollectionRequest<Ba
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseContactFolderCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseContactFolderCollectionResponse.class, IContactFolderCollectionPage.class);
+    public BaseContactFolderCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseContactFolderCollectionResponse.class, IContactFolderCollectionPage.class);
     }
 
     public void get(final ICallback<IContactFolderCollectionPage> callback) {

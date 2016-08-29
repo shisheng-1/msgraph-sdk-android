@@ -30,8 +30,8 @@ public class BaseOrganizationCollectionRequest extends BaseCollectionRequest<Bas
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseOrganizationCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseOrganizationCollectionResponse.class, IOrganizationCollectionPage.class);
+    public BaseOrganizationCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseOrganizationCollectionResponse.class, IOrganizationCollectionPage.class);
     }
 
     public void get(final ICallback<IOrganizationCollectionPage> callback) {

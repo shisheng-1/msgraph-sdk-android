@@ -27,9 +27,9 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
-        super(requestUrl, client, options, securityEnabledOnly);
+    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Boolean securityEnabledOnly) {
+        super(requestUrl, client, requestOptions, securityEnabledOnly);
     }
 }

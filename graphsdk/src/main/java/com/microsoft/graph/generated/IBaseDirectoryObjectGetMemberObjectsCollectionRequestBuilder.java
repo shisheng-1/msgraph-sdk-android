@@ -24,6 +24,6 @@ public interface IBaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder ex
 
     IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest();
 
-    IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final List<Option> options);
+    IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final List<Option> requestOptions);
 
 }

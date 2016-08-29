@@ -29,7 +29,7 @@ public interface IBaseExtensionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IExtensionRequest buildRequest(final List<Option> options);
+    IExtensionRequest buildRequest(final List<Option> requestOptions);
 
     IOpenTypeExtensionRequestBuilder openTypeExtension();
 

@@ -27,10 +27,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEntityRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseEntityRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IEntityRequest buildRequest(final List<Option> options) {
-        return new EntityRequest(getRequestUrl(), getClient(), options);
+    public IEntityRequest buildRequest(final List<Option> requestOptions) {
+        return new EntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -112,12 +112,176 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
+    public IWorkbookRequestBuilder workbook() {
+        return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
+    }
+
     public IPermissionRequestBuilder permission() {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
     }
 
     public IThumbnailSetRequestBuilder thumbnailSet() {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnailSet"), getClient(), null);
+    }
+
+    public IWorkbookApplicationRequestBuilder workbookApplication() {
+        return new WorkbookApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("workbookApplication"), getClient(), null);
+    }
+
+    public IWorkbookNamedItemRequestBuilder workbookNamedItem() {
+        return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("workbookNamedItem"), getClient(), null);
+    }
+
+    public IWorkbookTableRequestBuilder workbookTable() {
+        return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("workbookTable"), getClient(), null);
+    }
+
+    public IWorkbookWorksheetRequestBuilder workbookWorksheet() {
+        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("workbookWorksheet"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsRequestBuilder workbookFunctions() {
+        return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("workbookFunctions"), getClient(), null);
+    }
+
+    public IWorkbookChartRequestBuilder workbookChart() {
+        return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChart"), getClient(), null);
+    }
+
+    public IWorkbookChartAxesRequestBuilder workbookChartAxes() {
+        return new WorkbookChartAxesRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAxes"), getClient(), null);
+    }
+
+    public IWorkbookChartDataLabelsRequestBuilder workbookChartDataLabels() {
+        return new WorkbookChartDataLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartDataLabels"), getClient(), null);
+    }
+
+    public IWorkbookChartAreaFormatRequestBuilder workbookChartAreaFormat() {
+        return new WorkbookChartAreaFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAreaFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartLegendRequestBuilder workbookChartLegend() {
+        return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartLegend"), getClient(), null);
+    }
+
+    public IWorkbookChartSeriesRequestBuilder workbookChartSeries() {
+        return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartSeries"), getClient(), null);
+    }
+
+    public IWorkbookChartTitleRequestBuilder workbookChartTitle() {
+        return new WorkbookChartTitleRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartTitle"), getClient(), null);
+    }
+
+    public IWorkbookChartFillRequestBuilder workbookChartFill() {
+        return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartFill"), getClient(), null);
+    }
+
+    public IWorkbookChartFontRequestBuilder workbookChartFont() {
+        return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartFont"), getClient(), null);
+    }
+
+    public IWorkbookChartAxisRequestBuilder workbookChartAxis() {
+        return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAxis"), getClient(), null);
+    }
+
+    public IWorkbookChartAxisFormatRequestBuilder workbookChartAxisFormat() {
+        return new WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAxisFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartGridlinesRequestBuilder workbookChartGridlines() {
+        return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartGridlines"), getClient(), null);
+    }
+
+    public IWorkbookChartAxisTitleRequestBuilder workbookChartAxisTitle() {
+        return new WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAxisTitle"), getClient(), null);
+    }
+
+    public IWorkbookChartLineFormatRequestBuilder workbookChartLineFormat() {
+        return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartLineFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartAxisTitleFormatRequestBuilder workbookChartAxisTitleFormat() {
+        return new WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartAxisTitleFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartDataLabelFormatRequestBuilder workbookChartDataLabelFormat() {
+        return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartDataLabelFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartGridlinesFormatRequestBuilder workbookChartGridlinesFormat() {
+        return new WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartGridlinesFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartLegendFormatRequestBuilder workbookChartLegendFormat() {
+        return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartLegendFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartPointRequestBuilder workbookChartPoint() {
+        return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartPoint"), getClient(), null);
+    }
+
+    public IWorkbookChartPointFormatRequestBuilder workbookChartPointFormat() {
+        return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartPointFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartSeriesFormatRequestBuilder workbookChartSeriesFormat() {
+        return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartSeriesFormat"), getClient(), null);
+    }
+
+    public IWorkbookChartTitleFormatRequestBuilder workbookChartTitleFormat() {
+        return new WorkbookChartTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookChartTitleFormat"), getClient(), null);
+    }
+
+    public IWorkbookFilterRequestBuilder workbookFilter() {
+        return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("workbookFilter"), getClient(), null);
+    }
+
+    public IWorkbookFormatProtectionRequestBuilder workbookFormatProtection() {
+        return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("workbookFormatProtection"), getClient(), null);
+    }
+
+    public IWorkbookFunctionResultRequestBuilder workbookFunctionResult() {
+        return new WorkbookFunctionResultRequestBuilder(getRequestUrlWithAdditionalSegment("workbookFunctionResult"), getClient(), null);
+    }
+
+    public IWorkbookRangeRequestBuilder workbookRange() {
+        return new WorkbookRangeRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRange"), getClient(), null);
+    }
+
+    public IWorkbookRangeFormatRequestBuilder workbookRangeFormat() {
+        return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRangeFormat"), getClient(), null);
+    }
+
+    public IWorkbookRangeSortRequestBuilder workbookRangeSort() {
+        return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRangeSort"), getClient(), null);
+    }
+
+    public IWorkbookRangeBorderRequestBuilder workbookRangeBorder() {
+        return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRangeBorder"), getClient(), null);
+    }
+
+    public IWorkbookRangeFillRequestBuilder workbookRangeFill() {
+        return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRangeFill"), getClient(), null);
+    }
+
+    public IWorkbookRangeFontRequestBuilder workbookRangeFont() {
+        return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("workbookRangeFont"), getClient(), null);
+    }
+
+    public IWorkbookTableColumnRequestBuilder workbookTableColumn() {
+        return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("workbookTableColumn"), getClient(), null);
+    }
+
+    public IWorkbookTableRowRequestBuilder workbookTableRow() {
+        return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("workbookTableRow"), getClient(), null);
+    }
+
+    public IWorkbookTableSortRequestBuilder workbookTableSort() {
+        return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("workbookTableSort"), getClient(), null);
+    }
+
+    public IWorkbookWorksheetProtectionRequestBuilder workbookWorksheetProtection() {
+        return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("workbookWorksheetProtection"), getClient(), null);
     }
 
     public ISubscriptionRequestBuilder subscription() {

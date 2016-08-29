@@ -24,7 +24,8 @@ public interface IBaseGroupCollectionRequestBuilder extends IRequestBuilder {
 
     IGroupCollectionRequest buildRequest();
 
-    IGroupCollectionRequest buildRequest(final List<Option> options);
+    IGroupCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IGroupRequestBuilder byId(final String id);
+
 }

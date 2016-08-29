@@ -27,18 +27,18 @@ public class BaseGroupCollectionRequestBuilder extends BaseRequestBuilder implem
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IGroupCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IGroupCollectionRequest buildRequest(final List<Option> options) {
-        return new GroupCollectionRequest(getRequestUrl(), getClient(), options);
+    public IGroupCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new GroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IGroupRequestBuilder byId(final String id) {

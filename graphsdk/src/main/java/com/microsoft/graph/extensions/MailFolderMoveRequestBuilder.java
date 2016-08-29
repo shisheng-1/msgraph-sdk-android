@@ -27,9 +27,9 @@ public class MailFolderMoveRequestBuilder extends BaseMailFolderMoveRequestBuild
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public MailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options, destinationId);
+    public MailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String destinationId) {
+        super(requestUrl, client, requestOptions, destinationId);
     }
 }

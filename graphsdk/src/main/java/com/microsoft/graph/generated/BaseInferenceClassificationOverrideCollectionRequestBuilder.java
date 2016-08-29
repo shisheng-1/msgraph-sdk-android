@@ -27,18 +27,18 @@ public class BaseInferenceClassificationOverrideCollectionRequestBuilder extends
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseInferenceClassificationOverrideCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseInferenceClassificationOverrideCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IInferenceClassificationOverrideCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IInferenceClassificationOverrideCollectionRequest buildRequest(final List<Option> options) {
-        return new InferenceClassificationOverrideCollectionRequest(getRequestUrl(), getClient(), options);
+    public IInferenceClassificationOverrideCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new InferenceClassificationOverrideCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IInferenceClassificationOverrideRequestBuilder byId(final String id) {

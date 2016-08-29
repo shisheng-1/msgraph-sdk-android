@@ -24,7 +24,8 @@ public interface IBaseMessageCollectionRequestBuilder extends IRequestBuilder {
 
     IMessageCollectionRequest buildRequest();
 
-    IMessageCollectionRequest buildRequest(final List<Option> options);
+    IMessageCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IMessageRequestBuilder byId(final String id);
+
 }

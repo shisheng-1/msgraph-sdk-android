@@ -29,7 +29,7 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IUserRequest buildRequest(final List<Option> options);
+    IUserRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedDevices();
 

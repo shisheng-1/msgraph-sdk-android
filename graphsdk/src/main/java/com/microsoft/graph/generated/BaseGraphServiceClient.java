@@ -217,6 +217,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Workbooks objects.
+     *
+     * @return The request builder for the collection of Workbooks objects
+     */
+    public IDriveItemCollectionRequestBuilder getWorkbooks() {
+        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Workbooks.
+     *
+     * @param id The id of the Workbooks to retrieve.
+     * @return The request builder for the Workbooks object
+     */
+    public IDriveItemRequestBuilder getWorkbooks(final String id) {
+        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of Subscriptions objects.
      *
      * @return The request builder for the collection of Subscriptions objects

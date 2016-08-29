@@ -29,7 +29,7 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IEntityRequest buildRequest(final List<Option> options);
+    IEntityRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectRequestBuilder directoryObject();
 
@@ -63,9 +63,91 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IDriveItemRequestBuilder driveItem();
 
+    IWorkbookRequestBuilder workbook();
+
     IPermissionRequestBuilder permission();
 
     IThumbnailSetRequestBuilder thumbnailSet();
+
+    IWorkbookApplicationRequestBuilder workbookApplication();
+
+    IWorkbookNamedItemRequestBuilder workbookNamedItem();
+
+    IWorkbookTableRequestBuilder workbookTable();
+
+    IWorkbookWorksheetRequestBuilder workbookWorksheet();
+
+    IWorkbookFunctionsRequestBuilder workbookFunctions();
+
+    IWorkbookChartRequestBuilder workbookChart();
+
+    IWorkbookChartAxesRequestBuilder workbookChartAxes();
+
+    IWorkbookChartDataLabelsRequestBuilder workbookChartDataLabels();
+
+    IWorkbookChartAreaFormatRequestBuilder workbookChartAreaFormat();
+
+    IWorkbookChartLegendRequestBuilder workbookChartLegend();
+
+    IWorkbookChartSeriesRequestBuilder workbookChartSeries();
+
+    IWorkbookChartTitleRequestBuilder workbookChartTitle();
+
+    IWorkbookChartFillRequestBuilder workbookChartFill();
+
+    IWorkbookChartFontRequestBuilder workbookChartFont();
+
+    IWorkbookChartAxisRequestBuilder workbookChartAxis();
+
+    IWorkbookChartAxisFormatRequestBuilder workbookChartAxisFormat();
+
+    IWorkbookChartGridlinesRequestBuilder workbookChartGridlines();
+
+    IWorkbookChartAxisTitleRequestBuilder workbookChartAxisTitle();
+
+    IWorkbookChartLineFormatRequestBuilder workbookChartLineFormat();
+
+    IWorkbookChartAxisTitleFormatRequestBuilder workbookChartAxisTitleFormat();
+
+    IWorkbookChartDataLabelFormatRequestBuilder workbookChartDataLabelFormat();
+
+    IWorkbookChartGridlinesFormatRequestBuilder workbookChartGridlinesFormat();
+
+    IWorkbookChartLegendFormatRequestBuilder workbookChartLegendFormat();
+
+    IWorkbookChartPointRequestBuilder workbookChartPoint();
+
+    IWorkbookChartPointFormatRequestBuilder workbookChartPointFormat();
+
+    IWorkbookChartSeriesFormatRequestBuilder workbookChartSeriesFormat();
+
+    IWorkbookChartTitleFormatRequestBuilder workbookChartTitleFormat();
+
+    IWorkbookFilterRequestBuilder workbookFilter();
+
+    IWorkbookFormatProtectionRequestBuilder workbookFormatProtection();
+
+    IWorkbookFunctionResultRequestBuilder workbookFunctionResult();
+
+    IWorkbookRangeRequestBuilder workbookRange();
+
+    IWorkbookRangeFormatRequestBuilder workbookRangeFormat();
+
+    IWorkbookRangeSortRequestBuilder workbookRangeSort();
+
+    IWorkbookRangeBorderRequestBuilder workbookRangeBorder();
+
+    IWorkbookRangeFillRequestBuilder workbookRangeFill();
+
+    IWorkbookRangeFontRequestBuilder workbookRangeFont();
+
+    IWorkbookTableColumnRequestBuilder workbookTableColumn();
+
+    IWorkbookTableRowRequestBuilder workbookTableRow();
+
+    IWorkbookTableSortRequestBuilder workbookTableSort();
+
+    IWorkbookWorksheetProtectionRequestBuilder workbookWorksheetProtection();
 
     ISubscriptionRequestBuilder subscription();
 

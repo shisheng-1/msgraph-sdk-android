@@ -29,7 +29,7 @@ public interface IBaseCalendarRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ICalendarRequest buildRequest(final List<Option> options);
+    ICalendarRequest buildRequest(final List<Option> requestOptions);
 
     IEventCollectionRequestBuilder getEvents();
 

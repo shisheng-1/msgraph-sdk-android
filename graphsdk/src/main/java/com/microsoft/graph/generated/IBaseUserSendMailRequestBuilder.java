@@ -32,8 +32,8 @@ public interface IBaseUserSendMailRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserSendMailRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IUserSendMailRequest instance
      */
-    IUserSendMailRequest buildRequest(final List<Option> options);
+    IUserSendMailRequest buildRequest(final List<Option> requestOptions);
 }

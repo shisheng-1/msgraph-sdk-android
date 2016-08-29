@@ -27,9 +27,9 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<String> groupIds) {
-        super(requestUrl, client, options, groupIds);
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final List<String> groupIds) {
+        super(requestUrl, client, requestOptions, groupIds);
     }
 }

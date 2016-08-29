@@ -24,7 +24,8 @@ public interface IBasePostCollectionRequestBuilder extends IRequestBuilder {
 
     IPostCollectionRequest buildRequest();
 
-    IPostCollectionRequest buildRequest(final List<Option> options);
+    IPostCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IPostRequestBuilder byId(final String id);
+
 }

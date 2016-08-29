@@ -27,9 +27,9 @@ public class DriveItemStreamRequest extends BaseDriveItemStreamRequest implement
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public DriveItemStreamRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, DriveItem.class);
+    public DriveItemStreamRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DriveItem.class);
     }
 }

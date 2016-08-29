@@ -32,8 +32,8 @@ public interface IBaseEventDeclineRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IEventDeclineRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventDeclineRequest instance
      */
-    IEventDeclineRequest buildRequest(final List<Option> options);
+    IEventDeclineRequest buildRequest(final List<Option> requestOptions);
 }

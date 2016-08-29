@@ -27,9 +27,9 @@ public class OrganizationRequest extends BaseOrganizationRequest implements IOrg
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public OrganizationRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Organization.class);
+    public OrganizationRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Organization.class);
     }
 }

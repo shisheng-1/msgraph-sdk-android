@@ -27,14 +27,14 @@ public class BaseInferenceClassificationRequest extends BaseRequest implements I
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      * @param responseClass The class of the reponse
      */
     public BaseInferenceClassificationRequest(final String requestUrl,
             final IBaseClient client,
-            final List<Option> options,
+            final List<Option> requestOptions,
             final Class responseClass) {
-        super(requestUrl, client, options, responseClass);
+        super(requestUrl, client, requestOptions, responseClass);
     }
 
     /**

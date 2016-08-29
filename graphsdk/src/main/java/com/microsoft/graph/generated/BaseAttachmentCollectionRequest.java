@@ -30,8 +30,8 @@ public class BaseAttachmentCollectionRequest extends BaseCollectionRequest<BaseA
      * @param client The service client
      * @param options The options for this request
      */
-    public BaseAttachmentCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseAttachmentCollectionResponse.class, IAttachmentCollectionPage.class);
+    public BaseAttachmentCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseAttachmentCollectionResponse.class, IAttachmentCollectionPage.class);
     }
 
     public void get(final ICallback<IAttachmentCollectionPage> callback) {

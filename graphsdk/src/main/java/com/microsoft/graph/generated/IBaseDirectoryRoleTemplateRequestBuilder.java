@@ -29,6 +29,6 @@ public interface IBaseDirectoryRoleTemplateRequestBuilder extends IRequestBuilde
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryRoleTemplateRequest buildRequest(final List<Option> options);
+    IDirectoryRoleTemplateRequest buildRequest(final List<Option> requestOptions);
 
 }
