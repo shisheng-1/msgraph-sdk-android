@@ -26,6 +26,35 @@ import com.google.gson.annotations.*;
 public interface IBaseWorkbookRangeCellRequest {
 
     /**
+     * Patches the WorkbookRangeCell
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void patch(final ICallback<WorkbookRange> callback);
+
+    /**
+     * Patches the WorkbookRangeCell
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+    WorkbookRange patch() throws ClientException;
+
+    /**
+     * Puts the WorkbookRangeCell
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void put(final ICallback<WorkbookRange> callback);
+
+    /**
+     * Puts the WorkbookRangeCell
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     WorkbookRange put() throws ClientException;
+    /**
      * Gets the WorkbookRange
      * @param callback The callback to be called after success or failure.
      */

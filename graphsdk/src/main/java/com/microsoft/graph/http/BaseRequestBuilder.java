@@ -54,11 +54,16 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
 
     /**
      * Creates the request builder.
+     *
      * @param requestUrl The url to make the request against.
-     * @param client The client which can issue the request.
-     * @param options The options for this request.
+     * @param client     The client which can issue the request.
+     * @param options    The options for this request.
      */
-    public BaseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
+    public BaseRequestBuilder(
+            final String requestUrl,
+            final IBaseClient client,
+            final List<Option> options
+    ) {
         mRequestUrl = requestUrl;
         mClient = client;
         mBody = null;
@@ -68,7 +73,12 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
         }
     }
 
-    public BaseRequestBuilder(final String requestUrl, final IJsonBackedObject body, final IBaseClient client, final List<Option> options) {
+    public BaseRequestBuilder(
+            final String requestUrl,
+            final IJsonBackedObject body,
+            final IBaseClient client,
+            final List<Option> options
+    ) {
         mRequestUrl = requestUrl;
         mClient = client;
         mBody = body;
@@ -80,6 +90,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
 
     /**
      * Gets the client.
+     *
      * @return The client.
      */
     public IBaseClient getClient() {
@@ -88,6 +99,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
 
     /**
      * Gets the request url.
+     *
      * @return The request url.
      */
     public String getRequestUrl() {
@@ -96,6 +108,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
 
     /**
      * Get the full list of options for this request.
+     *
      * @return The full list of options for this request.
      */
     public List<Option> getOptions() {
@@ -104,6 +117,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
 
     /**
      * Gets the request url with an extra segment added to it.
+     *
      * @param urlSegment The section to add.
      * @return The base url for this request.
      */

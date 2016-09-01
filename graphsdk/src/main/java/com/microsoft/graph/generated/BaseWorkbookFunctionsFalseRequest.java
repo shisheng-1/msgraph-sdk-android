@@ -34,7 +34,7 @@ public class BaseWorkbookFunctionsFalseRequest extends BaseRequest implements IB
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsFalse
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsFalseRequest extends BaseRequest implements IB
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsFalse
      *
      * @return The WorkbookFunctionResult
      * @throws ClientException An exception occurs if there was an error while the request was sent.

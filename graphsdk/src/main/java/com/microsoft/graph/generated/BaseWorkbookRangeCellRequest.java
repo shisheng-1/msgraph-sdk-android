@@ -34,6 +34,43 @@ public class BaseWorkbookRangeCellRequest extends BaseRequest implements IBaseWo
     }
 
     /**
+     * Patches the WorkbookRangeCell
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookRangeCell
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRange patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeCell
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeCell
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRange put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookRange
      *
      * @param callback The callback to be called after success or failure.

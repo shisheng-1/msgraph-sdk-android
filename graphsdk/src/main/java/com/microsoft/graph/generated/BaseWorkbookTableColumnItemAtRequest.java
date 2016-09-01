@@ -34,6 +34,43 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     }
 
     /**
+     * Patches the WorkbookTableColumnItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookTableColumn> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookTableColumnItemAt
+     *
+     * @return The WorkbookTableColumn
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookTableColumn patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookTableColumnItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookTableColumn> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookTableColumnItemAt
+     *
+     * @return The WorkbookTableColumn
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookTableColumn put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookTableColumn
      *
      * @param callback The callback to be called after success or failure.

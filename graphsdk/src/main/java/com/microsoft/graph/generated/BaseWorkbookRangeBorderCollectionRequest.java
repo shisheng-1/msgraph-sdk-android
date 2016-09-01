@@ -28,7 +28,7 @@ public class BaseWorkbookRangeBorderCollectionRequest extends BaseCollectionRequ
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
     public BaseWorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookRangeBorderCollectionResponse.class, IWorkbookRangeBorderCollectionPage.class);

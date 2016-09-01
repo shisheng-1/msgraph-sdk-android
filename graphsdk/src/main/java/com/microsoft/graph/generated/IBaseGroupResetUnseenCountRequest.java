@@ -26,16 +26,15 @@ import com.google.gson.annotations.*;
 public interface IBaseGroupResetUnseenCountRequest {
 
     /**
-     * Creates the Void
+     * Creates the GroupResetUnseenCount
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<Void> callback);
 
     /**
-     * Creates the Void
+     * Creates the GroupResetUnseenCount
      *
-     * @return The Void
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     void post() throws ClientException;

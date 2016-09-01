@@ -29,9 +29,9 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @param options    {@link List} of {@link Option}s to add to this request
      */
     public BaseActionRequestBuilder(
-            String requestUrl,
-            IBaseClient client,
-            List<Option> options
+            final String requestUrl,
+            final IBaseClient client,
+            final List<Option> options
     ) {
         super(requestUrl, client, options);
     }
@@ -42,7 +42,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @param name The key used to access the stored body param
      * @return true, if {@link BaseActionRequestBuilder#mBodyParams} contains the key, otherwise false
      */
-    protected boolean hasParameter(String name) {
+    protected boolean hasParameter(final String name) {
         return mBodyParams.containsKey(name);
     }
 
@@ -53,7 +53,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @param <T>  The type to which this object should be cast
      * @return The stored instance of T, otherwise null
      */
-    protected <T> T getParameter(String name) {
+    protected <T> T getParameter(final String name) {
         return (T) mBodyParams.get(name);
     }
 }

@@ -34,7 +34,7 @@ public class BaseWorkbookTableConvertToRangeRequest extends BaseRequest implemen
     }
 
     /**
-     * Creates the WorkbookRange
+     * Creates the WorkbookTableConvertToRange
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseWorkbookTableConvertToRangeRequest extends BaseRequest implemen
     }
 
     /**
-     * Creates the WorkbookRange
+     * Creates the WorkbookTableConvertToRange
      *
      * @return The WorkbookRange
      * @throws ClientException An exception occurs if there was an error while the request was sent.

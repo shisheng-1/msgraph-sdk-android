@@ -34,7 +34,7 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsNow
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsNow
      *
      * @return The WorkbookFunctionResult
      * @throws ClientException An exception occurs if there was an error while the request was sent.

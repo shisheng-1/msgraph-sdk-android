@@ -34,7 +34,7 @@ public class BaseGroupAddFavoriteRequest extends BaseRequest implements IBaseGro
     }
 
     /**
-     * Creates the Void
+     * Creates the GroupAddFavorite
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -54,9 +54,8 @@ public class BaseGroupAddFavoriteRequest extends BaseRequest implements IBaseGro
     }
 
     /**
-     * Creates the Void
+     * Creates the GroupAddFavorite
      *
-     * @return The Void
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     public void post() throws ClientException {

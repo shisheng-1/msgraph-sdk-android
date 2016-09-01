@@ -28,7 +28,7 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
     public BaseEventCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseEventCollectionResponse.class, IEventCollectionPage.class);

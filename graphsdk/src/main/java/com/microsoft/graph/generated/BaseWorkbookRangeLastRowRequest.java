@@ -34,6 +34,43 @@ public class BaseWorkbookRangeLastRowRequest extends BaseRequest implements IBas
     }
 
     /**
+     * Patches the WorkbookRangeLastRow
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookRangeLastRow
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRange patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeLastRow
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeLastRow
+     *
+     * @return The WorkbookRange
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRange put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookRange
      *
      * @param callback The callback to be called after success or failure.

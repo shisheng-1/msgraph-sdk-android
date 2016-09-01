@@ -34,6 +34,43 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     }
 
     /**
+     * Patches the WorkbookChartPointItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookChartPoint> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookChartPointItemAt
+     *
+     * @return The WorkbookChartPoint
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookChartPoint patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookChartPointItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookChartPoint> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookChartPointItemAt
+     *
+     * @return The WorkbookChartPoint
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookChartPoint put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookChartPoint
      *
      * @param callback The callback to be called after success or failure.

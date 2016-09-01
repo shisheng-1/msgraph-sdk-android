@@ -34,6 +34,43 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     }
 
     /**
+     * Patches the WorkbookChartItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookChart> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookChartItemAt
+     *
+     * @return The WorkbookChart
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookChart patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookChartItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookChart> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookChartItemAt
+     *
+     * @return The WorkbookChart
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookChart put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookChart
      *
      * @param callback The callback to be called after success or failure.

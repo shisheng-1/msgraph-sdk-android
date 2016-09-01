@@ -26,6 +26,35 @@ import com.google.gson.annotations.*;
 public interface IBaseWorkbookTableRowItemAtRequest {
 
     /**
+     * Patches the WorkbookTableRowItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void patch(final ICallback<WorkbookTableRow> callback);
+
+    /**
+     * Patches the WorkbookTableRowItemAt
+     *
+     * @return The WorkbookTableRow
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+    WorkbookTableRow patch() throws ClientException;
+
+    /**
+     * Puts the WorkbookTableRowItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void put(final ICallback<WorkbookTableRow> callback);
+
+    /**
+     * Puts the WorkbookTableRowItemAt
+     *
+     * @return The WorkbookTableRow
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     WorkbookTableRow put() throws ClientException;
+    /**
      * Gets the WorkbookTableRow
      * @param callback The callback to be called after success or failure.
      */

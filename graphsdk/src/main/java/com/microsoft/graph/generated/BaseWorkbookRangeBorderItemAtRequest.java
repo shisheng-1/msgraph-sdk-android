@@ -34,6 +34,43 @@ public class BaseWorkbookRangeBorderItemAtRequest extends BaseRequest implements
     }
 
     /**
+     * Patches the WorkbookRangeBorderItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookRangeBorder> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookRangeBorderItemAt
+     *
+     * @return The WorkbookRangeBorder
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRangeBorder patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeBorderItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookRangeBorder> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookRangeBorderItemAt
+     *
+     * @return The WorkbookRangeBorder
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookRangeBorder put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookRangeBorder
      *
      * @param callback The callback to be called after success or failure.

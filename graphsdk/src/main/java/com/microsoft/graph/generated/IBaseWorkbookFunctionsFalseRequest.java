@@ -26,14 +26,14 @@ import com.google.gson.annotations.*;
 public interface IBaseWorkbookFunctionsFalseRequest {
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsFalse
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<WorkbookFunctionResult> callback);
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsFalse
      *
      * @return The WorkbookFunctionResult
      * @throws ClientException An exception occurs if there was an error while the request was sent.

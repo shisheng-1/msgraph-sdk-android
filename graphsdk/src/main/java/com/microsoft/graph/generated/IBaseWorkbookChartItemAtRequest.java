@@ -26,6 +26,35 @@ import com.google.gson.annotations.*;
 public interface IBaseWorkbookChartItemAtRequest {
 
     /**
+     * Patches the WorkbookChartItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void patch(final ICallback<WorkbookChart> callback);
+
+    /**
+     * Patches the WorkbookChartItemAt
+     *
+     * @return The WorkbookChart
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+    WorkbookChart patch() throws ClientException;
+
+    /**
+     * Puts the WorkbookChartItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    void put(final ICallback<WorkbookChart> callback);
+
+    /**
+     * Puts the WorkbookChartItemAt
+     *
+     * @return The WorkbookChart
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     WorkbookChart put() throws ClientException;
+    /**
      * Gets the WorkbookChart
      * @param callback The callback to be called after success or failure.
      */

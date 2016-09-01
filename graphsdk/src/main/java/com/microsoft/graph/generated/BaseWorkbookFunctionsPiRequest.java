@@ -34,7 +34,7 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsPi
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     }
 
     /**
-     * Creates the WorkbookFunctionResult
+     * Creates the WorkbookFunctionsPi
      *
      * @return The WorkbookFunctionResult
      * @throws ClientException An exception occurs if there was an error while the request was sent.

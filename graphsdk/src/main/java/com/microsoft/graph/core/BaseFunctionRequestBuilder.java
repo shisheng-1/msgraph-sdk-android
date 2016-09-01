@@ -29,9 +29,9 @@ public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
      * @param options    {@link List} of {@link Option}s to add to this request
      */
     public BaseFunctionRequestBuilder(
-            String requestUrl,
-            IBaseClient client,
-            List<Option> options
+            final String requestUrl,
+            final IBaseClient client,
+            final List<Option> options
     ) {
         super(requestUrl, client, options);
     }

@@ -28,7 +28,7 @@ public class BaseWorkbookTableCollectionRequest extends BaseCollectionRequest<Ba
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
     public BaseWorkbookTableCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookTableCollectionResponse.class, IWorkbookTableCollectionPage.class);

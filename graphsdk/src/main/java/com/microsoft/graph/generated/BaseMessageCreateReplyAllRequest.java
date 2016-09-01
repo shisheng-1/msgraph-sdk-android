@@ -34,7 +34,7 @@ public class BaseMessageCreateReplyAllRequest extends BaseRequest implements IBa
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateReplyAll
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseMessageCreateReplyAllRequest extends BaseRequest implements IBa
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateReplyAll
      *
      * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.

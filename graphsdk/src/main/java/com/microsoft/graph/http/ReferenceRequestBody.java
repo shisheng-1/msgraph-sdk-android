@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
-public class ReferenceRequestBody implements IJsonBackedObject{
+public class ReferenceRequestBody implements IJsonBackedObject {
 
     @SerializedName("@odata.id")
     public String odataId;
@@ -21,7 +21,7 @@ public class ReferenceRequestBody implements IJsonBackedObject{
      */
     private transient ISerializer mSerializer;
 
-    public ReferenceRequestBody(String payload) {
+    public ReferenceRequestBody(final String payload) {
         odataId  = payload;
     }
 

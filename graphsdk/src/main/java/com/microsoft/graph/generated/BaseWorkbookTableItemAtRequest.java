@@ -34,6 +34,43 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     }
 
     /**
+     * Patches the WorkbookTableItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void patch(final ICallback<WorkbookTable> callback) {
+        send(HttpMethod.PATCH, callback, null);
+    }
+
+    /**
+     * Patches the WorkbookTableItemAt
+     *
+     * @return The WorkbookTable
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookTable patch() throws ClientException {
+        return this.send(HttpMethod.PATCH, null);
+    }
+
+    /**
+     * Puts the WorkbookTableItemAt
+     *
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(final ICallback<WorkbookTable> callback) {
+        send(HttpMethod.PUT, callback, null);
+    }
+
+    /**
+     * Puts the WorkbookTableItemAt
+     *
+     * @return The WorkbookTable
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+     public WorkbookTable put() throws ClientException {
+        return this.send(HttpMethod.PUT, null);
+    }
+    /**
      * Gets the WorkbookTable
      *
      * @param callback The callback to be called after success or failure.

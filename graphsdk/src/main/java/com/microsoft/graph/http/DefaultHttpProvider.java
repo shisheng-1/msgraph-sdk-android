@@ -23,11 +23,11 @@
 package com.microsoft.graph.http;
 
 import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.serializer.ISerializer;
@@ -74,10 +74,10 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * Creates the DefaultHttpProvider.
      *
-     * @param serializer         The serializer.
-     * @param authenticationProvider       The auth provider.
-     * @param executors          The executors.
-     * @param logger             The logger for diagnostic information.
+     * @param serializer             The serializer.
+     * @param authenticationProvider The auth provider.
+     * @param executors              The executors.
+     * @param logger                 The logger for diagnostic information.
      */
     public DefaultHttpProvider(final ISerializer serializer,
                                final IAuthenticationProvider authenticationProvider,
@@ -127,9 +127,9 @@ public class DefaultHttpProvider implements IHttpProvider {
             public void run() {
                 try {
                     mExecutors.performOnForeground(sendRequestInternal(request,
-                                    resultClass,
-                                    serializable,
-                                    progressCallback),
+                            resultClass,
+                            serializable,
+                            progressCallback),
                             callback);
                 } catch (final ClientException e) {
                     mExecutors.performOnForeground(e, callback);
@@ -252,8 +252,8 @@ public class DefaultHttpProvider implements IHttpProvider {
                     return null;
                 }
 
-                if (connection.getResponseCode() == httpAcceptedResponseCode &&
-                        connection.getContentLength() <= 0) {
+                if (connection.getResponseCode() == httpAcceptedResponseCode
+                        && connection.getContentLength() <= 0) {
                     mLogger.logDebug("Handling response Content-Length = 0");
                     return null;
                 }

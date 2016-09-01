@@ -34,7 +34,7 @@ public class BaseMessageCreateForwardRequest extends BaseRequest implements IBas
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateForward
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseMessageCreateForwardRequest extends BaseRequest implements IBas
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateForward
      *
      * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.

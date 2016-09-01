@@ -34,7 +34,7 @@ public class BaseWorkbookFilterClearRequest extends BaseRequest implements IBase
     }
 
     /**
-     * Creates the Void
+     * Creates the WorkbookFilterClear
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -54,9 +54,8 @@ public class BaseWorkbookFilterClearRequest extends BaseRequest implements IBase
     }
 
     /**
-     * Creates the Void
+     * Creates the WorkbookFilterClear
      *
-     * @return The Void
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     public void post() throws ClientException {

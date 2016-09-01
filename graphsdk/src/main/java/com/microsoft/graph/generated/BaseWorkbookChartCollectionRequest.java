@@ -28,7 +28,7 @@ public class BaseWorkbookChartCollectionRequest extends BaseCollectionRequest<Ba
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
     public BaseWorkbookChartCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookChartCollectionResponse.class, IWorkbookChartCollectionPage.class);

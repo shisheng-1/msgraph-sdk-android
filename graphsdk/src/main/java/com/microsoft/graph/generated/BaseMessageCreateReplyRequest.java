@@ -34,7 +34,7 @@ public class BaseMessageCreateReplyRequest extends BaseRequest implements IBaseM
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateReply
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -43,7 +43,7 @@ public class BaseMessageCreateReplyRequest extends BaseRequest implements IBaseM
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateReply
      *
      * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.
