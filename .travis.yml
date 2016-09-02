@@ -13,7 +13,7 @@ android:
   - platform-tools
   - extra
   - android-23
-  - build-tools-23.0.1
+  - build-tools-23.0.3
 
 before_script:
   - echo no | android create avd --force -n test -t android-$ANDROID_TARGET --abi $ANDROID_ABI
@@ -25,5 +25,5 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew --no-daemon clean assemble
-  - ./gradlew --no-daemon connectedAndroidTest
+  - ./gradlew clean assemble
+  - ./gradlew connectedAndroidTest
