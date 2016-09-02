@@ -25,5 +25,5 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew --no-daemon clean assemble
-  - ./gradlew --no-daemon connectedAndroidTest
+  - ./gradlew clean assemble
+  - ./gradlew connectedAndroidTest
