@@ -30,12 +30,14 @@ public class BaseAttachmentCollectionResponse implements IJsonBackedObject {
      * The list of Attachment within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Attachment> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

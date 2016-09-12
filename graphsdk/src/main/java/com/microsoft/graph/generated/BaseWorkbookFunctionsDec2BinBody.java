@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsDec2BinBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The places.
      */
     @SerializedName("places")
+    @Expose
     public com.google.gson.JsonElement places;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsNumberValueBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The decimal Separator.
      */
     @SerializedName("decimalSeparator")
+    @Expose
     public com.google.gson.JsonElement decimalSeparator;
 
     /**
      * The group Separator.
      */
     @SerializedName("groupSeparator")
+    @Expose
     public com.google.gson.JsonElement groupSeparator;
 
 

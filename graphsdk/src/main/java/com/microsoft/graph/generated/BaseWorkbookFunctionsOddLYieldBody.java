@@ -29,48 +29,56 @@ public class BaseWorkbookFunctionsOddLYieldBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The last Interest.
      */
     @SerializedName("lastInterest")
+    @Expose
     public com.google.gson.JsonElement lastInterest;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The pr.
      */
     @SerializedName("pr")
+    @Expose
     public com.google.gson.JsonElement pr;
 
     /**
      * The redemption.
      */
     @SerializedName("redemption")
+    @Expose
     public com.google.gson.JsonElement redemption;
 
     /**
      * The frequency.
      */
     @SerializedName("frequency")
+    @Expose
     public com.google.gson.JsonElement frequency;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

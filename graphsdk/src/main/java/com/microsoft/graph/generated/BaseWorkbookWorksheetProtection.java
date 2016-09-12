@@ -34,12 +34,14 @@ public class BaseWorkbookWorksheetProtection extends Entity implements IJsonBack
      * The Options.
      */
     @SerializedName("options")
+    @Expose
     public WorkbookWorksheetProtectionOptions options;
 
     /**
      * The Protected.
      */
     @SerializedName("protected")
+    @Expose
     public Boolean msgraph_protected;
 
 

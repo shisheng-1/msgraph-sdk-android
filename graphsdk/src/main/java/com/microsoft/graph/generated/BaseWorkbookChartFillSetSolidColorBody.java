@@ -29,6 +29,7 @@ public class BaseWorkbookChartFillSetSolidColorBody {
      * The color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
 

@@ -34,48 +34,56 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
      * The Body.
      */
     @SerializedName("body")
+    @Expose
     public ItemBody body;
 
     /**
      * The Received Date Time.
      */
     @SerializedName("receivedDateTime")
+    @Expose
     public java.util.Calendar receivedDateTime;
 
     /**
      * The Has Attachments.
      */
     @SerializedName("hasAttachments")
+    @Expose
     public Boolean hasAttachments;
 
     /**
      * The From.
      */
     @SerializedName("from")
+    @Expose
     public Recipient from;
 
     /**
      * The Sender.
      */
     @SerializedName("sender")
+    @Expose
     public Recipient sender;
 
     /**
      * The Conversation Thread Id.
      */
     @SerializedName("conversationThreadId")
+    @Expose
     public String conversationThreadId;
 
     /**
      * The New Participants.
      */
     @SerializedName("newParticipants")
+    @Expose
     public List<Recipient> newParticipants;
 
     /**
      * The Conversation Id.
      */
     @SerializedName("conversationId")
+    @Expose
     public String conversationId;
 
     /**
@@ -87,6 +95,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
      * The In Reply To.
      */
     @SerializedName("inReplyTo")
+    @Expose
     public Post inReplyTo;
 
     /**

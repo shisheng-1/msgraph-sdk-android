@@ -34,18 +34,21 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Position.
      */
     @SerializedName("position")
+    @Expose
     public Integer position;
 
     /**
      * The Visibility.
      */
     @SerializedName("visibility")
+    @Expose
     public String visibility;
 
     /**
@@ -57,6 +60,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Protection.
      */
     @SerializedName("protection")
+    @Expose
     public WorkbookWorksheetProtection protection;
 
     /**

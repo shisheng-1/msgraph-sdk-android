@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsExactBody {
      * The text1.
      */
     @SerializedName("text1")
+    @Expose
     public com.google.gson.JsonElement text1;
 
     /**
      * The text2.
      */
     @SerializedName("text2")
+    @Expose
     public com.google.gson.JsonElement text2;
 
 

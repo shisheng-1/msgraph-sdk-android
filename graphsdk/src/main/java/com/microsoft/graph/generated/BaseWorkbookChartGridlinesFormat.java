@@ -34,6 +34,7 @@ public class BaseWorkbookChartGridlinesFormat extends Entity implements IJsonBac
      * The Line.
      */
     @SerializedName("line")
+    @Expose
     public WorkbookChartLineFormat line;
 
 

@@ -34,6 +34,7 @@ public class BaseWorkbookChartPointFormat extends Entity implements IJsonBackedO
      * The Fill.
      */
     @SerializedName("fill")
+    @Expose
     public WorkbookChartFill fill;
 
 

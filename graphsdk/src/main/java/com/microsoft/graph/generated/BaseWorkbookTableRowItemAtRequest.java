@@ -35,40 +35,43 @@ public class BaseWorkbookTableRowItemAtRequest extends BaseRequest implements IB
 
     /**
      * Patches the WorkbookTableRowItemAt
-     *
+     * @param srcWorkbookTableRow The WorkbookTableRow with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookTableRow> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookTableRow);
     }
 
     /**
      * Patches the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow with which to PATCH
      * @return The WorkbookTableRow
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableRow patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookTableRow patch(WorkbookTableRow srcWorkbookTableRow) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookTableRow);
     }
 
     /**
      * Puts the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookTableRow> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookTableRow);
     }
 
     /**
      * Puts the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow to PUT
      * @return The WorkbookTableRow
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableRow put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookTableRow put(WorkbookTableRow srcWorkbookTableRow) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookTableRow);
     }
     /**
      * Gets the WorkbookTableRow

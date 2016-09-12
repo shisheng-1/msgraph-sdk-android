@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsPriceDiscBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The discount.
      */
     @SerializedName("discount")
+    @Expose
     public com.google.gson.JsonElement discount;
 
     /**
      * The redemption.
      */
     @SerializedName("redemption")
+    @Expose
     public com.google.gson.JsonElement redemption;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

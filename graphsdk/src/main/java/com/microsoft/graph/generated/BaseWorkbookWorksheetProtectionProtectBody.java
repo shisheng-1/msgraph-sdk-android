@@ -29,6 +29,7 @@ public class BaseWorkbookWorksheetProtectionProtectBody {
      * The options.
      */
     @SerializedName("options")
+    @Expose
     public WorkbookWorksheetProtectionOptions options;
 
 

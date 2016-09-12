@@ -28,32 +28,36 @@ public interface IBaseWorkbookTableColumnItemAtRequest {
     /**
      * Patches the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookTableColumn> callback);
+    void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
 
     /**
      * Patches the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
      * @return The WorkbookTableColumn
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookTableColumn patch() throws ClientException;
+    WorkbookTableColumn patch(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException;
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookTableColumn> callback);
+    void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
      * @return The WorkbookTableColumn
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookTableColumn put() throws ClientException;
+     WorkbookTableColumn put(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException;
     /**
      * Gets the WorkbookTableColumn
      * @param callback The callback to be called after success or failure.

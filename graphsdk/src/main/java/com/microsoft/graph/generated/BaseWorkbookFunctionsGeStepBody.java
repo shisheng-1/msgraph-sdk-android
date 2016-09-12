@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsGeStepBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The step.
      */
     @SerializedName("step")
+    @Expose
     public com.google.gson.JsonElement step;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsTbillYieldBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The pr.
      */
     @SerializedName("pr")
+    @Expose
     public com.google.gson.JsonElement pr;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsRandBetweenBody {
      * The bottom.
      */
     @SerializedName("bottom")
+    @Expose
     public com.google.gson.JsonElement bottom;
 
     /**
      * The top.
      */
     @SerializedName("top")
+    @Expose
     public com.google.gson.JsonElement top;
 
 

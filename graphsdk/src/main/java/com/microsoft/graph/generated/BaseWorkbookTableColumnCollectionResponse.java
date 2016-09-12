@@ -30,12 +30,14 @@ public class BaseWorkbookTableColumnCollectionResponse implements IJsonBackedObj
      * The list of WorkbookTableColumn within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<WorkbookTableColumn> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

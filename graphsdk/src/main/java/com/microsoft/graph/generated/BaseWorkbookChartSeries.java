@@ -34,12 +34,14 @@ public class BaseWorkbookChartSeries extends Entity implements IJsonBackedObject
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartSeriesFormat format;
 
     /**

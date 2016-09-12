@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsImDivBody {
      * The inumber1.
      */
     @SerializedName("inumber1")
+    @Expose
     public com.google.gson.JsonElement inumber1;
 
     /**
      * The inumber2.
      */
     @SerializedName("inumber2")
+    @Expose
     public com.google.gson.JsonElement inumber2;
 
 

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseItemReference implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseItemReference() {
@@ -36,18 +37,21 @@ public class BaseItemReference implements IJsonBackedObject {
      * The Drive Id.
      */
     @SerializedName("driveId")
+    @Expose
     public String driveId;
 
     /**
      * The Id.
      */
     @SerializedName("id")
+    @Expose
     public String id;
 
     /**
      * The Path.
      */
     @SerializedName("path")
+    @Expose
     public String path;
 
 

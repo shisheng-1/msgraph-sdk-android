@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsAverageIfBody {
      * The range.
      */
     @SerializedName("range")
+    @Expose
     public com.google.gson.JsonElement range;
 
     /**
      * The criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public com.google.gson.JsonElement criteria;
 
     /**
      * The average Range.
      */
     @SerializedName("averageRange")
+    @Expose
     public com.google.gson.JsonElement averageRange;
 
 

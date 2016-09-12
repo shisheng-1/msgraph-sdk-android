@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsMirrBody {
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The finance Rate.
      */
     @SerializedName("financeRate")
+    @Expose
     public com.google.gson.JsonElement financeRate;
 
     /**
      * The reinvest Rate.
      */
     @SerializedName("reinvestRate")
+    @Expose
     public com.google.gson.JsonElement reinvestRate;
 
 

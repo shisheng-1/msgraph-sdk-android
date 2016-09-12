@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsFisherInvBody {
      * The y.
      */
     @SerializedName("y")
+    @Expose
     public com.google.gson.JsonElement y;
 
 

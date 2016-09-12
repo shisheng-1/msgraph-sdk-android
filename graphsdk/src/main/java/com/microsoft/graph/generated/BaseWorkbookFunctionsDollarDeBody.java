@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsDollarDeBody {
      * The fractional Dollar.
      */
     @SerializedName("fractionalDollar")
+    @Expose
     public com.google.gson.JsonElement fractionalDollar;
 
     /**
      * The fraction.
      */
     @SerializedName("fraction")
+    @Expose
     public com.google.gson.JsonElement fraction;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsRank_AvgBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The ref.
      */
     @SerializedName("ref")
+    @Expose
     public com.google.gson.JsonElement ref;
 
     /**
      * The order.
      */
     @SerializedName("order")
+    @Expose
     public com.google.gson.JsonElement order;
 
 

@@ -34,24 +34,28 @@ public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject
      * The Overlay.
      */
     @SerializedName("overlay")
+    @Expose
     public Boolean overlay;
 
     /**
      * The Position.
      */
     @SerializedName("position")
+    @Expose
     public String position;
 
     /**
      * The Visible.
      */
     @SerializedName("visible")
+    @Expose
     public Boolean visible;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartLegendFormat format;
 
 

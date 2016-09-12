@@ -34,30 +34,35 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      */
     @SerializedName("lastModifiedDateTime")
+    @Expose
     public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Content Type.
      */
     @SerializedName("contentType")
+    @Expose
     public String contentType;
 
     /**
      * The Size.
      */
     @SerializedName("size")
+    @Expose
     public Integer size;
 
     /**
      * The Is Inline.
      */
     @SerializedName("isInline")
+    @Expose
     public Boolean isInline;
 
 

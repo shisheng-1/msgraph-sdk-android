@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsColumnsBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
 

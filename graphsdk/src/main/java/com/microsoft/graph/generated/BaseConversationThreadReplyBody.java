@@ -29,6 +29,7 @@ public class BaseConversationThreadReplyBody {
      * The post.
      */
     @SerializedName("post")
+    @Expose
     public Post post;
 
 

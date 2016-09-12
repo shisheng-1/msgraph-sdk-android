@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsDdbBody {
      * The cost.
      */
     @SerializedName("cost")
+    @Expose
     public com.google.gson.JsonElement cost;
 
     /**
      * The salvage.
      */
     @SerializedName("salvage")
+    @Expose
     public com.google.gson.JsonElement salvage;
 
     /**
      * The life.
      */
     @SerializedName("life")
+    @Expose
     public com.google.gson.JsonElement life;
 
     /**
      * The period.
      */
     @SerializedName("period")
+    @Expose
     public com.google.gson.JsonElement period;
 
     /**
      * The factor.
      */
     @SerializedName("factor")
+    @Expose
     public com.google.gson.JsonElement factor;
 
 

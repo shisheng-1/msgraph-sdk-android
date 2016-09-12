@@ -34,48 +34,56 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
      * The To Recipients.
      */
     @SerializedName("toRecipients")
+    @Expose
     public List<Recipient> toRecipients;
 
     /**
      * The Topic.
      */
     @SerializedName("topic")
+    @Expose
     public String topic;
 
     /**
      * The Has Attachments.
      */
     @SerializedName("hasAttachments")
+    @Expose
     public Boolean hasAttachments;
 
     /**
      * The Last Delivered Date Time.
      */
     @SerializedName("lastDeliveredDateTime")
+    @Expose
     public java.util.Calendar lastDeliveredDateTime;
 
     /**
      * The Unique Senders.
      */
     @SerializedName("uniqueSenders")
+    @Expose
     public List<String> uniqueSenders;
 
     /**
      * The Cc Recipients.
      */
     @SerializedName("ccRecipients")
+    @Expose
     public List<Recipient> ccRecipients;
 
     /**
      * The Preview.
      */
     @SerializedName("preview")
+    @Expose
     public String preview;
 
     /**
      * The Is Locked.
      */
     @SerializedName("isLocked")
+    @Expose
     public Boolean isLocked;
 
     /**

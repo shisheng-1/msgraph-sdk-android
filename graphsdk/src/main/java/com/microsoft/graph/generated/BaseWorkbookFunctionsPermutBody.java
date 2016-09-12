@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsPermutBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The number Chosen.
      */
     @SerializedName("numberChosen")
+    @Expose
     public com.google.gson.JsonElement numberChosen;
 
 

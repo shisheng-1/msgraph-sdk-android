@@ -34,6 +34,7 @@ public class BaseWorkbook extends Entity implements IJsonBackedObject {
      * The Application.
      */
     @SerializedName("application")
+    @Expose
     public WorkbookApplication application;
 
     /**
@@ -55,6 +56,7 @@ public class BaseWorkbook extends Entity implements IJsonBackedObject {
      * The Functions.
      */
     @SerializedName("functions")
+    @Expose
     public WorkbookFunctions functions;
 
 

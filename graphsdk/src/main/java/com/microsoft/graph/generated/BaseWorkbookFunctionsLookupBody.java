@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsLookupBody {
      * The lookup Value.
      */
     @SerializedName("lookupValue")
+    @Expose
     public com.google.gson.JsonElement lookupValue;
 
     /**
      * The lookup Vector.
      */
     @SerializedName("lookupVector")
+    @Expose
     public com.google.gson.JsonElement lookupVector;
 
     /**
      * The result Vector.
      */
     @SerializedName("resultVector")
+    @Expose
     public com.google.gson.JsonElement resultVector;
 
 

@@ -34,12 +34,14 @@ public class BaseAttendee extends Recipient implements IJsonBackedObject {
      * The Status.
      */
     @SerializedName("status")
+    @Expose
     public ResponseStatus status;
 
     /**
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public AttendeeType type;
 
 

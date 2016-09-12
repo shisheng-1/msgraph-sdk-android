@@ -29,6 +29,7 @@ public class BaseWorkbookWorksheetAddBody {
      * The name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
 

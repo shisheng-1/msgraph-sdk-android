@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsMroundBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The multiple.
      */
     @SerializedName("multiple")
+    @Expose
     public com.google.gson.JsonElement multiple;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsRoundBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The num Digits.
      */
     @SerializedName("numDigits")
+    @Expose
     public com.google.gson.JsonElement numDigits;
 
 

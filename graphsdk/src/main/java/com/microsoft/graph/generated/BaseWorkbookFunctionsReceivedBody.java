@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsReceivedBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The investment.
      */
     @SerializedName("investment")
+    @Expose
     public com.google.gson.JsonElement investment;
 
     /**
      * The discount.
      */
     @SerializedName("discount")
+    @Expose
     public com.google.gson.JsonElement discount;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

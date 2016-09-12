@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsQuotientBody {
      * The numerator.
      */
     @SerializedName("numerator")
+    @Expose
     public com.google.gson.JsonElement numerator;
 
     /**
      * The denominator.
      */
     @SerializedName("denominator")
+    @Expose
     public com.google.gson.JsonElement denominator;
 
 

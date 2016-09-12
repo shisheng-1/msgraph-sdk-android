@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsCoupNcdBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The frequency.
      */
     @SerializedName("frequency")
+    @Expose
     public com.google.gson.JsonElement frequency;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

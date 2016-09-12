@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsYieldDiscBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The pr.
      */
     @SerializedName("pr")
+    @Expose
     public com.google.gson.JsonElement pr;
 
     /**
      * The redemption.
      */
     @SerializedName("redemption")
+    @Expose
     public com.google.gson.JsonElement redemption;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

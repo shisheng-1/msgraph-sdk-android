@@ -34,24 +34,28 @@ public class BaseWorkbookRangeBorder extends Entity implements IJsonBackedObject
      * The Color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
     /**
      * The Side Index.
      */
     @SerializedName("sideIndex")
+    @Expose
     public String sideIndex;
 
     /**
      * The Style.
      */
     @SerializedName("style")
+    @Expose
     public String style;
 
     /**
      * The Weight.
      */
     @SerializedName("weight")
+    @Expose
     public String weight;
 
 

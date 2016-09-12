@@ -34,6 +34,7 @@ public class BaseWorkbookFilter extends Entity implements IJsonBackedObject {
      * The Criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public WorkbookFilterCriteria criteria;
 
 

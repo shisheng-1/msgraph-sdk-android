@@ -29,6 +29,7 @@ public class BaseDirectoryObjectGetMemberGroupsBody {
      * The security Enabled Only.
      */
     @SerializedName("securityEnabledOnly")
+    @Expose
     public Boolean securityEnabledOnly;
 
 

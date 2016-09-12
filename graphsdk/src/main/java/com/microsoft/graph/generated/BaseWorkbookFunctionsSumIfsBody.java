@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsSumIfsBody {
      * The sum Range.
      */
     @SerializedName("sumRange")
+    @Expose
     public com.google.gson.JsonElement sumRange;
 
     /**
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsPercentRank_ExcBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
     /**
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The significance.
      */
     @SerializedName("significance")
+    @Expose
     public com.google.gson.JsonElement significance;
 
 

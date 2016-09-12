@@ -34,24 +34,28 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      */
     @SerializedName("createdDateTime")
+    @Expose
     public java.util.Calendar createdDateTime;
 
     /**
      * The Last Modified Date Time.
      */
     @SerializedName("lastModifiedDateTime")
+    @Expose
     public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Change Key.
      */
     @SerializedName("changeKey")
+    @Expose
     public String changeKey;
 
     /**
      * The Categories.
      */
     @SerializedName("categories")
+    @Expose
     public List<String> categories;
 
 

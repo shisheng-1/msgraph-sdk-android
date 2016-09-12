@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsBin2DecBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
 

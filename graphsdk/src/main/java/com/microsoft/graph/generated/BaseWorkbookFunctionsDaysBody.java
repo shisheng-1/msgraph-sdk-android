@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsDaysBody {
      * The end Date.
      */
     @SerializedName("endDate")
+    @Expose
     public com.google.gson.JsonElement endDate;
 
     /**
      * The start Date.
      */
     @SerializedName("startDate")
+    @Expose
     public com.google.gson.JsonElement startDate;
 
 

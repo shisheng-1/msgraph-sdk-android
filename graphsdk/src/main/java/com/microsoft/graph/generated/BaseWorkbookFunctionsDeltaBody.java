@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsDeltaBody {
      * The number1.
      */
     @SerializedName("number1")
+    @Expose
     public com.google.gson.JsonElement number1;
 
     /**
      * The number2.
      */
     @SerializedName("number2")
+    @Expose
     public com.google.gson.JsonElement number2;
 
 

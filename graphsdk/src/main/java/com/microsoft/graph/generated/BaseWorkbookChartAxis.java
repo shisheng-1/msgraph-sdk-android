@@ -34,48 +34,56 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
      * The Major Unit.
      */
     @SerializedName("majorUnit")
+    @Expose
     public com.google.gson.JsonElement majorUnit;
 
     /**
      * The Maximum.
      */
     @SerializedName("maximum")
+    @Expose
     public com.google.gson.JsonElement maximum;
 
     /**
      * The Minimum.
      */
     @SerializedName("minimum")
+    @Expose
     public com.google.gson.JsonElement minimum;
 
     /**
      * The Minor Unit.
      */
     @SerializedName("minorUnit")
+    @Expose
     public com.google.gson.JsonElement minorUnit;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartAxisFormat format;
 
     /**
      * The Major Gridlines.
      */
     @SerializedName("majorGridlines")
+    @Expose
     public WorkbookChartGridlines majorGridlines;
 
     /**
      * The Minor Gridlines.
      */
     @SerializedName("minorGridlines")
+    @Expose
     public WorkbookChartGridlines minorGridlines;
 
     /**
      * The Title.
      */
     @SerializedName("title")
+    @Expose
     public WorkbookChartAxisTitle title;
 
 

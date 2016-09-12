@@ -29,6 +29,7 @@ public class BaseWorkbookProcessQueryBody {
      * The input.
      */
     @SerializedName("input")
+    @Expose
     public byte[] input;
 
 

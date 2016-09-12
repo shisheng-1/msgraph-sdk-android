@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsSeriesSumBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The n.
      */
     @SerializedName("n")
+    @Expose
     public com.google.gson.JsonElement n;
 
     /**
      * The m.
      */
     @SerializedName("m")
+    @Expose
     public com.google.gson.JsonElement m;
 
     /**
      * The coefficients.
      */
     @SerializedName("coefficients")
+    @Expose
     public com.google.gson.JsonElement coefficients;
 
 

@@ -29,6 +29,7 @@ public class BaseDirectoryObjectCheckMemberGroupsBody {
      * The group Ids.
      */
     @SerializedName("groupIds")
+    @Expose
     public List<String> groupIds;
 
 

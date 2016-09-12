@@ -35,40 +35,43 @@ public class BaseWorkbookRangeBorderItemAtRequest extends BaseRequest implements
 
     /**
      * Patches the WorkbookRangeBorderItemAt
-     *
+     * @param srcWorkbookRangeBorder The WorkbookRangeBorder with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookRangeBorder> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookRangeBorder);
     }
 
     /**
      * Patches the WorkbookRangeBorderItemAt
      *
+     * @param srcWorkbookRangeBorder The WorkbookRangeBorder with which to PATCH
      * @return The WorkbookRangeBorder
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeBorder patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookRangeBorder patch(WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookRangeBorder);
     }
 
     /**
      * Puts the WorkbookRangeBorderItemAt
      *
+     * @param srcWorkbookRangeBorder The WorkbookRangeBorder to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookRangeBorder> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookRangeBorder);
     }
 
     /**
      * Puts the WorkbookRangeBorderItemAt
      *
+     * @param srcWorkbookRangeBorder The WorkbookRangeBorder to PUT
      * @return The WorkbookRangeBorder
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookRangeBorder put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookRangeBorder put(WorkbookRangeBorder srcWorkbookRangeBorder) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookRangeBorder);
     }
     /**
      * Gets the WorkbookRangeBorder

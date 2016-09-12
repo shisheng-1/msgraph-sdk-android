@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsRomanBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The form.
      */
     @SerializedName("form")
+    @Expose
     public com.google.gson.JsonElement form;
 
 

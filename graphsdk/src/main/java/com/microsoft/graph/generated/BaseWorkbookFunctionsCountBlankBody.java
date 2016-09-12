@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsCountBlankBody {
      * The range.
      */
     @SerializedName("range")
+    @Expose
     public com.google.gson.JsonElement range;
 
 

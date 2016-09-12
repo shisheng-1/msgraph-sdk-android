@@ -34,12 +34,14 @@ public class BaseProfilePhoto extends Entity implements IJsonBackedObject {
      * The Height.
      */
     @SerializedName("height")
+    @Expose
     public Integer height;
 
     /**
      * The Width.
      */
     @SerializedName("width")
+    @Expose
     public Integer width;
 
 

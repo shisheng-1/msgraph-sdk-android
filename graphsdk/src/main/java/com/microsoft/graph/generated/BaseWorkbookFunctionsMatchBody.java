@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsMatchBody {
      * The lookup Value.
      */
     @SerializedName("lookupValue")
+    @Expose
     public com.google.gson.JsonElement lookupValue;
 
     /**
      * The lookup Array.
      */
     @SerializedName("lookupArray")
+    @Expose
     public com.google.gson.JsonElement lookupArray;
 
     /**
      * The match Type.
      */
     @SerializedName("matchType")
+    @Expose
     public com.google.gson.JsonElement matchType;
 
 

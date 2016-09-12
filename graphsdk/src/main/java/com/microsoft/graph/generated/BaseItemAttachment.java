@@ -34,6 +34,7 @@ public class BaseItemAttachment extends Attachment implements IJsonBackedObject 
      * The Item.
      */
     @SerializedName("item")
+    @Expose
     public OutlookItem item;
 
 

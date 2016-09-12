@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsFvscheduleBody {
      * The principal.
      */
     @SerializedName("principal")
+    @Expose
     public com.google.gson.JsonElement principal;
 
     /**
      * The schedule.
      */
     @SerializedName("schedule")
+    @Expose
     public com.google.gson.JsonElement schedule;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsCountIfBody {
      * The range.
      */
     @SerializedName("range")
+    @Expose
     public com.google.gson.JsonElement range;
 
     /**
      * The criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public com.google.gson.JsonElement criteria;
 
 

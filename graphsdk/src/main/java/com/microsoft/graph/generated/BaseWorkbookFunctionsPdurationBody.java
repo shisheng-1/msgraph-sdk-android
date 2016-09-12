@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsPdurationBody {
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The pv.
      */
     @SerializedName("pv")
+    @Expose
     public com.google.gson.JsonElement pv;
 
     /**
      * The fv.
      */
     @SerializedName("fv")
+    @Expose
     public com.google.gson.JsonElement fv;
 
 

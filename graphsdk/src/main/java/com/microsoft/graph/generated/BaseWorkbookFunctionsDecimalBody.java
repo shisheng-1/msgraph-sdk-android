@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsDecimalBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The radix.
      */
     @SerializedName("radix")
+    @Expose
     public com.google.gson.JsonElement radix;
 
 

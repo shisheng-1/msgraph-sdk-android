@@ -29,18 +29,21 @@ public class BaseWorkbookTableSortApplyBody {
      * The fields.
      */
     @SerializedName("fields")
+    @Expose
     public List<WorkbookSortField> fields;
 
     /**
      * The match Case.
      */
     @SerializedName("matchCase")
+    @Expose
     public Boolean matchCase;
 
     /**
      * The method.
      */
     @SerializedName("method")
+    @Expose
     public String method;
 
 

@@ -34,12 +34,14 @@ public class BaseWorkbookChartPoint extends Entity implements IJsonBackedObject 
      * The Value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartPointFormat format;
 
 

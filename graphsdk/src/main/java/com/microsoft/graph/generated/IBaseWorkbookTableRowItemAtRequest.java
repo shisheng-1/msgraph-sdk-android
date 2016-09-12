@@ -28,32 +28,36 @@ public interface IBaseWorkbookTableRowItemAtRequest {
     /**
      * Patches the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookTableRow> callback);
+    void patch(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
 
     /**
      * Patches the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow with which to PATCH
      * @return The WorkbookTableRow
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookTableRow patch() throws ClientException;
+    WorkbookTableRow patch(WorkbookTableRow srcWorkbookTableRow) throws ClientException;
 
     /**
      * Puts the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookTableRow> callback);
+    void put(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
 
     /**
      * Puts the WorkbookTableRowItemAt
      *
+     * @param srcWorkbookTableRow The WorkbookTableRow to PUT
      * @return The WorkbookTableRow
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookTableRow put() throws ClientException;
+     WorkbookTableRow put(WorkbookTableRow srcWorkbookTableRow) throws ClientException;
     /**
      * Gets the WorkbookTableRow
      * @param callback The callback to be called after success or failure.

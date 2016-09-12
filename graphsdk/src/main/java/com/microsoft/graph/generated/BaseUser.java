@@ -34,246 +34,287 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Account Enabled.
      */
     @SerializedName("accountEnabled")
+    @Expose
     public Boolean accountEnabled;
 
     /**
      * The Assigned Licenses.
      */
     @SerializedName("assignedLicenses")
+    @Expose
     public List<AssignedLicense> assignedLicenses;
 
     /**
      * The Assigned Plans.
      */
     @SerializedName("assignedPlans")
+    @Expose
     public List<AssignedPlan> assignedPlans;
 
     /**
      * The Business Phones.
      */
     @SerializedName("businessPhones")
+    @Expose
     public List<String> businessPhones;
 
     /**
      * The City.
      */
     @SerializedName("city")
+    @Expose
     public String city;
 
     /**
      * The Company Name.
      */
     @SerializedName("companyName")
+    @Expose
     public String companyName;
 
     /**
      * The Country.
      */
     @SerializedName("country")
+    @Expose
     public String country;
 
     /**
      * The Department.
      */
     @SerializedName("department")
+    @Expose
     public String department;
 
     /**
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Given Name.
      */
     @SerializedName("givenName")
+    @Expose
     public String givenName;
 
     /**
      * The Job Title.
      */
     @SerializedName("jobTitle")
+    @Expose
     public String jobTitle;
 
     /**
      * The Mail.
      */
     @SerializedName("mail")
+    @Expose
     public String mail;
 
     /**
      * The Mail Nickname.
      */
     @SerializedName("mailNickname")
+    @Expose
     public String mailNickname;
 
     /**
      * The Mobile Phone.
      */
     @SerializedName("mobilePhone")
+    @Expose
     public String mobilePhone;
 
     /**
      * The On Premises Immutable Id.
      */
     @SerializedName("onPremisesImmutableId")
+    @Expose
     public String onPremisesImmutableId;
 
     /**
      * The On Premises Last Sync Date Time.
      */
     @SerializedName("onPremisesLastSyncDateTime")
+    @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Security Identifier.
      */
     @SerializedName("onPremisesSecurityIdentifier")
+    @Expose
     public String onPremisesSecurityIdentifier;
 
     /**
      * The On Premises Sync Enabled.
      */
     @SerializedName("onPremisesSyncEnabled")
+    @Expose
     public Boolean onPremisesSyncEnabled;
 
     /**
      * The Password Policies.
      */
     @SerializedName("passwordPolicies")
+    @Expose
     public String passwordPolicies;
 
     /**
      * The Password Profile.
      */
     @SerializedName("passwordProfile")
+    @Expose
     public PasswordProfile passwordProfile;
 
     /**
      * The Office Location.
      */
     @SerializedName("officeLocation")
+    @Expose
     public String officeLocation;
 
     /**
      * The Postal Code.
      */
     @SerializedName("postalCode")
+    @Expose
     public String postalCode;
 
     /**
      * The Preferred Language.
      */
     @SerializedName("preferredLanguage")
+    @Expose
     public String preferredLanguage;
 
     /**
      * The Provisioned Plans.
      */
     @SerializedName("provisionedPlans")
+    @Expose
     public List<ProvisionedPlan> provisionedPlans;
 
     /**
      * The Proxy Addresses.
      */
     @SerializedName("proxyAddresses")
+    @Expose
     public List<String> proxyAddresses;
 
     /**
      * The State.
      */
     @SerializedName("state")
+    @Expose
     public String state;
 
     /**
      * The Street Address.
      */
     @SerializedName("streetAddress")
+    @Expose
     public String streetAddress;
 
     /**
      * The Surname.
      */
     @SerializedName("surname")
+    @Expose
     public String surname;
 
     /**
      * The Usage Location.
      */
     @SerializedName("usageLocation")
+    @Expose
     public String usageLocation;
 
     /**
      * The User Principal Name.
      */
     @SerializedName("userPrincipalName")
+    @Expose
     public String userPrincipalName;
 
     /**
      * The User Type.
      */
     @SerializedName("userType")
+    @Expose
     public String userType;
 
     /**
      * The About Me.
      */
     @SerializedName("aboutMe")
+    @Expose
     public String aboutMe;
 
     /**
      * The Birthday.
      */
     @SerializedName("birthday")
+    @Expose
     public java.util.Calendar birthday;
 
     /**
      * The Hire Date.
      */
     @SerializedName("hireDate")
+    @Expose
     public java.util.Calendar hireDate;
 
     /**
      * The Interests.
      */
     @SerializedName("interests")
+    @Expose
     public List<String> interests;
 
     /**
      * The My Site.
      */
     @SerializedName("mySite")
+    @Expose
     public String mySite;
 
     /**
      * The Past Projects.
      */
     @SerializedName("pastProjects")
+    @Expose
     public List<String> pastProjects;
 
     /**
      * The Preferred Name.
      */
     @SerializedName("preferredName")
+    @Expose
     public String preferredName;
 
     /**
      * The Responsibilities.
      */
     @SerializedName("responsibilities")
+    @Expose
     public List<String> responsibilities;
 
     /**
      * The Schools.
      */
     @SerializedName("schools")
+    @Expose
     public List<String> schools;
 
     /**
      * The Skills.
      */
     @SerializedName("skills")
+    @Expose
     public List<String> skills;
 
     /**
@@ -290,6 +331,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Manager.
      */
     @SerializedName("manager")
+    @Expose
     public DirectoryObject manager;
 
     /**
@@ -326,6 +368,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Calendar.
      */
     @SerializedName("calendar")
+    @Expose
     public Calendar calendar;
 
     /**
@@ -362,18 +405,21 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Inference Classification.
      */
     @SerializedName("inferenceClassification")
+    @Expose
     public InferenceClassification inferenceClassification;
 
     /**
      * The Photo.
      */
     @SerializedName("photo")
+    @Expose
     public ProfilePhoto photo;
 
     /**
      * The Drive.
      */
     @SerializedName("drive")
+    @Expose
     public Drive drive;
 
 

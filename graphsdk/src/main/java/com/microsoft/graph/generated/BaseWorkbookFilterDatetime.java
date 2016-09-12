@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookFilterDatetime() {
@@ -36,12 +37,14 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
      * The Date.
      */
     @SerializedName("date")
+    @Expose
     public String date;
 
     /**
      * The Specificity.
      */
     @SerializedName("specificity")
+    @Expose
     public String specificity;
 
 

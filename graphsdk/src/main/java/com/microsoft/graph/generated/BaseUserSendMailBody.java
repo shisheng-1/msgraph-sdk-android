@@ -29,12 +29,14 @@ public class BaseUserSendMailBody {
      * The message.
      */
     @SerializedName("message")
+    @Expose
     public Message message;
 
     /**
      * The save To Sent Items.
      */
     @SerializedName("saveToSentItems")
+    @Expose
     public Boolean saveToSentItems;
 
 

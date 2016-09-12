@@ -34,18 +34,21 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
      * The Fields.
      */
     @SerializedName("fields")
+    @Expose
     public List<WorkbookSortField> fields;
 
     /**
      * The Match Case.
      */
     @SerializedName("matchCase")
+    @Expose
     public Boolean matchCase;
 
     /**
      * The Method.
      */
     @SerializedName("method")
+    @Expose
     public String method;
 
 

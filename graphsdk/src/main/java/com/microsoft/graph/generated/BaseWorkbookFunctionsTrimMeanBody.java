@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsTrimMeanBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
     /**
      * The percent.
      */
     @SerializedName("percent")
+    @Expose
     public com.google.gson.JsonElement percent;
 
 

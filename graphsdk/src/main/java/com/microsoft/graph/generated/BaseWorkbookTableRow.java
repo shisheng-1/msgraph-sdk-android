@@ -34,12 +34,14 @@ public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
      * The Index.
      */
     @SerializedName("index")
+    @Expose
     public Integer index;
 
     /**
      * The Values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

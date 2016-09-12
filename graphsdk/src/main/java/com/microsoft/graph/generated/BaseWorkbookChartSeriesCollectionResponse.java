@@ -30,12 +30,14 @@ public class BaseWorkbookChartSeriesCollectionResponse implements IJsonBackedObj
      * The list of WorkbookChartSeries within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<WorkbookChartSeries> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

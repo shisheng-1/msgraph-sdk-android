@@ -34,120 +34,140 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
      * The Address.
      */
     @SerializedName("address")
+    @Expose
     public String address;
 
     /**
      * The Address Local.
      */
     @SerializedName("addressLocal")
+    @Expose
     public String addressLocal;
 
     /**
      * The Cell Count.
      */
     @SerializedName("cellCount")
+    @Expose
     public Integer cellCount;
 
     /**
      * The Column Count.
      */
     @SerializedName("columnCount")
+    @Expose
     public Integer columnCount;
 
     /**
      * The Column Hidden.
      */
     @SerializedName("columnHidden")
+    @Expose
     public Boolean columnHidden;
 
     /**
      * The Column Index.
      */
     @SerializedName("columnIndex")
+    @Expose
     public Integer columnIndex;
 
     /**
      * The Formulas.
      */
     @SerializedName("formulas")
+    @Expose
     public com.google.gson.JsonElement formulas;
 
     /**
      * The Formulas Local.
      */
     @SerializedName("formulasLocal")
+    @Expose
     public com.google.gson.JsonElement formulasLocal;
 
     /**
      * The Formulas R1C1.
      */
     @SerializedName("formulasR1C1")
+    @Expose
     public com.google.gson.JsonElement formulasR1C1;
 
     /**
      * The Hidden.
      */
     @SerializedName("hidden")
+    @Expose
     public Boolean hidden;
 
     /**
      * The Number Format.
      */
     @SerializedName("numberFormat")
+    @Expose
     public com.google.gson.JsonElement numberFormat;
 
     /**
      * The Row Count.
      */
     @SerializedName("rowCount")
+    @Expose
     public Integer rowCount;
 
     /**
      * The Row Hidden.
      */
     @SerializedName("rowHidden")
+    @Expose
     public Boolean rowHidden;
 
     /**
      * The Row Index.
      */
     @SerializedName("rowIndex")
+    @Expose
     public Integer rowIndex;
 
     /**
      * The Text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The Value Types.
      */
     @SerializedName("valueTypes")
+    @Expose
     public com.google.gson.JsonElement valueTypes;
 
     /**
      * The Values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookRangeFormat format;
 
     /**
      * The Sort.
      */
     @SerializedName("sort")
+    @Expose
     public WorkbookRangeSort sort;
 
     /**
      * The Worksheet.
      */
     @SerializedName("worksheet")
+    @Expose
     public WorkbookWorksheet worksheet;
 
 

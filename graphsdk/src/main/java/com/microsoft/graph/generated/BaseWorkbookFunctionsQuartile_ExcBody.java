@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsQuartile_ExcBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
     /**
      * The quart.
      */
     @SerializedName("quart")
+    @Expose
     public com.google.gson.JsonElement quart;
 
 

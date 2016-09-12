@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsGamma_InvBody {
      * The probability.
      */
     @SerializedName("probability")
+    @Expose
     public com.google.gson.JsonElement probability;
 
     /**
      * The alpha.
      */
     @SerializedName("alpha")
+    @Expose
     public com.google.gson.JsonElement alpha;
 
     /**
      * The beta.
      */
     @SerializedName("beta")
+    @Expose
     public com.google.gson.JsonElement beta;
 
 

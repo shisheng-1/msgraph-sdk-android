@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsBinom_DistBody {
      * The number S.
      */
     @SerializedName("numberS")
+    @Expose
     public com.google.gson.JsonElement numberS;
 
     /**
      * The trials.
      */
     @SerializedName("trials")
+    @Expose
     public com.google.gson.JsonElement trials;
 
     /**
      * The probability S.
      */
     @SerializedName("probabilityS")
+    @Expose
     public com.google.gson.JsonElement probabilityS;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsFindBBody {
      * The find Text.
      */
     @SerializedName("findText")
+    @Expose
     public com.google.gson.JsonElement findText;
 
     /**
      * The within Text.
      */
     @SerializedName("withinText")
+    @Expose
     public com.google.gson.JsonElement withinText;
 
     /**
      * The start Num.
      */
     @SerializedName("startNum")
+    @Expose
     public com.google.gson.JsonElement startNum;
 
 

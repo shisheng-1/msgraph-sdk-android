@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsNotBody {
      * The logical.
      */
     @SerializedName("logical")
+    @Expose
     public com.google.gson.JsonElement logical;
 
 

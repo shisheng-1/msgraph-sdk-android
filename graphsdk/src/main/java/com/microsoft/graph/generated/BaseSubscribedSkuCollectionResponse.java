@@ -30,12 +30,14 @@ public class BaseSubscribedSkuCollectionResponse implements IJsonBackedObject {
      * The list of SubscribedSku within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<SubscribedSku> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

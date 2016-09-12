@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsTimeBody {
      * The hour.
      */
     @SerializedName("hour")
+    @Expose
     public com.google.gson.JsonElement hour;
 
     /**
      * The minute.
      */
     @SerializedName("minute")
+    @Expose
     public com.google.gson.JsonElement minute;
 
     /**
      * The second.
      */
     @SerializedName("second")
+    @Expose
     public com.google.gson.JsonElement second;
 
 

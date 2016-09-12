@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsPoisson_DistBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The mean.
      */
     @SerializedName("mean")
+    @Expose
     public com.google.gson.JsonElement mean;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

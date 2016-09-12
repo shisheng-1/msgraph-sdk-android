@@ -29,36 +29,42 @@ public class BaseWorkbookFunctionsBeta_DistBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The alpha.
      */
     @SerializedName("alpha")
+    @Expose
     public com.google.gson.JsonElement alpha;
 
     /**
      * The beta.
      */
     @SerializedName("beta")
+    @Expose
     public com.google.gson.JsonElement beta;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
     /**
      * The a.
      */
     @SerializedName("a")
+    @Expose
     public com.google.gson.JsonElement a;
 
     /**
      * The b.
      */
     @SerializedName("b")
+    @Expose
     public com.google.gson.JsonElement b;
 
 

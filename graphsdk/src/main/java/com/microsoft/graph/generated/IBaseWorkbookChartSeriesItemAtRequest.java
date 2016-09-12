@@ -28,32 +28,36 @@ public interface IBaseWorkbookChartSeriesItemAtRequest {
     /**
      * Patches the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookChartSeries> callback);
+    void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
 
     /**
      * Patches the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
      * @return The WorkbookChartSeries
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookChartSeries patch() throws ClientException;
+    WorkbookChartSeries patch(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException;
 
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookChartSeries> callback);
+    void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
 
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
      * @return The WorkbookChartSeries
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookChartSeries put() throws ClientException;
+     WorkbookChartSeries put(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException;
     /**
      * Gets the WorkbookChartSeries
      * @param callback The callback to be called after success or failure.

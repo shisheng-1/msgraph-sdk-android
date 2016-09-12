@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsProperBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
 

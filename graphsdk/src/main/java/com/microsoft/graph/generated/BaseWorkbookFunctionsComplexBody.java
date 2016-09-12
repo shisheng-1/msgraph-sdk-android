@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsComplexBody {
      * The real Num.
      */
     @SerializedName("realNum")
+    @Expose
     public com.google.gson.JsonElement realNum;
 
     /**
      * The i Num.
      */
     @SerializedName("iNum")
+    @Expose
     public com.google.gson.JsonElement iNum;
 
     /**
      * The suffix.
      */
     @SerializedName("suffix")
+    @Expose
     public com.google.gson.JsonElement suffix;
 
 

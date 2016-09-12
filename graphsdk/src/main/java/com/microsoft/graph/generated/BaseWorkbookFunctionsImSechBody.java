@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsImSechBody {
      * The inumber.
      */
     @SerializedName("inumber")
+    @Expose
     public com.google.gson.JsonElement inumber;
 
 

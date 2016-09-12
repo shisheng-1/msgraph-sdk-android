@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseAssignedPlan implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseAssignedPlan() {
@@ -36,24 +37,28 @@ public class BaseAssignedPlan implements IJsonBackedObject {
      * The Assigned Date Time.
      */
     @SerializedName("assignedDateTime")
+    @Expose
     public java.util.Calendar assignedDateTime;
 
     /**
      * The Capability Status.
      */
     @SerializedName("capabilityStatus")
+    @Expose
     public String capabilityStatus;
 
     /**
      * The Service.
      */
     @SerializedName("service")
+    @Expose
     public String service;
 
     /**
      * The Service Plan Id.
      */
     @SerializedName("servicePlanId")
+    @Expose
     public java.util.UUID servicePlanId;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsExpon_DistBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The lambda.
      */
     @SerializedName("lambda")
+    @Expose
     public com.google.gson.JsonElement lambda;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

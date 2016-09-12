@@ -29,12 +29,14 @@ public class BaseWorkbookTableRowAddBody {
      * The index.
      */
     @SerializedName("index")
+    @Expose
     public Integer index;
 
     /**
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

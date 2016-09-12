@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsImPowerBody {
      * The inumber.
      */
     @SerializedName("inumber")
+    @Expose
     public com.google.gson.JsonElement inumber;
 
     /**
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
 

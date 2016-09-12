@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsReptBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The number Times.
      */
     @SerializedName("numberTimes")
+    @Expose
     public com.google.gson.JsonElement numberTimes;
 
 

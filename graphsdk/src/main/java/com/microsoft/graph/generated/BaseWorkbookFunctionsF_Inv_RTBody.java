@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsF_Inv_RTBody {
      * The probability.
      */
     @SerializedName("probability")
+    @Expose
     public com.google.gson.JsonElement probability;
 
     /**
      * The deg Freedom1.
      */
     @SerializedName("degFreedom1")
+    @Expose
     public com.google.gson.JsonElement degFreedom1;
 
     /**
      * The deg Freedom2.
      */
     @SerializedName("degFreedom2")
+    @Expose
     public com.google.gson.JsonElement degFreedom2;
 
 

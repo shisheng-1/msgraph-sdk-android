@@ -30,12 +30,14 @@ public class BaseExtensionCollectionResponse implements IJsonBackedObject {
      * The list of Extension within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Extension> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

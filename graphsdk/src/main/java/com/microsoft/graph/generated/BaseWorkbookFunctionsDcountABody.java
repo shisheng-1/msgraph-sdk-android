@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsDcountABody {
      * The database.
      */
     @SerializedName("database")
+    @Expose
     public com.google.gson.JsonElement database;
 
     /**
      * The field.
      */
     @SerializedName("field")
+    @Expose
     public com.google.gson.JsonElement field;
 
     /**
      * The criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public com.google.gson.JsonElement criteria;
 
 

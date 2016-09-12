@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsConvertBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The from Unit.
      */
     @SerializedName("fromUnit")
+    @Expose
     public com.google.gson.JsonElement fromUnit;
 
     /**
      * The to Unit.
      */
     @SerializedName("toUnit")
+    @Expose
     public com.google.gson.JsonElement toUnit;
 
 

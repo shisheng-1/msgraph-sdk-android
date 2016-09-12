@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseShared implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseShared() {
@@ -36,12 +37,14 @@ public class BaseShared implements IJsonBackedObject {
      * The Owner.
      */
     @SerializedName("owner")
+    @Expose
     public IdentitySet owner;
 
     /**
      * The Scope.
      */
     @SerializedName("scope")
+    @Expose
     public String scope;
 
 

@@ -29,48 +29,56 @@ public class BaseWorkbookFunctionsAccrIntBody {
      * The issue.
      */
     @SerializedName("issue")
+    @Expose
     public com.google.gson.JsonElement issue;
 
     /**
      * The first Interest.
      */
     @SerializedName("firstInterest")
+    @Expose
     public com.google.gson.JsonElement firstInterest;
 
     /**
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The par.
      */
     @SerializedName("par")
+    @Expose
     public com.google.gson.JsonElement par;
 
     /**
      * The frequency.
      */
     @SerializedName("frequency")
+    @Expose
     public com.google.gson.JsonElement frequency;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
     /**
      * The calc Method.
      */
     @SerializedName("calcMethod")
+    @Expose
     public com.google.gson.JsonElement calcMethod;
 
 

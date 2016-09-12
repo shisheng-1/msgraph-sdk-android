@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsSydBody {
      * The cost.
      */
     @SerializedName("cost")
+    @Expose
     public com.google.gson.JsonElement cost;
 
     /**
      * The salvage.
      */
     @SerializedName("salvage")
+    @Expose
     public com.google.gson.JsonElement salvage;
 
     /**
      * The life.
      */
     @SerializedName("life")
+    @Expose
     public com.google.gson.JsonElement life;
 
     /**
      * The per.
      */
     @SerializedName("per")
+    @Expose
     public com.google.gson.JsonElement per;
 
 

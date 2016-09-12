@@ -30,12 +30,14 @@ public class BaseEventCollectionResponse implements IJsonBackedObject {
      * The list of Event within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Event> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

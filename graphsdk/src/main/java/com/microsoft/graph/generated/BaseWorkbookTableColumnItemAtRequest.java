@@ -35,40 +35,43 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
 
     /**
      * Patches the WorkbookTableColumnItemAt
-     *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookTableColumn> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookTableColumn);
     }
 
     /**
      * Patches the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
      * @return The WorkbookTableColumn
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableColumn patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookTableColumn patch(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookTableColumn);
     }
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookTableColumn> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookTableColumn);
     }
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
+     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
      * @return The WorkbookTableColumn
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTableColumn put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookTableColumn put(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookTableColumn);
     }
     /**
      * Gets the WorkbookTableColumn

@@ -29,30 +29,35 @@ public class BaseWorkbookRangeSortApplyBody {
      * The fields.
      */
     @SerializedName("fields")
+    @Expose
     public List<WorkbookSortField> fields;
 
     /**
      * The match Case.
      */
     @SerializedName("matchCase")
+    @Expose
     public Boolean matchCase;
 
     /**
      * The has Headers.
      */
     @SerializedName("hasHeaders")
+    @Expose
     public Boolean hasHeaders;
 
     /**
      * The orientation.
      */
     @SerializedName("orientation")
+    @Expose
     public String orientation;
 
     /**
      * The method.
      */
     @SerializedName("method")
+    @Expose
     public String method;
 
 

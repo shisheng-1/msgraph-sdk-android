@@ -70,7 +70,7 @@ public class DefaultSerializerTests extends AndroidTestCase {
     }
 
     public void testRecurrenceRangeSerialization() throws Exception {
-        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"@odata.type\":\"microsoft.graph.recurrenceRange\",\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
+        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         BaseRecurrenceRange brr = new BaseRecurrenceRange();
         brr.type = RecurrenceRangeType.endDate;

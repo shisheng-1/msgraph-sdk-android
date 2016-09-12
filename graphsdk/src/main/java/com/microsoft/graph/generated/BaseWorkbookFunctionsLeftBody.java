@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsLeftBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The num Chars.
      */
     @SerializedName("numChars")
+    @Expose
     public com.google.gson.JsonElement numChars;
 
 

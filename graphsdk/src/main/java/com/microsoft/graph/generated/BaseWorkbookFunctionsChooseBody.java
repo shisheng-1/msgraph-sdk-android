@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsChooseBody {
      * The index Num.
      */
     @SerializedName("indexNum")
+    @Expose
     public com.google.gson.JsonElement indexNum;
 
     /**
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

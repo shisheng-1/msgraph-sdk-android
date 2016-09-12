@@ -34,24 +34,28 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public String type;
 
     /**
      * The Value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
     /**
      * The Visible.
      */
     @SerializedName("visible")
+    @Expose
     public Boolean visible;
 
 

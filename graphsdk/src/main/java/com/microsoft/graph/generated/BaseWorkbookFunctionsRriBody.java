@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsRriBody {
      * The nper.
      */
     @SerializedName("nper")
+    @Expose
     public com.google.gson.JsonElement nper;
 
     /**
      * The pv.
      */
     @SerializedName("pv")
+    @Expose
     public com.google.gson.JsonElement pv;
 
     /**
      * The fv.
      */
     @SerializedName("fv")
+    @Expose
     public com.google.gson.JsonElement fv;
 
 

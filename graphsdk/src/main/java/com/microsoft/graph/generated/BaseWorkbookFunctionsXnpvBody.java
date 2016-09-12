@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsXnpvBody {
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The dates.
      */
     @SerializedName("dates")
+    @Expose
     public com.google.gson.JsonElement dates;
 
 

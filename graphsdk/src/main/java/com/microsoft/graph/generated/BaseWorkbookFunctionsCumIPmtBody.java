@@ -29,36 +29,42 @@ public class BaseWorkbookFunctionsCumIPmtBody {
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The nper.
      */
     @SerializedName("nper")
+    @Expose
     public com.google.gson.JsonElement nper;
 
     /**
      * The pv.
      */
     @SerializedName("pv")
+    @Expose
     public com.google.gson.JsonElement pv;
 
     /**
      * The start Period.
      */
     @SerializedName("startPeriod")
+    @Expose
     public com.google.gson.JsonElement startPeriod;
 
     /**
      * The end Period.
      */
     @SerializedName("endPeriod")
+    @Expose
     public com.google.gson.JsonElement endPeriod;
 
     /**
      * The type.
      */
     @SerializedName("type")
+    @Expose
     public com.google.gson.JsonElement type;
 
 

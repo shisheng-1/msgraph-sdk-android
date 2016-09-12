@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsSubstituteBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The old Text.
      */
     @SerializedName("oldText")
+    @Expose
     public com.google.gson.JsonElement oldText;
 
     /**
      * The new Text.
      */
     @SerializedName("newText")
+    @Expose
     public com.google.gson.JsonElement newText;
 
     /**
      * The instance Num.
      */
     @SerializedName("instanceNum")
+    @Expose
     public com.google.gson.JsonElement instanceNum;
 
 

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookSortField implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookSortField() {
@@ -36,36 +37,42 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
      * The Ascending.
      */
     @SerializedName("ascending")
+    @Expose
     public Boolean ascending;
 
     /**
      * The Color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
     /**
      * The Data Option.
      */
     @SerializedName("dataOption")
+    @Expose
     public String dataOption;
 
     /**
      * The Icon.
      */
     @SerializedName("icon")
+    @Expose
     public WorkbookIcon icon;
 
     /**
      * The Key.
      */
     @SerializedName("key")
+    @Expose
     public Integer key;
 
     /**
      * The Sort On.
      */
     @SerializedName("sortOn")
+    @Expose
     public String sortOn;
 
 

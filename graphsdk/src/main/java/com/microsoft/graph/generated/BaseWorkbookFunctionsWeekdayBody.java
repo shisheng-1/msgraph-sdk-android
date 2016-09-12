@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsWeekdayBody {
      * The serial Number.
      */
     @SerializedName("serialNumber")
+    @Expose
     public com.google.gson.JsonElement serialNumber;
 
     /**
      * The return Type.
      */
     @SerializedName("returnType")
+    @Expose
     public com.google.gson.JsonElement returnType;
 
 

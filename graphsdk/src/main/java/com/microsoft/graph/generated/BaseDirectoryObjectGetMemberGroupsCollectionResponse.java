@@ -27,9 +27,11 @@ import com.google.gson.annotations.*;
 public class BaseDirectoryObjectGetMemberGroupsCollectionResponse implements IJsonBackedObject {
 
     @SerializedName("value")
+    @Expose
     public List<String> value;
 
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

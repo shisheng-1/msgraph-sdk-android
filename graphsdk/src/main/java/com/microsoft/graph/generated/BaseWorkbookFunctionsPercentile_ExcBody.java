@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsPercentile_ExcBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
     /**
      * The k.
      */
     @SerializedName("k")
+    @Expose
     public com.google.gson.JsonElement k;
 
 

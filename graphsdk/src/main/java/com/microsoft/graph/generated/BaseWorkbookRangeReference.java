@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookRangeReference implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookRangeReference() {
@@ -36,6 +37,7 @@ public class BaseWorkbookRangeReference implements IJsonBackedObject {
      * The Address.
      */
     @SerializedName("address")
+    @Expose
     public String address;
 
 

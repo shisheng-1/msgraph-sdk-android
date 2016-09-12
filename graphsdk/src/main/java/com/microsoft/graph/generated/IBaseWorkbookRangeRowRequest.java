@@ -28,32 +28,36 @@ public interface IBaseWorkbookRangeRowRequest {
     /**
      * Patches the WorkbookRangeRow
      *
+     * @param srcWorkbookRange The WorkbookRange with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookRange> callback);
+    void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
 
     /**
      * Patches the WorkbookRangeRow
      *
+     * @param srcWorkbookRange The WorkbookRange with which to PATCH
      * @return The WorkbookRange
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookRange patch() throws ClientException;
+    WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException;
 
     /**
      * Puts the WorkbookRangeRow
      *
+     * @param srcWorkbookRange The WorkbookRange to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookRange> callback);
+    void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
 
     /**
      * Puts the WorkbookRangeRow
      *
+     * @param srcWorkbookRange The WorkbookRange to PUT
      * @return The WorkbookRange
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookRange put() throws ClientException;
+     WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException;
     /**
      * Gets the WorkbookRange
      * @param callback The callback to be called after success or failure.

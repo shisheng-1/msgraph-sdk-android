@@ -34,30 +34,35 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
      * The Column Width.
      */
     @SerializedName("columnWidth")
+    @Expose
     public Double columnWidth;
 
     /**
      * The Horizontal Alignment.
      */
     @SerializedName("horizontalAlignment")
+    @Expose
     public String horizontalAlignment;
 
     /**
      * The Row Height.
      */
     @SerializedName("rowHeight")
+    @Expose
     public Double rowHeight;
 
     /**
      * The Vertical Alignment.
      */
     @SerializedName("verticalAlignment")
+    @Expose
     public String verticalAlignment;
 
     /**
      * The Wrap Text.
      */
     @SerializedName("wrapText")
+    @Expose
     public Boolean wrapText;
 
     /**
@@ -69,18 +74,21 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
      * The Fill.
      */
     @SerializedName("fill")
+    @Expose
     public WorkbookRangeFill fill;
 
     /**
      * The Font.
      */
     @SerializedName("font")
+    @Expose
     public WorkbookRangeFont font;
 
     /**
      * The Protection.
      */
     @SerializedName("protection")
+    @Expose
     public WorkbookFormatProtection protection;
 
 

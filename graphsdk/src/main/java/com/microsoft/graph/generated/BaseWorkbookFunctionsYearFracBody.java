@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsYearFracBody {
      * The start Date.
      */
     @SerializedName("startDate")
+    @Expose
     public com.google.gson.JsonElement startDate;
 
     /**
      * The end Date.
      */
     @SerializedName("endDate")
+    @Expose
     public com.google.gson.JsonElement endDate;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

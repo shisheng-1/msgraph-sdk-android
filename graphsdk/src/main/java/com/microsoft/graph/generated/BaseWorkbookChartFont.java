@@ -34,36 +34,42 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
      * The Bold.
      */
     @SerializedName("bold")
+    @Expose
     public Boolean bold;
 
     /**
      * The Color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
     /**
      * The Italic.
      */
     @SerializedName("italic")
+    @Expose
     public Boolean italic;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Size.
      */
     @SerializedName("size")
+    @Expose
     public Double size;
 
     /**
      * The Underline.
      */
     @SerializedName("underline")
+    @Expose
     public String underline;
 
 

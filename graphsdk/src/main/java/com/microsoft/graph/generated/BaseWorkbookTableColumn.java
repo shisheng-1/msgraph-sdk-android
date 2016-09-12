@@ -34,24 +34,28 @@ public class BaseWorkbookTableColumn extends Entity implements IJsonBackedObject
      * The Index.
      */
     @SerializedName("index")
+    @Expose
     public Integer index;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The Filter.
      */
     @SerializedName("filter")
+    @Expose
     public WorkbookFilter filter;
 
 

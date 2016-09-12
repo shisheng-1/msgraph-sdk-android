@@ -29,12 +29,14 @@ public class BaseDriveItemCopyBody {
      * The name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The parent Reference.
      */
     @SerializedName("parentReference")
+    @Expose
     public ItemReference parentReference;
 
 

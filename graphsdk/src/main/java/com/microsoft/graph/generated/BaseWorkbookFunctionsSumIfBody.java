@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsSumIfBody {
      * The range.
      */
     @SerializedName("range")
+    @Expose
     public com.google.gson.JsonElement range;
 
     /**
      * The criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public com.google.gson.JsonElement criteria;
 
     /**
      * The sum Range.
      */
     @SerializedName("sumRange")
+    @Expose
     public com.google.gson.JsonElement sumRange;
 
 

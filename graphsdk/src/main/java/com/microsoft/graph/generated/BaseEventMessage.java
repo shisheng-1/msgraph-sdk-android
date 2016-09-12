@@ -34,12 +34,14 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
      * The Meeting Message Type.
      */
     @SerializedName("meetingMessageType")
+    @Expose
     public MeetingMessageType meetingMessageType;
 
     /**
      * The Event.
      */
     @SerializedName("event")
+    @Expose
     public Event event;
 
 

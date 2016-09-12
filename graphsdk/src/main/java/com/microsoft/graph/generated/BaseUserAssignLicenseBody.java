@@ -29,12 +29,14 @@ public class BaseUserAssignLicenseBody {
      * The add Licenses.
      */
     @SerializedName("addLicenses")
+    @Expose
     public List<AssignedLicense> addLicenses;
 
     /**
      * The remove Licenses.
      */
     @SerializedName("removeLicenses")
+    @Expose
     public List<java.util.UUID> removeLicenses;
 
 

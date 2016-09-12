@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsReplaceBBody {
      * The old Text.
      */
     @SerializedName("oldText")
+    @Expose
     public com.google.gson.JsonElement oldText;
 
     /**
      * The start Num.
      */
     @SerializedName("startNum")
+    @Expose
     public com.google.gson.JsonElement startNum;
 
     /**
      * The num Bytes.
      */
     @SerializedName("numBytes")
+    @Expose
     public com.google.gson.JsonElement numBytes;
 
     /**
      * The new Text.
      */
     @SerializedName("newText")
+    @Expose
     public com.google.gson.JsonElement newText;
 
 

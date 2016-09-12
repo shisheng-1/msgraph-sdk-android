@@ -34,24 +34,28 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Show Headers.
      */
     @SerializedName("showHeaders")
+    @Expose
     public Boolean showHeaders;
 
     /**
      * The Show Totals.
      */
     @SerializedName("showTotals")
+    @Expose
     public Boolean showTotals;
 
     /**
      * The Style.
      */
     @SerializedName("style")
+    @Expose
     public String style;
 
     /**
@@ -68,12 +72,14 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
      * The Sort.
      */
     @SerializedName("sort")
+    @Expose
     public WorkbookTableSort sort;
 
     /**
      * The Worksheet.
      */
     @SerializedName("worksheet")
+    @Expose
     public WorkbookWorksheet worksheet;
 
 

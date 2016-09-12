@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsErfBody {
      * The lower Limit.
      */
     @SerializedName("lowerLimit")
+    @Expose
     public com.google.gson.JsonElement lowerLimit;
 
     /**
      * The upper Limit.
      */
     @SerializedName("upperLimit")
+    @Expose
     public com.google.gson.JsonElement upperLimit;
 
 

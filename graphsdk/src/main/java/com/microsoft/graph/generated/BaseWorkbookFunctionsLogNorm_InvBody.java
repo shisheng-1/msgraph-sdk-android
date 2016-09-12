@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsLogNorm_InvBody {
      * The probability.
      */
     @SerializedName("probability")
+    @Expose
     public com.google.gson.JsonElement probability;
 
     /**
      * The mean.
      */
     @SerializedName("mean")
+    @Expose
     public com.google.gson.JsonElement mean;
 
     /**
      * The standard Dev.
      */
     @SerializedName("standardDev")
+    @Expose
     public com.google.gson.JsonElement standardDev;
 
 

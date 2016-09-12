@@ -29,18 +29,21 @@ public class BaseWorkbookFilterApplyCustomFilterBody {
      * The criteria1.
      */
     @SerializedName("criteria1")
+    @Expose
     public String criteria1;
 
     /**
      * The criteria2.
      */
     @SerializedName("criteria2")
+    @Expose
     public String criteria2;
 
     /**
      * The oper.
      */
     @SerializedName("oper")
+    @Expose
     public String oper;
 
 

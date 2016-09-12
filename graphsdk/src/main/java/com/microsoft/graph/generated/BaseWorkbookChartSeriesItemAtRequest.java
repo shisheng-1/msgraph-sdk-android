@@ -35,40 +35,43 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
 
     /**
      * Patches the WorkbookChartSeriesItemAt
-     *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookChartSeries> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookChartSeries);
     }
 
     /**
      * Patches the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
      * @return The WorkbookChartSeries
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartSeries patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookChartSeries patch(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookChartSeries);
     }
 
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookChartSeries> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookChartSeries);
     }
 
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
+     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
      * @return The WorkbookChartSeries
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartSeries put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookChartSeries put(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookChartSeries);
     }
     /**
      * Gets the WorkbookChartSeries

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseSharingInvitation implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseSharingInvitation() {
@@ -36,24 +37,28 @@ public class BaseSharingInvitation implements IJsonBackedObject {
      * The Email.
      */
     @SerializedName("email")
+    @Expose
     public String email;
 
     /**
      * The Invited By.
      */
     @SerializedName("invitedBy")
+    @Expose
     public IdentitySet invitedBy;
 
     /**
      * The Redeemed By.
      */
     @SerializedName("redeemedBy")
+    @Expose
     public String redeemedBy;
 
     /**
      * The Sign In Required.
      */
     @SerializedName("signInRequired")
+    @Expose
     public Boolean signInRequired;
 
 

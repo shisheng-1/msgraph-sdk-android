@@ -34,54 +34,63 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
      * The Position.
      */
     @SerializedName("position")
+    @Expose
     public String position;
 
     /**
      * The Separator.
      */
     @SerializedName("separator")
+    @Expose
     public String separator;
 
     /**
      * The Show Bubble Size.
      */
     @SerializedName("showBubbleSize")
+    @Expose
     public Boolean showBubbleSize;
 
     /**
      * The Show Category Name.
      */
     @SerializedName("showCategoryName")
+    @Expose
     public Boolean showCategoryName;
 
     /**
      * The Show Legend Key.
      */
     @SerializedName("showLegendKey")
+    @Expose
     public Boolean showLegendKey;
 
     /**
      * The Show Percentage.
      */
     @SerializedName("showPercentage")
+    @Expose
     public Boolean showPercentage;
 
     /**
      * The Show Series Name.
      */
     @SerializedName("showSeriesName")
+    @Expose
     public Boolean showSeriesName;
 
     /**
      * The Show Value.
      */
     @SerializedName("showValue")
+    @Expose
     public Boolean showValue;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartDataLabelFormat format;
 
 

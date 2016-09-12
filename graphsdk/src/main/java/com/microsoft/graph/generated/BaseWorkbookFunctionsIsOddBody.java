@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsIsOddBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
 

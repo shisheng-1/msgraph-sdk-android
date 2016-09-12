@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsNominalBody {
      * The effect Rate.
      */
     @SerializedName("effectRate")
+    @Expose
     public com.google.gson.JsonElement effectRate;
 
     /**
      * The npery.
      */
     @SerializedName("npery")
+    @Expose
     public com.google.gson.JsonElement npery;
 
 

@@ -34,12 +34,14 @@ public class BaseWorkbookChartSeriesFormat extends Entity implements IJsonBacked
      * The Fill.
      */
     @SerializedName("fill")
+    @Expose
     public WorkbookChartFill fill;
 
     /**
      * The Line.
      */
     @SerializedName("line")
+    @Expose
     public WorkbookChartLineFormat line;
 
 

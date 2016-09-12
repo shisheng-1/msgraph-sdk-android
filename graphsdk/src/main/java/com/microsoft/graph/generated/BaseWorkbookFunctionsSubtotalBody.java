@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsSubtotalBody {
      * The function Num.
      */
     @SerializedName("functionNum")
+    @Expose
     public com.google.gson.JsonElement functionNum;
 
     /**
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsDatevalueBody {
      * The date Text.
      */
     @SerializedName("dateText")
+    @Expose
     public com.google.gson.JsonElement dateText;
 
 

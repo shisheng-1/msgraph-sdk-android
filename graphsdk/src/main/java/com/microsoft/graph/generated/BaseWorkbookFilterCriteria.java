@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookFilterCriteria() {
@@ -36,48 +37,56 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
      * The Color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
     /**
      * The Criterion1.
      */
     @SerializedName("criterion1")
+    @Expose
     public String criterion1;
 
     /**
      * The Criterion2.
      */
     @SerializedName("criterion2")
+    @Expose
     public String criterion2;
 
     /**
      * The Dynamic Criteria.
      */
     @SerializedName("dynamicCriteria")
+    @Expose
     public String dynamicCriteria;
 
     /**
      * The Filter On.
      */
     @SerializedName("filterOn")
+    @Expose
     public String filterOn;
 
     /**
      * The Icon.
      */
     @SerializedName("icon")
+    @Expose
     public WorkbookIcon icon;
 
     /**
      * The Operator.
      */
     @SerializedName("operator")
+    @Expose
     public String operator;
 
     /**
      * The Values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

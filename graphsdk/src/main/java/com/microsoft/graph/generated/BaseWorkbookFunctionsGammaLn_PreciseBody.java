@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
 

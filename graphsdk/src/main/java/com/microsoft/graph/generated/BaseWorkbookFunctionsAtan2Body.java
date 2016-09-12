@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsAtan2Body {
      * The x Num.
      */
     @SerializedName("xNum")
+    @Expose
     public com.google.gson.JsonElement xNum;
 
     /**
      * The y Num.
      */
     @SerializedName("yNum")
+    @Expose
     public com.google.gson.JsonElement yNum;
 
 

@@ -34,18 +34,21 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
      * The Content Id.
      */
     @SerializedName("contentId")
+    @Expose
     public String contentId;
 
     /**
      * The Content Location.
      */
     @SerializedName("contentLocation")
+    @Expose
     public String contentLocation;
 
     /**
      * The Content Bytes.
      */
     @SerializedName("contentBytes")
+    @Expose
     public byte[] contentBytes;
 
 

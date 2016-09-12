@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsXirrBody {
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The dates.
      */
     @SerializedName("dates")
+    @Expose
     public com.google.gson.JsonElement dates;
 
     /**
      * The guess.
      */
     @SerializedName("guess")
+    @Expose
     public com.google.gson.JsonElement guess;
 
 

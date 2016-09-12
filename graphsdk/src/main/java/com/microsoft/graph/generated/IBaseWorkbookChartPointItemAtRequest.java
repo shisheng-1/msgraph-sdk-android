@@ -28,32 +28,36 @@ public interface IBaseWorkbookChartPointItemAtRequest {
     /**
      * Patches the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookChartPoint> callback);
+    void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Patches the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
      * @return The WorkbookChartPoint
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookChartPoint patch() throws ClientException;
+    WorkbookChartPoint patch(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException;
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookChartPoint> callback);
+    void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
      * @return The WorkbookChartPoint
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookChartPoint put() throws ClientException;
+     WorkbookChartPoint put(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException;
     /**
      * Gets the WorkbookChartPoint
      * @param callback The callback to be called after success or failure.

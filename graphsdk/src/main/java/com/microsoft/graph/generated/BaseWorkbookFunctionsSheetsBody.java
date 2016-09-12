@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsSheetsBody {
      * The reference.
      */
     @SerializedName("reference")
+    @Expose
     public com.google.gson.JsonElement reference;
 
 

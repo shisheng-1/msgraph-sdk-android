@@ -34,30 +34,35 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Parent Folder Id.
      */
     @SerializedName("parentFolderId")
+    @Expose
     public String parentFolderId;
 
     /**
      * The Child Folder Count.
      */
     @SerializedName("childFolderCount")
+    @Expose
     public Integer childFolderCount;
 
     /**
      * The Unread Item Count.
      */
     @SerializedName("unreadItemCount")
+    @Expose
     public Integer unreadItemCount;
 
     /**
      * The Total Item Count.
      */
     @SerializedName("totalItemCount")
+    @Expose
     public Integer totalItemCount;
 
     /**

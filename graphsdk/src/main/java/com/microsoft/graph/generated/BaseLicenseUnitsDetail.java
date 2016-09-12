@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseLicenseUnitsDetail() {
@@ -36,18 +37,21 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
      * The Enabled.
      */
     @SerializedName("enabled")
+    @Expose
     public Integer enabled;
 
     /**
      * The Suspended.
      */
     @SerializedName("suspended")
+    @Expose
     public Integer suspended;
 
     /**
      * The Warning.
      */
     @SerializedName("warning")
+    @Expose
     public Integer warning;
 
 

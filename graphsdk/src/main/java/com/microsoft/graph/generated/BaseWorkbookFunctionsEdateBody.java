@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsEdateBody {
      * The start Date.
      */
     @SerializedName("startDate")
+    @Expose
     public com.google.gson.JsonElement startDate;
 
     /**
      * The months.
      */
     @SerializedName("months")
+    @Expose
     public com.google.gson.JsonElement months;
 
 

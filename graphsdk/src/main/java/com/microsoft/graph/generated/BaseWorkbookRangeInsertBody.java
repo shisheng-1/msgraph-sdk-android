@@ -29,6 +29,7 @@ public class BaseWorkbookRangeInsertBody {
      * The shift.
      */
     @SerializedName("shift")
+    @Expose
     public String shift;
 
 

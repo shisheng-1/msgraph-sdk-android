@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsError_TypeBody {
      * The error Val.
      */
     @SerializedName("errorVal")
+    @Expose
     public com.google.gson.JsonElement errorVal;
 
 

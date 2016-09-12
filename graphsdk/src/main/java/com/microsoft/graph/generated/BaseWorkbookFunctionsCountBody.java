@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsCountBody {
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsLogBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The base.
      */
     @SerializedName("base")
+    @Expose
     public com.google.gson.JsonElement base;
 
 

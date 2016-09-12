@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseEmailAddress implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseEmailAddress() {
@@ -36,12 +37,14 @@ public class BaseEmailAddress implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Address.
      */
     @SerializedName("address")
+    @Expose
     public String address;
 
 

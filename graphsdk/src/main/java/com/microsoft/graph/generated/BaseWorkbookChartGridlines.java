@@ -34,12 +34,14 @@ public class BaseWorkbookChartGridlines extends Entity implements IJsonBackedObj
      * The Visible.
      */
     @SerializedName("visible")
+    @Expose
     public Boolean visible;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartGridlinesFormat format;
 
 

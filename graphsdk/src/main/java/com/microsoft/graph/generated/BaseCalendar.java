@@ -34,18 +34,21 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Color.
      */
     @SerializedName("color")
+    @Expose
     public CalendarColor color;
 
     /**
      * The Change Key.
      */
     @SerializedName("changeKey")
+    @Expose
     public String changeKey;
 
     /**

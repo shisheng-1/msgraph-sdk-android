@@ -29,12 +29,14 @@ public class BaseWorkbookChartSetPositionBody {
      * The start Cell.
      */
     @SerializedName("startCell")
+    @Expose
     public com.google.gson.JsonElement startCell;
 
     /**
      * The end Cell.
      */
     @SerializedName("endCell")
+    @Expose
     public com.google.gson.JsonElement endCell;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsCeiling_MathBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The significance.
      */
     @SerializedName("significance")
+    @Expose
     public com.google.gson.JsonElement significance;
 
     /**
      * The mode.
      */
     @SerializedName("mode")
+    @Expose
     public com.google.gson.JsonElement mode;
 
 

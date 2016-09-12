@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsNorm_S_DistBody {
      * The z.
      */
     @SerializedName("z")
+    @Expose
     public com.google.gson.JsonElement z;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

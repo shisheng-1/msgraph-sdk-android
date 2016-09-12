@@ -34,18 +34,21 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
      * The Description.
      */
     @SerializedName("description")
+    @Expose
     public String description;
 
     /**
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Role Template Id.
      */
     @SerializedName("roleTemplateId")
+    @Expose
     public String roleTemplateId;
 
     /**

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseQuota implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseQuota() {
@@ -36,30 +37,35 @@ public class BaseQuota implements IJsonBackedObject {
      * The Deleted.
      */
     @SerializedName("deleted")
+    @Expose
     public Long deleted;
 
     /**
      * The Remaining.
      */
     @SerializedName("remaining")
+    @Expose
     public Long remaining;
 
     /**
      * The State.
      */
     @SerializedName("state")
+    @Expose
     public String state;
 
     /**
      * The Total.
      */
     @SerializedName("total")
+    @Expose
     public Long total;
 
     /**
      * The Used.
      */
     @SerializedName("used")
+    @Expose
     public Long used;
 
 

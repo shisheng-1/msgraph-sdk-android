@@ -35,40 +35,43 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
 
     /**
      * Patches the WorkbookChartPointItemAt
-     *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookChartPoint> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookChartPoint);
     }
 
     /**
      * Patches the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
      * @return The WorkbookChartPoint
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartPoint patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookChartPoint patch(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookChartPoint);
     }
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookChartPoint> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookChartPoint);
     }
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
+     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
      * @return The WorkbookChartPoint
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChartPoint put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookChartPoint put(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookChartPoint);
     }
     /**
      * Gets the WorkbookChartPoint

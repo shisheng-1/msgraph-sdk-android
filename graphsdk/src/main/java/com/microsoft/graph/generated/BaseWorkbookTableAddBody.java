@@ -29,12 +29,14 @@ public class BaseWorkbookTableAddBody {
      * The address.
      */
     @SerializedName("address")
+    @Expose
     public String address;
 
     /**
      * The has Headers.
      */
     @SerializedName("hasHeaders")
+    @Expose
     public Boolean hasHeaders;
 
 

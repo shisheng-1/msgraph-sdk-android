@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsBitlshiftBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The shift Amount.
      */
     @SerializedName("shiftAmount")
+    @Expose
     public com.google.gson.JsonElement shiftAmount;
 
 

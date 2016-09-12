@@ -29,6 +29,7 @@ public class BaseWorkbookFilterApplyCellColorFilterBody {
      * The color.
      */
     @SerializedName("color")
+    @Expose
     public String color;
 
 

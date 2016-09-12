@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsUsdollarBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The decimals.
      */
     @SerializedName("decimals")
+    @Expose
     public com.google.gson.JsonElement decimals;
 
 

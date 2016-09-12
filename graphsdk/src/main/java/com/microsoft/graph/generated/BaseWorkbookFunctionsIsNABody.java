@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsIsNABody {
      * The value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsNetworkDaysBody {
      * The start Date.
      */
     @SerializedName("startDate")
+    @Expose
     public com.google.gson.JsonElement startDate;
 
     /**
      * The end Date.
      */
     @SerializedName("endDate")
+    @Expose
     public com.google.gson.JsonElement endDate;
 
     /**
      * The holidays.
      */
     @SerializedName("holidays")
+    @Expose
     public com.google.gson.JsonElement holidays;
 
 

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseImage implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseImage() {
@@ -36,12 +37,14 @@ public class BaseImage implements IJsonBackedObject {
      * The Height.
      */
     @SerializedName("height")
+    @Expose
     public Integer height;
 
     /**
      * The Width.
      */
     @SerializedName("width")
+    @Expose
     public Integer width;
 
 

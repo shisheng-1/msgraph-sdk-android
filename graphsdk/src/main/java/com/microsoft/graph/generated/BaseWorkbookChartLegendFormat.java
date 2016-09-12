@@ -34,12 +34,14 @@ public class BaseWorkbookChartLegendFormat extends Entity implements IJsonBacked
      * The Fill.
      */
     @SerializedName("fill")
+    @Expose
     public WorkbookChartFill fill;
 
     /**
      * The Font.
      */
     @SerializedName("font")
+    @Expose
     public WorkbookChartFont font;
 
 

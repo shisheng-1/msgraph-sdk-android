@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsFixedBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The decimals.
      */
     @SerializedName("decimals")
+    @Expose
     public com.google.gson.JsonElement decimals;
 
     /**
      * The no Commas.
      */
     @SerializedName("noCommas")
+    @Expose
     public com.google.gson.JsonElement noCommas;
 
 

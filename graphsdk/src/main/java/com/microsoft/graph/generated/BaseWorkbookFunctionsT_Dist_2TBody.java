@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsT_Dist_2TBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The deg Freedom.
      */
     @SerializedName("degFreedom")
+    @Expose
     public com.google.gson.JsonElement degFreedom;
 
 

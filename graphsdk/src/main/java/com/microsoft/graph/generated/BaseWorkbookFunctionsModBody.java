@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsModBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The divisor.
      */
     @SerializedName("divisor")
+    @Expose
     public com.google.gson.JsonElement divisor;
 
 

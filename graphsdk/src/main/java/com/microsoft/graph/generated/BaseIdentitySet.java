@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseIdentitySet implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseIdentitySet() {
@@ -36,18 +37,21 @@ public class BaseIdentitySet implements IJsonBackedObject {
      * The Application.
      */
     @SerializedName("application")
+    @Expose
     public Identity application;
 
     /**
      * The Device.
      */
     @SerializedName("device")
+    @Expose
     public Identity device;
 
     /**
      * The User.
      */
     @SerializedName("user")
+    @Expose
     public Identity user;
 
 

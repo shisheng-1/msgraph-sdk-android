@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsT_DistBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The deg Freedom.
      */
     @SerializedName("degFreedom")
+    @Expose
     public com.google.gson.JsonElement degFreedom;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookChartAddBody {
      * The type.
      */
     @SerializedName("type")
+    @Expose
     public String type;
 
     /**
      * The source Data.
      */
     @SerializedName("sourceData")
+    @Expose
     public com.google.gson.JsonElement sourceData;
 
     /**
      * The series By.
      */
     @SerializedName("seriesBy")
+    @Expose
     public String seriesBy;
 
 

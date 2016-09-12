@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsPhiBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
 

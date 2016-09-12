@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseFileSystemInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseFileSystemInfo() {
@@ -36,12 +37,14 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
      * The Created Date Time.
      */
     @SerializedName("createdDateTime")
+    @Expose
     public java.util.Calendar createdDateTime;
 
     /**
      * The Last Modified Date Time.
      */
     @SerializedName("lastModifiedDateTime")
+    @Expose
     public java.util.Calendar lastModifiedDateTime;
 
 

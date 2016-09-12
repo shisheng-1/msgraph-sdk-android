@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsBinom_InvBody {
      * The trials.
      */
     @SerializedName("trials")
+    @Expose
     public com.google.gson.JsonElement trials;
 
     /**
      * The probability S.
      */
     @SerializedName("probabilityS")
+    @Expose
     public com.google.gson.JsonElement probabilityS;
 
     /**
      * The alpha.
      */
     @SerializedName("alpha")
+    @Expose
     public com.google.gson.JsonElement alpha;
 
 

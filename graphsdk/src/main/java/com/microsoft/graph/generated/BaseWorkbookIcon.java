@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookIcon implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookIcon() {
@@ -36,12 +37,14 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
      * The Index.
      */
     @SerializedName("index")
+    @Expose
     public Integer index;
 
     /**
      * The Set.
      */
     @SerializedName("set")
+    @Expose
     public String set;
 
 

@@ -28,32 +28,36 @@ public interface IBaseWorkbookTableItemAtRequest {
     /**
      * Patches the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    void patch(final ICallback<WorkbookTable> callback);
+    void patch(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback);
 
     /**
      * Patches the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable with which to PATCH
      * @return The WorkbookTable
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-    WorkbookTable patch() throws ClientException;
+    WorkbookTable patch(WorkbookTable srcWorkbookTable) throws ClientException;
 
     /**
      * Puts the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable to PUT
      * @param callback The callback to be called after success or failure
      */
-    void put(final ICallback<WorkbookTable> callback);
+    void put(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback);
 
     /**
      * Puts the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable to PUT
      * @return The WorkbookTable
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     WorkbookTable put() throws ClientException;
+     WorkbookTable put(WorkbookTable srcWorkbookTable) throws ClientException;
     /**
      * Gets the WorkbookTable
      * @param callback The callback to be called after success or failure.

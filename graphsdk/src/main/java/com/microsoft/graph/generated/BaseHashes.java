@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseHashes implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseHashes() {
@@ -36,12 +37,14 @@ public class BaseHashes implements IJsonBackedObject {
      * The Crc32Hash.
      */
     @SerializedName("crc32Hash")
+    @Expose
     public String crc32Hash;
 
     /**
      * The Sha1Hash.
      */
     @SerializedName("sha1Hash")
+    @Expose
     public String sha1Hash;
 
 

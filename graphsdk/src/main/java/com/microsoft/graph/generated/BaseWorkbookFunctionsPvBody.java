@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsPvBody {
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The nper.
      */
     @SerializedName("nper")
+    @Expose
     public com.google.gson.JsonElement nper;
 
     /**
      * The pmt.
      */
     @SerializedName("pmt")
+    @Expose
     public com.google.gson.JsonElement pmt;
 
     /**
      * The fv.
      */
     @SerializedName("fv")
+    @Expose
     public com.google.gson.JsonElement fv;
 
     /**
      * The type.
      */
     @SerializedName("type")
+    @Expose
     public com.google.gson.JsonElement type;
 
 

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsIfBody {
      * The logical Test.
      */
     @SerializedName("logicalTest")
+    @Expose
     public com.google.gson.JsonElement logicalTest;
 
     /**
      * The value If True.
      */
     @SerializedName("valueIfTrue")
+    @Expose
     public com.google.gson.JsonElement valueIfTrue;
 
     /**
      * The value If False.
      */
     @SerializedName("valueIfFalse")
+    @Expose
     public com.google.gson.JsonElement valueIfFalse;
 
 

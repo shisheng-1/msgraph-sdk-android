@@ -30,12 +30,14 @@ public class BasePostCollectionResponse implements IJsonBackedObject {
      * The list of Post within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Post> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsTextBody {
      * The value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
     /**
      * The format Text.
      */
     @SerializedName("formatText")
+    @Expose
     public com.google.gson.JsonElement formatText;
 
 

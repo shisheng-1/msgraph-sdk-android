@@ -34,138 +34,161 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
      * The Received Date Time.
      */
     @SerializedName("receivedDateTime")
+    @Expose
     public java.util.Calendar receivedDateTime;
 
     /**
      * The Sent Date Time.
      */
     @SerializedName("sentDateTime")
+    @Expose
     public java.util.Calendar sentDateTime;
 
     /**
      * The Has Attachments.
      */
     @SerializedName("hasAttachments")
+    @Expose
     public Boolean hasAttachments;
 
     /**
      * The Internet Message Id.
      */
     @SerializedName("internetMessageId")
+    @Expose
     public String internetMessageId;
 
     /**
      * The Subject.
      */
     @SerializedName("subject")
+    @Expose
     public String subject;
 
     /**
      * The Body.
      */
     @SerializedName("body")
+    @Expose
     public ItemBody body;
 
     /**
      * The Body Preview.
      */
     @SerializedName("bodyPreview")
+    @Expose
     public String bodyPreview;
 
     /**
      * The Importance.
      */
     @SerializedName("importance")
+    @Expose
     public Importance importance;
 
     /**
      * The Parent Folder Id.
      */
     @SerializedName("parentFolderId")
+    @Expose
     public String parentFolderId;
 
     /**
      * The Sender.
      */
     @SerializedName("sender")
+    @Expose
     public Recipient sender;
 
     /**
      * The From.
      */
     @SerializedName("from")
+    @Expose
     public Recipient from;
 
     /**
      * The To Recipients.
      */
     @SerializedName("toRecipients")
+    @Expose
     public List<Recipient> toRecipients;
 
     /**
      * The Cc Recipients.
      */
     @SerializedName("ccRecipients")
+    @Expose
     public List<Recipient> ccRecipients;
 
     /**
      * The Bcc Recipients.
      */
     @SerializedName("bccRecipients")
+    @Expose
     public List<Recipient> bccRecipients;
 
     /**
      * The Reply To.
      */
     @SerializedName("replyTo")
+    @Expose
     public List<Recipient> replyTo;
 
     /**
      * The Conversation Id.
      */
     @SerializedName("conversationId")
+    @Expose
     public String conversationId;
 
     /**
      * The Unique Body.
      */
     @SerializedName("uniqueBody")
+    @Expose
     public ItemBody uniqueBody;
 
     /**
      * The Is Delivery Receipt Requested.
      */
     @SerializedName("isDeliveryReceiptRequested")
+    @Expose
     public Boolean isDeliveryReceiptRequested;
 
     /**
      * The Is Read Receipt Requested.
      */
     @SerializedName("isReadReceiptRequested")
+    @Expose
     public Boolean isReadReceiptRequested;
 
     /**
      * The Is Read.
      */
     @SerializedName("isRead")
+    @Expose
     public Boolean isRead;
 
     /**
      * The Is Draft.
      */
     @SerializedName("isDraft")
+    @Expose
     public Boolean isDraft;
 
     /**
      * The Web Link.
      */
     @SerializedName("webLink")
+    @Expose
     public String webLink;
 
     /**
      * The Inference Classification.
      */
     @SerializedName("inferenceClassification")
+    @Expose
     public InferenceClassificationType inferenceClassification;
 
     /**

@@ -34,12 +34,14 @@ public class BaseWorkbookChartTitleFormat extends Entity implements IJsonBackedO
      * The Fill.
      */
     @SerializedName("fill")
+    @Expose
     public WorkbookChartFill fill;
 
     /**
      * The Font.
      */
     @SerializedName("font")
+    @Expose
     public WorkbookChartFont font;
 
 

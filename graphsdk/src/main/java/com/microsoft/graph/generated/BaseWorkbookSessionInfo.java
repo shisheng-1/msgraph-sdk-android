@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookSessionInfo() {
@@ -36,12 +37,14 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
      * The Id.
      */
     @SerializedName("id")
+    @Expose
     public String id;
 
     /**
      * The Persist Changes.
      */
     @SerializedName("persistChanges")
+    @Expose
     public Boolean persistChanges;
 
 

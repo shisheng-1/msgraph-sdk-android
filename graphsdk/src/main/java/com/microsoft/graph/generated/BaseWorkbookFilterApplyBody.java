@@ -29,6 +29,7 @@ public class BaseWorkbookFilterApplyBody {
      * The criteria.
      */
     @SerializedName("criteria")
+    @Expose
     public WorkbookFilterCriteria criteria;
 
 

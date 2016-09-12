@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseRemoteItem implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseRemoteItem() {
@@ -36,42 +37,49 @@ public class BaseRemoteItem implements IJsonBackedObject {
      * The File.
      */
     @SerializedName("file")
+    @Expose
     public File file;
 
     /**
      * The File System Info.
      */
     @SerializedName("fileSystemInfo")
+    @Expose
     public FileSystemInfo fileSystemInfo;
 
     /**
      * The Folder.
      */
     @SerializedName("folder")
+    @Expose
     public Folder folder;
 
     /**
      * The Id.
      */
     @SerializedName("id")
+    @Expose
     public String id;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Parent Reference.
      */
     @SerializedName("parentReference")
+    @Expose
     public ItemReference parentReference;
 
     /**
      * The Size.
      */
     @SerializedName("size")
+    @Expose
     public Long size;
 
 

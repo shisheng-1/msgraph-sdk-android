@@ -29,54 +29,63 @@ public class BaseWorkbookFunctionsOddFPriceBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The issue.
      */
     @SerializedName("issue")
+    @Expose
     public com.google.gson.JsonElement issue;
 
     /**
      * The first Coupon.
      */
     @SerializedName("firstCoupon")
+    @Expose
     public com.google.gson.JsonElement firstCoupon;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The yld.
      */
     @SerializedName("yld")
+    @Expose
     public com.google.gson.JsonElement yld;
 
     /**
      * The redemption.
      */
     @SerializedName("redemption")
+    @Expose
     public com.google.gson.JsonElement redemption;
 
     /**
      * The frequency.
      */
     @SerializedName("frequency")
+    @Expose
     public com.google.gson.JsonElement frequency;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

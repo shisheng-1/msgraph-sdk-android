@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsNegBinom_DistBody {
      * The number F.
      */
     @SerializedName("numberF")
+    @Expose
     public com.google.gson.JsonElement numberF;
 
     /**
      * The number S.
      */
     @SerializedName("numberS")
+    @Expose
     public com.google.gson.JsonElement numberS;
 
     /**
      * The probability S.
      */
     @SerializedName("probabilityS")
+    @Expose
     public com.google.gson.JsonElement probabilityS;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

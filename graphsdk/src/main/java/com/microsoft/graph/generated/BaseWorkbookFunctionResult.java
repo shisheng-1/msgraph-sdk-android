@@ -34,12 +34,14 @@ public class BaseWorkbookFunctionResult extends Entity implements IJsonBackedObj
      * The Error.
      */
     @SerializedName("error")
+    @Expose
     public String error;
 
     /**
      * The Value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
 

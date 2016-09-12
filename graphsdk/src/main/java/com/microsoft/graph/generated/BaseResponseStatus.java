@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseResponseStatus implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseResponseStatus() {
@@ -36,12 +37,14 @@ public class BaseResponseStatus implements IJsonBackedObject {
      * The Response.
      */
     @SerializedName("response")
+    @Expose
     public ResponseType response;
 
     /**
      * The Time.
      */
     @SerializedName("time")
+    @Expose
     public java.util.Calendar time;
 
 

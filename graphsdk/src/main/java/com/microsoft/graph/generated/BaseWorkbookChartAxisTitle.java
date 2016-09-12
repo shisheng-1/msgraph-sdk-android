@@ -34,18 +34,21 @@ public class BaseWorkbookChartAxisTitle extends Entity implements IJsonBackedObj
      * The Text.
      */
     @SerializedName("text")
+    @Expose
     public String text;
 
     /**
      * The Visible.
      */
     @SerializedName("visible")
+    @Expose
     public Boolean visible;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartAxisTitleFormat format;
 
 

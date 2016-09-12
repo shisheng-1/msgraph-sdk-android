@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsDateBody {
      * The year.
      */
     @SerializedName("year")
+    @Expose
     public com.google.gson.JsonElement year;
 
     /**
      * The month.
      */
     @SerializedName("month")
+    @Expose
     public com.google.gson.JsonElement month;
 
     /**
      * The day.
      */
     @SerializedName("day")
+    @Expose
     public com.google.gson.JsonElement day;
 
 

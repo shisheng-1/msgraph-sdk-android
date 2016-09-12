@@ -29,12 +29,14 @@ public class BasePostForwardBody {
      * The comment.
      */
     @SerializedName("comment")
+    @Expose
     public String comment;
 
     /**
      * The to Recipients.
      */
     @SerializedName("toRecipients")
+    @Expose
     public List<Recipient> toRecipients;
 
 

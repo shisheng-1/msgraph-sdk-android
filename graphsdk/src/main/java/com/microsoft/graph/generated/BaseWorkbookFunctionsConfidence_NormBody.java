@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsConfidence_NormBody {
      * The alpha.
      */
     @SerializedName("alpha")
+    @Expose
     public com.google.gson.JsonElement alpha;
 
     /**
      * The standard Dev.
      */
     @SerializedName("standardDev")
+    @Expose
     public com.google.gson.JsonElement standardDev;
 
     /**
      * The size.
      */
     @SerializedName("size")
+    @Expose
     public com.google.gson.JsonElement size;
 
 

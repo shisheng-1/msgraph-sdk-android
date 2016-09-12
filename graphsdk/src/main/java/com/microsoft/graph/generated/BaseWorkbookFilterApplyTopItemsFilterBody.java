@@ -29,6 +29,7 @@ public class BaseWorkbookFilterApplyTopItemsFilterBody {
      * The count.
      */
     @SerializedName("count")
+    @Expose
     public Integer count;
 
 

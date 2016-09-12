@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
      * The sample S.
      */
     @SerializedName("sampleS")
+    @Expose
     public com.google.gson.JsonElement sampleS;
 
     /**
      * The number Sample.
      */
     @SerializedName("numberSample")
+    @Expose
     public com.google.gson.JsonElement numberSample;
 
     /**
      * The population S.
      */
     @SerializedName("populationS")
+    @Expose
     public com.google.gson.JsonElement populationS;
 
     /**
      * The number Pop.
      */
     @SerializedName("numberPop")
+    @Expose
     public com.google.gson.JsonElement numberPop;
 
     /**
      * The cumulative.
      */
     @SerializedName("cumulative")
+    @Expose
     public com.google.gson.JsonElement cumulative;
 
 

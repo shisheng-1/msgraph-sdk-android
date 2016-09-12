@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseWorkbookWorksheetProtectionOptions() {
@@ -36,66 +37,77 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
      * The Allow Auto Filter.
      */
     @SerializedName("allowAutoFilter")
+    @Expose
     public Boolean allowAutoFilter;
 
     /**
      * The Allow Delete Columns.
      */
     @SerializedName("allowDeleteColumns")
+    @Expose
     public Boolean allowDeleteColumns;
 
     /**
      * The Allow Delete Rows.
      */
     @SerializedName("allowDeleteRows")
+    @Expose
     public Boolean allowDeleteRows;
 
     /**
      * The Allow Format Cells.
      */
     @SerializedName("allowFormatCells")
+    @Expose
     public Boolean allowFormatCells;
 
     /**
      * The Allow Format Columns.
      */
     @SerializedName("allowFormatColumns")
+    @Expose
     public Boolean allowFormatColumns;
 
     /**
      * The Allow Format Rows.
      */
     @SerializedName("allowFormatRows")
+    @Expose
     public Boolean allowFormatRows;
 
     /**
      * The Allow Insert Columns.
      */
     @SerializedName("allowInsertColumns")
+    @Expose
     public Boolean allowInsertColumns;
 
     /**
      * The Allow Insert Hyperlinks.
      */
     @SerializedName("allowInsertHyperlinks")
+    @Expose
     public Boolean allowInsertHyperlinks;
 
     /**
      * The Allow Insert Rows.
      */
     @SerializedName("allowInsertRows")
+    @Expose
     public Boolean allowInsertRows;
 
     /**
      * The Allow Pivot Tables.
      */
     @SerializedName("allowPivotTables")
+    @Expose
     public Boolean allowPivotTables;
 
     /**
      * The Allow Sort.
      */
     @SerializedName("allowSort")
+    @Expose
     public Boolean allowSort;
 
 

@@ -29,42 +29,49 @@ public class BaseWorkbookFunctionsAmorLincBody {
      * The cost.
      */
     @SerializedName("cost")
+    @Expose
     public com.google.gson.JsonElement cost;
 
     /**
      * The date Purchased.
      */
     @SerializedName("datePurchased")
+    @Expose
     public com.google.gson.JsonElement datePurchased;
 
     /**
      * The first Period.
      */
     @SerializedName("firstPeriod")
+    @Expose
     public com.google.gson.JsonElement firstPeriod;
 
     /**
      * The salvage.
      */
     @SerializedName("salvage")
+    @Expose
     public com.google.gson.JsonElement salvage;
 
     /**
      * The period.
      */
     @SerializedName("period")
+    @Expose
     public com.google.gson.JsonElement period;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

@@ -29,36 +29,42 @@ public class BaseWorkbookFunctionsPriceMatBody {
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The maturity.
      */
     @SerializedName("maturity")
+    @Expose
     public com.google.gson.JsonElement maturity;
 
     /**
      * The issue.
      */
     @SerializedName("issue")
+    @Expose
     public com.google.gson.JsonElement issue;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The yld.
      */
     @SerializedName("yld")
+    @Expose
     public com.google.gson.JsonElement yld;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 

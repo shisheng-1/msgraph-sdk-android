@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsIsoWeekNumBody {
      * The date.
      */
     @SerializedName("date")
+    @Expose
     public com.google.gson.JsonElement date;
 
 

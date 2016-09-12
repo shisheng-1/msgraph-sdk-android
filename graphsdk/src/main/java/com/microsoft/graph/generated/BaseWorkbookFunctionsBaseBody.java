@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsBaseBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The radix.
      */
     @SerializedName("radix")
+    @Expose
     public com.google.gson.JsonElement radix;
 
     /**
      * The min Length.
      */
     @SerializedName("minLength")
+    @Expose
     public com.google.gson.JsonElement minLength;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsHyperlinkBody {
      * The link Location.
      */
     @SerializedName("linkLocation")
+    @Expose
     public com.google.gson.JsonElement linkLocation;
 
     /**
      * The friendly Name.
      */
     @SerializedName("friendlyName")
+    @Expose
     public com.google.gson.JsonElement friendlyName;
 
 

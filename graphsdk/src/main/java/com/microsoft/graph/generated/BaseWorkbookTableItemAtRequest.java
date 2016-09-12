@@ -35,40 +35,43 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
 
     /**
      * Patches the WorkbookTableItemAt
-     *
+     * @param srcWorkbookTable The WorkbookTable with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookTable> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookTable);
     }
 
     /**
      * Patches the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable with which to PATCH
      * @return The WorkbookTable
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTable patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookTable patch(WorkbookTable srcWorkbookTable) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookTable);
     }
 
     /**
      * Puts the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookTable> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookTable);
     }
 
     /**
      * Puts the WorkbookTableItemAt
      *
+     * @param srcWorkbookTable The WorkbookTable to PUT
      * @return The WorkbookTable
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookTable put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookTable put(WorkbookTable srcWorkbookTable) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookTable);
     }
     /**
      * Gets the WorkbookTable

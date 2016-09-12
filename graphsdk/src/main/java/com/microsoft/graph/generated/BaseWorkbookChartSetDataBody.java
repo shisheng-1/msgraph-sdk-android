@@ -29,12 +29,14 @@ public class BaseWorkbookChartSetDataBody {
      * The source Data.
      */
     @SerializedName("sourceData")
+    @Expose
     public com.google.gson.JsonElement sourceData;
 
     /**
      * The series By.
      */
     @SerializedName("seriesBy")
+    @Expose
     public String seriesBy;
 
 

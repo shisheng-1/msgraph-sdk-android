@@ -30,12 +30,14 @@ public class BaseDeviceCollectionResponse implements IJsonBackedObject {
      * The list of Device within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Device> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsMidbBody {
      * The text.
      */
     @SerializedName("text")
+    @Expose
     public com.google.gson.JsonElement text;
 
     /**
      * The start Num.
      */
     @SerializedName("startNum")
+    @Expose
     public com.google.gson.JsonElement startNum;
 
     /**
      * The num Bytes.
      */
     @SerializedName("numBytes")
+    @Expose
     public com.google.gson.JsonElement numBytes;
 
 

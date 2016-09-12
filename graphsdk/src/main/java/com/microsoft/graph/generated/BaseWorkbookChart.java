@@ -34,54 +34,63 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
      * The Height.
      */
     @SerializedName("height")
+    @Expose
     public Double height;
 
     /**
      * The Left.
      */
     @SerializedName("left")
+    @Expose
     public Double left;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Top.
      */
     @SerializedName("top")
+    @Expose
     public Double top;
 
     /**
      * The Width.
      */
     @SerializedName("width")
+    @Expose
     public Double width;
 
     /**
      * The Axes.
      */
     @SerializedName("axes")
+    @Expose
     public WorkbookChartAxes axes;
 
     /**
      * The Data Labels.
      */
     @SerializedName("dataLabels")
+    @Expose
     public WorkbookChartDataLabels dataLabels;
 
     /**
      * The Format.
      */
     @SerializedName("format")
+    @Expose
     public WorkbookChartAreaFormat format;
 
     /**
      * The Legend.
      */
     @SerializedName("legend")
+    @Expose
     public WorkbookChartLegend legend;
 
     /**
@@ -93,12 +102,14 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
      * The Title.
      */
     @SerializedName("title")
+    @Expose
     public WorkbookChartTitle title;
 
     /**
      * The Worksheet.
      */
     @SerializedName("worksheet")
+    @Expose
     public WorkbookWorksheet worksheet;
 
 

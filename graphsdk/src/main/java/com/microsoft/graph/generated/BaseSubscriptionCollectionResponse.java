@@ -30,12 +30,14 @@ public class BaseSubscriptionCollectionResponse implements IJsonBackedObject {
      * The list of Subscription within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Subscription> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

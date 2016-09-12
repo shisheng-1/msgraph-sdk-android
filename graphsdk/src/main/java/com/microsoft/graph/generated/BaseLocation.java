@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseLocation implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseLocation() {
@@ -36,12 +37,14 @@ public class BaseLocation implements IJsonBackedObject {
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Address.
      */
     @SerializedName("address")
+    @Expose
     public PhysicalAddress address;
 
 

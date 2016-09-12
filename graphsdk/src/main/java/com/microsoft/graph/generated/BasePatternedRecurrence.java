@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BasePatternedRecurrence implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BasePatternedRecurrence() {
@@ -36,12 +37,14 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
      * The Pattern.
      */
     @SerializedName("pattern")
+    @Expose
     public RecurrencePattern pattern;
 
     /**
      * The Range.
      */
     @SerializedName("range")
+    @Expose
     public RecurrenceRange range;
 
 

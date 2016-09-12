@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BasePhysicalAddress implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BasePhysicalAddress() {
@@ -36,30 +37,35 @@ public class BasePhysicalAddress implements IJsonBackedObject {
      * The Street.
      */
     @SerializedName("street")
+    @Expose
     public String street;
 
     /**
      * The City.
      */
     @SerializedName("city")
+    @Expose
     public String city;
 
     /**
      * The State.
      */
     @SerializedName("state")
+    @Expose
     public String state;
 
     /**
      * The Country Or Region.
      */
     @SerializedName("countryOrRegion")
+    @Expose
     public String countryOrRegion;
 
     /**
      * The Postal Code.
      */
     @SerializedName("postalCode")
+    @Expose
     public String postalCode;
 
 

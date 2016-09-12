@@ -29,42 +29,49 @@ public class BaseWorkbookFunctionsVdbBody {
      * The cost.
      */
     @SerializedName("cost")
+    @Expose
     public com.google.gson.JsonElement cost;
 
     /**
      * The salvage.
      */
     @SerializedName("salvage")
+    @Expose
     public com.google.gson.JsonElement salvage;
 
     /**
      * The life.
      */
     @SerializedName("life")
+    @Expose
     public com.google.gson.JsonElement life;
 
     /**
      * The start Period.
      */
     @SerializedName("startPeriod")
+    @Expose
     public com.google.gson.JsonElement startPeriod;
 
     /**
      * The end Period.
      */
     @SerializedName("endPeriod")
+    @Expose
     public com.google.gson.JsonElement endPeriod;
 
     /**
      * The factor.
      */
     @SerializedName("factor")
+    @Expose
     public com.google.gson.JsonElement factor;
 
     /**
      * The no Switch.
      */
     @SerializedName("noSwitch")
+    @Expose
     public com.google.gson.JsonElement noSwitch;
 
 

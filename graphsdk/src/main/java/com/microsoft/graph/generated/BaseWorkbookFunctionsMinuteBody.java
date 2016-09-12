@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsMinuteBody {
      * The serial Number.
      */
     @SerializedName("serialNumber")
+    @Expose
     public com.google.gson.JsonElement serialNumber;
 
 

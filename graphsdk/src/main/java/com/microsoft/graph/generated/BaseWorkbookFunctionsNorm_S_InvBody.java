@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsNorm_S_InvBody {
      * The probability.
      */
     @SerializedName("probability")
+    @Expose
     public com.google.gson.JsonElement probability;
 
 

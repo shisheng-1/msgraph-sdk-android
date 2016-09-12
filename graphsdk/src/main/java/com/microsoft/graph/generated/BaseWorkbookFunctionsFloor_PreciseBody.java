@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsFloor_PreciseBody {
      * The number.
      */
     @SerializedName("number")
+    @Expose
     public com.google.gson.JsonElement number;
 
     /**
      * The significance.
      */
     @SerializedName("significance")
+    @Expose
     public com.google.gson.JsonElement significance;
 
 

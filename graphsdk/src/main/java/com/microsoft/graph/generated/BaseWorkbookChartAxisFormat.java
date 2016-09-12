@@ -34,12 +34,14 @@ public class BaseWorkbookChartAxisFormat extends Entity implements IJsonBackedOb
      * The Font.
      */
     @SerializedName("font")
+    @Expose
     public WorkbookChartFont font;
 
     /**
      * The Line.
      */
     @SerializedName("line")
+    @Expose
     public WorkbookChartLineFormat line;
 
 

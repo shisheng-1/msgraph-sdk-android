@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsIrrBody {
      * The values.
      */
     @SerializedName("values")
+    @Expose
     public com.google.gson.JsonElement values;
 
     /**
      * The guess.
      */
     @SerializedName("guess")
+    @Expose
     public com.google.gson.JsonElement guess;
 
 

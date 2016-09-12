@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsTBody {
      * The value.
      */
     @SerializedName("value")
+    @Expose
     public com.google.gson.JsonElement value;
 
 

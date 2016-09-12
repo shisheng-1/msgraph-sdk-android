@@ -29,24 +29,28 @@ public class BaseWorkbookFunctionsIspmtBody {
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The per.
      */
     @SerializedName("per")
+    @Expose
     public com.google.gson.JsonElement per;
 
     /**
      * The nper.
      */
     @SerializedName("nper")
+    @Expose
     public com.google.gson.JsonElement nper;
 
     /**
      * The pv.
      */
     @SerializedName("pv")
+    @Expose
     public com.google.gson.JsonElement pv;
 
 

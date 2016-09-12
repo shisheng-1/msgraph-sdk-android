@@ -35,40 +35,43 @@ public class BaseWorkbookChartItemRequest extends BaseRequest implements IBaseWo
 
     /**
      * Patches the WorkbookChartItem
-     *
+     * @param srcWorkbookChart The WorkbookChart with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookChart> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookChart);
     }
 
     /**
      * Patches the WorkbookChartItem
      *
+     * @param srcWorkbookChart The WorkbookChart with which to PATCH
      * @return The WorkbookChart
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChart patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookChart patch(WorkbookChart srcWorkbookChart) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookChart);
     }
 
     /**
      * Puts the WorkbookChartItem
      *
+     * @param srcWorkbookChart The WorkbookChart to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookChart> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookChart);
     }
 
     /**
      * Puts the WorkbookChartItem
      *
+     * @param srcWorkbookChart The WorkbookChart to PUT
      * @return The WorkbookChart
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookChart put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookChart put(WorkbookChart srcWorkbookChart) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookChart);
     }
     /**
      * Gets the WorkbookChart

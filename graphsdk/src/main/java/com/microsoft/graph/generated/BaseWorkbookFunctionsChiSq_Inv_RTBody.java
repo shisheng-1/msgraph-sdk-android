@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTBody {
      * The probability.
      */
     @SerializedName("probability")
+    @Expose
     public com.google.gson.JsonElement probability;
 
     /**
      * The deg Freedom.
      */
     @SerializedName("degFreedom")
+    @Expose
     public com.google.gson.JsonElement degFreedom;
 
 

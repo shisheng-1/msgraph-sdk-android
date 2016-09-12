@@ -35,40 +35,43 @@ public class BaseWorkbookNamedItemRangeRequest extends BaseRequest implements IB
 
     /**
      * Patches the WorkbookNamedItemRange
-     *
+     * @param srcWorkbookRange The WorkbookRange with which to PATCH
      * @param callback The callback to be called after success or failure
      */
-    public void patch(final ICallback<WorkbookRange> callback) {
-        send(HttpMethod.PATCH, callback, null);
+    public void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PATCH, callback, srcWorkbookRange);
     }
 
     /**
      * Patches the WorkbookNamedItemRange
      *
+     * @param srcWorkbookRange The WorkbookRange with which to PATCH
      * @return The WorkbookRange
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange patch() throws ClientException {
-        return this.send(HttpMethod.PATCH, null);
+     public WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException {
+        return this.send(HttpMethod.PATCH, srcWorkbookRange);
     }
 
     /**
      * Puts the WorkbookNamedItemRange
      *
+     * @param srcWorkbookRange The WorkbookRange to PUT
      * @param callback The callback to be called after success or failure
      */
-    public void put(final ICallback<WorkbookRange> callback) {
-        send(HttpMethod.PUT, callback, null);
+    public void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
+        send(HttpMethod.PUT, callback, srcWorkbookRange);
     }
 
     /**
      * Puts the WorkbookNamedItemRange
      *
+     * @param srcWorkbookRange The WorkbookRange to PUT
      * @return The WorkbookRange
      * @throws ClientException An exception occurs if there was an error while the request was sent
      */
-     public WorkbookRange put() throws ClientException {
-        return this.send(HttpMethod.PUT, null);
+     public WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException {
+        return this.send(HttpMethod.PUT, srcWorkbookRange);
     }
     /**
      * Gets the WorkbookRange

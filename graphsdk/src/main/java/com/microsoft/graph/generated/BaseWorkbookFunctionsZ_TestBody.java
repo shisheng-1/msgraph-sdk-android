@@ -29,18 +29,21 @@ public class BaseWorkbookFunctionsZ_TestBody {
      * The array.
      */
     @SerializedName("array")
+    @Expose
     public com.google.gson.JsonElement array;
 
     /**
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The sigma.
      */
     @SerializedName("sigma")
+    @Expose
     public com.google.gson.JsonElement sigma;
 
 

@@ -29,12 +29,14 @@ public class BaseWorkbookFunctionsBesselKBody {
      * The x.
      */
     @SerializedName("x")
+    @Expose
     public com.google.gson.JsonElement x;
 
     /**
      * The n.
      */
     @SerializedName("n")
+    @Expose
     public com.google.gson.JsonElement n;
 
 

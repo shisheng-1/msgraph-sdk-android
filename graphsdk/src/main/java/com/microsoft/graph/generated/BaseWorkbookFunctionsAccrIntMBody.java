@@ -29,30 +29,35 @@ public class BaseWorkbookFunctionsAccrIntMBody {
      * The issue.
      */
     @SerializedName("issue")
+    @Expose
     public com.google.gson.JsonElement issue;
 
     /**
      * The settlement.
      */
     @SerializedName("settlement")
+    @Expose
     public com.google.gson.JsonElement settlement;
 
     /**
      * The rate.
      */
     @SerializedName("rate")
+    @Expose
     public com.google.gson.JsonElement rate;
 
     /**
      * The par.
      */
     @SerializedName("par")
+    @Expose
     public com.google.gson.JsonElement par;
 
     /**
      * The basis.
      */
     @SerializedName("basis")
+    @Expose
     public com.google.gson.JsonElement basis;
 
 
