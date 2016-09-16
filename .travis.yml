@@ -26,5 +26,5 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - ./gradlew clean assemble
+  - travis_wait 30 ./gradlew clean assemble
   - ./gradlew connectedAndroidTest
