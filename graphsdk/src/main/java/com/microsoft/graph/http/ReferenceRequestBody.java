@@ -2,6 +2,7 @@ package com.microsoft.graph.http;
 
 
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
@@ -9,6 +10,7 @@ import com.microsoft.graph.serializer.ISerializer;
 public class ReferenceRequestBody implements IJsonBackedObject {
 
     @SerializedName("@odata.id")
+    @Expose
     public String odataId;
 
     /**
