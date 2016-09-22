@@ -48,6 +48,13 @@ public class BaseSharingLink implements IJsonBackedObject {
     public String type;
 
     /**
+     * The Scope.
+     */
+    @SerializedName("scope")
+    @Expose
+    public String scope;
+
+    /**
      * The Web Url.
      */
     @SerializedName("webUrl")

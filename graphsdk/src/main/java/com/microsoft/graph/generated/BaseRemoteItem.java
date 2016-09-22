@@ -34,6 +34,20 @@ public class BaseRemoteItem implements IJsonBackedObject {
     }
 
     /**
+     * The Created By.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Created Date Time.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The File.
      */
     @SerializedName("file")
@@ -62,11 +76,32 @@ public class BaseRemoteItem implements IJsonBackedObject {
     public String id;
 
     /**
+     * The Last Modified By.
+     */
+    @SerializedName("lastModifiedBy")
+    @Expose
+    public IdentitySet lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Name.
      */
     @SerializedName("name")
     @Expose
     public String name;
+
+    /**
+     * The Package.
+     */
+    @SerializedName("package")
+    @Expose
+    public com.microsoft.graph.extensions.Package msgraph_package;
 
     /**
      * The Parent Reference.
@@ -76,11 +111,39 @@ public class BaseRemoteItem implements IJsonBackedObject {
     public ItemReference parentReference;
 
     /**
+     * The Sharepoint Ids.
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
+
+    /**
      * The Size.
      */
     @SerializedName("size")
     @Expose
     public Long size;
+
+    /**
+     * The Special Folder.
+     */
+    @SerializedName("specialFolder")
+    @Expose
+    public SpecialFolder specialFolder;
+
+    /**
+     * The Web Dav Url.
+     */
+    @SerializedName("webDavUrl")
+    @Expose
+    public String webDavUrl;
+
+    /**
+     * The Web Url.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
 
 
     /**

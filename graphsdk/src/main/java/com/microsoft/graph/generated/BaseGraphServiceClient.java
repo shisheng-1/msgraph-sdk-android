@@ -217,6 +217,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Shares objects.
+     *
+     * @return The request builder for the collection of Shares objects
+     */
+    public ISharedDriveItemCollectionRequestBuilder getShares() {
+        return new SharedDriveItemCollectionRequestBuilder(getServiceRoot() + "/shares", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Shares.
+     *
+     * @param id The id of the Shares to retrieve.
+     * @return The request builder for the Shares object
+     */
+    public ISharedDriveItemRequestBuilder getShares(final String id) {
+        return new SharedDriveItemRequestBuilder(getServiceRoot() + "/shares/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of Workbooks objects.
      *
      * @return The request builder for the collection of Workbooks objects

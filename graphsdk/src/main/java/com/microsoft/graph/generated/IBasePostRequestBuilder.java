@@ -43,6 +43,14 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
     IPostForwardRequestBuilder getForward(final String comment, final List<Recipient> toRecipients);
     IPostReplyRequestBuilder getReply(final Post post);
 

@@ -69,6 +69,10 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
 
+    public IDriveSearchCollectionRequestBuilder getSearch(final String q) {
+        return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
+    }
+
     public IDriveRecentCollectionRequestBuilder getRecent() {
         return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }

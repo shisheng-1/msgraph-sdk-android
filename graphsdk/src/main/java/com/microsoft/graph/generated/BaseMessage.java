@@ -192,14 +192,24 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     public InferenceClassificationType inferenceClassification;
 
     /**
+     * The Attachments.
+     */
+    public transient AttachmentCollectionPage attachments;
+
+    /**
      * The Extensions.
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
-     * The Attachments.
+     * The Single Value Extended Properties.
      */
-    public transient AttachmentCollectionPage attachments;
+    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+
+    /**
+     * The Multi Value Extended Properties.
+     */
+    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
@@ -239,6 +249,22 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
         mRawObject = json;
 
 
+        if (json.has("attachments")) {
+            final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+            if (json.has("attachments@odata.nextLink")) {
+                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
+            final Attachment[] array = new Attachment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            attachments = new AttachmentCollectionPage(response, null);
+        }
+
         if (json.has("extensions")) {
             final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
             if (json.has("extensions@odata.nextLink")) {
@@ -255,20 +281,36 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
             extensions = new ExtensionCollectionPage(response, null);
         }
 
-        if (json.has("attachments")) {
-            final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
-            if (json.has("attachments@odata.nextLink")) {
-                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
+        if (json.has("singleValueExtendedProperties")) {
+            final BaseSingleValueLegacyExtendedPropertyCollectionResponse response = new BaseSingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
-            final Attachment[] array = new Attachment[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            attachments = new AttachmentCollectionPage(response, null);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("multiValueExtendedProperties")) {
+            final BaseMultiValueLegacyExtendedPropertyCollectionResponse response = new BaseMultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

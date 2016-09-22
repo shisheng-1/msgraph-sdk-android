@@ -45,13 +45,6 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The CTag.
-     */
-    @SerializedName("cTag")
-    @Expose
-    public String cTag;
-
-    /**
      * The Description.
      */
     @SerializedName("description")
@@ -87,27 +80,6 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public String name;
 
     /**
-     * The Parent Reference.
-     */
-    @SerializedName("parentReference")
-    @Expose
-    public ItemReference parentReference;
-
-    /**
-     * The Size.
-     */
-    @SerializedName("size")
-    @Expose
-    public Long size;
-
-    /**
-     * The Web Dav Url.
-     */
-    @SerializedName("webDavUrl")
-    @Expose
-    public String webDavUrl;
-
-    /**
      * The Web Url.
      */
     @SerializedName("webUrl")
@@ -120,6 +92,13 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     @SerializedName("audio")
     @Expose
     public Audio audio;
+
+    /**
+     * The CTag.
+     */
+    @SerializedName("cTag")
+    @Expose
+    public String cTag;
 
     /**
      * The Deleted.
@@ -164,6 +143,20 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public GeoCoordinates location;
 
     /**
+     * The Package.
+     */
+    @SerializedName("package")
+    @Expose
+    public com.microsoft.graph.extensions.Package msgraph_package;
+
+    /**
+     * The Parent Reference.
+     */
+    @SerializedName("parentReference")
+    @Expose
+    public ItemReference parentReference;
+
+    /**
      * The Photo.
      */
     @SerializedName("photo")
@@ -176,6 +169,13 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     @SerializedName("remoteItem")
     @Expose
     public RemoteItem remoteItem;
+
+    /**
+     * The Root.
+     */
+    @SerializedName("root")
+    @Expose
+    public Root root;
 
     /**
      * The Search Result.
@@ -192,6 +192,20 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public Shared shared;
 
     /**
+     * The Sharepoint Ids.
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
+
+    /**
+     * The Size.
+     */
+    @SerializedName("size")
+    @Expose
+    public Long size;
+
+    /**
      * The Special Folder.
      */
     @SerializedName("specialFolder")
@@ -206,11 +220,11 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public Video video;
 
     /**
-     * The Package.
+     * The Web Dav Url.
      */
-    @SerializedName("package")
+    @SerializedName("webDavUrl")
     @Expose
-    public com.microsoft.graph.extensions.Package msgraph_package;
+    public String webDavUrl;
 
     /**
      * The Created By User.
@@ -234,14 +248,14 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     public User lastModifiedByUser;
 
     /**
-     * The Permissions.
-     */
-    public transient PermissionCollectionPage permissions;
-
-    /**
      * The Children.
      */
     public transient DriveItemCollectionPage children;
+
+    /**
+     * The Permissions.
+     */
+    public transient PermissionCollectionPage permissions;
 
     /**
      * The Thumbnails.
@@ -286,22 +300,6 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
         mRawObject = json;
 
 
-        if (json.has("permissions")) {
-            final BasePermissionCollectionResponse response = new BasePermissionCollectionResponse();
-            if (json.has("permissions@odata.nextLink")) {
-                response.nextLink = json.get("permissions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("permissions").toString(), JsonObject[].class);
-            final Permission[] array = new Permission[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Permission.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            permissions = new PermissionCollectionPage(response, null);
-        }
-
         if (json.has("children")) {
             final BaseDriveItemCollectionResponse response = new BaseDriveItemCollectionResponse();
             if (json.has("children@odata.nextLink")) {
@@ -316,6 +314,22 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             children = new DriveItemCollectionPage(response, null);
+        }
+
+        if (json.has("permissions")) {
+            final BasePermissionCollectionResponse response = new BasePermissionCollectionResponse();
+            if (json.has("permissions@odata.nextLink")) {
+                response.nextLink = json.get("permissions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("permissions").toString(), JsonObject[].class);
+            final Permission[] array = new Permission[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Permission.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            permissions = new PermissionCollectionPage(response, null);
         }
 
         if (json.has("thumbnails")) {

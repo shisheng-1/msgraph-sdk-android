@@ -100,6 +100,14 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachment"), getClient(), null);
     }
 
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueLegacyExtendedProperty() {
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueLegacyExtendedProperty"), getClient(), null);
+    }
+
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueLegacyExtendedProperty() {
+        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueLegacyExtendedProperty"), getClient(), null);
+    }
+
     public IExtensionRequestBuilder extension() {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extension"), getClient(), null);
     }
@@ -122,6 +130,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     public IThumbnailSetRequestBuilder thumbnailSet() {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnailSet"), getClient(), null);
+    }
+
+    public ISharedDriveItemRequestBuilder sharedDriveItem() {
+        return new SharedDriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("sharedDriveItem"), getClient(), null);
     }
 
     public IWorkbookApplicationRequestBuilder workbookApplication() {

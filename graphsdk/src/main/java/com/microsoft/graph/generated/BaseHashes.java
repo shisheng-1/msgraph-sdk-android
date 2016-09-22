@@ -47,6 +47,13 @@ public class BaseHashes implements IJsonBackedObject {
     @Expose
     public String sha1Hash;
 
+    /**
+     * The Quick Xor Hash.
+     */
+    @SerializedName("quickXorHash")
+    @Expose
+    public String quickXorHash;
+
 
     /**
      * The raw representation of this class

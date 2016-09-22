@@ -38,6 +38,14 @@ public interface IBaseMailFolderRequestBuilder extends IRequestBuilder {
     IMailFolderCollectionRequestBuilder getChildFolders();
 
     IMailFolderRequestBuilder getChildFolders(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
     IMailFolderCopyRequestBuilder getCopy(final String destinationId);
     IMailFolderMoveRequestBuilder getMove(final String destinationId);
 

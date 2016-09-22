@@ -39,4 +39,12 @@ public interface IBaseContactFolderRequestBuilder extends IRequestBuilder {
 
     IContactFolderRequestBuilder getChildFolders(final String id);
 
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
+
 }

@@ -25,29 +25,33 @@ import com.google.gson.annotations.*;
  */
 public class BaseDriveRecipient implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    @Expose(serialize = false)
+    public String oDataType;
 
-	public BaseDriveRecipient(){
-		oDataType = "microsoft.graph.driveRecipient";
-	}
-	
+    public BaseDriveRecipient() {
+        oDataType = "microsoft.graph.driveRecipient";
+    }
+
     /**
      * The Email.
      */
     @SerializedName("email")
+    @Expose
     public String email;
 
     /**
      * The Alias.
      */
     @SerializedName("alias")
+    @Expose
     public String alias;
 
     /**
      * The Object Id.
      */
     @SerializedName("objectId")
+    @Expose
     public String objectId;
 
 

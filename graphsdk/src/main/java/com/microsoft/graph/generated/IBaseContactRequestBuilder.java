@@ -35,6 +35,14 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
 
     IExtensionRequestBuilder getExtensions(final String id);
 
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
+
     /**
      * Gets the request builder for ProfilePhoto.
      */

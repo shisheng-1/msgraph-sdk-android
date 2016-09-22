@@ -48,11 +48,25 @@ public class BaseItemReference implements IJsonBackedObject {
     public String id;
 
     /**
+     * The Name.
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
      * The Path.
      */
     @SerializedName("path")
     @Expose
     public String path;
+
+    /**
+     * The Share Id.
+     */
+    @SerializedName("shareId")
+    @Expose
+    public String shareId;
 
 
     /**

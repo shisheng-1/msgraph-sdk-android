@@ -44,6 +44,8 @@ public interface IBaseDriveRequestBuilder extends IRequestBuilder {
      */
     IDriveItemRequestBuilder getRoot();
 
+    IDriveSearchCollectionRequestBuilder getSearch(final String q);
+
     IDriveRecentCollectionRequestBuilder getRecent();
 
     IDriveSharedWithMeCollectionRequestBuilder getSharedWithMe();

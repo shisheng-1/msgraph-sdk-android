@@ -248,6 +248,13 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public String userType;
 
     /**
+     * The Mailbox Settings.
+     */
+    @SerializedName("mailboxSettings")
+    @Expose
+    public MailboxSettings mailboxSettings;
+
+    /**
      * The About Me.
      */
     @SerializedName("aboutMe")
@@ -421,6 +428,11 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("drive")
     @Expose
     public Drive drive;
+
+    /**
+     * The Drives.
+     */
+    public transient DriveCollectionPage drives;
 
 
     /**
@@ -682,6 +694,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             contactFolders = new ContactFolderCollectionPage(response, null);
+        }
+
+        if (json.has("drives")) {
+            final BaseDriveCollectionResponse response = new BaseDriveCollectionResponse();
+            if (json.has("drives@odata.nextLink")) {
+                response.nextLink = json.get("drives@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("drives").toString(), JsonObject[].class);
+            final Drive[] array = new Drive[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Drive.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            drives = new DriveCollectionPage(response, null);
         }
     }
 }

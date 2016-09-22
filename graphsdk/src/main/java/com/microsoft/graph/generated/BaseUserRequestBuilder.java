@@ -180,6 +180,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     public IDriveRequestBuilder getDrive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
+    public IDriveCollectionRequestBuilder getDrives() {
+        return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
+    }
+
+    public IDriveRequestBuilder getDrives(final String id) {
+        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
+    }
 
     public IUserAssignLicenseRequestBuilder getAssignLicense(final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);

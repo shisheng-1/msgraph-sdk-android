@@ -25,29 +25,33 @@ import com.google.gson.annotations.*;
  */
 public class BaseUploadSession implements IJsonBackedObject {
 
-	@SerializedName("@odata.type")
-	public String oDataType;
+    @SerializedName("@odata.type")
+    @Expose(serialize = false)
+    public String oDataType;
 
-	public BaseUploadSession(){
-		oDataType = "microsoft.graph.uploadSession";
-	}
-	
+    public BaseUploadSession() {
+        oDataType = "microsoft.graph.uploadSession";
+    }
+
     /**
      * The Upload Url.
      */
     @SerializedName("uploadUrl")
+    @Expose
     public String uploadUrl;
 
     /**
      * The Expiration Date Time.
      */
     @SerializedName("expirationDateTime")
+    @Expose
     public java.util.Calendar expirationDateTime;
 
     /**
      * The Next Expected Ranges.
      */
     @SerializedName("nextExpectedRanges")
+    @Expose
     public List<String> nextExpectedRanges;
 
 

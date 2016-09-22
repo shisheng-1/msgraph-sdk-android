@@ -57,6 +57,10 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IAttachmentRequestBuilder attachment();
 
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueLegacyExtendedProperty();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueLegacyExtendedProperty();
+
     IExtensionRequestBuilder extension();
 
     IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride();
@@ -68,6 +72,8 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     IPermissionRequestBuilder permission();
 
     IThumbnailSetRequestBuilder thumbnailSet();
+
+    ISharedDriveItemRequestBuilder sharedDriveItem();
 
     IWorkbookApplicationRequestBuilder workbookApplication();
 

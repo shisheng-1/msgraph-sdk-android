@@ -33,13 +33,21 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
 
     IEventMessageRequestBuilder eventMessage();
 
+    IAttachmentCollectionRequestBuilder getAttachments();
+
+    IAttachmentRequestBuilder getAttachments(final String id);
+
     IExtensionCollectionRequestBuilder getExtensions();
 
     IExtensionRequestBuilder getExtensions(final String id);
 
-    IAttachmentCollectionRequestBuilder getAttachments();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
 
-    IAttachmentRequestBuilder getAttachments(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
     IMessageCopyRequestBuilder getCopy(final String destinationId);
     IMessageMoveRequestBuilder getMove(final String destinationId);
     IMessageCreateReplyRequestBuilder getCreateReply();

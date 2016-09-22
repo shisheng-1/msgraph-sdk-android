@@ -47,6 +47,13 @@ public class BaseFile implements IJsonBackedObject {
     @Expose
     public String mimeType;
 
+    /**
+     * The Processing Metadata.
+     */
+    @SerializedName("processingMetadata")
+    @Expose
+    public Boolean processingMetadata;
+
 
     /**
      * The raw representation of this class

@@ -46,13 +46,13 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
      */
     IUserWithReferenceRequestBuilder getLastModifiedByUser();
 
-    IPermissionCollectionRequestBuilder getPermissions();
-
-    IPermissionRequestBuilder getPermissions(final String id);
-
     IDriveItemCollectionRequestBuilder getChildren();
 
     IDriveItemRequestBuilder getChildren(final String id);
+
+    IPermissionCollectionRequestBuilder getPermissions();
+
+    IPermissionRequestBuilder getPermissions(final String id);
 
     IThumbnailSetCollectionRequestBuilder getThumbnails();
 
@@ -60,12 +60,15 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
 
     IDriveItemStreamRequestBuilder getContent();
     IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope);
+    IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item);
+
+    IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final List<String> roles, final Boolean sendInvitation, final String message, final List<DriveRecipient> recipients);
     IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference);
 
     IDriveItemSearchCollectionRequestBuilder getSearch(final String q);
 
-    IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
-
     IDriveItemDeltaCollectionRequestBuilder getDelta();
+
+    IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
 
 }
