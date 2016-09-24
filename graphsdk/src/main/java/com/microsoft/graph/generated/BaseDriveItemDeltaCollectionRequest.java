@@ -28,10 +28,10 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDriveItemDeltaCollectionResponse.class, IDriveItemDeltaCollectionPage.class);
+    public BaseDriveItemDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDriveItemDeltaCollectionResponse.class, IDriveItemDeltaCollectionPage.class);
     }
 
 
@@ -58,7 +58,7 @@ public class BaseDriveItemDeltaCollectionRequest extends BaseCollectionRequest<B
     public IDriveItemDeltaCollectionPage buildFromResponse(final BaseDriveItemDeltaCollectionResponse response) {
         final IDriveItemDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* token */ null);
+            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }

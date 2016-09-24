@@ -28,10 +28,10 @@ public class BaseConversationCollectionRequest extends BaseCollectionRequest<Bas
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseConversationCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseConversationCollectionResponse.class, IConversationCollectionPage.class);
+    public BaseConversationCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseConversationCollectionResponse.class, IConversationCollectionPage.class);
     }
 
     public void get(final ICallback<IConversationCollectionPage> callback) {

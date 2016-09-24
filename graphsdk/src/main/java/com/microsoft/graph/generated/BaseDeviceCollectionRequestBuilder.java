@@ -27,18 +27,18 @@ public class BaseDeviceCollectionRequestBuilder extends BaseRequestBuilder imple
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDeviceCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDeviceCollectionRequest buildRequest(final List<Option> options) {
-        return new DeviceCollectionRequest(getRequestUrl(), getClient(), options);
+    public IDeviceCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new DeviceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IDeviceRequestBuilder byId(final String id) {

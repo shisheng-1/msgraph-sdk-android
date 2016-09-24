@@ -24,6 +24,6 @@ public interface IBaseDriveItemSearchCollectionRequestBuilder extends IRequestBu
 
     IDriveItemSearchCollectionRequest buildRequest();
 
-    IDriveItemSearchCollectionRequest buildRequest(final List<Option> options);
+    IDriveItemSearchCollectionRequest buildRequest(final List<Option> requestOptions);
 
 }

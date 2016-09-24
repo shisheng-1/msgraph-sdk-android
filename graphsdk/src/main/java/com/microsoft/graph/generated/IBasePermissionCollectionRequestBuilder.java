@@ -24,7 +24,8 @@ public interface IBasePermissionCollectionRequestBuilder extends IRequestBuilder
 
     IPermissionCollectionRequest buildRequest();
 
-    IPermissionCollectionRequest buildRequest(final List<Option> options);
+    IPermissionCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IPermissionRequestBuilder byId(final String id);
+
 }

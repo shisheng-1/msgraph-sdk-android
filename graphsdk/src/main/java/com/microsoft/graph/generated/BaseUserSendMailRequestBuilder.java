@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base User Send Mail Request Builder.
  */
-public class BaseUserSendMailRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserSendMail
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Message message, final Boolean saveToSentItems) {
-        super(requestUrl, client, options);
+    public BaseUserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Message message, final Boolean saveToSentItems) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("message", message);
         mBodyParams.put("saveToSentItems", saveToSentItems);
     }
@@ -44,21 +44,22 @@ public class BaseUserSendMailRequestBuilder extends BasePostMethodRequestBuilder
     }
 
     /**
-     * Creates the IUserSendMailRequest with specific options instead of the existing options
+     * Creates the IUserSendMailRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IUserSendMailRequest instance
      */
-    public IUserSendMailRequest buildRequest(final List<Option> options) {
+    public IUserSendMailRequest buildRequest(final List<Option> requestOptions) {
         UserSendMailRequest request = new UserSendMailRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("message")) {
             request.mBody.message = getParameter("message");
         }
+
         if (hasParameter("saveToSentItems")) {
             request.mBody.saveToSentItems = getParameter("saveToSentItems");
         }

@@ -32,8 +32,8 @@ public interface IBaseConversationThreadReplyRequestBuilder extends IRequestBuil
     /**
      * Creates the IConversationThreadReplyRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IConversationThreadReplyRequest instance
      */
-    IConversationThreadReplyRequest buildRequest(final List<Option> options);
+    IConversationThreadReplyRequest buildRequest(final List<Option> requestOptions);
 }

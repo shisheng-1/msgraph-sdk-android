@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BasePackage implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BasePackage() {
@@ -36,6 +37,7 @@ public class BasePackage implements IJsonBackedObject {
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public String type;
 
 

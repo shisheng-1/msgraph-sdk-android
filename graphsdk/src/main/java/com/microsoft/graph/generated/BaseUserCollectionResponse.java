@@ -30,12 +30,14 @@ public class BaseUserCollectionResponse implements IJsonBackedObject {
      * The list of User within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<User> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

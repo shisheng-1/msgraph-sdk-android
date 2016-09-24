@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Post Forward Request Builder.
  */
-public class BasePostForwardRequestBuilder extends BasePostMethodRequestBuilder {
+public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this PostForward
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BasePostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final List<Recipient> toRecipients) {
-        super(requestUrl, client, options);
+    public BasePostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String comment, final List<Recipient> toRecipients) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("comment", comment);
         mBodyParams.put("toRecipients", toRecipients);
     }
@@ -44,21 +44,22 @@ public class BasePostForwardRequestBuilder extends BasePostMethodRequestBuilder 
     }
 
     /**
-     * Creates the IPostForwardRequest with specific options instead of the existing options
+     * Creates the IPostForwardRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IPostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest(final List<Option> options) {
+    public IPostForwardRequest buildRequest(final List<Option> requestOptions) {
         PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
+
         if (hasParameter("toRecipients")) {
             request.mBody.toRecipients = getParameter("toRecipients");
         }

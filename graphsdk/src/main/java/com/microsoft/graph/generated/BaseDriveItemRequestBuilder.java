@@ -27,10 +27,10 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDriveItemRequest buildRequest(final List<Option> options) {
-        return new DriveItemRequest(getRequestUrl(), getClient(), options);
+    public IDriveItemRequest buildRequest(final List<Option> requestOptions) {
+        return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -56,17 +56,17 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     /**
+     * Gets the request builder for Workbook.
+     */
+    public IWorkbookRequestBuilder getWorkbook() {
+        return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for User.
      */
     public IUserWithReferenceRequestBuilder getLastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
-    }
-    public IPermissionCollectionRequestBuilder getPermissions() {
-        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
-    }
-
-    public IPermissionRequestBuilder getPermissions(final String id) {
-        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     public IDriveItemCollectionRequestBuilder getChildren() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
@@ -74,6 +74,13 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     public IDriveItemRequestBuilder getChildren(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
+    }
+    public IPermissionCollectionRequestBuilder getPermissions() {
+        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    }
+
+    public IPermissionRequestBuilder getPermissions(final String id) {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     public IThumbnailSetCollectionRequestBuilder getThumbnails() {
         return new ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);
@@ -91,6 +98,14 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope);
     }
 
+    public IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item) {
+        return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
+    }
+
+    public IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final List<String> roles, final Boolean sendInvitation, final String message, final List<DriveRecipient> recipients) {
+        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
+    }
+
     public IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference) {
         return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
@@ -99,11 +114,11 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
         return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
-    public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
-        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
-    }
-
     public IDriveItemDeltaCollectionRequestBuilder getDelta() {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+    public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
+        return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
     }
 }

@@ -24,7 +24,8 @@ public interface IBaseDirectoryRoleCollectionRequestBuilder extends IRequestBuil
 
     IDirectoryRoleCollectionRequest buildRequest();
 
-    IDirectoryRoleCollectionRequest buildRequest(final List<Option> options);
+    IDirectoryRoleCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryRoleRequestBuilder byId(final String id);
+
 }

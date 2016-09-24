@@ -32,8 +32,8 @@ public interface IBaseEventTentativelyAcceptRequestBuilder extends IRequestBuild
     /**
      * Creates the IEventTentativelyAcceptRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventTentativelyAcceptRequest instance
      */
-    IEventTentativelyAcceptRequest buildRequest(final List<Option> options);
+    IEventTentativelyAcceptRequest buildRequest(final List<Option> requestOptions);
 }

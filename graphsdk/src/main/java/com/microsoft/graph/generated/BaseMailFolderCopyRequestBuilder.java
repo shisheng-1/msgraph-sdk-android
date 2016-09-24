@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Mail Folder Copy Request Builder.
  */
-public class BaseMailFolderCopyRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MailFolderCopy
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options);
+    public BaseMailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String destinationId) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("destinationId", destinationId);
     }
 
@@ -43,16 +43,16 @@ public class BaseMailFolderCopyRequestBuilder extends BasePostMethodRequestBuild
     }
 
     /**
-     * Creates the IMailFolderCopyRequest with specific options instead of the existing options
+     * Creates the IMailFolderCopyRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMailFolderCopyRequest instance
      */
-    public IMailFolderCopyRequest buildRequest(final List<Option> options) {
+    public IMailFolderCopyRequest buildRequest(final List<Option> requestOptions) {
         MailFolderCopyRequest request = new MailFolderCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("destinationId")) {

@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Event Snooze Reminder Request Builder.
  */
-public class BaseEventSnoozeReminderRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventSnoozeReminder
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final DateTimeTimeZone newReminderTime) {
-        super(requestUrl, client, options);
+    public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final DateTimeTimeZone newReminderTime) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("newReminderTime", newReminderTime);
     }
 
@@ -43,16 +43,16 @@ public class BaseEventSnoozeReminderRequestBuilder extends BasePostMethodRequest
     }
 
     /**
-     * Creates the IEventSnoozeReminderRequest with specific options instead of the existing options
+     * Creates the IEventSnoozeReminderRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest(final List<Option> options) {
+    public IEventSnoozeReminderRequest buildRequest(final List<Option> requestOptions) {
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("newReminderTime")) {

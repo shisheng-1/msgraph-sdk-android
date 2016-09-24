@@ -30,12 +30,14 @@ public class BaseOrganizationCollectionResponse implements IJsonBackedObject {
      * The list of Organization within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<Organization> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

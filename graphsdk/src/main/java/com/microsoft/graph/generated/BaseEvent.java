@@ -34,168 +34,203 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
      * The Original Start Time Zone.
      */
     @SerializedName("originalStartTimeZone")
+    @Expose
     public String originalStartTimeZone;
 
     /**
      * The Original End Time Zone.
      */
     @SerializedName("originalEndTimeZone")
+    @Expose
     public String originalEndTimeZone;
 
     /**
      * The Response Status.
      */
     @SerializedName("responseStatus")
+    @Expose
     public ResponseStatus responseStatus;
 
     /**
      * The ICal UId.
      */
     @SerializedName("iCalUId")
+    @Expose
     public String iCalUId;
 
     /**
      * The Reminder Minutes Before Start.
      */
     @SerializedName("reminderMinutesBeforeStart")
+    @Expose
     public Integer reminderMinutesBeforeStart;
 
     /**
      * The Is Reminder On.
      */
     @SerializedName("isReminderOn")
+    @Expose
     public Boolean isReminderOn;
 
     /**
      * The Has Attachments.
      */
     @SerializedName("hasAttachments")
+    @Expose
     public Boolean hasAttachments;
 
     /**
      * The Subject.
      */
     @SerializedName("subject")
+    @Expose
     public String subject;
 
     /**
      * The Body.
      */
     @SerializedName("body")
+    @Expose
     public ItemBody body;
 
     /**
      * The Body Preview.
      */
     @SerializedName("bodyPreview")
+    @Expose
     public String bodyPreview;
 
     /**
      * The Importance.
      */
     @SerializedName("importance")
+    @Expose
     public Importance importance;
 
     /**
      * The Sensitivity.
      */
     @SerializedName("sensitivity")
+    @Expose
     public Sensitivity sensitivity;
 
     /**
      * The Start.
      */
     @SerializedName("start")
+    @Expose
     public DateTimeTimeZone start;
 
     /**
      * The Original Start.
      */
     @SerializedName("originalStart")
+    @Expose
     public java.util.Calendar originalStart;
 
     /**
      * The End.
      */
     @SerializedName("end")
+    @Expose
     public DateTimeTimeZone end;
 
     /**
      * The Location.
      */
     @SerializedName("location")
+    @Expose
     public Location location;
 
     /**
      * The Is All Day.
      */
     @SerializedName("isAllDay")
+    @Expose
     public Boolean isAllDay;
 
     /**
      * The Is Cancelled.
      */
     @SerializedName("isCancelled")
+    @Expose
     public Boolean isCancelled;
 
     /**
      * The Is Organizer.
      */
     @SerializedName("isOrganizer")
+    @Expose
     public Boolean isOrganizer;
 
     /**
      * The Recurrence.
      */
     @SerializedName("recurrence")
+    @Expose
     public PatternedRecurrence recurrence;
 
     /**
      * The Response Requested.
      */
     @SerializedName("responseRequested")
+    @Expose
     public Boolean responseRequested;
 
     /**
      * The Series Master Id.
      */
     @SerializedName("seriesMasterId")
+    @Expose
     public String seriesMasterId;
 
     /**
      * The Show As.
      */
     @SerializedName("showAs")
+    @Expose
     public FreeBusyStatus showAs;
 
     /**
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public EventType type;
 
     /**
      * The Attendees.
      */
     @SerializedName("attendees")
+    @Expose
     public List<Attendee> attendees;
 
     /**
      * The Organizer.
      */
     @SerializedName("organizer")
+    @Expose
     public Recipient organizer;
 
     /**
      * The Web Link.
      */
     @SerializedName("webLink")
+    @Expose
     public String webLink;
+
+    /**
+     * The Online Meeting Url.
+     */
+    @SerializedName("onlineMeetingUrl")
+    @Expose
+    public String onlineMeetingUrl;
 
     /**
      * The Calendar.
      */
     @SerializedName("calendar")
+    @Expose
     public Calendar calendar;
 
     /**
@@ -212,6 +247,16 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      */
     public transient AttachmentCollectionPage attachments;
+
+    /**
+     * The Single Value Extended Properties.
+     */
+    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+
+    /**
+     * The Multi Value Extended Properties.
+     */
+    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
@@ -297,6 +342,38 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             attachments = new AttachmentCollectionPage(response, null);
+        }
+
+        if (json.has("singleValueExtendedProperties")) {
+            final BaseSingleValueLegacyExtendedPropertyCollectionResponse response = new BaseSingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("multiValueExtendedProperties")) {
+            final BaseMultiValueLegacyExtendedPropertyCollectionResponse response = new BaseMultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

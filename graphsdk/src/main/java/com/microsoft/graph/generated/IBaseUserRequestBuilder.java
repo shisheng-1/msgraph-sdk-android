@@ -29,7 +29,7 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IUserRequest buildRequest(final List<Option> options);
+    IUserRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedDevices();
 
@@ -111,6 +111,10 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
      * Gets the request builder for Drive.
      */
     IDriveRequestBuilder getDrive();
+
+    IDriveCollectionRequestBuilder getDrives();
+
+    IDriveRequestBuilder getDrives(final String id);
     IUserAssignLicenseRequestBuilder getAssignLicense(final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder getChangePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder getSendMail(final Message message, final Boolean saveToSentItems);

@@ -29,12 +29,14 @@ public class BaseDriveItemCreateLinkBody {
      * The type.
      */
     @SerializedName("type")
+    @Expose
     public String type;
 
     /**
      * The scope.
      */
     @SerializedName("scope")
+    @Expose
     public String scope;
 
 

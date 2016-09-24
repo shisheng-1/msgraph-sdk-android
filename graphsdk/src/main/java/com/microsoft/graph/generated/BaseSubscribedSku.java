@@ -34,42 +34,49 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
      * The Capability Status.
      */
     @SerializedName("capabilityStatus")
+    @Expose
     public String capabilityStatus;
 
     /**
      * The Consumed Units.
      */
     @SerializedName("consumedUnits")
+    @Expose
     public Integer consumedUnits;
 
     /**
      * The Prepaid Units.
      */
     @SerializedName("prepaidUnits")
+    @Expose
     public LicenseUnitsDetail prepaidUnits;
 
     /**
      * The Service Plans.
      */
     @SerializedName("servicePlans")
+    @Expose
     public List<ServicePlanInfo> servicePlans;
 
     /**
      * The Sku Id.
      */
     @SerializedName("skuId")
+    @Expose
     public java.util.UUID skuId;
 
     /**
      * The Sku Part Number.
      */
     @SerializedName("skuPartNumber")
+    @Expose
     public String skuPartNumber;
 
     /**
      * The Applies To.
      */
     @SerializedName("appliesTo")
+    @Expose
     public String appliesTo;
 
 

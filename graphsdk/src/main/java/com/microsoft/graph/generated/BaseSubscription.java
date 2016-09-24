@@ -34,30 +34,35 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
      * The Resource.
      */
     @SerializedName("resource")
+    @Expose
     public String resource;
 
     /**
      * The Change Type.
      */
     @SerializedName("changeType")
+    @Expose
     public String changeType;
 
     /**
      * The Client State.
      */
     @SerializedName("clientState")
+    @Expose
     public String clientState;
 
     /**
      * The Notification Url.
      */
     @SerializedName("notificationUrl")
+    @Expose
     public String notificationUrl;
 
     /**
      * The Expiration Date Time.
      */
     @SerializedName("expirationDateTime")
+    @Expose
     public java.util.Calendar expirationDateTime;
 
 

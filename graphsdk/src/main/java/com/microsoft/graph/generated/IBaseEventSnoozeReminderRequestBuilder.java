@@ -32,8 +32,8 @@ public interface IBaseEventSnoozeReminderRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IEventSnoozeReminderRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventSnoozeReminderRequest instance
      */
-    IEventSnoozeReminderRequest buildRequest(final List<Option> options);
+    IEventSnoozeReminderRequest buildRequest(final List<Option> requestOptions);
 }

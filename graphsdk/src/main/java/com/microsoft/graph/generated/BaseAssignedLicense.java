@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseAssignedLicense implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseAssignedLicense() {
@@ -36,12 +37,14 @@ public class BaseAssignedLicense implements IJsonBackedObject {
      * The Disabled Plans.
      */
     @SerializedName("disabledPlans")
+    @Expose
     public List<java.util.UUID> disabledPlans;
 
     /**
      * The Sku Id.
      */
     @SerializedName("skuId")
+    @Expose
     public java.util.UUID skuId;
 
 

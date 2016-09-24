@@ -30,12 +30,14 @@ public class BaseThumbnailSetCollectionResponse implements IJsonBackedObject {
      * The list of ThumbnailSet within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<ThumbnailSet> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

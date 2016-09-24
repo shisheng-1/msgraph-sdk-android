@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseSpecialFolder implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseSpecialFolder() {
@@ -36,6 +37,7 @@ public class BaseSpecialFolder implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
 

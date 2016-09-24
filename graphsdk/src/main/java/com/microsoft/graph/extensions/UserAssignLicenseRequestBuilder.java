@@ -27,9 +27,9 @@ public class UserAssignLicenseRequestBuilder extends BaseUserAssignLicenseReques
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public UserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
-        super(requestUrl, client, options, addLicenses, removeLicenses);
+    public UserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
+        super(requestUrl, client, requestOptions, addLicenses, removeLicenses);
     }
 }

@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseFolder implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseFolder() {
@@ -36,6 +37,7 @@ public class BaseFolder implements IJsonBackedObject {
      * The Child Count.
      */
     @SerializedName("childCount")
+    @Expose
     public Integer childCount;
 
 

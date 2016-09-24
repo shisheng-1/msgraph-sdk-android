@@ -28,10 +28,10 @@ public class BaseDirectoryObjectCollectionWithReferencesRequest extends BaseColl
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
+    public BaseDirectoryObjectCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
     public void get(final ICallback<IDirectoryObjectCollectionWithReferencesPage> callback) {

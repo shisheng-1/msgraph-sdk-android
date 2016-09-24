@@ -29,6 +29,7 @@ public class BaseMessageReplyAllBody {
      * The comment.
      */
     @SerializedName("comment")
+    @Expose
     public String comment;
 
 

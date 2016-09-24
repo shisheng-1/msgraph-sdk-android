@@ -27,9 +27,9 @@ public class EventTentativelyAcceptRequestBuilder extends BaseEventTentativelyAc
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
-        super(requestUrl, client, options, comment, sendResponse);
+    public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String comment, final Boolean sendResponse) {
+        super(requestUrl, client, requestOptions, comment, sendResponse);
     }
 }

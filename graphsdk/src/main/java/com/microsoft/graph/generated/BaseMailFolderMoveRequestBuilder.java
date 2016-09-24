@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Mail Folder Move Request Builder.
  */
-public class BaseMailFolderMoveRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseMailFolderMoveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MailFolderMove
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options);
+    public BaseMailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String destinationId) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("destinationId", destinationId);
     }
 
@@ -43,16 +43,16 @@ public class BaseMailFolderMoveRequestBuilder extends BasePostMethodRequestBuild
     }
 
     /**
-     * Creates the IMailFolderMoveRequest with specific options instead of the existing options
+     * Creates the IMailFolderMoveRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMailFolderMoveRequest instance
      */
-    public IMailFolderMoveRequest buildRequest(final List<Option> options) {
+    public IMailFolderMoveRequest buildRequest(final List<Option> requestOptions) {
         MailFolderMoveRequest request = new MailFolderMoveRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("destinationId")) {

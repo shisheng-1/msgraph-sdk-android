@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base User Assign License Request Builder.
  */
-public class BaseUserAssignLicenseRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserAssignLicense
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
-        super(requestUrl, client, options);
+    public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final List<AssignedLicense> addLicenses, final List<java.util.UUID> removeLicenses) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("addLicenses", addLicenses);
         mBodyParams.put("removeLicenses", removeLicenses);
     }
@@ -44,21 +44,22 @@ public class BaseUserAssignLicenseRequestBuilder extends BasePostMethodRequestBu
     }
 
     /**
-     * Creates the IUserAssignLicenseRequest with specific options instead of the existing options
+     * Creates the IUserAssignLicenseRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IUserAssignLicenseRequest instance
      */
-    public IUserAssignLicenseRequest buildRequest(final List<Option> options) {
+    public IUserAssignLicenseRequest buildRequest(final List<Option> requestOptions) {
         UserAssignLicenseRequest request = new UserAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("addLicenses")) {
             request.mBody.addLicenses = getParameter("addLicenses");
         }
+
         if (hasParameter("removeLicenses")) {
             request.mBody.removeLicenses = getParameter("removeLicenses");
         }

@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Directory Object Check Member Groups Collection Request Builder.
  */
-public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends BasePostMethodRequestBuilder implements IBaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder {
+public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends BaseActionRequestBuilder implements IBaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final List<String> groupIds) {
-        super(requestUrl, client, options);
+    public BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final List<String> groupIds) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("groupIds", groupIds);
       }
 
@@ -37,11 +37,11 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extend
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final List<Option> options) {
+    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final List<Option> requestOptions) {
         DirectoryObjectCheckMemberGroupsCollectionRequest request = new DirectoryObjectCheckMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("groupIds")) {

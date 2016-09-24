@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Conversation Thread Reply Request Builder.
  */
-public class BaseConversationThreadReplyRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ConversationThreadReply
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
-        super(requestUrl, client, options);
+    public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Post post) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("post", post);
     }
 
@@ -43,16 +43,16 @@ public class BaseConversationThreadReplyRequestBuilder extends BasePostMethodReq
     }
 
     /**
-     * Creates the IConversationThreadReplyRequest with specific options instead of the existing options
+     * Creates the IConversationThreadReplyRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IConversationThreadReplyRequest instance
      */
-    public IConversationThreadReplyRequest buildRequest(final List<Option> options) {
+    public IConversationThreadReplyRequest buildRequest(final List<Option> requestOptions) {
         ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("post")) {

@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base User Change Password Request Builder.
  */
-public class BaseUserChangePasswordRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserChangePassword
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String currentPassword, final String newPassword) {
-        super(requestUrl, client, options);
+    public BaseUserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String currentPassword, final String newPassword) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("currentPassword", currentPassword);
         mBodyParams.put("newPassword", newPassword);
     }
@@ -44,21 +44,22 @@ public class BaseUserChangePasswordRequestBuilder extends BasePostMethodRequestB
     }
 
     /**
-     * Creates the IUserChangePasswordRequest with specific options instead of the existing options
+     * Creates the IUserChangePasswordRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IUserChangePasswordRequest instance
      */
-    public IUserChangePasswordRequest buildRequest(final List<Option> options) {
+    public IUserChangePasswordRequest buildRequest(final List<Option> requestOptions) {
         UserChangePasswordRequest request = new UserChangePasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("currentPassword")) {
             request.mBody.currentPassword = getParameter("currentPassword");
         }
+
         if (hasParameter("newPassword")) {
             request.mBody.newPassword = getParameter("newPassword");
         }

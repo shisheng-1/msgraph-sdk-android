@@ -24,7 +24,7 @@ public interface IBaseDirectoryObjectCollectionWithReferencesRequestBuilder exte
 
     IDirectoryObjectCollectionWithReferencesRequest buildRequest();
 
-    IDirectoryObjectCollectionWithReferencesRequest buildRequest(final List<Option> options);
+    IDirectoryObjectCollectionWithReferencesRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectWithReferenceRequestBuilder byId(final String id);
 

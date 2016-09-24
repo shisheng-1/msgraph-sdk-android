@@ -32,8 +32,8 @@ public interface IBaseGroupResetUnseenCountRequestBuilder extends IRequestBuilde
     /**
      * Creates the IGroupResetUnseenCountRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupResetUnseenCountRequest instance
      */
-    IGroupResetUnseenCountRequest buildRequest(final List<Option> options);
+    IGroupResetUnseenCountRequest buildRequest(final List<Option> requestOptions);
 }

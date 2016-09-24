@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Group Remove Favorite Request Builder.
  */
-public class BaseGroupRemoveFavoriteRequestBuilder extends BaseGetMethodRequestBuilder {
+public class BaseGroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupRemoveFavorite
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupRemoveFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseGroupRemoveFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,18 +42,17 @@ public class BaseGroupRemoveFavoriteRequestBuilder extends BaseGetMethodRequestB
     }
 
     /**
-     * Creates the IGroupRemoveFavoriteRequest with specific options instead of the existing options
+     * Creates the IGroupRemoveFavoriteRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupRemoveFavoriteRequest instance
      */
-    public IGroupRemoveFavoriteRequest buildRequest(final List<Option> options) {
+    public IGroupRemoveFavoriteRequest buildRequest(final List<Option> requestOptions) {
         GroupRemoveFavoriteRequest request = new GroupRemoveFavoriteRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
-
 
         return request;
     }

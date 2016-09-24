@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseAudio implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseAudio() {
@@ -36,96 +37,112 @@ public class BaseAudio implements IJsonBackedObject {
      * The Album.
      */
     @SerializedName("album")
+    @Expose
     public String album;
 
     /**
      * The Album Artist.
      */
     @SerializedName("albumArtist")
+    @Expose
     public String albumArtist;
 
     /**
      * The Artist.
      */
     @SerializedName("artist")
+    @Expose
     public String artist;
 
     /**
      * The Bitrate.
      */
     @SerializedName("bitrate")
+    @Expose
     public Long bitrate;
 
     /**
      * The Composers.
      */
     @SerializedName("composers")
+    @Expose
     public String composers;
 
     /**
      * The Copyright.
      */
     @SerializedName("copyright")
+    @Expose
     public String copyright;
 
     /**
      * The Disc.
      */
     @SerializedName("disc")
+    @Expose
     public Integer disc;
 
     /**
      * The Disc Count.
      */
     @SerializedName("discCount")
+    @Expose
     public Integer discCount;
 
     /**
      * The Duration.
      */
     @SerializedName("duration")
+    @Expose
     public Long duration;
 
     /**
      * The Genre.
      */
     @SerializedName("genre")
+    @Expose
     public String genre;
 
     /**
      * The Has Drm.
      */
     @SerializedName("hasDrm")
+    @Expose
     public Boolean hasDrm;
 
     /**
      * The Is Variable Bitrate.
      */
     @SerializedName("isVariableBitrate")
+    @Expose
     public Boolean isVariableBitrate;
 
     /**
      * The Title.
      */
     @SerializedName("title")
+    @Expose
     public String title;
 
     /**
      * The Track.
      */
     @SerializedName("track")
+    @Expose
     public Integer track;
 
     /**
      * The Track Count.
      */
     @SerializedName("trackCount")
+    @Expose
     public Integer trackCount;
 
     /**
      * The Year.
      */
     @SerializedName("year")
+    @Expose
     public Integer year;
 
 

@@ -27,18 +27,18 @@ public class BaseDriveItemCollectionRequestBuilder extends BaseRequestBuilder im
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDriveItemCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDriveItemCollectionRequest buildRequest(final List<Option> options) {
-        return new DriveItemCollectionRequest(getRequestUrl(), getClient(), options);
+    public IDriveItemCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new DriveItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IDriveItemRequestBuilder byId(final String id) {

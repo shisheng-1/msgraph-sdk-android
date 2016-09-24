@@ -27,9 +27,9 @@ public class UserReminderViewCollectionRequestBuilder extends BaseUserReminderVi
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String startDateTime, final String endDateTime) {
-        super(requestUrl, client, options, startDateTime, endDateTime);
+    public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String startDateTime, final String endDateTime) {
+        super(requestUrl, client, requestOptions, startDateTime, endDateTime);
     }
 }

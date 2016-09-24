@@ -27,17 +27,17 @@ public class BaseDirectoryObjectCollectionReferenceRequestBuilder extends BaseRe
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDirectoryObjectCollectionReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDirectoryObjectCollectionReferenceRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCollectionReferenceRequest buildRequest(final List<Option> options) {
-        return new DirectoryObjectCollectionReferenceRequest(getRequestUrl(), getClient(), options);
+    public IDirectoryObjectCollectionReferenceRequest buildRequest(final List<Option> requestOptions) {
+        return new DirectoryObjectCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

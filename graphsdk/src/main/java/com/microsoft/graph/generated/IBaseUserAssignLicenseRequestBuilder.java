@@ -32,8 +32,8 @@ public interface IBaseUserAssignLicenseRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserAssignLicenseRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IUserAssignLicenseRequest instance
      */
-    IUserAssignLicenseRequest buildRequest(final List<Option> options);
+    IUserAssignLicenseRequest buildRequest(final List<Option> requestOptions);
 }

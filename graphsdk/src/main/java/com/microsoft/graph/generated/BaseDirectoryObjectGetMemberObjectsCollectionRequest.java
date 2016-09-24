@@ -31,10 +31,10 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequest extends BaseCo
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectGetMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDirectoryObjectGetMemberObjectsCollectionResponse.class, IDirectoryObjectGetMemberObjectsCollectionPage.class);
+    public BaseDirectoryObjectGetMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDirectoryObjectGetMemberObjectsCollectionResponse.class, IDirectoryObjectGetMemberObjectsCollectionPage.class);
         mBody = new DirectoryObjectGetMemberObjectsBody();
     }
 

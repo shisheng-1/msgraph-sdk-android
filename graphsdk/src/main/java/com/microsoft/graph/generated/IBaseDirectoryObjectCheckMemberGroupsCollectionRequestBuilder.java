@@ -24,6 +24,6 @@ public interface IBaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder e
 
     IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest();
 
-    IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final List<Option> options);
+    IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final List<Option> requestOptions);
 
 }

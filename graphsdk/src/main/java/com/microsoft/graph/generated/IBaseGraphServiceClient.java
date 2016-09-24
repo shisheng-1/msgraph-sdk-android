@@ -158,6 +158,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IDriveRequestBuilder getDrives(final String id);
 
     /**
+     * Gets the collection of Shares objects.
+     *
+     * @return The request builder for the collection of Shares objects
+     */
+    ISharedDriveItemCollectionRequestBuilder getShares();
+
+    /**
+     * Gets a single Shares.
+     *
+     * @param id The id of the Shares to retrieve.
+     * @return The request builder for the Shares object
+     */
+    ISharedDriveItemRequestBuilder getShares(final String id);
+
+    /**
+     * Gets the collection of Workbooks objects.
+     *
+     * @return The request builder for the collection of Workbooks objects
+     */
+    IDriveItemCollectionRequestBuilder getWorkbooks();
+
+    /**
+     * Gets a single Workbooks.
+     *
+     * @param id The id of the Workbooks to retrieve.
+     * @return The request builder for the Workbooks object
+     */
+    IDriveItemRequestBuilder getWorkbooks(final String id);
+
+    /**
      * Gets the collection of Subscriptions objects.
      *
      * @return The request builder for the collection of Subscriptions objects

@@ -24,7 +24,8 @@ public interface IBaseEventCollectionRequestBuilder extends IRequestBuilder {
 
     IEventCollectionRequest buildRequest();
 
-    IEventCollectionRequest buildRequest(final List<Option> options);
+    IEventCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IEventRequestBuilder byId(final String id);
+
 }

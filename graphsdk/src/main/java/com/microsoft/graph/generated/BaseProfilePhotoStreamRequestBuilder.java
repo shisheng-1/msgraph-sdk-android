@@ -27,10 +27,10 @@ public class BaseProfilePhotoStreamRequestBuilder extends BaseRequestBuilder imp
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseProfilePhotoStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseProfilePhotoStreamRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -43,8 +43,8 @@ public class BaseProfilePhotoStreamRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request with specific options instead of the existing options
      */
-    public IProfilePhotoStreamRequest buildRequest(final List<Option> options) {
-        return new ProfilePhotoStreamRequest(getRequestUrl(), getClient(), options);
+    public IProfilePhotoStreamRequest buildRequest(final List<Option> requestOptions) {
+        return new ProfilePhotoStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

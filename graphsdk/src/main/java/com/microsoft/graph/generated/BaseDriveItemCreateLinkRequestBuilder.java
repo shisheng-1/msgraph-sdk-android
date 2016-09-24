@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Drive Item Create Link Request Builder.
  */
-public class BaseDriveItemCreateLinkRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemCreateLink
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String type, final String scope) {
-        super(requestUrl, client, options);
+    public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String type, final String scope) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("type", type);
         mBodyParams.put("scope", scope);
     }
@@ -44,21 +44,22 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BasePostMethodRequest
     }
 
     /**
-     * Creates the IDriveItemCreateLinkRequest with specific options instead of the existing options
+     * Creates the IDriveItemCreateLinkRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IDriveItemCreateLinkRequest instance
      */
-    public IDriveItemCreateLinkRequest buildRequest(final List<Option> options) {
+    public IDriveItemCreateLinkRequest buildRequest(final List<Option> requestOptions) {
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
         }
+
         if (hasParameter("scope")) {
             request.mBody.scope = getParameter("scope");
         }

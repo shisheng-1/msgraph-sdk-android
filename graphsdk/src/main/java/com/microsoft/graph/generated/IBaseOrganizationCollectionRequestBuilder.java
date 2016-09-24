@@ -24,7 +24,8 @@ public interface IBaseOrganizationCollectionRequestBuilder extends IRequestBuild
 
     IOrganizationCollectionRequest buildRequest();
 
-    IOrganizationCollectionRequest buildRequest(final List<Option> options);
+    IOrganizationCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IOrganizationRequestBuilder byId(final String id);
+
 }

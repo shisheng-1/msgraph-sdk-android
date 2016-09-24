@@ -29,7 +29,7 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPostRequest buildRequest(final List<Option> options);
+    IPostRequest buildRequest(final List<Option> requestOptions);
 
     IExtensionCollectionRequestBuilder getExtensions();
 
@@ -43,6 +43,14 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
     IPostForwardRequestBuilder getForward(final String comment, final List<Recipient> toRecipients);
     IPostReplyRequestBuilder getReply(final Post post);
 

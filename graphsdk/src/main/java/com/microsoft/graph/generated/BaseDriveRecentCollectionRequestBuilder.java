@@ -19,30 +19,33 @@ import java.util.List;
 /**
  * The class for the Base Drive Recent Collection Request Builder.
  */
-public class BaseDriveRecentCollectionRequestBuilder extends BaseGetMethodRequestBuilder implements IBaseDriveRecentCollectionRequestBuilder {
+public class BaseDriveRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IBaseDriveRecentCollectionRequestBuilder {
 
     /**
      * The request builder for this collection of Drive
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveRecentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDriveRecentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDriveRecentCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDriveRecentCollectionRequest buildRequest(final List<Option> options) {
+    public IDriveRecentCollectionRequest buildRequest(final List<Option> requestOptions) {
         DriveRecentCollectionRequest request = new DriveRecentCollectionRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
+      for (FunctionOption option : mFunctionOptions) {
+            request.addFunctionOption(option);
+      }
 
         return request;
     }

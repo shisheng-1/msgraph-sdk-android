@@ -26,14 +26,14 @@ import com.google.gson.annotations.*;
 public interface IBaseMessageCreateForwardRequest {
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateForward
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<Message> callback);
 
     /**
-     * Creates the Message
+     * Creates the MessageCreateForward
      *
      * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.

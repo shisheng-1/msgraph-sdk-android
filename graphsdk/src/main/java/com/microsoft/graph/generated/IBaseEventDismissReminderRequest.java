@@ -26,16 +26,15 @@ import com.google.gson.annotations.*;
 public interface IBaseEventDismissReminderRequest {
 
     /**
-     * Creates the Event
+     * Creates the EventDismissReminder
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<Void> callback);
 
     /**
-     * Creates the Event
+     * Creates the EventDismissReminder
      *
-     * @return The Event
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     void post() throws ClientException;

@@ -32,8 +32,8 @@ public interface IBaseGroupUnsubscribeByMailRequestBuilder extends IRequestBuild
     /**
      * Creates the IGroupUnsubscribeByMailRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupUnsubscribeByMailRequest instance
      */
-    IGroupUnsubscribeByMailRequest buildRequest(final List<Option> options);
+    IGroupUnsubscribeByMailRequest buildRequest(final List<Option> requestOptions);
 }

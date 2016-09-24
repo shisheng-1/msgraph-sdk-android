@@ -34,90 +34,105 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
      * The Account Enabled.
      */
     @SerializedName("accountEnabled")
+    @Expose
     public Boolean accountEnabled;
 
     /**
      * The Alternative Security Ids.
      */
     @SerializedName("alternativeSecurityIds")
+    @Expose
     public List<AlternativeSecurityId> alternativeSecurityIds;
 
     /**
      * The Approximate Last Sign In Date Time.
      */
     @SerializedName("approximateLastSignInDateTime")
+    @Expose
     public java.util.Calendar approximateLastSignInDateTime;
 
     /**
      * The Device Id.
      */
     @SerializedName("deviceId")
+    @Expose
     public String deviceId;
 
     /**
      * The Device Metadata.
      */
     @SerializedName("deviceMetadata")
+    @Expose
     public String deviceMetadata;
 
     /**
      * The Device Version.
      */
     @SerializedName("deviceVersion")
+    @Expose
     public Integer deviceVersion;
 
     /**
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Is Compliant.
      */
     @SerializedName("isCompliant")
+    @Expose
     public Boolean isCompliant;
 
     /**
      * The Is Managed.
      */
     @SerializedName("isManaged")
+    @Expose
     public Boolean isManaged;
 
     /**
      * The On Premises Last Sync Date Time.
      */
     @SerializedName("onPremisesLastSyncDateTime")
+    @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Sync Enabled.
      */
     @SerializedName("onPremisesSyncEnabled")
+    @Expose
     public Boolean onPremisesSyncEnabled;
 
     /**
      * The Operating System.
      */
     @SerializedName("operatingSystem")
+    @Expose
     public String operatingSystem;
 
     /**
      * The Operating System Version.
      */
     @SerializedName("operatingSystemVersion")
+    @Expose
     public String operatingSystemVersion;
 
     /**
      * The Physical Ids.
      */
     @SerializedName("physicalIds")
+    @Expose
     public List<String> physicalIds;
 
     /**
      * The Trust Type.
      */
     @SerializedName("trustType")
+    @Expose
     public String trustType;
 
     /**

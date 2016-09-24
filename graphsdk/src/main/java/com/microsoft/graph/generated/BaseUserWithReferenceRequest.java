@@ -27,10 +27,10 @@ public class BaseUserWithReferenceRequest extends BaseRequest implements IBaseUs
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserWithReferenceRequest(String requestUrl, IBaseClient client, List<Option> options) {
-        super(requestUrl, client, options, User.class);
+    public BaseUserWithReferenceRequest(String requestUrl, IBaseClient client, List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, User.class);
     }
 
     public void post(final User newUser, final IJsonBackedObject payload, final ICallback<User> callback) {

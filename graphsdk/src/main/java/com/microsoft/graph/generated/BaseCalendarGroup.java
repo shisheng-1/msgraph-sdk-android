@@ -34,18 +34,21 @@ public class BaseCalendarGroup extends Entity implements IJsonBackedObject {
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Class Id.
      */
     @SerializedName("classId")
+    @Expose
     public java.util.UUID classId;
 
     /**
      * The Change Key.
      */
     @SerializedName("changeKey")
+    @Expose
     public String changeKey;
 
     /**

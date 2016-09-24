@@ -29,7 +29,7 @@ public interface IBaseCalendarRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ICalendarRequest buildRequest(final List<Option> options);
+    ICalendarRequest buildRequest(final List<Option> requestOptions);
 
     IEventCollectionRequestBuilder getEvents();
 
@@ -38,5 +38,13 @@ public interface IBaseCalendarRequestBuilder extends IRequestBuilder {
     IEventCollectionRequestBuilder getCalendarView();
 
     IEventRequestBuilder getCalendarView(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
 
 }

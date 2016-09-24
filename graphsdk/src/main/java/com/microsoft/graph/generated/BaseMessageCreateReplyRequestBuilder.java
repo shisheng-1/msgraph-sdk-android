@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Message Create Reply Request Builder.
  */
-public class BaseMessageCreateReplyRequestBuilder extends BaseGetMethodRequestBuilder {
+public class BaseMessageCreateReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCreateReply
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseMessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,18 +42,17 @@ public class BaseMessageCreateReplyRequestBuilder extends BaseGetMethodRequestBu
     }
 
     /**
-     * Creates the IMessageCreateReplyRequest with specific options instead of the existing options
+     * Creates the IMessageCreateReplyRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMessageCreateReplyRequest instance
      */
-    public IMessageCreateReplyRequest buildRequest(final List<Option> options) {
+    public IMessageCreateReplyRequest buildRequest(final List<Option> requestOptions) {
         MessageCreateReplyRequest request = new MessageCreateReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
-
 
         return request;
     }

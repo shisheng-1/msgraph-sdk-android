@@ -28,10 +28,10 @@ public class BaseGroupCollectionRequest extends BaseCollectionRequest<BaseGroupC
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseGroupCollectionResponse.class, IGroupCollectionPage.class);
+    public BaseGroupCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseGroupCollectionResponse.class, IGroupCollectionPage.class);
     }
 
     public void get(final ICallback<IGroupCollectionPage> callback) {

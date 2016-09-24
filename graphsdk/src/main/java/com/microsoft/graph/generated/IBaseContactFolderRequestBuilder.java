@@ -29,7 +29,7 @@ public interface IBaseContactFolderRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IContactFolderRequest buildRequest(final List<Option> options);
+    IContactFolderRequest buildRequest(final List<Option> requestOptions);
 
     IContactCollectionRequestBuilder getContacts();
 
@@ -38,5 +38,13 @@ public interface IBaseContactFolderRequestBuilder extends IRequestBuilder {
     IContactFolderCollectionRequestBuilder getChildFolders();
 
     IContactFolderRequestBuilder getChildFolders(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
 
 }

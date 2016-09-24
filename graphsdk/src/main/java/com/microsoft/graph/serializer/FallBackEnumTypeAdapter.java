@@ -64,8 +64,11 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
                     String value = reader.nextString();
                     T incoming = enumValues.get(value);
                     if (incoming == null) {
-                        mLogger.logDebug(String.format("The following value %s could not be recognized as a member of the enum",
-                                value));
+                        mLogger.logDebug(
+                                String.format(
+                                        "The following value %s could not be recognized as a member of the enum",
+                                        value)
+                        );
                         return enumValues.get(NO_KNOWN_VALUE);
                     }
                     return incoming;

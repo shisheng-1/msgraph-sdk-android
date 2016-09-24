@@ -24,7 +24,8 @@ public interface IBaseUserCollectionRequestBuilder extends IRequestBuilder {
 
     IUserCollectionRequest buildRequest();
 
-    IUserCollectionRequest buildRequest(final List<Option> options);
+    IUserCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IUserRequestBuilder byId(final String id);
+
 }

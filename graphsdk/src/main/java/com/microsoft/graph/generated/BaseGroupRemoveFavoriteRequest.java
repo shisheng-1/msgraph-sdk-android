@@ -27,15 +27,14 @@ public class BaseGroupRemoveFavoriteRequest extends BaseRequest implements IBase
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupRemoveFavoriteRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Void.class);
-
+    public BaseGroupRemoveFavoriteRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**
-     * Creates the Group
+     * Creates the GroupRemoveFavorite
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -55,9 +54,8 @@ public class BaseGroupRemoveFavoriteRequest extends BaseRequest implements IBase
     }
 
     /**
-     * Creates the Group
+     * Creates the GroupRemoveFavorite
      *
-     * @return The Group
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     public void post() throws ClientException {

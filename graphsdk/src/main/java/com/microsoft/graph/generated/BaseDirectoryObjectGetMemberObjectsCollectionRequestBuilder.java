@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Directory Object Get Member Objects Collection Request Builder.
  */
-public class BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder extends BasePostMethodRequestBuilder implements IBaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder {
+public class BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder extends BaseActionRequestBuilder implements IBaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Boolean securityEnabledOnly) {
-        super(requestUrl, client, options);
+    public BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Boolean securityEnabledOnly) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("securityEnabledOnly", securityEnabledOnly);
       }
 
@@ -37,11 +37,11 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final List<Option> options) {
+    public IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final List<Option> requestOptions) {
         DirectoryObjectGetMemberObjectsCollectionRequest request = new DirectoryObjectGetMemberObjectsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("securityEnabledOnly")) {

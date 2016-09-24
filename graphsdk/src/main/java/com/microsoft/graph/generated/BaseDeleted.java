@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseDeleted implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseDeleted() {
@@ -36,6 +37,7 @@ public class BaseDeleted implements IJsonBackedObject {
      * The State.
      */
     @SerializedName("state")
+    @Expose
     public String state;
 
 

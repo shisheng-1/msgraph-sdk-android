@@ -24,7 +24,8 @@ public interface IBaseSubscribedSkuCollectionRequestBuilder extends IRequestBuil
 
     ISubscribedSkuCollectionRequest buildRequest();
 
-    ISubscribedSkuCollectionRequest buildRequest(final List<Option> options);
+    ISubscribedSkuCollectionRequest buildRequest(final List<Option> requestOptions);
 
     ISubscribedSkuRequestBuilder byId(final String id);
+
 }

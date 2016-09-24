@@ -28,10 +28,10 @@ public class BaseUserReferenceRequestBuilder extends BaseRequestBuilder implemen
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseUserReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,9 +42,9 @@ public class BaseUserReferenceRequestBuilder extends BaseRequestBuilder implemen
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IUserReferenceRequest buildRequest(final List<Option> options) {
-        return new UserReferenceRequest(getRequestUrl(), getClient(), options);
+    public IUserReferenceRequest buildRequest(final List<Option> requestOptions) {
+        return new UserReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

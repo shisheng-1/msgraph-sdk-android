@@ -29,7 +29,7 @@ public interface IBaseDirectoryRoleRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryRoleRequest buildRequest(final List<Option> options);
+    IDirectoryRoleRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers();
 

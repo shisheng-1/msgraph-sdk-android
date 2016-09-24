@@ -28,10 +28,10 @@ public class BaseDeviceCollectionRequest extends BaseCollectionRequest<BaseDevic
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDeviceCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDeviceCollectionResponse.class, IDeviceCollectionPage.class);
+    public BaseDeviceCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDeviceCollectionResponse.class, IDeviceCollectionPage.class);
     }
 
     public void get(final ICallback<IDeviceCollectionPage> callback) {

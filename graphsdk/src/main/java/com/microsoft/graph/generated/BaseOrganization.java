@@ -34,108 +34,126 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
      * The Assigned Plans.
      */
     @SerializedName("assignedPlans")
+    @Expose
     public List<AssignedPlan> assignedPlans;
 
     /**
      * The Business Phones.
      */
     @SerializedName("businessPhones")
+    @Expose
     public List<String> businessPhones;
 
     /**
      * The City.
      */
     @SerializedName("city")
+    @Expose
     public String city;
 
     /**
      * The Country.
      */
     @SerializedName("country")
+    @Expose
     public String country;
 
     /**
      * The Country Letter Code.
      */
     @SerializedName("countryLetterCode")
+    @Expose
     public String countryLetterCode;
 
     /**
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Marketing Notification Emails.
      */
     @SerializedName("marketingNotificationEmails")
+    @Expose
     public List<String> marketingNotificationEmails;
 
     /**
      * The On Premises Last Sync Date Time.
      */
     @SerializedName("onPremisesLastSyncDateTime")
+    @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Sync Enabled.
      */
     @SerializedName("onPremisesSyncEnabled")
+    @Expose
     public Boolean onPremisesSyncEnabled;
 
     /**
      * The Postal Code.
      */
     @SerializedName("postalCode")
+    @Expose
     public String postalCode;
 
     /**
      * The Preferred Language.
      */
     @SerializedName("preferredLanguage")
+    @Expose
     public String preferredLanguage;
 
     /**
      * The Provisioned Plans.
      */
     @SerializedName("provisionedPlans")
+    @Expose
     public List<ProvisionedPlan> provisionedPlans;
 
     /**
      * The Security Compliance Notification Mails.
      */
     @SerializedName("securityComplianceNotificationMails")
+    @Expose
     public List<String> securityComplianceNotificationMails;
 
     /**
      * The Security Compliance Notification Phones.
      */
     @SerializedName("securityComplianceNotificationPhones")
+    @Expose
     public List<String> securityComplianceNotificationPhones;
 
     /**
      * The State.
      */
     @SerializedName("state")
+    @Expose
     public String state;
 
     /**
      * The Street.
      */
     @SerializedName("street")
+    @Expose
     public String street;
 
     /**
      * The Technical Notification Mails.
      */
     @SerializedName("technicalNotificationMails")
+    @Expose
     public List<String> technicalNotificationMails;
 
     /**
      * The Verified Domains.
      */
     @SerializedName("verifiedDomains")
+    @Expose
     public List<VerifiedDomain> verifiedDomains;
 
 

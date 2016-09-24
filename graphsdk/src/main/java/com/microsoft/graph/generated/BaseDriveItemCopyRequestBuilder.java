@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Drive Item Copy Request Builder.
  */
-public class BaseDriveItemCopyRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemCopy
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String name, final ItemReference parentReference) {
-        super(requestUrl, client, options);
+    public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String name, final ItemReference parentReference) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("name", name);
         mBodyParams.put("parentReference", parentReference);
     }
@@ -44,21 +44,22 @@ public class BaseDriveItemCopyRequestBuilder extends BasePostMethodRequestBuilde
     }
 
     /**
-     * Creates the IDriveItemCopyRequest with specific options instead of the existing options
+     * Creates the IDriveItemCopyRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IDriveItemCopyRequest instance
      */
-    public IDriveItemCopyRequest buildRequest(final List<Option> options) {
+    public IDriveItemCopyRequest buildRequest(final List<Option> requestOptions) {
         DriveItemCopyRequest request = new DriveItemCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("name")) {
             request.mBody.name = getParameter("name");
         }
+
         if (hasParameter("parentReference")) {
             request.mBody.parentReference = getParameter("parentReference");
         }

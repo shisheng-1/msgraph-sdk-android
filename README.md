@@ -1,6 +1,6 @@
 # Get started with the Microsoft Graph SDK for Android
 
-[ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)[![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-android.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-android)
+[ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)
 
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Android application!
 

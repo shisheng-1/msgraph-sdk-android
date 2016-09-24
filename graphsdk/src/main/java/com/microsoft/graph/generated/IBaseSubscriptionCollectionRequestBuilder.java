@@ -24,7 +24,8 @@ public interface IBaseSubscriptionCollectionRequestBuilder extends IRequestBuild
 
     ISubscriptionCollectionRequest buildRequest();
 
-    ISubscriptionCollectionRequest buildRequest(final List<Option> options);
+    ISubscriptionCollectionRequest buildRequest(final List<Option> requestOptions);
 
     ISubscriptionRequestBuilder byId(final String id);
+
 }

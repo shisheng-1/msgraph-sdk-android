@@ -24,7 +24,8 @@ public interface IBaseCalendarCollectionRequestBuilder extends IRequestBuilder {
 
     ICalendarCollectionRequest buildRequest();
 
-    ICalendarCollectionRequest buildRequest(final List<Option> options);
+    ICalendarCollectionRequest buildRequest(final List<Option> requestOptions);
 
     ICalendarRequestBuilder byId(final String id);
+
 }

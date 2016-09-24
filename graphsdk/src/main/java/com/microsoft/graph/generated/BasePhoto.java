@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BasePhoto implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BasePhoto() {
@@ -36,48 +37,56 @@ public class BasePhoto implements IJsonBackedObject {
      * The Camera Make.
      */
     @SerializedName("cameraMake")
+    @Expose
     public String cameraMake;
 
     /**
      * The Camera Model.
      */
     @SerializedName("cameraModel")
+    @Expose
     public String cameraModel;
 
     /**
      * The Exposure Denominator.
      */
     @SerializedName("exposureDenominator")
+    @Expose
     public Double exposureDenominator;
 
     /**
      * The Exposure Numerator.
      */
     @SerializedName("exposureNumerator")
+    @Expose
     public Double exposureNumerator;
 
     /**
      * The Focal Length.
      */
     @SerializedName("focalLength")
+    @Expose
     public Double focalLength;
 
     /**
      * The FNumber.
      */
     @SerializedName("fNumber")
+    @Expose
     public Double fNumber;
 
     /**
      * The Taken Date Time.
      */
     @SerializedName("takenDateTime")
+    @Expose
     public java.util.Calendar takenDateTime;
 
     /**
      * The Iso.
      */
     @SerializedName("iso")
+    @Expose
     public Integer iso;
 
 

@@ -27,10 +27,10 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDriveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDriveRequest buildRequest(final List<Option> options) {
-        return new DriveRequest(getRequestUrl(), getClient(), options);
+    public IDriveRequest buildRequest(final List<Option> requestOptions) {
+        return new DriveRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IDriveItemCollectionRequestBuilder getItems() {
@@ -67,6 +67,10 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
      */
     public IDriveItemRequestBuilder getRoot() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
+    }
+
+    public IDriveSearchCollectionRequestBuilder getSearch(final String q) {
+        return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
     public IDriveRecentCollectionRequestBuilder getRecent() {

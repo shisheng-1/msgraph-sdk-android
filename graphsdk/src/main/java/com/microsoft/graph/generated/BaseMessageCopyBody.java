@@ -29,6 +29,7 @@ public class BaseMessageCopyBody {
      * The destination Id.
      */
     @SerializedName("destinationId")
+    @Expose
     public String destinationId;
 
 

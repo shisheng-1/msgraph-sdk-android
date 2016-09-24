@@ -29,7 +29,7 @@ public interface IBaseDeviceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDeviceRequest buildRequest(final List<Option> options);
+    IDeviceRequest buildRequest(final List<Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredOwners();
 

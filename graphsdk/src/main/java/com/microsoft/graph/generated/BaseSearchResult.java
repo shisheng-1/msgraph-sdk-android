@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseSearchResult implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseSearchResult() {
@@ -36,6 +37,7 @@ public class BaseSearchResult implements IJsonBackedObject {
      * The On Click Telemetry Url.
      */
     @SerializedName("onClickTelemetryUrl")
+    @Expose
     public String onClickTelemetryUrl;
 
 

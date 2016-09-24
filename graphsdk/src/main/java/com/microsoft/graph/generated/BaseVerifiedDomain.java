@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseVerifiedDomain implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseVerifiedDomain() {
@@ -36,30 +37,35 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
      * The Capabilities.
      */
     @SerializedName("capabilities")
+    @Expose
     public String capabilities;
 
     /**
      * The Is Default.
      */
     @SerializedName("isDefault")
+    @Expose
     public Boolean isDefault;
 
     /**
      * The Is Initial.
      */
     @SerializedName("isInitial")
+    @Expose
     public Boolean isInitial;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
 
     /**
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public String type;
 
 

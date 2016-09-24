@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseDateTimeTimeZone() {
@@ -36,12 +37,14 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
      * The Date Time.
      */
     @SerializedName("dateTime")
+    @Expose
     public String dateTime;
 
     /**
      * The Time Zone.
      */
     @SerializedName("timeZone")
+    @Expose
     public String timeZone;
 
 

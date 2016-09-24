@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base User Reminder View Collection Request Builder.
  */
-public class BaseUserReminderViewCollectionRequestBuilder extends BaseGetMethodRequestBuilder implements IBaseUserReminderViewCollectionRequestBuilder {
+public class BaseUserReminderViewCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IBaseUserReminderViewCollectionRequestBuilder {
 
     /**
      * The request builder for this collection of User
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String startDateTime, final String endDateTime) {
-        super(requestUrl, client, options);
+    public BaseUserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String startDateTime, final String endDateTime) {
+        super(requestUrl, client, requestOptions);
         mFunctionOptions.add(new FunctionOption("startDateTime", startDateTime));
           mFunctionOptions.add(new FunctionOption("endDateTime", endDateTime));
       }
@@ -38,20 +38,17 @@ public class BaseUserReminderViewCollectionRequestBuilder extends BaseGetMethodR
         return buildRequest(getOptions());
     }
 
-    public IUserReminderViewCollectionRequest buildRequest(final List<Option> options) {
+    public IUserReminderViewCollectionRequest buildRequest(final List<Option> requestOptions) {
         UserReminderViewCollectionRequest request = new UserReminderViewCollectionRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
-        for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : mFunctionOptions) {
             request.addFunctionOption(option);
-        }
-          for (FunctionOption option : mFunctionOptions) {
-            request.addFunctionOption(option);
-        }
-  
+      }
+
         return request;
     }
 }

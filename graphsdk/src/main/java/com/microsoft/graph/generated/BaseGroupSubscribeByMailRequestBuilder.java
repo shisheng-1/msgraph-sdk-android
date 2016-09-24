@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Group Subscribe By Mail Request Builder.
  */
-public class BaseGroupSubscribeByMailRequestBuilder extends BaseGetMethodRequestBuilder {
+public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupSubscribeByMail
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupSubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseGroupSubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,18 +42,17 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseGetMethodRequest
     }
 
     /**
-     * Creates the IGroupSubscribeByMailRequest with specific options instead of the existing options
+     * Creates the IGroupSubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupSubscribeByMailRequest instance
      */
-    public IGroupSubscribeByMailRequest buildRequest(final List<Option> options) {
+    public IGroupSubscribeByMailRequest buildRequest(final List<Option> requestOptions) {
         GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
-
 
         return request;
     }

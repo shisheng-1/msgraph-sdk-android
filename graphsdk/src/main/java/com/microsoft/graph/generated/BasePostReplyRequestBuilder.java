@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Post Reply Request Builder.
  */
-public class BasePostReplyRequestBuilder extends BasePostMethodRequestBuilder {
+public class BasePostReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this PostReply
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BasePostReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final Post post) {
-        super(requestUrl, client, options);
+    public BasePostReplyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Post post) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("post", post);
     }
 
@@ -43,16 +43,16 @@ public class BasePostReplyRequestBuilder extends BasePostMethodRequestBuilder {
     }
 
     /**
-     * Creates the IPostReplyRequest with specific options instead of the existing options
+     * Creates the IPostReplyRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IPostReplyRequest instance
      */
-    public IPostReplyRequest buildRequest(final List<Option> options) {
+    public IPostReplyRequest buildRequest(final List<Option> requestOptions) {
         PostReplyRequest request = new PostReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("post")) {

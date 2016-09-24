@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Group Add Favorite Request Builder.
  */
-public class BaseGroupAddFavoriteRequestBuilder extends BaseGetMethodRequestBuilder {
+public class BaseGroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupAddFavorite
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseGroupAddFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseGroupAddFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,18 +42,17 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseGetMethodRequestBuil
     }
 
     /**
-     * Creates the IGroupAddFavoriteRequest with specific options instead of the existing options
+     * Creates the IGroupAddFavoriteRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IGroupAddFavoriteRequest instance
      */
-    public IGroupAddFavoriteRequest buildRequest(final List<Option> options) {
+    public IGroupAddFavoriteRequest buildRequest(final List<Option> requestOptions) {
         GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
-
 
         return request;
     }

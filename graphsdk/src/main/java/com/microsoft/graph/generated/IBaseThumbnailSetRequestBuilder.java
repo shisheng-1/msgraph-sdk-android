@@ -29,6 +29,6 @@ public interface IBaseThumbnailSetRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IThumbnailSetRequest buildRequest(final List<Option> options);
+    IThumbnailSetRequest buildRequest(final List<Option> requestOptions);
 
 }

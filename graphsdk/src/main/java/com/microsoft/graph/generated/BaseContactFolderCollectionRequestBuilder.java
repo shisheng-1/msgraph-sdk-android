@@ -27,18 +27,18 @@ public class BaseContactFolderCollectionRequestBuilder extends BaseRequestBuilde
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseContactFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseContactFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IContactFolderCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IContactFolderCollectionRequest buildRequest(final List<Option> options) {
-        return new ContactFolderCollectionRequest(getRequestUrl(), getClient(), options);
+    public IContactFolderCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new ContactFolderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IContactFolderRequestBuilder byId(final String id) {

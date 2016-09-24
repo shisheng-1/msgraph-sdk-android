@@ -29,6 +29,6 @@ public interface IBasePermissionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPermissionRequest buildRequest(final List<Option> options);
+    IPermissionRequest buildRequest(final List<Option> requestOptions);
 
 }

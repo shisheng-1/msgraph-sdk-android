@@ -34,18 +34,21 @@ public class BaseDrive extends Entity implements IJsonBackedObject {
      * The Drive Type.
      */
     @SerializedName("driveType")
+    @Expose
     public String driveType;
 
     /**
      * The Owner.
      */
     @SerializedName("owner")
+    @Expose
     public IdentitySet owner;
 
     /**
      * The Quota.
      */
     @SerializedName("quota")
+    @Expose
     public Quota quota;
 
     /**
@@ -62,6 +65,7 @@ public class BaseDrive extends Entity implements IJsonBackedObject {
      * The Root.
      */
     @SerializedName("root")
+    @Expose
     public DriveItem root;
 
 

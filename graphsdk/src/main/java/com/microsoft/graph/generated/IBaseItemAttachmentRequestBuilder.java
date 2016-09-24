@@ -29,7 +29,7 @@ public interface IBaseItemAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IItemAttachmentRequest buildRequest(final List<Option> options);
+    IItemAttachmentRequest buildRequest(final List<Option> requestOptions);
 
     /**
      * Gets the request builder for OutlookItem.

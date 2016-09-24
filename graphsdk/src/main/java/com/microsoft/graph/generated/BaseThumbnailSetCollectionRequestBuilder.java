@@ -27,18 +27,18 @@ public class BaseThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseThumbnailSetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseThumbnailSetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IThumbnailSetCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IThumbnailSetCollectionRequest buildRequest(final List<Option> options) {
-        return new ThumbnailSetCollectionRequest(getRequestUrl(), getClient(), options);
+    public IThumbnailSetCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new ThumbnailSetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IThumbnailSetRequestBuilder byId(final String id) {

@@ -27,10 +27,10 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseItemAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseItemAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IItemAttachmentRequest buildRequest(final List<Option> options) {
-        return new ItemAttachmentRequest(getRequestUrl(), getClient(), options);
+    public IItemAttachmentRequest buildRequest(final List<Option> requestOptions) {
+        return new ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 

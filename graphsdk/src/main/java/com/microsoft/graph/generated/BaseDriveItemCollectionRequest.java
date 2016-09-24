@@ -28,10 +28,10 @@ public class BaseDriveItemCollectionRequest extends BaseCollectionRequest<BaseDr
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseDriveItemCollectionResponse.class, IDriveItemCollectionPage.class);
+    public BaseDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseDriveItemCollectionResponse.class, IDriveItemCollectionPage.class);
     }
 
     public void get(final ICallback<IDriveItemCollectionPage> callback) {

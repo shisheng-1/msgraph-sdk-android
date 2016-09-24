@@ -24,7 +24,8 @@ public interface IBaseMailFolderCollectionRequestBuilder extends IRequestBuilder
 
     IMailFolderCollectionRequest buildRequest();
 
-    IMailFolderCollectionRequest buildRequest(final List<Option> options);
+    IMailFolderCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IMailFolderRequestBuilder byId(final String id);
+
 }

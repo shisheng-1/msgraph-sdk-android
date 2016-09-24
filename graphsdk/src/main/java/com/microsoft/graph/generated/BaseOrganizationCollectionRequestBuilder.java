@@ -27,18 +27,18 @@ public class BaseOrganizationCollectionRequestBuilder extends BaseRequestBuilder
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseOrganizationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseOrganizationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IOrganizationCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IOrganizationCollectionRequest buildRequest(final List<Option> options) {
-        return new OrganizationCollectionRequest(getRequestUrl(), getClient(), options);
+    public IOrganizationCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new OrganizationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IOrganizationRequestBuilder byId(final String id) {

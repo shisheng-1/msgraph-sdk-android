@@ -28,10 +28,10 @@ public class BaseExtensionCollectionRequest extends BaseCollectionRequest<BaseEx
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseExtensionCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseExtensionCollectionResponse.class, IExtensionCollectionPage.class);
+    public BaseExtensionCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseExtensionCollectionResponse.class, IExtensionCollectionPage.class);
     }
 
     public void get(final ICallback<IExtensionCollectionPage> callback) {

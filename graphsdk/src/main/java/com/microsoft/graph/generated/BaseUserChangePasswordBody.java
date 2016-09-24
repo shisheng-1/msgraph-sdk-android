@@ -29,12 +29,14 @@ public class BaseUserChangePasswordBody {
      * The current Password.
      */
     @SerializedName("currentPassword")
+    @Expose
     public String currentPassword;
 
     /**
      * The new Password.
      */
     @SerializedName("newPassword")
+    @Expose
     public String newPassword;
 
 

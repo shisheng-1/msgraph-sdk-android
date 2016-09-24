@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Event Accept Request Builder.
  */
-public class BaseEventAcceptRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseEventAcceptRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventAccept
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment, final Boolean sendResponse) {
-        super(requestUrl, client, options);
+    public BaseEventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String comment, final Boolean sendResponse) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("comment", comment);
         mBodyParams.put("sendResponse", sendResponse);
     }
@@ -44,21 +44,22 @@ public class BaseEventAcceptRequestBuilder extends BasePostMethodRequestBuilder 
     }
 
     /**
-     * Creates the IEventAcceptRequest with specific options instead of the existing options
+     * Creates the IEventAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventAcceptRequest instance
      */
-    public IEventAcceptRequest buildRequest(final List<Option> options) {
+    public IEventAcceptRequest buildRequest(final List<Option> requestOptions) {
         EventAcceptRequest request = new EventAcceptRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("comment")) {
             request.mBody.comment = getParameter("comment");
         }
+
         if (hasParameter("sendResponse")) {
             request.mBody.sendResponse = getParameter("sendResponse");
         }

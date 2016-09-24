@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseRecurrencePattern implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseRecurrencePattern() {
@@ -36,42 +37,49 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public RecurrencePatternType type;
 
     /**
      * The Interval.
      */
     @SerializedName("interval")
+    @Expose
     public Integer interval;
 
     /**
      * The Month.
      */
     @SerializedName("month")
+    @Expose
     public Integer month;
 
     /**
      * The Day Of Month.
      */
     @SerializedName("dayOfMonth")
+    @Expose
     public Integer dayOfMonth;
 
     /**
      * The Days Of Week.
      */
     @SerializedName("daysOfWeek")
+    @Expose
     public List<DayOfWeek> daysOfWeek;
 
     /**
      * The First Day Of Week.
      */
     @SerializedName("firstDayOfWeek")
+    @Expose
     public DayOfWeek firstDayOfWeek;
 
     /**
      * The Index.
      */
     @SerializedName("index")
+    @Expose
     public WeekIndex index;
 
 

@@ -34,139 +34,167 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
      * The Received Date Time.
      */
     @SerializedName("receivedDateTime")
+    @Expose
     public java.util.Calendar receivedDateTime;
 
     /**
      * The Sent Date Time.
      */
     @SerializedName("sentDateTime")
+    @Expose
     public java.util.Calendar sentDateTime;
 
     /**
      * The Has Attachments.
      */
     @SerializedName("hasAttachments")
+    @Expose
     public Boolean hasAttachments;
 
     /**
      * The Internet Message Id.
      */
     @SerializedName("internetMessageId")
+    @Expose
     public String internetMessageId;
 
     /**
      * The Subject.
      */
     @SerializedName("subject")
+    @Expose
     public String subject;
 
     /**
      * The Body.
      */
     @SerializedName("body")
+    @Expose
     public ItemBody body;
 
     /**
      * The Body Preview.
      */
     @SerializedName("bodyPreview")
+    @Expose
     public String bodyPreview;
 
     /**
      * The Importance.
      */
     @SerializedName("importance")
+    @Expose
     public Importance importance;
 
     /**
      * The Parent Folder Id.
      */
     @SerializedName("parentFolderId")
+    @Expose
     public String parentFolderId;
 
     /**
      * The Sender.
      */
     @SerializedName("sender")
+    @Expose
     public Recipient sender;
 
     /**
      * The From.
      */
     @SerializedName("from")
+    @Expose
     public Recipient from;
 
     /**
      * The To Recipients.
      */
     @SerializedName("toRecipients")
+    @Expose
     public List<Recipient> toRecipients;
 
     /**
      * The Cc Recipients.
      */
     @SerializedName("ccRecipients")
+    @Expose
     public List<Recipient> ccRecipients;
 
     /**
      * The Bcc Recipients.
      */
     @SerializedName("bccRecipients")
+    @Expose
     public List<Recipient> bccRecipients;
 
     /**
      * The Reply To.
      */
     @SerializedName("replyTo")
+    @Expose
     public List<Recipient> replyTo;
 
     /**
      * The Conversation Id.
      */
     @SerializedName("conversationId")
+    @Expose
     public String conversationId;
 
     /**
      * The Unique Body.
      */
     @SerializedName("uniqueBody")
+    @Expose
     public ItemBody uniqueBody;
 
     /**
      * The Is Delivery Receipt Requested.
      */
     @SerializedName("isDeliveryReceiptRequested")
+    @Expose
     public Boolean isDeliveryReceiptRequested;
 
     /**
      * The Is Read Receipt Requested.
      */
     @SerializedName("isReadReceiptRequested")
+    @Expose
     public Boolean isReadReceiptRequested;
 
     /**
      * The Is Read.
      */
     @SerializedName("isRead")
+    @Expose
     public Boolean isRead;
 
     /**
      * The Is Draft.
      */
     @SerializedName("isDraft")
+    @Expose
     public Boolean isDraft;
 
     /**
      * The Web Link.
      */
     @SerializedName("webLink")
+    @Expose
     public String webLink;
 
     /**
      * The Inference Classification.
      */
     @SerializedName("inferenceClassification")
+    @Expose
     public InferenceClassificationType inferenceClassification;
+
+    /**
+     * The Attachments.
+     */
+    public transient AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
@@ -174,9 +202,14 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     public transient ExtensionCollectionPage extensions;
 
     /**
-     * The Attachments.
+     * The Single Value Extended Properties.
      */
-    public transient AttachmentCollectionPage attachments;
+    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+
+    /**
+     * The Multi Value Extended Properties.
+     */
+    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
@@ -216,6 +249,22 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
         mRawObject = json;
 
 
+        if (json.has("attachments")) {
+            final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+            if (json.has("attachments@odata.nextLink")) {
+                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
+            final Attachment[] array = new Attachment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            attachments = new AttachmentCollectionPage(response, null);
+        }
+
         if (json.has("extensions")) {
             final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
             if (json.has("extensions@odata.nextLink")) {
@@ -232,20 +281,36 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
             extensions = new ExtensionCollectionPage(response, null);
         }
 
-        if (json.has("attachments")) {
-            final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
-            if (json.has("attachments@odata.nextLink")) {
-                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
+        if (json.has("singleValueExtendedProperties")) {
+            final BaseSingleValueLegacyExtendedPropertyCollectionResponse response = new BaseSingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
-            final Attachment[] array = new Attachment[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            attachments = new AttachmentCollectionPage(response, null);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("multiValueExtendedProperties")) {
+            final BaseMultiValueLegacyExtendedPropertyCollectionResponse response = new BaseMultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

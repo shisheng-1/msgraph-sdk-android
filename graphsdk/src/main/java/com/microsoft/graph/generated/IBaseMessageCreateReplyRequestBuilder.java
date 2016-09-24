@@ -32,8 +32,8 @@ public interface IBaseMessageCreateReplyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageCreateReplyRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMessageCreateReplyRequest instance
      */
-    IMessageCreateReplyRequest buildRequest(final List<Option> options);
+    IMessageCreateReplyRequest buildRequest(final List<Option> requestOptions);
 }

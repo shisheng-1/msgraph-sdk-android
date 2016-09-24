@@ -29,6 +29,7 @@ public class BaseEventSnoozeReminderBody {
      * The new Reminder Time.
      */
     @SerializedName("newReminderTime")
+    @Expose
     public DateTimeTimeZone newReminderTime;
 
 

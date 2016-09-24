@@ -27,9 +27,9 @@ public class OpenTypeExtensionRequest extends BaseOpenTypeExtensionRequest imple
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public OpenTypeExtensionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, OpenTypeExtension.class);
+    public OpenTypeExtensionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, OpenTypeExtension.class);
     }
 }

@@ -28,10 +28,10 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseCalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseCalendarGroupCollectionResponse.class, ICalendarGroupCollectionPage.class);
+    public BaseCalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseCalendarGroupCollectionResponse.class, ICalendarGroupCollectionPage.class);
     }
 
     public void get(final ICallback<ICalendarGroupCollectionPage> callback) {

@@ -29,7 +29,7 @@ public interface IBaseConversationThreadRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IConversationThreadRequest buildRequest(final List<Option> options);
+    IConversationThreadRequest buildRequest(final List<Option> requestOptions);
 
     IPostCollectionRequestBuilder getPosts();
 

@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Event Dismiss Reminder Request Builder.
  */
-public class BaseEventDismissReminderRequestBuilder extends BaseGetMethodRequestBuilder {
+public class BaseEventDismissReminderRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventDismissReminder
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventDismissReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseEventDismissReminderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -42,18 +42,17 @@ public class BaseEventDismissReminderRequestBuilder extends BaseGetMethodRequest
     }
 
     /**
-     * Creates the IEventDismissReminderRequest with specific options instead of the existing options
+     * Creates the IEventDismissReminderRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventDismissReminderRequest instance
      */
-    public IEventDismissReminderRequest buildRequest(final List<Option> options) {
+    public IEventDismissReminderRequest buildRequest(final List<Option> requestOptions) {
         EventDismissReminderRequest request = new EventDismissReminderRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
-
 
         return request;
     }

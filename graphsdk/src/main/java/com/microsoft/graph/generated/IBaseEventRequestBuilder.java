@@ -29,7 +29,7 @@ public interface IBaseEventRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IEventRequest buildRequest(final List<Option> options);
+    IEventRequest buildRequest(final List<Option> requestOptions);
 
     /**
      * Gets the request builder for Calendar.
@@ -47,6 +47,14 @@ public interface IBaseEventRequestBuilder extends IRequestBuilder {
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
     IEventAcceptRequestBuilder getAccept(final String comment, final Boolean sendResponse);
     IEventDeclineRequestBuilder getDecline(final String comment, final Boolean sendResponse);
     IEventTentativelyAcceptRequestBuilder getTentativelyAccept(final String comment, final Boolean sendResponse);

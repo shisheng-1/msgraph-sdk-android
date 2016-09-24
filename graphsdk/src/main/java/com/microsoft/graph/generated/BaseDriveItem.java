@@ -34,179 +34,228 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
      * The Created By.
      */
     @SerializedName("createdBy")
+    @Expose
     public IdentitySet createdBy;
 
     /**
      * The Created Date Time.
      */
     @SerializedName("createdDateTime")
+    @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The CTag.
-     */
-    @SerializedName("cTag")
-    public String cTag;
 
     /**
      * The Description.
      */
     @SerializedName("description")
+    @Expose
     public String description;
 
     /**
      * The ETag.
      */
     @SerializedName("eTag")
+    @Expose
     public String eTag;
 
     /**
      * The Last Modified By.
      */
     @SerializedName("lastModifiedBy")
+    @Expose
     public IdentitySet lastModifiedBy;
 
     /**
      * The Last Modified Date Time.
      */
     @SerializedName("lastModifiedDateTime")
+    @Expose
     public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
-
-    /**
-     * The Parent Reference.
-     */
-    @SerializedName("parentReference")
-    public ItemReference parentReference;
-
-    /**
-     * The Size.
-     */
-    @SerializedName("size")
-    public Long size;
-
-    /**
-     * The Web Dav Url.
-     */
-    @SerializedName("webDavUrl")
-    public String webDavUrl;
 
     /**
      * The Web Url.
      */
     @SerializedName("webUrl")
+    @Expose
     public String webUrl;
 
     /**
      * The Audio.
      */
     @SerializedName("audio")
+    @Expose
     public Audio audio;
+
+    /**
+     * The CTag.
+     */
+    @SerializedName("cTag")
+    @Expose
+    public String cTag;
 
     /**
      * The Deleted.
      */
     @SerializedName("deleted")
+    @Expose
     public Deleted deleted;
 
     /**
      * The File.
      */
     @SerializedName("file")
+    @Expose
     public File file;
 
     /**
      * The File System Info.
      */
     @SerializedName("fileSystemInfo")
+    @Expose
     public FileSystemInfo fileSystemInfo;
 
     /**
      * The Folder.
      */
     @SerializedName("folder")
+    @Expose
     public Folder folder;
 
     /**
      * The Image.
      */
     @SerializedName("image")
+    @Expose
     public Image image;
 
     /**
      * The Location.
      */
     @SerializedName("location")
+    @Expose
     public GeoCoordinates location;
+
+    /**
+     * The Package.
+     */
+    @SerializedName("package")
+    @Expose
+    public com.microsoft.graph.extensions.Package msgraph_package;
+
+    /**
+     * The Parent Reference.
+     */
+    @SerializedName("parentReference")
+    @Expose
+    public ItemReference parentReference;
 
     /**
      * The Photo.
      */
     @SerializedName("photo")
+    @Expose
     public Photo photo;
 
     /**
      * The Remote Item.
      */
     @SerializedName("remoteItem")
+    @Expose
     public RemoteItem remoteItem;
+
+    /**
+     * The Root.
+     */
+    @SerializedName("root")
+    @Expose
+    public Root root;
 
     /**
      * The Search Result.
      */
     @SerializedName("searchResult")
+    @Expose
     public SearchResult searchResult;
 
     /**
      * The Shared.
      */
     @SerializedName("shared")
+    @Expose
     public Shared shared;
+
+    /**
+     * The Sharepoint Ids.
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
+
+    /**
+     * The Size.
+     */
+    @SerializedName("size")
+    @Expose
+    public Long size;
 
     /**
      * The Special Folder.
      */
     @SerializedName("specialFolder")
+    @Expose
     public SpecialFolder specialFolder;
 
     /**
      * The Video.
      */
     @SerializedName("video")
+    @Expose
     public Video video;
 
     /**
-     * The Package.
+     * The Web Dav Url.
      */
-    @SerializedName("package")
-    public com.microsoft.graph.extensions.Package msgraph_package;
+    @SerializedName("webDavUrl")
+    @Expose
+    public String webDavUrl;
 
     /**
      * The Created By User.
      */
     @SerializedName("createdByUser")
+    @Expose
     public User createdByUser;
+
+    /**
+     * The Workbook.
+     */
+    @SerializedName("workbook")
+    @Expose
+    public Workbook workbook;
 
     /**
      * The Last Modified By User.
      */
     @SerializedName("lastModifiedByUser")
+    @Expose
     public User lastModifiedByUser;
-
-    /**
-     * The Permissions.
-     */
-    public transient PermissionCollectionPage permissions;
 
     /**
      * The Children.
      */
     public transient DriveItemCollectionPage children;
+
+    /**
+     * The Permissions.
+     */
+    public transient PermissionCollectionPage permissions;
 
     /**
      * The Thumbnails.
@@ -251,22 +300,6 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
         mRawObject = json;
 
 
-        if (json.has("permissions")) {
-            final BasePermissionCollectionResponse response = new BasePermissionCollectionResponse();
-            if (json.has("permissions@odata.nextLink")) {
-                response.nextLink = json.get("permissions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("permissions").toString(), JsonObject[].class);
-            final Permission[] array = new Permission[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Permission.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            permissions = new PermissionCollectionPage(response, null);
-        }
-
         if (json.has("children")) {
             final BaseDriveItemCollectionResponse response = new BaseDriveItemCollectionResponse();
             if (json.has("children@odata.nextLink")) {
@@ -281,6 +314,22 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             children = new DriveItemCollectionPage(response, null);
+        }
+
+        if (json.has("permissions")) {
+            final BasePermissionCollectionResponse response = new BasePermissionCollectionResponse();
+            if (json.has("permissions@odata.nextLink")) {
+                response.nextLink = json.get("permissions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("permissions").toString(), JsonObject[].class);
+            final Permission[] array = new Permission[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Permission.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            permissions = new PermissionCollectionPage(response, null);
         }
 
         if (json.has("thumbnails")) {

@@ -27,10 +27,10 @@ public class BaseContactFolderRequestBuilder extends BaseRequestBuilder implemen
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseContactFolderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseContactFolderRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     /**
@@ -41,10 +41,10 @@ public class BaseContactFolderRequestBuilder extends BaseRequestBuilder implemen
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IContactFolderRequest buildRequest(final List<Option> options) {
-        return new ContactFolderRequest(getRequestUrl(), getClient(), options);
+    public IContactFolderRequest buildRequest(final List<Option> requestOptions) {
+        return new ContactFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IContactCollectionRequestBuilder getContacts() {
@@ -60,5 +60,19 @@ public class BaseContactFolderRequestBuilder extends BaseRequestBuilder implemen
 
     public IContactFolderRequestBuilder getChildFolders(final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
+    }
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties() {
+        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
+    }
+
+    public ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id) {
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties() {
+        return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
+    }
+
+    public IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id) {
+        return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 }

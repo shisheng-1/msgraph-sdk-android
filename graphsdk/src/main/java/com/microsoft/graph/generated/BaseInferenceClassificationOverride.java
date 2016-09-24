@@ -34,12 +34,14 @@ public class BaseInferenceClassificationOverride extends Entity implements IJson
      * The Classify As.
      */
     @SerializedName("classifyAs")
+    @Expose
     public InferenceClassificationType classifyAs;
 
     /**
      * The Sender Email Address.
      */
     @SerializedName("senderEmailAddress")
+    @Expose
     public EmailAddress senderEmailAddress;
 
 

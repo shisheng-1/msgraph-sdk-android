@@ -24,6 +24,6 @@ public interface IBaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder ext
 
     IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest();
 
-    IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final List<Option> options);
+    IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final List<Option> requestOptions);
 
 }

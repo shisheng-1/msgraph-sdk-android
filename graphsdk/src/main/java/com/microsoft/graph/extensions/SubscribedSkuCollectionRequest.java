@@ -27,9 +27,9 @@ public class SubscribedSkuCollectionRequest extends BaseSubscribedSkuCollectionR
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public SubscribedSkuCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public SubscribedSkuCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 }

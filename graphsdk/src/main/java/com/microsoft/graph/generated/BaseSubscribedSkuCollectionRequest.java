@@ -28,10 +28,10 @@ public class BaseSubscribedSkuCollectionRequest extends BaseCollectionRequest<Ba
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseSubscribedSkuCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, BaseSubscribedSkuCollectionResponse.class, ISubscribedSkuCollectionPage.class);
+    public BaseSubscribedSkuCollectionRequest(final String requestUrl, IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, BaseSubscribedSkuCollectionResponse.class, ISubscribedSkuCollectionPage.class);
     }
 
     public void get(final ICallback<ISubscribedSkuCollectionPage> callback) {

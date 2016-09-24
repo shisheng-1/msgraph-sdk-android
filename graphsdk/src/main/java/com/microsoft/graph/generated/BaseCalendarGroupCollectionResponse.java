@@ -30,12 +30,14 @@ public class BaseCalendarGroupCollectionResponse implements IJsonBackedObject {
      * The list of CalendarGroup within this collection page
      */
     @SerializedName("value")
+    @Expose
     public List<CalendarGroup> value;
 
     /**
      * The url to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
+    @Expose(serialize = false)
     public String nextLink;
 
     /**

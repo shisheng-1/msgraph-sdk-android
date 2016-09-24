@@ -28,10 +28,10 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseEventAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Void.class);
+    public BaseEventAcceptRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Void.class);
         mBody = new EventAcceptBody();
     }
 

@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Message Reply All Request Builder.
  */
-public class BaseMessageReplyAllRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseMessageReplyAllRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageReplyAll
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String comment) {
-        super(requestUrl, client, options);
+    public BaseMessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String comment) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("comment", comment);
     }
 
@@ -43,16 +43,16 @@ public class BaseMessageReplyAllRequestBuilder extends BasePostMethodRequestBuil
     }
 
     /**
-     * Creates the IMessageReplyAllRequest with specific options instead of the existing options
+     * Creates the IMessageReplyAllRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMessageReplyAllRequest instance
      */
-    public IMessageReplyAllRequest buildRequest(final List<Option> options) {
+    public IMessageReplyAllRequest buildRequest(final List<Option> requestOptions) {
         MessageReplyAllRequest request = new MessageReplyAllRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("comment")) {

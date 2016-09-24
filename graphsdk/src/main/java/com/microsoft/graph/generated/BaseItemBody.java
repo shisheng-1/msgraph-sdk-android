@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseItemBody implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseItemBody() {
@@ -36,12 +37,14 @@ public class BaseItemBody implements IJsonBackedObject {
      * The Content Type.
      */
     @SerializedName("contentType")
+    @Expose
     public BodyType contentType;
 
     /**
      * The Content.
      */
     @SerializedName("content")
+    @Expose
     public String content;
 
 

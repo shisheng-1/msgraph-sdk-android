@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseAlternativeSecurityId() {
@@ -36,18 +37,21 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
      * The Type.
      */
     @SerializedName("type")
+    @Expose
     public Integer type;
 
     /**
      * The Identity Provider.
      */
     @SerializedName("identityProvider")
+    @Expose
     public String identityProvider;
 
     /**
      * The Key.
      */
     @SerializedName("key")
+    @Expose
     public byte[] key;
 
 

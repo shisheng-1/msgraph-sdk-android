@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseIdentity implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseIdentity() {
@@ -36,12 +37,14 @@ public class BaseIdentity implements IJsonBackedObject {
      * The Display Name.
      */
     @SerializedName("displayName")
+    @Expose
     public String displayName;
 
     /**
      * The Id.
      */
     @SerializedName("id")
+    @Expose
     public String id;
 
 

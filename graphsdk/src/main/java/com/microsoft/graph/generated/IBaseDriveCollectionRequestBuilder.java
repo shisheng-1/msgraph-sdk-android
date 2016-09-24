@@ -24,7 +24,8 @@ public interface IBaseDriveCollectionRequestBuilder extends IRequestBuilder {
 
     IDriveCollectionRequest buildRequest();
 
-    IDriveCollectionRequest buildRequest(final List<Option> options);
+    IDriveCollectionRequest buildRequest(final List<Option> requestOptions);
 
     IDriveRequestBuilder byId(final String id);
+
 }

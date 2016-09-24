@@ -27,18 +27,18 @@ public class BaseUserCollectionRequestBuilder extends BaseRequestBuilder impleme
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseUserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseUserCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IUserCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IUserCollectionRequest buildRequest(final List<Option> options) {
-        return new UserCollectionRequest(getRequestUrl(), getClient(), options);
+    public IUserCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new UserCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IUserRequestBuilder byId(final String id) {

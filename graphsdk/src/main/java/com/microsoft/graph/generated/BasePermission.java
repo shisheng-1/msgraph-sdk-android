@@ -34,36 +34,42 @@ public class BasePermission extends Entity implements IJsonBackedObject {
      * The Granted To.
      */
     @SerializedName("grantedTo")
+    @Expose
     public IdentitySet grantedTo;
 
     /**
      * The Invitation.
      */
     @SerializedName("invitation")
+    @Expose
     public SharingInvitation invitation;
 
     /**
      * The Inherited From.
      */
     @SerializedName("inheritedFrom")
+    @Expose
     public ItemReference inheritedFrom;
 
     /**
      * The Link.
      */
     @SerializedName("link")
+    @Expose
     public SharingLink link;
 
     /**
      * The Roles.
      */
     @SerializedName("roles")
+    @Expose
     public List<String> roles;
 
     /**
      * The Share Id.
      */
     @SerializedName("shareId")
+    @Expose
     public String shareId;
 
 

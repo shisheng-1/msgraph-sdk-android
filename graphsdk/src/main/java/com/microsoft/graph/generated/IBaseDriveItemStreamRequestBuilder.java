@@ -29,6 +29,6 @@ public interface IBaseDriveItemStreamRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDriveItemStreamRequest buildRequest(final List<Option> options);
+    IDriveItemStreamRequest buildRequest(final List<Option> requestOptions);
 
 }

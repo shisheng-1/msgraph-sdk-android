@@ -27,15 +27,14 @@ public class BaseMessageSendRequest extends BaseRequest implements IBaseMessageS
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMessageSendRequest(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options, Void.class);
-
+    public BaseMessageSendRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageSend
      *
      * @param callback The callback to be called after success or failure.
      */
@@ -55,9 +54,8 @@ public class BaseMessageSendRequest extends BaseRequest implements IBaseMessageS
     }
 
     /**
-     * Creates the Message
+     * Creates the MessageSend
      *
-     * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     public void post() throws ClientException {

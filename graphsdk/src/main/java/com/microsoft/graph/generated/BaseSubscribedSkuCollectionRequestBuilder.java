@@ -27,18 +27,18 @@ public class BaseSubscribedSkuCollectionRequestBuilder extends BaseRequestBuilde
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseSubscribedSkuCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseSubscribedSkuCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public ISubscribedSkuCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public ISubscribedSkuCollectionRequest buildRequest(final List<Option> options) {
-        return new SubscribedSkuCollectionRequest(getRequestUrl(), getClient(), options);
+    public ISubscribedSkuCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new SubscribedSkuCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public ISubscribedSkuRequestBuilder byId(final String id) {

@@ -157,6 +157,7 @@ final class GsonFactory {
         };
 
         return new GsonBuilder()
+                .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
                 .registerTypeAdapter(Calendar.class, calendarJsonDeserializer)
                 .registerTypeAdapter(GregorianCalendar.class, calendarJsonSerializer)

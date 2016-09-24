@@ -29,12 +29,14 @@ public class BaseEventTentativelyAcceptBody {
      * The comment.
      */
     @SerializedName("comment")
+    @Expose
     public String comment;
 
     /**
      * The send Response.
      */
     @SerializedName("sendResponse")
+    @Expose
     public Boolean sendResponse;
 
 

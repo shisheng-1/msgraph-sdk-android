@@ -32,8 +32,8 @@ public interface IBaseEventDismissReminderRequestBuilder extends IRequestBuilder
     /**
      * Creates the IEventDismissReminderRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IEventDismissReminderRequest instance
      */
-    IEventDismissReminderRequest buildRequest(final List<Option> options);
+    IEventDismissReminderRequest buildRequest(final List<Option> requestOptions);
 }

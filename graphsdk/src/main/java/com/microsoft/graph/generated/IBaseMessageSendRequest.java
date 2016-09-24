@@ -26,16 +26,15 @@ import com.google.gson.annotations.*;
 public interface IBaseMessageSendRequest {
 
     /**
-     * Creates the Message
+     * Creates the MessageSend
      *
      * @param callback The callback to be called after success or failure.
      */
     void post(final ICallback<Void> callback);
 
     /**
-     * Creates the Message
+     * Creates the MessageSend
      *
-     * @return The Message
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     void post() throws ClientException;

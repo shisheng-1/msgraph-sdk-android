@@ -32,8 +32,8 @@ public interface IBaseMailFolderCopyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMailFolderCopyRequest with specific options instead of the existing options
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMailFolderCopyRequest instance
      */
-    IMailFolderCopyRequest buildRequest(final List<Option> options);
+    IMailFolderCopyRequest buildRequest(final List<Option> requestOptions);
 }

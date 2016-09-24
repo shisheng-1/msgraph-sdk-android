@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseServicePlanInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseServicePlanInfo() {
@@ -36,24 +37,28 @@ public class BaseServicePlanInfo implements IJsonBackedObject {
      * The Service Plan Id.
      */
     @SerializedName("servicePlanId")
+    @Expose
     public java.util.UUID servicePlanId;
 
     /**
      * The Service Plan Name.
      */
     @SerializedName("servicePlanName")
+    @Expose
     public String servicePlanName;
 
     /**
      * The Provisioning Status.
      */
     @SerializedName("provisioningStatus")
+    @Expose
     public String provisioningStatus;
 
     /**
      * The Applies To.
      */
     @SerializedName("appliesTo")
+    @Expose
     public String appliesTo;
 
 

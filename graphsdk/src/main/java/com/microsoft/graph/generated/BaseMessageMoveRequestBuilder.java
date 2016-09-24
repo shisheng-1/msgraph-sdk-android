@@ -19,17 +19,17 @@ import java.util.List;
 /**
  * The class for the Base Message Move Request Builder.
  */
-public class BaseMessageMoveRequestBuilder extends BasePostMethodRequestBuilder {
+public class BaseMessageMoveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageMove
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseMessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options, final String destinationId) {
-        super(requestUrl, client, options);
+    public BaseMessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String destinationId) {
+        super(requestUrl, client, requestOptions);
         mBodyParams.put("destinationId", destinationId);
     }
 
@@ -43,16 +43,16 @@ public class BaseMessageMoveRequestBuilder extends BasePostMethodRequestBuilder 
     }
 
     /**
-     * Creates the IMessageMoveRequest with specific options instead of the existing options
+     * Creates the IMessageMoveRequest with specific requestOptions instead of the existing requestOptions
      *
-     * @param options the options for the request
+     * @param requestOptions the options for the request
      * @return The IMessageMoveRequest instance
      */
-    public IMessageMoveRequest buildRequest(final List<Option> options) {
+    public IMessageMoveRequest buildRequest(final List<Option> requestOptions) {
         MessageMoveRequest request = new MessageMoveRequest(
                 getRequestUrl(),
                 getClient(),
-                options
+                requestOptions
         );
 
         if (hasParameter("destinationId")) {

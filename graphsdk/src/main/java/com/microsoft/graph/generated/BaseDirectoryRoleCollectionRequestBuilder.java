@@ -27,18 +27,18 @@ public class BaseDirectoryRoleCollectionRequestBuilder extends BaseRequestBuilde
      *
      * @param requestUrl The request url
      * @param client The service client
-     * @param options The options for this request
+     * @param requestOptions The options for this request
      */
-    public BaseDirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> options) {
-        super(requestUrl, client, options);
+    public BaseDirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
     }
 
     public IDirectoryRoleCollectionRequest buildRequest() {
         return buildRequest(getOptions());
     }
 
-    public IDirectoryRoleCollectionRequest buildRequest(final List<Option> options) {
-        return new DirectoryRoleCollectionRequest(getRequestUrl(), getClient(), options);
+    public IDirectoryRoleCollectionRequest buildRequest(final List<Option> requestOptions) {
+        return new DirectoryRoleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
     public IDirectoryRoleRequestBuilder byId(final String id) {

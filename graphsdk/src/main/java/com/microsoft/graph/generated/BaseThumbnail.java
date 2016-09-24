@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseThumbnail implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseThumbnail() {
@@ -36,18 +37,21 @@ public class BaseThumbnail implements IJsonBackedObject {
      * The Height.
      */
     @SerializedName("height")
+    @Expose
     public Integer height;
 
     /**
      * The Url.
      */
     @SerializedName("url")
+    @Expose
     public String url;
 
     /**
      * The Width.
      */
     @SerializedName("width")
+    @Expose
     public Integer width;
 
 

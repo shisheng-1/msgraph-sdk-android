@@ -26,6 +26,7 @@ import com.google.gson.annotations.*;
 public class BaseRemoteItem implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
+    @Expose(serialize = false)
     public String oDataType;
 
     public BaseRemoteItem() {
@@ -33,46 +34,116 @@ public class BaseRemoteItem implements IJsonBackedObject {
     }
 
     /**
+     * The Created By.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Created Date Time.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The File.
      */
     @SerializedName("file")
+    @Expose
     public File file;
 
     /**
      * The File System Info.
      */
     @SerializedName("fileSystemInfo")
+    @Expose
     public FileSystemInfo fileSystemInfo;
 
     /**
      * The Folder.
      */
     @SerializedName("folder")
+    @Expose
     public Folder folder;
 
     /**
      * The Id.
      */
     @SerializedName("id")
+    @Expose
     public String id;
+
+    /**
+     * The Last Modified By.
+     */
+    @SerializedName("lastModifiedBy")
+    @Expose
+    public IdentitySet lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Name.
      */
     @SerializedName("name")
+    @Expose
     public String name;
+
+    /**
+     * The Package.
+     */
+    @SerializedName("package")
+    @Expose
+    public com.microsoft.graph.extensions.Package msgraph_package;
 
     /**
      * The Parent Reference.
      */
     @SerializedName("parentReference")
+    @Expose
     public ItemReference parentReference;
+
+    /**
+     * The Sharepoint Ids.
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
 
     /**
      * The Size.
      */
     @SerializedName("size")
+    @Expose
     public Long size;
+
+    /**
+     * The Special Folder.
+     */
+    @SerializedName("specialFolder")
+    @Expose
+    public SpecialFolder specialFolder;
+
+    /**
+     * The Web Dav Url.
+     */
+    @SerializedName("webDavUrl")
+    @Expose
+    public String webDavUrl;
+
+    /**
+     * The Web Url.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
 
 
     /**
