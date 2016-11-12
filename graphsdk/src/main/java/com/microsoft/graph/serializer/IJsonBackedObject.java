@@ -33,7 +33,13 @@ public interface IJsonBackedObject {
      * Sets the raw json object this object was parsed from.
      *
      * @param serializer The serializer for sub class deserialization.
-     * @param json The json that this object was derived from.
+     * @param json       The json that this object was derived from.
      */
     void setRawObject(final ISerializer serializer, final JsonObject json);
+
+    /**
+     * @return
+     */
+    AdditionalDataDelegate getAdditionalDataDelegate();
+
 }

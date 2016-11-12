@@ -24,6 +24,7 @@ package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
 
+import com.microsoft.graph.serializer.AdditionalDataDelegate;
 import com.microsoft.graph.serializer.ISerializer;
 
 import java.util.Collections;
@@ -35,6 +36,8 @@ import java.util.List;
  * @param <T2> The type of the request builder for the next page in this collection
  */
 public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2>  {
+
+    private transient AdditionalDataDelegate additionalDataDelegate = new AdditionalDataDelegate(this);
 
     /**
      * The contents of this page.
@@ -109,5 +112,10 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         mSerializer = serializer;
         mRawObject = json;
+    }
+
+    @Override
+    public final AdditionalDataDelegate getAdditionalDataDelegate() {
+        return additionalDataDelegate;
     }
 }

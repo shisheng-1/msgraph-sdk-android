@@ -34,6 +34,13 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionResponse implements IJ
     @Expose(serialize = false)
     public String nextLink;
 
+    private transient AdditionalDataDelegate additionalDataDelegate = new AdditionalDataDelegate(this);
+
+    @Override
+    public final AdditionalDataDelegate getAdditionalDataDelegate() {
+        return additionalDataDelegate;
+    }
+
     /**
      * The raw representation of this class
      */
