@@ -6,7 +6,7 @@ Suppose you have an `EntityType` describing a Vehicle:
 <EntityType Name="vehicle" BaseType="your.namespace.entity" OpenType="true">
    <Property Name="make" Type="Edm.String" Unicode="false" />
    <Property Name="model" Type="Edm.String" Unicode="false" />
-   <Property Name="year" Type="Edm.Int32" />
+   <Property Name="modelYear" Type="Edm.Int32" />
 </EntityType>
 ```
 
