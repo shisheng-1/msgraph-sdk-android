@@ -1,4 +1,4 @@
-# Open Types, PATCHing null data, and capturing additional data in the Microsoft Graph SDK for Android
+# OpenTypes, PATCHing null data, and capturing additional data in the Microsoft Graph SDK for Android
 The Microsoft Graph SDK for Android allows you to capture, inspect, mutate, and export properties not captured by the SDK's built-in native entity definitions.
 
 Suppose you have an `EntityType`, describing a Vehicle:
