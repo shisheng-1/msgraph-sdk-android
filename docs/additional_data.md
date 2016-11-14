@@ -72,7 +72,7 @@ vehicle
 This syntax supports all null, object, array, and primitive JSON structures.
 
 ### Setting properties to `null`
-To support PATCH operations involving `null` values, specify the property name you wish to make nullify:
+To support PATCH operations involving `null` values, specify the property name you wish to nullify:
 
 ```java
 vehicle
