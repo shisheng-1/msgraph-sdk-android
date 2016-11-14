@@ -46,7 +46,7 @@ With the addition of the `AdditionalDataManager` (as of `v1.1.1`) capture and tr
 ## Examples
 
 ### Querying undeclared properties
-Using the above example, we'll query our example vehicle entity for the undeclared `licensePlate` property:
+Using the above example, we'll query our vehicle entity for the undeclared `licensePlate` property:
 
 ```java
 // Load a Vehicle
