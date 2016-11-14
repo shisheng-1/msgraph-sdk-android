@@ -11,15 +11,19 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class AdditionalDataDelegate {
+public class AdditionalDataManager extends HashMap<String, JsonElement> {
 
     private final IJsonBackedObject jsonBackedObject;
-    private final Map<String, JsonElement> additionalData = new HashMap<>();
 
-    public AdditionalDataDelegate(IJsonBackedObject jsonBackedObject) {
+    public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
         this.jsonBackedObject = jsonBackedObject;
     }
 
+    /**
+     * TODO Document
+     *
+     * @param json
+     */
     final void setAdditionalData(JsonObject json) {
         // get the names of all the Fields on this Object's hierarchy
         Set<String> objectFields = getFields();
@@ -33,12 +37,8 @@ public class AdditionalDataDelegate {
 
         // set the additionalData
         for (String jsonKey : additionalDataKeys) {
-            additionalData.put(jsonKey, json.get(jsonKey));
+            put(jsonKey, json.get(jsonKey));
         }
-    }
-
-    public final Map<String, JsonElement> getAdditionalData() {
-        return additionalData;
     }
 
     private Set<String> getJsonKeys(JsonObject json) {
@@ -62,5 +62,4 @@ public class AdditionalDataDelegate {
         }
         return serializingFields;
     }
-
 }

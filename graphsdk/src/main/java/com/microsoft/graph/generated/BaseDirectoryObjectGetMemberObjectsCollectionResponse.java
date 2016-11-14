@@ -34,11 +34,11 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionResponse implements IJ
     @Expose(serialize = false)
     public String nextLink;
 
-    private transient AdditionalDataDelegate additionalDataDelegate = new AdditionalDataDelegate(this);
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataDelegate getAdditionalDataDelegate() {
-        return additionalDataDelegate;
+    public final AdditionalDataManager getAdditionalDataManager() {
+        return additionalDataManager;
     }
 
     /**

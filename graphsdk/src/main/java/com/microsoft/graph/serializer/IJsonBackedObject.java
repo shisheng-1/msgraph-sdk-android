@@ -38,8 +38,10 @@ public interface IJsonBackedObject {
     void setRawObject(final ISerializer serializer, final JsonObject json);
 
     /**
+     * TODO Document
+     *
      * @return
      */
-    AdditionalDataDelegate getAdditionalDataDelegate();
+    AdditionalDataManager getAdditionalDataManager();
 
 }
