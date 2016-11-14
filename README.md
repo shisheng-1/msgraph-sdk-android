@@ -84,7 +84,7 @@ For a more detailed documentation see:
 
 * [Overview](docs/overview.md)
 * [Extensibility](docs/extensibility.md)
-* [Handling Open Types, PATCH support with `null` values][docs/additional_data.md]
+* [Handling Open Types, PATCH support with `null` values](docs/additional_data.md)
 * [Collections](docs/collections.md)
 * [Errors](docs/errors.md)
 * [Contributions](docs/contributions.md)
