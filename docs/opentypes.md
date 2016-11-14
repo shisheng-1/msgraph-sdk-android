@@ -41,7 +41,7 @@ Because `vehicle` is defined as an `OpenType`, additional undeclared properties 
 }
 ```
 
-With the addition of the `AdditionalDataManager` (as of `v1.1.1`) capture and transmission of such properties is supported through a transient native property.
+With the addition of the `AdditionalDataManager` (as of `v1.1.1`), capture and transmission of such properties is supported through a transient native property.
 
 ## Examples
 
