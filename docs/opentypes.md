@@ -60,7 +60,7 @@ String licensePlate =
         .getAsString();
 ```
 
-### Specifying undeclared properties
+### Initialize undeclared properties
 To specify an undeclared property, the following syntax may be used:
 
 ```java
