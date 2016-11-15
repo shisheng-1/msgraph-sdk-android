@@ -168,3 +168,12 @@ graphServiceClient()
         }
     });
  ```
+
+## Setting properties to `null`
+To support PATCH operations involving `null` values, specify the property name you wish to nullify:
+
+```java
+user
+    .getAdditionalDataManager()
+    .put("officeLocation", JsonNull.INSTANCE);
+```
