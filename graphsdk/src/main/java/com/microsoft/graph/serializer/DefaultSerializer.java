@@ -110,7 +110,7 @@ public class DefaultSerializer implements ISerializer {
             }
         }
 
-        return outJsonTree.getAsString();
+        return outJsonTree.toString();
     }
 
     private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
