@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.http;
 
-
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
