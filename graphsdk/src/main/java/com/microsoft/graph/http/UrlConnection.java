@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.http;
 
-
 import com.microsoft.graph.options.HeaderOption;
 
 import java.io.IOException;
@@ -50,6 +49,7 @@ public class UrlConnection implements IConnection {
 
     /**
      * Creates a new UrlConnection.
+     *
      * @param request The IHttpRequest to create the connection from.
      * @throws IOException An exception occurs if there was a problem creating the connection.
      */
@@ -131,6 +131,7 @@ public class UrlConnection implements IConnection {
 
     /**
      * Gets the response headers from a http url connection.
+     *
      * @param connection The http connection.
      * @return The set of headers names and value.
      */
