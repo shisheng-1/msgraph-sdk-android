@@ -97,6 +97,11 @@ public class UrlConnection implements IConnection {
     }
 
     @Override
+    public int getContentLength() {
+        return mConnection.getContentLength();
+    }
+
+    @Override
     public int getResponseCode() throws IOException {
         return mConnection.getResponseCode();
     }

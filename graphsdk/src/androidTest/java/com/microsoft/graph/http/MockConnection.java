@@ -67,8 +67,13 @@ public class MockConnection implements IConnection {
     }
 
     @Override
-    public void setContentLength(int length) {
+    public int getContentLength() {
+        return mData.getJsonResponse().length();
+    }
 
+    @Override
+    public void setContentLength(int length) {
+        // noop
     }
 
 }

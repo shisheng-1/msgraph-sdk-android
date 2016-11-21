@@ -99,6 +99,13 @@ public interface IConnection {
     String getRequestMethod();
 
     /**
+     * Returns the Content-Length.
+     *
+     * @return The content length.
+     */
+    int getContentLength();
+
+    /**
      * Set the Content-Length header
      *
      * @param length the length of content

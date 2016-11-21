@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.http;
 
-
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.serializer.ISerializer;
@@ -34,18 +33,20 @@ public interface IHttpProvider {
 
     /**
      * Get the serializer for this http provider.
+     *
      * @return The serializer for this provider.
      */
     ISerializer getSerializer();
 
     /**
      * Sends the http request asynchronously.
-     * @param request The request description.
-     * @param callback The callback to be called after success or failure.
-     * @param resultClass The class of the response from the service.
+     *
+     * @param request      The request description.
+     * @param callback     The callback to be called after success or failure.
+     * @param resultClass  The class of the response from the service.
      * @param serializable The object to send to the service in the body of the request.
-     * @param <Result> The type of the response object.
-     * @param <BodyType> The type of the object to send to the service in the body of the request.
+     * @param <Result>     The type of the response object.
+     * @param <BodyType>   The type of the object to send to the service in the body of the request.
      */
     <Result, BodyType> void send(final IHttpRequest request,
                                  final ICallback<Result> callback,
@@ -55,11 +56,12 @@ public interface IHttpProvider {
 
     /**
      * Sends the http request.
-     * @param request The request description.
-     * @param resultClass The class of the response from the service.
+     *
+     * @param request      The request description.
+     * @param resultClass  The class of the response from the service.
      * @param serializable The object to send to the service in the body of the request.
-     * @param <Result> The type of the response object.
-     * @param <BodyType> The type of the object to send to the service in the body of the request.
+     * @param <Result>     The type of the response object.
+     * @param <BodyType>   The type of the object to send to the service in the body of the request.
      * @return The result from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
@@ -70,12 +72,13 @@ public interface IHttpProvider {
 
     /**
      * Sends the http request.
-     * @param request The request description.
-     * @param resultClass The class of the response from the service.
-     * @param serializable The object to send to the service in the body of the request.
-     * @param handler The handler for stateful response.
-     * @param <Result> The expected return type return.
-     * @param <BodyType> The type of the object to send to the service in the body of the request.
+     *
+     * @param request           The request description.
+     * @param resultClass       The class of the response from the service.
+     * @param serializable      The object to send to the service in the body of the request.
+     * @param handler           The handler for stateful response.
+     * @param <Result>          The expected return type return.
+     * @param <BodyType>        The type of the object to send to the service in the body of the request.
      * @param <DeserializeType> The type of the http response object.
      * @return The expected result object for the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
