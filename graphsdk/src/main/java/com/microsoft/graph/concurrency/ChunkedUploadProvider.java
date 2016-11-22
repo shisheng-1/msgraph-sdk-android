@@ -20,11 +20,15 @@
 // THE SOFTWARE.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.extensions;
+package com.microsoft.graph.concurrency;
 
 
 import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.extensions.ChunkedUploadRequest;
+import com.microsoft.graph.extensions.ChunkedUploadResult;
+import com.microsoft.graph.extensions.IGraphServiceClient;
+import com.microsoft.graph.extensions.UploadSession;
 import com.microsoft.graph.options.Option;
 
 import java.io.IOException;

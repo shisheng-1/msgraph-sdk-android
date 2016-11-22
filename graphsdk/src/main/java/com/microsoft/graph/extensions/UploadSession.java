@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.extensions;
 
+import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.generated.BaseUploadSession;
 
 import java.io.InputStream;
