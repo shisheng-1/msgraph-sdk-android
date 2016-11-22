@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2015 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -45,6 +45,16 @@ import java.util.Scanner;
  * Http provider based off of URLConnection.
  */
 public class DefaultHttpProvider implements IHttpProvider {
+
+    /**
+     * The content type header
+     */
+    static final String CONTENT_TYPE_HEADER_NAME = "Content-Type";
+
+    /**
+     * The content type for json responses
+     */
+    static final String JSON_CONTENT_TYPE = "application/json";
 
     /**
      * The serializer.
@@ -129,7 +139,8 @@ public class DefaultHttpProvider implements IHttpProvider {
                     mExecutors.performOnForeground(sendRequestInternal(request,
                             resultClass,
                             serializable,
-                            progressCallback),
+                            progressCallback,
+                            null),
                             callback);
                 } catch (final ClientException e) {
                     mExecutors.performOnForeground(e, callback);
@@ -154,35 +165,52 @@ public class DefaultHttpProvider implements IHttpProvider {
                                       final Class<Result> resultClass,
                                       final Body serializable)
             throws ClientException {
-        return sendRequestInternal(request, resultClass, serializable, null);
+        return send(request, resultClass, serializable, null);
     }
 
     /**
      * Sends the http request.
      *
-     * @param request      The request description.
-     * @param resultClass  The class of the response from the service.
-     * @param serializable The object to send to the service in the body of the request.
-     * @param progress     The progress callback for the request.
-     * @param <Result>     The type of the response object.
-     * @param <Body>       The type of the object to send to the service in the body of the request.
+     * @param request           The request description.
+     * @param resultClass       The class of the response from the service.
+     * @param serializable      The object to send to the service in the body of the request.
+     * @param handler           The handler for stateful response.
+     * @param <Result>          The type of the response object.
+     * @param <Body>            The type of the object to send to the service in the body of the request.
+     * @param <DeserializeType> The response handler for stateful response.
+     * @return The result from the request.
+     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     */
+    public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
+                                                       final Class<Result> resultClass,
+                                                       final Body serializable,
+                                                       final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
+        return sendRequestInternal(request, resultClass, serializable, null, handler);
+    }
+
+    /**
+     * Sends the http request.
+     *
+     * @param request           The request description.
+     * @param resultClass       The class of the response from the service.
+     * @param serializable      The object to send to the service in the body of the request.
+     * @param progress          The progress callback for the request.
+     * @param handler           The handler for stateful response.
+     * @param <Result>          The type of the response object.
+     * @param <Body>            The type of the object to send to the service in the body of the request.
+     * @param <DeserializeType> The response handler for stateful response.
      * @return The result from the request.
      * @throws ClientException An exception occurs if the request was unable to complete for any reason.
      */
-    private <Result, Body> Result sendRequestInternal(final IHttpRequest request,
-                                                      final Class<Result> resultClass,
-                                                      final Body serializable,
-                                                      final IProgressCallback<Result> progress)
+    private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
+                                                                       final Class<Result> resultClass,
+                                                                       final Body serializable,
+                                                                       final IProgressCallback<Result> progress,
+                                                                       final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
         final int defaultBufferSize = 4096;
-        final String contentTypeHeaderName = "Content-Type";
         final String contentLengthHeaderName = "Content-Length";
         final String binaryContentType = "application/octet-stream";
-        final String jsonContentType = "application/json";
-        final int httpClientErrorResponseCode = 400;
-        final int httpNoBodyResponseCode = 204;
-        final int httpAcceptedResponseCode = 202;
-        final int httpNotModified = 304;
 
         try {
             if (mAuthenticationProvider != null) {
@@ -198,7 +226,6 @@ public class DefaultHttpProvider implements IHttpProvider {
 
             try {
                 mLogger.logDebug("Request Method " + request.getHttpMethod().toString());
-                connection.setFollowRedirects(true);
 
                 final byte[] bytesToWrite;
                 if (serializable == null) {
@@ -206,14 +233,14 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else if (serializable instanceof byte[]) {
                     mLogger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
-                    connection.addRequestHeader(contentTypeHeaderName, binaryContentType);
-                    connection.addRequestHeader(contentLengthHeaderName, "" + bytesToWrite.length);
+                    connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
+                    connection.setContentLength(bytesToWrite.length);
                 } else {
                     mLogger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = mSerializer.serializeObject(serializable);
                     bytesToWrite = serializeObject.getBytes();
-                    connection.addRequestHeader(contentTypeHeaderName, jsonContentType);
-                    connection.addRequestHeader(contentLengthHeaderName, "" + bytesToWrite.length);
+                    connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
+                    connection.setContentLength(bytesToWrite.length);
                 }
 
                 // Handle cases where we've got a body to process.
@@ -236,34 +263,42 @@ public class DefaultHttpProvider implements IHttpProvider {
                     bos.close();
                 }
 
+                if (handler != null) {
+                    handler.configConnection(connection);
+                }
+
                 mLogger.logDebug(String.format("Response code %d, %s",
                         connection.getResponseCode(),
                         connection.getResponseMessage()));
 
-                if (connection.getResponseCode() >= httpClientErrorResponseCode) {
+                if (handler != null) {
+                    mLogger.logDebug("StatefulResponse is handling the HTTP response.");
+                    return handler.generateResult(
+                            request, connection, this.getSerializer(), this.mLogger);
+                }
+
+                if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
                     mLogger.logDebug("Handling error response");
                     in = connection.getInputStream();
                     handleErrorResponse(request, serializable, connection);
                 }
 
-                if (connection.getResponseCode() == httpNoBodyResponseCode
-                        || connection.getResponseCode() == httpNotModified) {
+                if (connection.getResponseCode() == HttpResponseCode.HTTP_NOBODY
+                        || connection.getResponseCode() == HttpResponseCode.HTTP_NOT_MODIFIED) {
                     mLogger.logDebug("Handling response with no body");
                     return null;
                 }
 
-                if (connection.getResponseCode() == httpAcceptedResponseCode
-                        && connection.getContentLength() <= 0) {
-                    mLogger.logDebug("Handling response Content-Length = 0");
-                    return null;
+                if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
+                    mLogger.logDebug("Handling accepted response");
                 }
 
                 in = new BufferedInputStream(connection.getInputStream());
 
                 final Map<String, String> headers = connection.getHeaders();
 
-                final String contentType = headers.get(contentTypeHeaderName);
-                if (contentType.contains(jsonContentType)) {
+                final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
+                if (contentType.contains(JSON_CONTENT_TYPE)) {
                     mLogger.logDebug("Response json");
                     return handleJsonResponse(in, resultClass);
                 } else {
@@ -283,7 +318,7 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         } catch (final GraphServiceException ex) {
             final boolean shouldLogVerbosely = mLogger.getLoggingLevel() == LoggerLevel.Debug;
-            mLogger.logError("Error during http request " + ex.getMessage(shouldLogVerbosely), ex);
+            mLogger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",

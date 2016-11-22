@@ -102,6 +102,11 @@ public class MockHttpProvider implements IHttpProvider {
         return null;
     }
 
+    @Override
+    public <Result, BodyType, DeserializeType> Result send(IHttpRequest request, Class<Result> resultClass, BodyType serializable, IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
+        return null;
+    }
+
     void setConnectionFactory(final IConnectionFactory factory) {
         mConnectionFactory = factory;
     }
