@@ -23,7 +23,7 @@
 package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
-
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.ISerializer;
 
 import java.util.Collections;
@@ -31,10 +31,13 @@ import java.util.List;
 
 /**
  * A page of results from a collection.
+ *
  * @param <T1> The type of the item contained within the collection.
  * @param <T2> The type of the request builder for the next page in this collection
  */
-public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2>  {
+public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2> {
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     /**
      * The contents of this page.
@@ -58,7 +61,8 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
 
     /**
      * Creates the collection page.
-     * @param pageContents The contents of this page.
+     *
+     * @param pageContents       The contents of this page.
      * @param nextRequestBuilder The request builder for the next page.
      */
     public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
@@ -70,6 +74,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
 
     /**
      * Gets the next page request builder.
+     *
      * @return The next page request builder.
      */
     public T2 getNextPage() {
@@ -78,6 +83,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
 
     /**
      * Gets the current page.
+     *
      * @return The current page.
      */
     public List<T1> getCurrentPage() {
@@ -86,6 +92,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
 
     /**
      * Gets the raw representation of this class.
+     *
      * @return The raw representation of this class.
      */
     public JsonObject getRawObject() {
@@ -94,6 +101,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
 
     /**
      * Gets the serializer.
+     *
      * @return The serializer.
      */
     protected ISerializer getSerializer() {
@@ -104,10 +112,15 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * Sets the raw json object.
      *
      * @param serializer The serializer.
-     * @param json The json object to set this object to.
+     * @param json       The json object to set this object to.
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         mSerializer = serializer;
         mRawObject = json;
+    }
+
+    @Override
+    public final AdditionalDataManager getAdditionalDataManager() {
+        return additionalDataManager;
     }
 }

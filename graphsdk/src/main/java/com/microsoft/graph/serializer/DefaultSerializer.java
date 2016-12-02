@@ -23,9 +23,11 @@
 package com.microsoft.graph.serializer;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import com.microsoft.graph.logger.ILogger;
+
+import java.util.Map;
 
 /**
  * The default serializer implementation for the SDK.
@@ -44,6 +46,7 @@ public class DefaultSerializer implements ISerializer {
 
     /**
      * Creates a DefaultSerializer.
+     *
      * @param logger The logger.
      */
     public DefaultSerializer(final ILogger logger) {
@@ -53,9 +56,10 @@ public class DefaultSerializer implements ISerializer {
 
     /**
      * Deserialize an object from the input string.
+     *
      * @param inputString The string that stores the representation of the item.
-     * @param clazz The .class of the item to be deserialized.
-     * @param <T> The type of the item to be deserialized.
+     * @param clazz       The .class of the item to be deserialized.
+     * @param <T>         The type of the item to be deserialized.
      * @return The deserialized item from the input string.
      */
     @Override
@@ -65,8 +69,10 @@ public class DefaultSerializer implements ISerializer {
         // Populate the json backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
             mLogger.logDebug("Deserializing type " + clazz.getSimpleName());
-            final IJsonBackedObject jsonBackedObject = (IJsonBackedObject)jsonObject;
-            jsonBackedObject.setRawObject(this, mGson.fromJson(inputString, JsonObject.class));
+            final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
+            final JsonObject rawObject = mGson.fromJson(inputString, JsonObject.class);
+            jsonBackedObject.setRawObject(this, rawObject);
+            jsonBackedObject.getAdditionalDataManager().setAdditionalData(rawObject);
         } else {
             mLogger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
         }
@@ -78,12 +84,36 @@ public class DefaultSerializer implements ISerializer {
      * Serializes an object into a string.
      *
      * @param serializableObject The object to convert into a string.
-     * @param <T> The type of the item to be serialized.
+     * @param <T>                The type of the item to be serialized.
      * @return The string representation of that item.
      */
     @Override
     public <T> String serializeObject(final T serializableObject) {
         mLogger.logDebug("Serializing type " + serializableObject.getClass().getSimpleName());
-        return mGson.toJson(serializableObject);
+        JsonElement outJsonTree = mGson.toJsonTree(serializableObject);
+
+        if (serializableObject instanceof IJsonBackedObject) {
+            AdditionalDataManager additionalData =
+                    ((IJsonBackedObject) serializableObject)
+                            .getAdditionalDataManager();
+            if (outJsonTree.isJsonObject()) {
+                JsonObject outJson = outJsonTree.getAsJsonObject();
+                for (Map.Entry<String, JsonElement> entry : additionalData.entrySet()) {
+                    if (!fieldIsOdataTransient(entry)) {
+                        outJson.add(
+                                entry.getKey(),
+                                entry.getValue()
+                        );
+                    }
+                }
+                outJsonTree = outJson;
+            }
+        }
+
+        return outJsonTree.toString();
+    }
+
+    private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
+        return entry.getKey().startsWith("@");
     }
 }

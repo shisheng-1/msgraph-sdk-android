@@ -15,7 +15,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-android:1.1.+')
+    compile('com.microsoft.graph:msgraph-sdk-android:1.2.+')
 
     // Include the gson dependency
     compile('com.google.code.gson:gson:2.3.1')
@@ -84,6 +84,7 @@ For a more detailed documentation see:
 
 * [Overview](docs/overview.md)
 * [Extensibility](docs/extensibility.md)
+* [Handling Open Types, PATCH support with `null` values](docs/additional_data.md)
 * [Collections](docs/collections.md)
 * [Errors](docs/errors.md)
 * [Contributions](docs/contributions.md)

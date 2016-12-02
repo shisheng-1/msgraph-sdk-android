@@ -34,6 +34,13 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionResponse implements IJs
     @Expose(serialize = false)
     public String nextLink;
 
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager getAdditionalDataManager() {
+        return additionalDataManager;
+    }
+
     /**
      * The raw representation of this class
      */

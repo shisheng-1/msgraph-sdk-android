@@ -25,10 +25,13 @@ package com.microsoft.graph.http;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.ISerializer;
 
 public class GraphErrorResponse implements IJsonBackedObject {
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @SerializedName("error")
     public GraphError error;
@@ -45,6 +48,11 @@ public class GraphErrorResponse implements IJsonBackedObject {
     @Override
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         rawObject = json;
+    }
+
+    @Override
+    public final AdditionalDataManager getAdditionalDataManager() {
+        return additionalDataManager;
     }
 }
 
