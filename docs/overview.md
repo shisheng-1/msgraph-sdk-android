@@ -11,7 +11,7 @@ To get the name of an item you address the `name` property. It is possible for a
 
 The resources that are generated map to the json model described by the [$metadata service document](https://graph.microsoft.com/v1.0/$metadata). There are items that might not be exposed because they expire very quickly or represent functionality that is not featured in this SDK as of yet. To access these fields use `getRawObject()` on the model items and access the specific properties that are not in the model.
 
-Advanced uses can the [MSGraph SDK Code Generator](https://github.com/microsoftgraph/MSGraph-SDK-Code-Generator) in concert with updated $metadata from the [beta](https://graph.microsoft.com/beta/$metadata) or other preview endpoints.
+Advanced users can use the [MSGraph SDK Code Generator](https://github.com/microsoftgraph/MSGraph-SDK-Code-Generator) in concert with updated $metadata from the [beta](https://graph.microsoft.com/beta/$metadata) or other preview endpoints.
 
 ## Issuing requests
 To make requests against the service, first build a request with **RequestBuilder** and then build it into a Request object, which is then sent against the service. This follows the URL scheme that the Microsoft Graph API uses for all its resources.
