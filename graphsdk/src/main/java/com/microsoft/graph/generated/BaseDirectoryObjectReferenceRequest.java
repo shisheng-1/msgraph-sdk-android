@@ -62,4 +62,24 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
         getQueryOptions().add(new QueryOption("$expand", value));
         return (DirectoryObjectReferenceRequest)this;
     }
+	/**
+	* Puts the DirectoryObject
+	*
+	* @param srcDirectoryObject The DirectoryObject reference to PUT
+	* @param callback The callback to be called after success or failure
+	*/
+    public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
+		send(HttpMethod.PUT, callback, srcDirectoryObject);
+    }
+
+	/**
+	* Puts the DirectoryObject
+	*
+	* @param srcDirectoryObject The DirectoryObject reference to PUT
+	* @return The DirectoryObject
+	* @throws ClientException An exception occurs if there was an error while the request was sent
+	*/
+    public DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException {
+       return send(HttpMethod.PUT, srcDirectoryObject);
+    }
 }

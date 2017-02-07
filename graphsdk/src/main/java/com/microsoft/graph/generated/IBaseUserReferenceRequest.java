@@ -42,4 +42,20 @@ public interface IBaseUserReferenceRequest extends IHttpRequest {
      */
     IBaseUserReferenceRequest expand(final String value);
 
+    /**
+     * Puts the User
+     *
+     * @param srcUser The User to PUT
+     * @param callback The callback to be called after success or failure
+     */
+    void put(User srcUser, final ICallback<User> callback);
+
+	/**
+	* Puts the User
+	* 
+	* @param srcUser The User to PUT
+	* @return The User
+	* @throws ClientException An exception occurs if there was an error while the request was sent
+	*/
+	User put(User srcUser) throws ClientException;
 }
