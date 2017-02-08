@@ -38,7 +38,7 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     }
 
     public User delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -49,7 +49,7 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
      */
     public IUserReferenceRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
-        return (UserReferenceRequest)this;
+        return (UserReferenceRequest) this;
     }
 
     /**
@@ -60,26 +60,27 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
      */
     public IUserReferenceRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));
-        return (UserReferenceRequest)this;
-    }
-	/**
-	* Puts the User
-	*
-	* @param srcUser The User reference to PUT
-	* @param callback The callback to be called after success or failure
-	*/
-    public void put(User srcUser, final ICallback<User> callback) {
-		send(HttpMethod.PUT, callback, srcUser);
+        return (UserReferenceRequest) this;
     }
 
-	/**
-	* Puts the User
-	*
-	* @param srcUser The User reference to PUT
-	* @return The User
-	* @throws ClientException An exception occurs if there was an error while the request was sent
-	*/
+    /**
+     * Puts the User
+     *
+     * @param srcUser The User reference to PUT
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(User srcUser, final ICallback<User> callback) {
+        send(HttpMethod.PUT, callback, srcUser);
+    }
+
+    /**
+     * Puts the User
+     *
+     * @param srcUser The User reference to PUT
+     * @return The User
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
     public User put(User srcUser) throws ClientException {
-       return send(HttpMethod.PUT, srcUser);
+        return send(HttpMethod.PUT, srcUser);
     }
 }
