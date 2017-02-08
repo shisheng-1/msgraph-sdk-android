@@ -38,7 +38,7 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     }
 
     public DirectoryObject delete() throws ClientException {
-       return send(HttpMethod.DELETE, null);
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
@@ -49,7 +49,7 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
      */
     public IDirectoryObjectReferenceRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
-        return (DirectoryObjectReferenceRequest)this;
+        return (DirectoryObjectReferenceRequest) this;
     }
 
     /**
@@ -60,26 +60,27 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
      */
     public IDirectoryObjectReferenceRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));
-        return (DirectoryObjectReferenceRequest)this;
-    }
-	/**
-	* Puts the DirectoryObject
-	*
-	* @param srcDirectoryObject The DirectoryObject reference to PUT
-	* @param callback The callback to be called after success or failure
-	*/
-    public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
-		send(HttpMethod.PUT, callback, srcDirectoryObject);
+        return (DirectoryObjectReferenceRequest) this;
     }
 
-	/**
-	* Puts the DirectoryObject
-	*
-	* @param srcDirectoryObject The DirectoryObject reference to PUT
-	* @return The DirectoryObject
-	* @throws ClientException An exception occurs if there was an error while the request was sent
-	*/
+    /**
+     * Puts the DirectoryObject
+     *
+     * @param srcDirectoryObject The DirectoryObject reference to PUT
+     * @param callback The callback to be called after success or failure
+     */
+    public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
+        send(HttpMethod.PUT, callback, srcDirectoryObject);
+    }
+
+    /**
+     * Puts the DirectoryObject
+     *
+     * @param srcDirectoryObject The DirectoryObject reference to PUT
+     * @return The DirectoryObject
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
     public DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException {
-       return send(HttpMethod.PUT, srcDirectoryObject);
+        return send(HttpMethod.PUT, srcDirectoryObject);
     }
 }
