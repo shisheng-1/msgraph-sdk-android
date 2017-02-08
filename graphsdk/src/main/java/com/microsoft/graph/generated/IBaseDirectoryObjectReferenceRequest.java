@@ -50,12 +50,12 @@ public interface IBaseDirectoryObjectReferenceRequest extends IHttpRequest {
      */
     void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback);
 
-	/**
-	* Puts the DirectoryObject
-	* 
-	* @param srcDirectoryObject The DirectoryObject to PUT
-	* @return The DirectoryObject
-	* @throws ClientException An exception occurs if there was an error while the request was sent
-	*/
-	DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException;
+    /**
+     * Puts the DirectoryObject
+     *
+     * @param srcDirectoryObject The DirectoryObject to PUT
+     * @return The DirectoryObject
+     * @throws ClientException An exception occurs if there was an error while the request was sent
+     */
+    DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException;
 }
