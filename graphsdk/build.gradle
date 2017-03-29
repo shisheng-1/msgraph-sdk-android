@@ -40,6 +40,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
 }
 
 apply plugin: 'checkstyle'
@@ -61,9 +64,6 @@ task checkstyle(type: Checkstyle) {
 dependencies {
     compile ('com.google.code.gson:gson:2.3.1') {
         exclude module: 'com.google.code.gson'
-    }
-    compile ('xerces:xercesImpl:2.11.0') {
-        exclude module: 'stax-api'
     }
     androidTestCompile 'junit:junit:4.12'
 }
