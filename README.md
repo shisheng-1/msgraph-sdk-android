@@ -106,4 +106,4 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 
 ## 9. Third Party Notices
 
-[Third Party Notices](THIRD PARTY NOTICES)
+[Third Party Notices](THIRD%20PARTY%20NOTICES)
