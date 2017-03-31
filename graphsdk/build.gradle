@@ -39,6 +39,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        buildTypes.each {
+            it.buildConfigField 'String', 'CLIENT_ID', ClientId
+            it.buildConfigField 'String', 'USERNAME', Username
+            it.buildConfigField 'String', 'PASSWORD', Password
+        }
     }
     dexOptions {
         javaMaxHeapSize "4g"
