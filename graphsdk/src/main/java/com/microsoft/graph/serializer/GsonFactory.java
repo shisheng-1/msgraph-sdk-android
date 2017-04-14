@@ -37,6 +37,7 @@ import com.microsoft.graph.model.DateOnly;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.Calendar;
+import java.util.EnumSet;
 import java.util.GregorianCalendar;
 
 /**
@@ -156,6 +157,32 @@ final class GsonFactory {
             }
         };
 
+        final JsonSerializer<EnumSet> enumSetJsonSerializer = new JsonSerializer<EnumSet>() {
+            @Override
+            public JsonElement serialize(final EnumSet src,
+                                         final Type typeOfSrc,
+                                         final JsonSerializationContext context) {
+                if (src == null) {
+                    return null;
+                }
+
+                return EnumSetSerializer.serialize(src);
+            }
+        };
+
+        final JsonDeserializer<EnumSet> enumSetJsonDeserializer = new JsonDeserializer<EnumSet>() {
+            @Override
+            public EnumSet deserialize(final JsonElement json,
+                                        final Type typeOfT,
+                                        final JsonDeserializationContext context) throws JsonParseException {
+                if (json == null) {
+                    return null;
+                }
+
+                return EnumSetSerializer.deserialize(typeOfT, json.getAsString());
+            }
+        };
+
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
@@ -166,6 +193,8 @@ final class GsonFactory {
                 .registerTypeAdapter(byte[].class, byteArrayJsonSerializer)
                 .registerTypeAdapter(DateOnly.class, dateJsonSerializer)
                 .registerTypeAdapter(DateOnly.class, dateJsonDeserializer)
+                .registerTypeAdapter(EnumSet.class, enumSetJsonSerializer)
+                .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapterFactory(new FallBackEnumTypeAdapter())
                 .create();
     }
