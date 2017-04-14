@@ -120,3 +120,10 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+
+task copyResDirectoryToClasses(type: Copy) {
+    from "${projectDir}/src/androidTest/res"
+    into "${buildDir}/intermediates/classes/androidTest/debug/res"
+}
+
+assembleDebug.dependsOn(copyResDirectoryToClasses)
