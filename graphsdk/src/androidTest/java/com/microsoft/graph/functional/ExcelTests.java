@@ -51,8 +51,8 @@ public class ExcelTests extends AndroidTestCase {
 
     public void testCreateNamedItem() {
 //        JsonObject range = new JsonObject();
-//        range.addProperty("range", "A1");
-//        WorkbookNamedItem item = testBase.graphClient.getMe().getDrive().getItems(fileId).getWorkbook().getNames().getAdd("named-range", range, "Comment").buildRequest().post();
+//        range.addProperty("address", "Sheet1!A1");
+//        WorkbookNamedItem item = testBase.graphClient.getMe().getDrive().getItems("015U5LKCVICVSIQ6DKOVELGXD3WAEHMMAI").getWorkbook().getNames().getAdd("named-range", range, "Comment").buildRequest().post();
 //        assertNotNull(item);
 //        assertEquals("named-range", item.name);
     }
