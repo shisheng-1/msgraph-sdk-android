@@ -162,7 +162,7 @@ final class GsonFactory {
             public JsonElement serialize(final EnumSet src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
-                if (src == null) {
+                if (src == null || src.size() == 0) {
                     return null;
                 }
 

@@ -59,7 +59,7 @@ public class EnumSetSerializer {
      * @param src The source EnumSet
      * @return A comma-delimited string of enum values
      */
-    public static JsonPrimitive serialize(EnumSet src) {
+    public static JsonPrimitive serialize(EnumSet<?> src) {
         String serializedString = "";
 
         Iterator i = src.iterator();
