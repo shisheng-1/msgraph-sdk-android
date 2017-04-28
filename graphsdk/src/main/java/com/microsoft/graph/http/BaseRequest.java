@@ -92,6 +92,11 @@ public abstract class BaseRequest implements IHttpRequest {
     private final Class mResponseClass;
 
     /**
+     * Value to pass to setUseCaches in connection.
+     */
+    private boolean mUseCaches;
+
+    /**
      * Create the request.
      *
      * @param requestUrl    The url to make the request against.
@@ -207,6 +212,26 @@ public abstract class BaseRequest implements IHttpRequest {
     @Override
     public void addHeader(final String header, final String value) {
         mHeadersOptions.add(new HeaderOption(header, value));
+    }
+
+    /**
+     * Sets useCaches parameter to cache the response.
+     *
+     * @param useCaches The value of useCaches.
+     */
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        mUseCaches = useCaches;
+    }
+
+    /**
+     * Gets useCaches parameter.
+     *
+     * @return The value of useCaches.
+     */
+    @Override
+    public boolean getUseCaches() {
+        return mUseCaches;
     }
 
     /**
