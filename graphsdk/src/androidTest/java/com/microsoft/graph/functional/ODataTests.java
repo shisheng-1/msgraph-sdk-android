@@ -3,7 +3,13 @@ package com.microsoft.graph.functional;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.Suppress;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
+//import com.microsoft.graph.extensions.Group;
+//import com.microsoft.graph.extensions.GroupDeltaCollectionPage;
+//import com.microsoft.graph.extensions.IGroupDeltaCollectionPage;
+//import com.microsoft.graph.extensions.IGroupDeltaCollectionRequest;
+//import com.microsoft.graph.extensions.IGroupDeltaCollectionRequestBuilder;
 //import com.microsoft.graph.extensions.Extension;
 //import com.microsoft.graph.extensions.IUserGetMailTipsCollectionPage;
 //import com.microsoft.graph.extensions.MailTips;
@@ -13,6 +19,7 @@ import com.google.gson.JsonPrimitive;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
@@ -24,7 +31,7 @@ public class ODataTests extends AndroidTestCase {
 
     @Before
     public void setUp() {
-//        testBase = new TestBase();
+       testBase = new TestBase();
 //
 //        // There's a current limitation of two extensions per user. If there's two extensions in the collection,
 //        // delete the latest one
@@ -70,5 +77,29 @@ public class ODataTests extends AndroidTestCase {
 //                assertTrue(mailTipsPage.get(i).recipientScope.getClass().isInstance(mailTips));
 //            }
 //        }
+    }
+
+    @Test
+    public void testDeltaQuery() {
+//        testBase.graphClient.setServiceRoot("https://graph.microsoft.com/beta");
+//        IGroupDeltaCollectionPage deltas = testBase.graphClient.getGroups().getDelta().buildRequest().get();
+//
+//        assertNotNull(deltas.getCurrentPage());
+//        for (int i = 0; i < deltas.getCurrentPage().size(); i++) {
+//            Group group = deltas.getCurrentPage().get(i);
+//            String s = group.description;
+//        }
+//
+//        while(deltas.getNextPage() != null) {
+//            deltas = deltas.getNextPage().buildRequest().get();
+//            assertNotNull(deltas.getCurrentPage());
+//        }
+//
+//        IGroupDeltaCollectionPage deltas2 = testBase.graphClient.getGroups().getDelta(deltas.getDeltaLink()).buildRequest().get();
+//        assertNotNull(deltas2);
+    }
+
+    @Test
+    public void testDeletedItem() {
     }
 }
