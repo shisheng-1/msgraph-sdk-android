@@ -63,5 +63,17 @@ public interface IHttpRequest {
      * @param value The value of the header.
      */
     void addHeader(String header, String value);
+
+    /**
+     * Sets useCaches parameter to cache the response.
+     * @param useCaches The value of useCaches.
+     */
+    void setUseCaches(boolean useCaches);
+
+    /**
+     * Gets useCaches parameter.
+     * @return The value of useCaches.
+     */
+    boolean getUseCaches();
 }
 

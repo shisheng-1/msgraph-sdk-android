@@ -20,6 +20,7 @@ public class MockHttpRequest implements IHttpRequest {
     private HttpMethod mHttpMethod = HttpMethod.GET;
     private List<HeaderOption> mHeaders = new ArrayList<HeaderOption>();
     private List<Option> mOptions = new ArrayList<Option>();
+    private boolean mUseCaches;
 
     @Override
     public URL getRequestUrl() {
@@ -47,10 +48,20 @@ public class MockHttpRequest implements IHttpRequest {
 
     @Override
     public void addHeader(String header, String value) {
-        mHeaders.add(new HeaderOption(header,value));
+        mHeaders.add(new HeaderOption(header, value));
     }
 
-    public void setHttpMethod(HttpMethod method){
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        mUseCaches = useCaches;
+    }
+
+    @Override
+    public boolean getUseCaches() {
+        return mUseCaches;
+    }
+
+    public void setHttpMethod(HttpMethod method) {
         mHttpMethod = method;
     }
 }
