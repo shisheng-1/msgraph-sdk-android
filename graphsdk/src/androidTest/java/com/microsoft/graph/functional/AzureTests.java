@@ -1,6 +1,7 @@
 package com.microsoft.graph.functional;
 
 import android.test.AndroidTestCase;
+import android.test.suitebuilder.annotation.Suppress;
 
 //import com.microsoft.graph.extensions.AdministrativeUnit;
 import com.microsoft.graph.extensions.DirectoryObject;
@@ -11,7 +12,7 @@ import com.microsoft.graph.http.GraphServiceException;
 
 import org.junit.*;
 
-//@Suppress
+@Suppress
 public class AzureTests extends AndroidTestCase {
 
     private TestBase testBase;
