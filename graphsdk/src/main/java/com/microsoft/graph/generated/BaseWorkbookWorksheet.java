@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Position.
+	 * 
      */
     @SerializedName("position")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
+	 * 
      */
     @SerializedName("visibility")
     @Expose
@@ -56,11 +59,25 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Charts.
+	 * 
      */
     public transient WorkbookChartCollectionPage charts;
 
     /**
+     * The Names.
+	 * 
+     */
+    public transient WorkbookNamedItemCollectionPage names;
+
+    /**
+     * The Pivot Tables.
+	 * 
+     */
+    public transient WorkbookPivotTableCollectionPage pivotTables;
+
+    /**
      * The Protection.
+	 * 
      */
     @SerializedName("protection")
     @Expose
@@ -68,6 +85,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Tables.
+	 * 
      */
     public transient WorkbookTableCollectionPage tables;
 
@@ -123,6 +141,38 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             charts = new WorkbookChartCollectionPage(response, null);
+        }
+
+        if (json.has("names")) {
+            final BaseWorkbookNamedItemCollectionResponse response = new BaseWorkbookNamedItemCollectionResponse();
+            if (json.has("names@odata.nextLink")) {
+                response.nextLink = json.get("names@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("names").toString(), JsonObject[].class);
+            final WorkbookNamedItem[] array = new WorkbookNamedItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookNamedItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            names = new WorkbookNamedItemCollectionPage(response, null);
+        }
+
+        if (json.has("pivotTables")) {
+            final BaseWorkbookPivotTableCollectionResponse response = new BaseWorkbookPivotTableCollectionResponse();
+            if (json.has("pivotTables@odata.nextLink")) {
+                response.nextLink = json.get("pivotTables@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pivotTables").toString(), JsonObject[].class);
+            final WorkbookPivotTable[] array = new WorkbookPivotTable[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookPivotTable.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            pivotTables = new WorkbookPivotTableCollectionPage(response, null);
         }
 
         if (json.has("tables")) {

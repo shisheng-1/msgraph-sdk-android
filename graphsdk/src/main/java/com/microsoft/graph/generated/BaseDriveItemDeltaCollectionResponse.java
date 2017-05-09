@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -28,7 +28,7 @@ public class BaseDriveItemDeltaCollectionResponse implements IJsonBackedObject {
 
     @SerializedName("value")
     @Expose
-    public List<DriveItem> value;
+    public java.util.List<DriveItem> value;
 
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)

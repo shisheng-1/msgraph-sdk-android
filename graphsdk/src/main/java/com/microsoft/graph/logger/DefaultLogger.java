@@ -79,14 +79,11 @@ public class DefaultLogger implements ILogger {
      */
     @Override
     public void logDebug(final String message) {
-        switch (mLevel) {
-            case Debug:
+
                 for (final String line : message.split("\n")) {
                     Log.d(getTag(), line);
                 }
-            default:
-            case Error:
-        }
+
     }
 
     /**

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,13 +45,15 @@ public class BaseAssignedLicense implements IJsonBackedObject {
 
     /**
      * The Disabled Plans.
+	 * 
      */
     @SerializedName("disabledPlans")
     @Expose
-    public List<java.util.UUID> disabledPlans;
+    public java.util.List<java.util.UUID> disabledPlans;
 
     /**
      * The Sku Id.
+	 * 
      */
     @SerializedName("skuId")
     @Expose

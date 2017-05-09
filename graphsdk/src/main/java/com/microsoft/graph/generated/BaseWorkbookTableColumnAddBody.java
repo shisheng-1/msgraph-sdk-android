@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookTableColumnAddBody {
 
     /**
      * The index.
+	 * 
      */
     @SerializedName("index")
     @Expose
@@ -34,10 +35,19 @@ public class BaseWorkbookTableColumnAddBody {
 
     /**
      * The values.
+	 * 
      */
     @SerializedName("values")
     @Expose
     public com.google.gson.JsonElement values;
+
+    /**
+     * The name.
+	 * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
 
     /**

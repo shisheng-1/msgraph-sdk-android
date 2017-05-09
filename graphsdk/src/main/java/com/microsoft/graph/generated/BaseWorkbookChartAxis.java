@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Major Unit.
+	 * 
      */
     @SerializedName("majorUnit")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Maximum.
+	 * 
      */
     @SerializedName("maximum")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minimum.
+	 * 
      */
     @SerializedName("minimum")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minor Unit.
+	 * 
      */
     @SerializedName("minorUnit")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
+	 * 
      */
     @SerializedName("format")
     @Expose
@@ -70,6 +75,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Major Gridlines.
+	 * 
      */
     @SerializedName("majorGridlines")
     @Expose
@@ -77,6 +83,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minor Gridlines.
+	 * 
      */
     @SerializedName("minorGridlines")
     @Expose
@@ -84,6 +91,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
+	 * 
      */
     @SerializedName("title")
     @Expose

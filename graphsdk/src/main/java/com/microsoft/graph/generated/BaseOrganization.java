@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,20 +35,23 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Assigned Plans.
+	 * 
      */
     @SerializedName("assignedPlans")
     @Expose
-    public List<AssignedPlan> assignedPlans;
+    public java.util.List<AssignedPlan> assignedPlans;
 
     /**
      * The Business Phones.
+	 * 
      */
     @SerializedName("businessPhones")
     @Expose
-    public List<String> businessPhones;
+    public java.util.List<String> businessPhones;
 
     /**
      * The City.
+	 * 
      */
     @SerializedName("city")
     @Expose
@@ -56,6 +59,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Country.
+	 * 
      */
     @SerializedName("country")
     @Expose
@@ -63,6 +67,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Country Letter Code.
+	 * 
      */
     @SerializedName("countryLetterCode")
     @Expose
@@ -70,6 +75,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -77,13 +83,15 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Marketing Notification Emails.
+	 * 
      */
     @SerializedName("marketingNotificationEmails")
     @Expose
-    public List<String> marketingNotificationEmails;
+    public java.util.List<String> marketingNotificationEmails;
 
     /**
      * The On Premises Last Sync Date Time.
+	 * 
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -91,6 +99,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The On Premises Sync Enabled.
+	 * 
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -98,6 +107,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Postal Code.
+	 * 
      */
     @SerializedName("postalCode")
     @Expose
@@ -105,6 +115,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Language.
+	 * 
      */
     @SerializedName("preferredLanguage")
     @Expose
@@ -112,27 +123,31 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Provisioned Plans.
+	 * 
      */
     @SerializedName("provisionedPlans")
     @Expose
-    public List<ProvisionedPlan> provisionedPlans;
+    public java.util.List<ProvisionedPlan> provisionedPlans;
 
     /**
      * The Security Compliance Notification Mails.
+	 * 
      */
     @SerializedName("securityComplianceNotificationMails")
     @Expose
-    public List<String> securityComplianceNotificationMails;
+    public java.util.List<String> securityComplianceNotificationMails;
 
     /**
      * The Security Compliance Notification Phones.
+	 * 
      */
     @SerializedName("securityComplianceNotificationPhones")
     @Expose
-    public List<String> securityComplianceNotificationPhones;
+    public java.util.List<String> securityComplianceNotificationPhones;
 
     /**
      * The State.
+	 * 
      */
     @SerializedName("state")
     @Expose
@@ -140,6 +155,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Street.
+	 * 
      */
     @SerializedName("street")
     @Expose
@@ -147,17 +163,19 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Technical Notification Mails.
+	 * 
      */
     @SerializedName("technicalNotificationMails")
     @Expose
-    public List<String> technicalNotificationMails;
+    public java.util.List<String> technicalNotificationMails;
 
     /**
      * The Verified Domains.
+	 * 
      */
     @SerializedName("verifiedDomains")
     @Expose
-    public List<VerifiedDomain> verifiedDomains;
+    public java.util.List<VerifiedDomain> verifiedDomains;
 
 
     /**

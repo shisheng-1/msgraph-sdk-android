@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -44,14 +44,8 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Description.
+	 * 
      */
     @SerializedName("description")
     @Expose
@@ -59,10 +53,19 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The File System Info.
+	 * 
      */
     @SerializedName("fileSystemInfo")
     @Expose
     public FileSystemInfo fileSystemInfo;
+
+    /**
+     * The Name.
+	 * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
 
     /**

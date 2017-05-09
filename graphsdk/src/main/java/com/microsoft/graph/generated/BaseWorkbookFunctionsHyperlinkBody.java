@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsHyperlinkBody {
 
     /**
      * The link Location.
+	 * 
      */
     @SerializedName("linkLocation")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsHyperlinkBody {
 
     /**
      * The friendly Name.
+	 * 
      */
     @SerializedName("friendlyName")
     @Expose

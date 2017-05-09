@@ -81,7 +81,7 @@ public class ChunkedUploadRequest {
      * @param chunkSize  The chunk array size.
      * @param maxRetry   The limit on retry.
      * @param beginIndex The begin index of this chunk in the input stream.
-     * @param totalLenth The total length of the input stream.
+     * @param totalLength The total length of the input stream.
      */
     public ChunkedUploadRequest(final String requestUrl,
                                 final IGraphServiceClient client,
@@ -90,7 +90,7 @@ public class ChunkedUploadRequest {
                                 final int chunkSize,
                                 final int maxRetry,
                                 final int beginIndex,
-                                final int totalLenth) {
+                                final int totalLength) {
         this.mData = new byte[chunkSize];
         System.arraycopy(chunk, 0, this.mData, 0, chunkSize);
         this.mRetryCount = 0;
@@ -103,7 +103,7 @@ public class ChunkedUploadRequest {
                         CONTENT_RANGE_FORMAT,
                         beginIndex,
                         beginIndex + chunkSize - 1,
-                        totalLenth));
+                        totalLength));
     }
 
     /**

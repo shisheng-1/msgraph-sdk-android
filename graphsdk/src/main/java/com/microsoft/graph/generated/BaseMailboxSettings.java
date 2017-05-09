@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,13 +45,23 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Automatic Replies Setting.
+	 * 
      */
     @SerializedName("automaticRepliesSetting")
     @Expose
     public AutomaticRepliesSetting automaticRepliesSetting;
 
     /**
+     * The Archive Folder.
+	 * 
+     */
+    @SerializedName("archiveFolder")
+    @Expose
+    public String archiveFolder;
+
+    /**
      * The Time Zone.
+	 * 
      */
     @SerializedName("timeZone")
     @Expose
@@ -59,6 +69,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Language.
+	 * 
      */
     @SerializedName("language")
     @Expose

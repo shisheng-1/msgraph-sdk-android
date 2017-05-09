@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -42,6 +43,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
+	 * 
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -49,6 +51,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Folder Count.
+	 * 
      */
     @SerializedName("childFolderCount")
     @Expose
@@ -56,6 +59,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Unread Item Count.
+	 * 
      */
     @SerializedName("unreadItemCount")
     @Expose
@@ -63,6 +67,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Item Count.
+	 * 
      */
     @SerializedName("totalItemCount")
     @Expose
@@ -70,21 +75,25 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
+	 * 
      */
     public transient MessageCollectionPage messages;
 
     /**
      * The Child Folders.
+	 * 
      */
     public transient MailFolderCollectionPage childFolders;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

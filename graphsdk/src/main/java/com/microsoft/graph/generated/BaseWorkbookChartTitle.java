@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Overlay.
+	 * 
      */
     @SerializedName("overlay")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Text.
+	 * 
      */
     @SerializedName("text")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Visible.
+	 * 
      */
     @SerializedName("visible")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Format.
+	 * 
      */
     @SerializedName("format")
     @Expose

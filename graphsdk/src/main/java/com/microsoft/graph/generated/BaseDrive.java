@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * The class for the Base Drive.
  */
-public class BaseDrive extends Entity implements IJsonBackedObject {
+public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
 
     public BaseDrive() {
@@ -35,6 +35,7 @@ public class BaseDrive extends Entity implements IJsonBackedObject {
 
     /**
      * The Drive Type.
+	 * 
      */
     @SerializedName("driveType")
     @Expose
@@ -42,6 +43,7 @@ public class BaseDrive extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
+	 * 
      */
     @SerializedName("owner")
     @Expose
@@ -49,27 +51,39 @@ public class BaseDrive extends Entity implements IJsonBackedObject {
 
     /**
      * The Quota.
+	 * 
      */
     @SerializedName("quota")
     @Expose
     public Quota quota;
 
     /**
+     * The Share Point Ids.
+	 * 
+     */
+    @SerializedName("sharePointIds")
+    @Expose
+    public SharepointIds sharePointIds;
+
+    /**
      * The Items.
+	 * 
      */
     public transient DriveItemCollectionPage items;
 
     /**
-     * The Special.
-     */
-    public transient DriveItemCollectionPage special;
-
-    /**
      * The Root.
+	 * 
      */
     @SerializedName("root")
     @Expose
     public DriveItem root;
+
+    /**
+     * The Special.
+	 * 
+     */
+    public transient DriveItemCollectionPage special;
 
 
     /**

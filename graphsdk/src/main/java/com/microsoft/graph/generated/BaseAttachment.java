@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
+	 * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -42,6 +43,7 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -49,6 +51,7 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
+	 * 
      */
     @SerializedName("contentType")
     @Expose
@@ -56,6 +59,7 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
+	 * 
      */
     @SerializedName("size")
     @Expose
@@ -63,6 +67,7 @@ public class BaseAttachment extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Inline.
+	 * 
      */
     @SerializedName("isInline")
     @Expose

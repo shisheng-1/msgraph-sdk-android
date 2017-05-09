@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseMessageForwardBody {
 
     /**
      * The comment.
+	 * 
      */
     @SerializedName("comment")
     @Expose
@@ -34,10 +35,11 @@ public class BaseMessageForwardBody {
 
     /**
      * The to Recipients.
+	 * 
      */
     @SerializedName("toRecipients")
     @Expose
-    public List<Recipient> toRecipients;
+    public java.util.List<Recipient> toRecipients;
 
 
     /**

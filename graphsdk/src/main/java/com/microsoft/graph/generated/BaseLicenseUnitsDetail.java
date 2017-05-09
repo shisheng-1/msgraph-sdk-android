@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Enabled.
+	 * 
      */
     @SerializedName("enabled")
     @Expose
@@ -52,6 +53,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Suspended.
+	 * 
      */
     @SerializedName("suspended")
     @Expose
@@ -59,6 +61,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Warning.
+	 * 
      */
     @SerializedName("warning")
     @Expose

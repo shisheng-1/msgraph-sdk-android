@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The sample S.
+	 * 
      */
     @SerializedName("sampleS")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The number Sample.
+	 * 
      */
     @SerializedName("numberSample")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The population S.
+	 * 
      */
     @SerializedName("populationS")
     @Expose
@@ -48,6 +51,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The number Pop.
+	 * 
      */
     @SerializedName("numberPop")
     @Expose
@@ -55,6 +59,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The cumulative.
+	 * 
      */
     @SerializedName("cumulative")
     @Expose

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Position.
+	 * 
      */
     @SerializedName("position")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Separator.
+	 * 
      */
     @SerializedName("separator")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Bubble Size.
+	 * 
      */
     @SerializedName("showBubbleSize")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Category Name.
+	 * 
      */
     @SerializedName("showCategoryName")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Legend Key.
+	 * 
      */
     @SerializedName("showLegendKey")
     @Expose
@@ -70,6 +75,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Percentage.
+	 * 
      */
     @SerializedName("showPercentage")
     @Expose
@@ -77,6 +83,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Series Name.
+	 * 
      */
     @SerializedName("showSeriesName")
     @Expose
@@ -84,6 +91,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Show Value.
+	 * 
      */
     @SerializedName("showValue")
     @Expose
@@ -91,6 +99,7 @@ public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedOb
 
     /**
      * The Format.
+	 * 
      */
     @SerializedName("format")
     @Expose

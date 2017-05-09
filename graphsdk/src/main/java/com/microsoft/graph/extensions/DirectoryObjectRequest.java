@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -32,7 +32,7 @@ public class DirectoryObjectRequest extends BaseDirectoryObjectRequest implement
      */
     public DirectoryObjectRequest(final String requestUrl,
             final IBaseClient client,
-            final List<Option> requestOptions,
+            final java.util.List<Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
@@ -44,7 +44,7 @@ public class DirectoryObjectRequest extends BaseDirectoryObjectRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DirectoryObjectRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+    public DirectoryObjectRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 }

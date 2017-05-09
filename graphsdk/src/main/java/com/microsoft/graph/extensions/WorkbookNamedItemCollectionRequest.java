@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -23,13 +23,13 @@ import java.util.List;
 public class WorkbookNamedItemCollectionRequest extends BaseWorkbookNamedItemCollectionRequest implements IWorkbookNamedItemCollectionRequest {
 
     /**
-     * The request for this collection of Workbook
+     * The request for this collection of WorkbookWorksheet
      *
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookNamedItemCollectionRequest(final String requestUrl, final IBaseClient client, final List<Option> requestOptions) {
+    public WorkbookNamedItemCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

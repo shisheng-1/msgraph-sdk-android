@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseWorkbook
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsGammaLn_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final com.google.gson.JsonElement x) {
+    public WorkbookFunctionsGammaLn_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions, x);
     }
 }

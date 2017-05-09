@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
+	 * 
      */
     @SerializedName("resource")
     @Expose
@@ -42,6 +43,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
+	 * 
      */
     @SerializedName("changeType")
     @Expose
@@ -49,6 +51,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Client State.
+	 * 
      */
     @SerializedName("clientState")
     @Expose
@@ -56,6 +59,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Url.
+	 * 
      */
     @SerializedName("notificationUrl")
     @Expose
@@ -63,6 +67,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
+	 * 
      */
     @SerializedName("expirationDateTime")
     @Expose

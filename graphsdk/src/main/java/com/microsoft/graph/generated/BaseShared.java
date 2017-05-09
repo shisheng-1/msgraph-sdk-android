@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Owner.
+	 * 
      */
     @SerializedName("owner")
     @Expose
@@ -52,10 +53,27 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Scope.
+	 * 
      */
     @SerializedName("scope")
     @Expose
     public String scope;
+
+    /**
+     * The Shared By.
+	 * 
+     */
+    @SerializedName("sharedBy")
+    @Expose
+    public IdentitySet sharedBy;
+
+    /**
+     * The Shared Date Time.
+	 * 
+     */
+    @SerializedName("sharedDateTime")
+    @Expose
+    public java.util.Calendar sharedDateTime;
 
 
     /**

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -26,18 +26,20 @@ import com.google.gson.annotations.*;
 public class BaseDriveItemCreateLinkBody {
 
     /**
-     * The type.
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The scope.
+	 * 
      */
     @SerializedName("scope")
     @Expose
     public String scope;
+
+    /**
+     * The type.
+	 * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

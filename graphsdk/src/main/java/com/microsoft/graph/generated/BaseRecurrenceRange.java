@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Type.
+	 * 
      */
     @SerializedName("type")
     @Expose
@@ -52,6 +53,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Start Date.
+	 * 
      */
     @SerializedName("startDate")
     @Expose
@@ -59,6 +61,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The End Date.
+	 * 
      */
     @SerializedName("endDate")
     @Expose
@@ -66,6 +69,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Recurrence Time Zone.
+	 * 
      */
     @SerializedName("recurrenceTimeZone")
     @Expose
@@ -73,6 +77,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Number Of Occurrences.
+	 * 
      */
     @SerializedName("numberOfOccurrences")
     @Expose

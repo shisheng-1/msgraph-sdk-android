@@ -19,7 +19,7 @@ def getVersionName() {
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         minSdkVersion 15
@@ -39,6 +39,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        buildTypes.each {
+            it.buildConfigField 'String', 'CLIENT_ID', ClientId
+            it.buildConfigField 'String', 'USERNAME', Username
+            it.buildConfigField 'String', 'PASSWORD', Password
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
     }
 }
 
@@ -112,3 +120,10 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+
+task copyResDirectoryToClasses(type: Copy) {
+    from "${projectDir}/src/androidTest/res"
+    into "${buildDir}/intermediates/classes/androidTest/debug/res"
+}
+
+//assembleDebug.dependsOn(copyResDirectoryToClasses)

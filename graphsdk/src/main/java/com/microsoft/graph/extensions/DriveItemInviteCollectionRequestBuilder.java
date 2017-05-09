@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseDriveItemInvite
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Boolean requireSignIn, final List<String> roles, final Boolean sendInvitation, final String message, final List<DriveRecipient> recipients) {
-        super(requestUrl, client, requestOptions, requireSignIn, roles, sendInvitation, message, recipients);
+    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String message, final java.util.List<DriveRecipient> recipients, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation) {
+        super(requestUrl, client, requestOptions, message, recipients, requireSignIn, roles, sendInvitation);
     }
 }
