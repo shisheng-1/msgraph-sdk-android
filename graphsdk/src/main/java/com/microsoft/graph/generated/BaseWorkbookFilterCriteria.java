@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Color.
+	 * 
      */
     @SerializedName("color")
     @Expose
@@ -52,6 +53,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Criterion1.
+	 * 
      */
     @SerializedName("criterion1")
     @Expose
@@ -59,6 +61,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Criterion2.
+	 * 
      */
     @SerializedName("criterion2")
     @Expose
@@ -66,6 +69,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Dynamic Criteria.
+	 * 
      */
     @SerializedName("dynamicCriteria")
     @Expose
@@ -73,6 +77,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Filter On.
+	 * 
      */
     @SerializedName("filterOn")
     @Expose
@@ -80,6 +85,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Icon.
+	 * 
      */
     @SerializedName("icon")
     @Expose
@@ -87,6 +93,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Operator.
+	 * 
      */
     @SerializedName("operator")
     @Expose
@@ -94,6 +101,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Values.
+	 * 
      */
     @SerializedName("values")
     @Expose

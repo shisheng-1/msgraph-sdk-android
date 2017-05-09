@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsDiscBody {
 
     /**
      * The settlement.
+	 * 
      */
     @SerializedName("settlement")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsDiscBody {
 
     /**
      * The maturity.
+	 * 
      */
     @SerializedName("maturity")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsDiscBody {
 
     /**
      * The pr.
+	 * 
      */
     @SerializedName("pr")
     @Expose
@@ -48,6 +51,7 @@ public class BaseWorkbookFunctionsDiscBody {
 
     /**
      * The redemption.
+	 * 
      */
     @SerializedName("redemption")
     @Expose
@@ -55,6 +59,7 @@ public class BaseWorkbookFunctionsDiscBody {
 
     /**
      * The basis.
+	 * 
      */
     @SerializedName("basis")
     @Expose

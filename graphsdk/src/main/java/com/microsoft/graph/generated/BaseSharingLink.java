@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,27 +45,31 @@ public class BaseSharingLink implements IJsonBackedObject {
 
     /**
      * The Application.
+	 * 
      */
     @SerializedName("application")
     @Expose
     public Identity application;
 
     /**
-     * The Type.
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Scope.
+	 * 
      */
     @SerializedName("scope")
     @Expose
     public String scope;
 
     /**
+     * The Type.
+	 * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
+
+    /**
      * The Web Url.
+	 * 
      */
     @SerializedName("webUrl")
     @Expose

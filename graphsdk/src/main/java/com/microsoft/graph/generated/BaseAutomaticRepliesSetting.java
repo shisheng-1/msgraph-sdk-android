@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Status.
+	 * 
      */
     @SerializedName("status")
     @Expose
@@ -52,6 +53,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Audience.
+	 * 
      */
     @SerializedName("externalAudience")
     @Expose
@@ -59,6 +61,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled Start Date Time.
+	 * 
      */
     @SerializedName("scheduledStartDateTime")
     @Expose
@@ -66,6 +69,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled End Date Time.
+	 * 
      */
     @SerializedName("scheduledEndDateTime")
     @Expose
@@ -73,6 +77,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Internal Reply Message.
+	 * 
      */
     @SerializedName("internalReplyMessage")
     @Expose
@@ -80,6 +85,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Reply Message.
+	 * 
      */
     @SerializedName("externalReplyMessage")
     @Expose

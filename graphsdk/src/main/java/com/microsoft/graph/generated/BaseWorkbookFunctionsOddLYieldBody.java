@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The settlement.
+	 * 
      */
     @SerializedName("settlement")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The maturity.
+	 * 
      */
     @SerializedName("maturity")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The last Interest.
+	 * 
      */
     @SerializedName("lastInterest")
     @Expose
@@ -48,6 +51,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The rate.
+	 * 
      */
     @SerializedName("rate")
     @Expose
@@ -55,6 +59,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The pr.
+	 * 
      */
     @SerializedName("pr")
     @Expose
@@ -62,6 +67,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The redemption.
+	 * 
      */
     @SerializedName("redemption")
     @Expose
@@ -69,6 +75,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The frequency.
+	 * 
      */
     @SerializedName("frequency")
     @Expose
@@ -76,6 +83,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The basis.
+	 * 
      */
     @SerializedName("basis")
     @Expose

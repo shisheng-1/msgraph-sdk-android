@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Album.
+	 * 
      */
     @SerializedName("album")
     @Expose
@@ -52,6 +53,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Album Artist.
+	 * 
      */
     @SerializedName("albumArtist")
     @Expose
@@ -59,6 +61,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Artist.
+	 * 
      */
     @SerializedName("artist")
     @Expose
@@ -66,6 +69,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Bitrate.
+	 * 
      */
     @SerializedName("bitrate")
     @Expose
@@ -73,6 +77,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Composers.
+	 * 
      */
     @SerializedName("composers")
     @Expose
@@ -80,6 +85,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Copyright.
+	 * 
      */
     @SerializedName("copyright")
     @Expose
@@ -87,6 +93,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Disc.
+	 * 
      */
     @SerializedName("disc")
     @Expose
@@ -94,6 +101,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Disc Count.
+	 * 
      */
     @SerializedName("discCount")
     @Expose
@@ -101,6 +109,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Duration.
+	 * 
      */
     @SerializedName("duration")
     @Expose
@@ -108,6 +117,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Genre.
+	 * 
      */
     @SerializedName("genre")
     @Expose
@@ -115,6 +125,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Has Drm.
+	 * 
      */
     @SerializedName("hasDrm")
     @Expose
@@ -122,6 +133,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Is Variable Bitrate.
+	 * 
      */
     @SerializedName("isVariableBitrate")
     @Expose
@@ -129,6 +141,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Title.
+	 * 
      */
     @SerializedName("title")
     @Expose
@@ -136,6 +149,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Track.
+	 * 
      */
     @SerializedName("track")
     @Expose
@@ -143,6 +157,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Track Count.
+	 * 
      */
     @SerializedName("trackCount")
     @Expose
@@ -150,6 +165,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Year.
+	 * 
      */
     @SerializedName("year")
     @Expose

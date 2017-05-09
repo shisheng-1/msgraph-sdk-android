@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
+	 * 
      */
     @SerializedName("receivedDateTime")
     @Expose
@@ -42,6 +43,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sent Date Time.
+	 * 
      */
     @SerializedName("sentDateTime")
     @Expose
@@ -49,6 +51,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
+	 * 
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -56,6 +59,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Internet Message Id.
+	 * 
      */
     @SerializedName("internetMessageId")
     @Expose
@@ -63,6 +67,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
+	 * 
      */
     @SerializedName("subject")
     @Expose
@@ -70,6 +75,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
+	 * 
      */
     @SerializedName("body")
     @Expose
@@ -77,6 +83,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
+	 * 
      */
     @SerializedName("bodyPreview")
     @Expose
@@ -84,6 +91,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
+	 * 
      */
     @SerializedName("importance")
     @Expose
@@ -91,6 +99,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
+	 * 
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -98,6 +107,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
+	 * 
      */
     @SerializedName("sender")
     @Expose
@@ -105,6 +115,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
+	 * 
      */
     @SerializedName("from")
     @Expose
@@ -112,34 +123,39 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The To Recipients.
+	 * 
      */
     @SerializedName("toRecipients")
     @Expose
-    public List<Recipient> toRecipients;
+    public java.util.List<Recipient> toRecipients;
 
     /**
      * The Cc Recipients.
+	 * 
      */
     @SerializedName("ccRecipients")
     @Expose
-    public List<Recipient> ccRecipients;
+    public java.util.List<Recipient> ccRecipients;
 
     /**
      * The Bcc Recipients.
+	 * 
      */
     @SerializedName("bccRecipients")
     @Expose
-    public List<Recipient> bccRecipients;
+    public java.util.List<Recipient> bccRecipients;
 
     /**
      * The Reply To.
+	 * 
      */
     @SerializedName("replyTo")
     @Expose
-    public List<Recipient> replyTo;
+    public java.util.List<Recipient> replyTo;
 
     /**
      * The Conversation Id.
+	 * 
      */
     @SerializedName("conversationId")
     @Expose
@@ -147,6 +163,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Unique Body.
+	 * 
      */
     @SerializedName("uniqueBody")
     @Expose
@@ -154,6 +171,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Delivery Receipt Requested.
+	 * 
      */
     @SerializedName("isDeliveryReceiptRequested")
     @Expose
@@ -161,6 +179,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read Receipt Requested.
+	 * 
      */
     @SerializedName("isReadReceiptRequested")
     @Expose
@@ -168,6 +187,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read.
+	 * 
      */
     @SerializedName("isRead")
     @Expose
@@ -175,6 +195,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Draft.
+	 * 
      */
     @SerializedName("isDraft")
     @Expose
@@ -182,6 +203,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
+	 * 
      */
     @SerializedName("webLink")
     @Expose
@@ -189,6 +211,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Inference Classification.
+	 * 
      */
     @SerializedName("inferenceClassification")
     @Expose
@@ -196,21 +219,25 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
+	 * 
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
+	 * 
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

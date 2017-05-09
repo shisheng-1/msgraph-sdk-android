@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Auto Filter.
+	 * 
      */
     @SerializedName("allowAutoFilter")
     @Expose
@@ -52,6 +53,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Delete Columns.
+	 * 
      */
     @SerializedName("allowDeleteColumns")
     @Expose
@@ -59,6 +61,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Delete Rows.
+	 * 
      */
     @SerializedName("allowDeleteRows")
     @Expose
@@ -66,6 +69,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Format Cells.
+	 * 
      */
     @SerializedName("allowFormatCells")
     @Expose
@@ -73,6 +77,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Format Columns.
+	 * 
      */
     @SerializedName("allowFormatColumns")
     @Expose
@@ -80,6 +85,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Format Rows.
+	 * 
      */
     @SerializedName("allowFormatRows")
     @Expose
@@ -87,6 +93,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Insert Columns.
+	 * 
      */
     @SerializedName("allowInsertColumns")
     @Expose
@@ -94,6 +101,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Insert Hyperlinks.
+	 * 
      */
     @SerializedName("allowInsertHyperlinks")
     @Expose
@@ -101,6 +109,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Insert Rows.
+	 * 
      */
     @SerializedName("allowInsertRows")
     @Expose
@@ -108,6 +117,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Pivot Tables.
+	 * 
      */
     @SerializedName("allowPivotTables")
     @Expose
@@ -115,6 +125,7 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
 
     /**
      * The Allow Sort.
+	 * 
      */
     @SerializedName("allowSort")
     @Expose

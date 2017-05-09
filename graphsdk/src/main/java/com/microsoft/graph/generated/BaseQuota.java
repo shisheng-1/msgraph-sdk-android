@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Deleted.
+	 * 
      */
     @SerializedName("deleted")
     @Expose
@@ -52,6 +53,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Remaining.
+	 * 
      */
     @SerializedName("remaining")
     @Expose
@@ -59,6 +61,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The State.
+	 * 
      */
     @SerializedName("state")
     @Expose
@@ -66,6 +69,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Total.
+	 * 
      */
     @SerializedName("total")
     @Expose
@@ -73,6 +77,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Used.
+	 * 
      */
     @SerializedName("used")
     @Expose

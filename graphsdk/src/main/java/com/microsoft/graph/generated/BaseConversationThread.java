@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,13 +35,15 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The To Recipients.
+	 * 
      */
     @SerializedName("toRecipients")
     @Expose
-    public List<Recipient> toRecipients;
+    public java.util.List<Recipient> toRecipients;
 
     /**
      * The Topic.
+	 * 
      */
     @SerializedName("topic")
     @Expose
@@ -49,6 +51,7 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The Has Attachments.
+	 * 
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -56,6 +59,7 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Delivered Date Time.
+	 * 
      */
     @SerializedName("lastDeliveredDateTime")
     @Expose
@@ -63,20 +67,23 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The Unique Senders.
+	 * 
      */
     @SerializedName("uniqueSenders")
     @Expose
-    public List<String> uniqueSenders;
+    public java.util.List<String> uniqueSenders;
 
     /**
      * The Cc Recipients.
+	 * 
      */
     @SerializedName("ccRecipients")
     @Expose
-    public List<Recipient> ccRecipients;
+    public java.util.List<Recipient> ccRecipients;
 
     /**
      * The Preview.
+	 * 
      */
     @SerializedName("preview")
     @Expose
@@ -84,6 +91,7 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The Is Locked.
+	 * 
      */
     @SerializedName("isLocked")
     @Expose
@@ -91,6 +99,7 @@ public class BaseConversationThread extends Entity implements IJsonBackedObject 
 
     /**
      * The Posts.
+	 * 
      */
     public transient PostCollectionPage posts;
 

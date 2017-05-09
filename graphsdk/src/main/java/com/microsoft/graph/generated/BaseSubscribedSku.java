@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
+	 * 
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -42,6 +43,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Consumed Units.
+	 * 
      */
     @SerializedName("consumedUnits")
     @Expose
@@ -49,6 +51,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Prepaid Units.
+	 * 
      */
     @SerializedName("prepaidUnits")
     @Expose
@@ -56,13 +59,15 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
+	 * 
      */
     @SerializedName("servicePlans")
     @Expose
-    public List<ServicePlanInfo> servicePlans;
+    public java.util.List<ServicePlanInfo> servicePlans;
 
     /**
      * The Sku Id.
+	 * 
      */
     @SerializedName("skuId")
     @Expose
@@ -70,6 +75,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
+	 * 
      */
     @SerializedName("skuPartNumber")
     @Expose
@@ -77,6 +83,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
+	 * 
      */
     @SerializedName("appliesTo")
     @Expose

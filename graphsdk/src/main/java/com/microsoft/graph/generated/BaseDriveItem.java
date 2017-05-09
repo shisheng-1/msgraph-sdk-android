@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * The class for the Base Drive Item.
  */
-public class BaseDriveItem extends Entity implements IJsonBackedObject {
+public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
 
     public BaseDriveItem() {
@@ -34,63 +34,8 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
     }
 
     /**
-     * The Created By.
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public IdentitySet createdBy;
-
-    /**
-     * The Created Date Time.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Description.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The ETag.
-     */
-    @SerializedName("eTag")
-    @Expose
-    public String eTag;
-
-    /**
-     * The Last Modified By.
-     */
-    @SerializedName("lastModifiedBy")
-    @Expose
-    public IdentitySet lastModifiedBy;
-
-    /**
-     * The Last Modified Date Time.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Name.
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
-     * The Web Url.
-     */
-    @SerializedName("webUrl")
-    @Expose
-    public String webUrl;
-
-    /**
      * The Audio.
+	 * 
      */
     @SerializedName("audio")
     @Expose
@@ -98,6 +43,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The CTag.
+	 * 
      */
     @SerializedName("cTag")
     @Expose
@@ -105,6 +51,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted.
+	 * 
      */
     @SerializedName("deleted")
     @Expose
@@ -112,6 +59,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The File.
+	 * 
      */
     @SerializedName("file")
     @Expose
@@ -119,6 +67,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The File System Info.
+	 * 
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -126,6 +75,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Folder.
+	 * 
      */
     @SerializedName("folder")
     @Expose
@@ -133,6 +83,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Image.
+	 * 
      */
     @SerializedName("image")
     @Expose
@@ -140,6 +91,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
+	 * 
      */
     @SerializedName("location")
     @Expose
@@ -147,20 +99,15 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Package.
+	 * 
      */
     @SerializedName("package")
     @Expose
     public com.microsoft.graph.extensions.Package msgraph_package;
 
     /**
-     * The Parent Reference.
-     */
-    @SerializedName("parentReference")
-    @Expose
-    public ItemReference parentReference;
-
-    /**
      * The Photo.
+	 * 
      */
     @SerializedName("photo")
     @Expose
@@ -168,6 +115,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Remote Item.
+	 * 
      */
     @SerializedName("remoteItem")
     @Expose
@@ -175,6 +123,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Root.
+	 * 
      */
     @SerializedName("root")
     @Expose
@@ -182,6 +131,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Search Result.
+	 * 
      */
     @SerializedName("searchResult")
     @Expose
@@ -189,6 +139,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared.
+	 * 
      */
     @SerializedName("shared")
     @Expose
@@ -196,6 +147,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
+	 * 
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -203,6 +155,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
+	 * 
      */
     @SerializedName("size")
     @Expose
@@ -210,6 +163,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Special Folder.
+	 * 
      */
     @SerializedName("specialFolder")
     @Expose
@@ -217,6 +171,7 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Video.
+	 * 
      */
     @SerializedName("video")
     @Expose
@@ -224,46 +179,37 @@ public class BaseDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Dav Url.
+	 * 
      */
     @SerializedName("webDavUrl")
     @Expose
     public String webDavUrl;
 
     /**
-     * The Created By User.
-     */
-    @SerializedName("createdByUser")
-    @Expose
-    public User createdByUser;
-
-    /**
-     * The Workbook.
-     */
-    @SerializedName("workbook")
-    @Expose
-    public Workbook workbook;
-
-    /**
-     * The Last Modified By User.
-     */
-    @SerializedName("lastModifiedByUser")
-    @Expose
-    public User lastModifiedByUser;
-
-    /**
      * The Children.
+	 * 
      */
     public transient DriveItemCollectionPage children;
 
     /**
      * The Permissions.
+	 * 
      */
     public transient PermissionCollectionPage permissions;
 
     /**
      * The Thumbnails.
+	 * 
      */
     public transient ThumbnailSetCollectionPage thumbnails;
+
+    /**
+     * The Workbook.
+	 * 
+     */
+    @SerializedName("workbook")
+    @Expose
+    public Workbook workbook;
 
 
     /**

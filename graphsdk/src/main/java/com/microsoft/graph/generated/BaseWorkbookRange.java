@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Address.
+	 * 
      */
     @SerializedName("address")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Address Local.
+	 * 
      */
     @SerializedName("addressLocal")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Cell Count.
+	 * 
      */
     @SerializedName("cellCount")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Count.
+	 * 
      */
     @SerializedName("columnCount")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Hidden.
+	 * 
      */
     @SerializedName("columnHidden")
     @Expose
@@ -70,6 +75,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Index.
+	 * 
      */
     @SerializedName("columnIndex")
     @Expose
@@ -77,6 +83,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas.
+	 * 
      */
     @SerializedName("formulas")
     @Expose
@@ -84,6 +91,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas Local.
+	 * 
      */
     @SerializedName("formulasLocal")
     @Expose
@@ -91,6 +99,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas R1C1.
+	 * 
      */
     @SerializedName("formulasR1C1")
     @Expose
@@ -98,6 +107,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Hidden.
+	 * 
      */
     @SerializedName("hidden")
     @Expose
@@ -105,6 +115,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Number Format.
+	 * 
      */
     @SerializedName("numberFormat")
     @Expose
@@ -112,6 +123,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Count.
+	 * 
      */
     @SerializedName("rowCount")
     @Expose
@@ -119,6 +131,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Hidden.
+	 * 
      */
     @SerializedName("rowHidden")
     @Expose
@@ -126,6 +139,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Index.
+	 * 
      */
     @SerializedName("rowIndex")
     @Expose
@@ -133,6 +147,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
+	 * 
      */
     @SerializedName("text")
     @Expose
@@ -140,6 +155,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
+	 * 
      */
     @SerializedName("valueTypes")
     @Expose
@@ -147,6 +163,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
+	 * 
      */
     @SerializedName("values")
     @Expose
@@ -154,6 +171,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
+	 * 
      */
     @SerializedName("format")
     @Expose
@@ -161,6 +179,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Sort.
+	 * 
      */
     @SerializedName("sort")
     @Expose
@@ -168,6 +187,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
+	 * 
      */
     @SerializedName("worksheet")
     @Expose

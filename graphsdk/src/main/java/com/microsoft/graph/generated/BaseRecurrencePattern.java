@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Type.
+	 * 
      */
     @SerializedName("type")
     @Expose
@@ -52,6 +53,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Interval.
+	 * 
      */
     @SerializedName("interval")
     @Expose
@@ -59,6 +61,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Month.
+	 * 
      */
     @SerializedName("month")
     @Expose
@@ -66,6 +69,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Day Of Month.
+	 * 
      */
     @SerializedName("dayOfMonth")
     @Expose
@@ -73,13 +77,15 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Days Of Week.
+	 * 
      */
     @SerializedName("daysOfWeek")
     @Expose
-    public List<DayOfWeek> daysOfWeek;
+    public java.util.List<DayOfWeek> daysOfWeek;
 
     /**
      * The First Day Of Week.
+	 * 
      */
     @SerializedName("firstDayOfWeek")
     @Expose
@@ -87,6 +93,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Index.
+	 * 
      */
     @SerializedName("index")
     @Expose

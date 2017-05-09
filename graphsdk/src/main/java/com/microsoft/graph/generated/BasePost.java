@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
+	 * 
      */
     @SerializedName("body")
     @Expose
@@ -42,6 +43,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
+	 * 
      */
     @SerializedName("receivedDateTime")
     @Expose
@@ -49,6 +51,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
+	 * 
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -56,6 +59,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
+	 * 
      */
     @SerializedName("from")
     @Expose
@@ -63,6 +67,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
+	 * 
      */
     @SerializedName("sender")
     @Expose
@@ -70,6 +75,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Thread Id.
+	 * 
      */
     @SerializedName("conversationThreadId")
     @Expose
@@ -77,13 +83,15 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The New Participants.
+	 * 
      */
     @SerializedName("newParticipants")
     @Expose
-    public List<Recipient> newParticipants;
+    public java.util.List<Recipient> newParticipants;
 
     /**
      * The Conversation Id.
+	 * 
      */
     @SerializedName("conversationId")
     @Expose
@@ -91,11 +99,13 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
+	 * 
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The In Reply To.
+	 * 
      */
     @SerializedName("inReplyTo")
     @Expose
@@ -103,16 +113,19 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
+	 * 
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

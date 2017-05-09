@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
+	 * 
      */
     @SerializedName("accountEnabled")
     @Expose
@@ -42,27 +43,31 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
+	 * 
      */
     @SerializedName("assignedLicenses")
     @Expose
-    public List<AssignedLicense> assignedLicenses;
+    public java.util.List<AssignedLicense> assignedLicenses;
 
     /**
      * The Assigned Plans.
+	 * 
      */
     @SerializedName("assignedPlans")
     @Expose
-    public List<AssignedPlan> assignedPlans;
+    public java.util.List<AssignedPlan> assignedPlans;
 
     /**
      * The Business Phones.
+	 * 
      */
     @SerializedName("businessPhones")
     @Expose
-    public List<String> businessPhones;
+    public java.util.List<String> businessPhones;
 
     /**
      * The City.
+	 * 
      */
     @SerializedName("city")
     @Expose
@@ -70,6 +75,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
+	 * 
      */
     @SerializedName("companyName")
     @Expose
@@ -77,6 +83,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
+	 * 
      */
     @SerializedName("country")
     @Expose
@@ -84,6 +91,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Department.
+	 * 
      */
     @SerializedName("department")
     @Expose
@@ -91,6 +99,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -98,13 +107,23 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Given Name.
+	 * 
      */
     @SerializedName("givenName")
     @Expose
     public String givenName;
 
     /**
+     * The Im Addresses.
+	 * 
+     */
+    @SerializedName("imAddresses")
+    @Expose
+    public java.util.List<String> imAddresses;
+
+    /**
      * The Job Title.
+	 * 
      */
     @SerializedName("jobTitle")
     @Expose
@@ -112,6 +131,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
+	 * 
      */
     @SerializedName("mail")
     @Expose
@@ -119,6 +139,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
+	 * 
      */
     @SerializedName("mailNickname")
     @Expose
@@ -126,6 +147,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
+	 * 
      */
     @SerializedName("mobilePhone")
     @Expose
@@ -133,6 +155,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Immutable Id.
+	 * 
      */
     @SerializedName("onPremisesImmutableId")
     @Expose
@@ -140,6 +163,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
+	 * 
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -147,6 +171,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
+	 * 
      */
     @SerializedName("onPremisesSecurityIdentifier")
     @Expose
@@ -154,6 +179,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
+	 * 
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -161,6 +187,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
+	 * 
      */
     @SerializedName("passwordPolicies")
     @Expose
@@ -168,6 +195,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
+	 * 
      */
     @SerializedName("passwordProfile")
     @Expose
@@ -175,6 +203,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Office Location.
+	 * 
      */
     @SerializedName("officeLocation")
     @Expose
@@ -182,6 +211,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Postal Code.
+	 * 
      */
     @SerializedName("postalCode")
     @Expose
@@ -189,6 +219,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
+	 * 
      */
     @SerializedName("preferredLanguage")
     @Expose
@@ -196,20 +227,23 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provisioned Plans.
+	 * 
      */
     @SerializedName("provisionedPlans")
     @Expose
-    public List<ProvisionedPlan> provisionedPlans;
+    public java.util.List<ProvisionedPlan> provisionedPlans;
 
     /**
      * The Proxy Addresses.
+	 * 
      */
     @SerializedName("proxyAddresses")
     @Expose
-    public List<String> proxyAddresses;
+    public java.util.List<String> proxyAddresses;
 
     /**
      * The State.
+	 * 
      */
     @SerializedName("state")
     @Expose
@@ -217,6 +251,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Street Address.
+	 * 
      */
     @SerializedName("streetAddress")
     @Expose
@@ -224,6 +259,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Surname.
+	 * 
      */
     @SerializedName("surname")
     @Expose
@@ -231,6 +267,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Usage Location.
+	 * 
      */
     @SerializedName("usageLocation")
     @Expose
@@ -238,6 +275,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
+	 * 
      */
     @SerializedName("userPrincipalName")
     @Expose
@@ -245,6 +283,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
+	 * 
      */
     @SerializedName("userType")
     @Expose
@@ -252,6 +291,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mailbox Settings.
+	 * 
      */
     @SerializedName("mailboxSettings")
     @Expose
@@ -259,6 +299,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The About Me.
+	 * 
      */
     @SerializedName("aboutMe")
     @Expose
@@ -266,6 +307,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Birthday.
+	 * 
      */
     @SerializedName("birthday")
     @Expose
@@ -273,6 +315,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hire Date.
+	 * 
      */
     @SerializedName("hireDate")
     @Expose
@@ -280,13 +323,15 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Interests.
+	 * 
      */
     @SerializedName("interests")
     @Expose
-    public List<String> interests;
+    public java.util.List<String> interests;
 
     /**
      * The My Site.
+	 * 
      */
     @SerializedName("mySite")
     @Expose
@@ -294,13 +339,15 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Past Projects.
+	 * 
      */
     @SerializedName("pastProjects")
     @Expose
-    public List<String> pastProjects;
+    public java.util.List<String> pastProjects;
 
     /**
      * The Preferred Name.
+	 * 
      */
     @SerializedName("preferredName")
     @Expose
@@ -308,37 +355,43 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Responsibilities.
+	 * 
      */
     @SerializedName("responsibilities")
     @Expose
-    public List<String> responsibilities;
+    public java.util.List<String> responsibilities;
 
     /**
      * The Schools.
+	 * 
      */
     @SerializedName("schools")
     @Expose
-    public List<String> schools;
+    public java.util.List<String> schools;
 
     /**
      * The Skills.
+	 * 
      */
     @SerializedName("skills")
     @Expose
-    public List<String> skills;
+    public java.util.List<String> skills;
 
     /**
      * The Owned Devices.
+	 * 
      */
     public transient DirectoryObjectCollectionPage ownedDevices;
 
     /**
      * The Registered Devices.
+	 * 
      */
     public transient DirectoryObjectCollectionPage registeredDevices;
 
     /**
      * The Manager.
+	 * 
      */
     @SerializedName("manager")
     @Expose
@@ -346,36 +399,49 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Direct Reports.
+	 * 
      */
     public transient DirectoryObjectCollectionPage directReports;
 
     /**
      * The Member Of.
+	 * 
      */
     public transient DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Created Objects.
+	 * 
      */
     public transient DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Owned Objects.
+	 * 
      */
     public transient DirectoryObjectCollectionPage ownedObjects;
 
     /**
+     * The License Details.
+	 * 
+     */
+    public transient LicenseDetailsCollectionPage licenseDetails;
+
+    /**
      * The Messages.
+	 * 
      */
     public transient MessageCollectionPage messages;
 
     /**
      * The Mail Folders.
+	 * 
      */
     public transient MailFolderCollectionPage mailFolders;
 
     /**
      * The Calendar.
+	 * 
      */
     @SerializedName("calendar")
     @Expose
@@ -383,36 +449,43 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Calendars.
+	 * 
      */
     public transient CalendarCollectionPage calendars;
 
     /**
      * The Calendar Groups.
+	 * 
      */
     public transient CalendarGroupCollectionPage calendarGroups;
 
     /**
      * The Calendar View.
+	 * 
      */
     public transient EventCollectionPage calendarView;
 
     /**
      * The Events.
+	 * 
      */
     public transient EventCollectionPage events;
 
     /**
      * The Contacts.
+	 * 
      */
     public transient ContactCollectionPage contacts;
 
     /**
      * The Contact Folders.
+	 * 
      */
     public transient ContactFolderCollectionPage contactFolders;
 
     /**
      * The Inference Classification.
+	 * 
      */
     @SerializedName("inferenceClassification")
     @Expose
@@ -420,13 +493,21 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photo.
+	 * 
      */
     @SerializedName("photo")
     @Expose
     public ProfilePhoto photo;
 
     /**
+     * The Photos.
+	 * 
+     */
+    public transient ProfilePhotoCollectionPage photos;
+
+    /**
      * The Drive.
+	 * 
      */
     @SerializedName("drive")
     @Expose
@@ -434,8 +515,17 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Drives.
+	 * 
      */
     public transient DriveCollectionPage drives;
+
+    /**
+     * The Planner.
+	 * 
+     */
+    @SerializedName("planner")
+    @Expose
+    public PlannerUser planner;
 
 
     /**
@@ -571,6 +661,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             ownedObjects = new DirectoryObjectCollectionPage(response, null);
         }
 
+        if (json.has("licenseDetails")) {
+            final BaseLicenseDetailsCollectionResponse response = new BaseLicenseDetailsCollectionResponse();
+            if (json.has("licenseDetails@odata.nextLink")) {
+                response.nextLink = json.get("licenseDetails@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("licenseDetails").toString(), JsonObject[].class);
+            final LicenseDetails[] array = new LicenseDetails[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LicenseDetails.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            licenseDetails = new LicenseDetailsCollectionPage(response, null);
+        }
+
         if (json.has("messages")) {
             final BaseMessageCollectionResponse response = new BaseMessageCollectionResponse();
             if (json.has("messages@odata.nextLink")) {
@@ -697,6 +803,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             contactFolders = new ContactFolderCollectionPage(response, null);
+        }
+
+        if (json.has("photos")) {
+            final BaseProfilePhotoCollectionResponse response = new BaseProfilePhotoCollectionResponse();
+            if (json.has("photos@odata.nextLink")) {
+                response.nextLink = json.get("photos@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("photos").toString(), JsonObject[].class);
+            final ProfilePhoto[] array = new ProfilePhoto[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfilePhoto.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            photos = new ProfilePhotoCollectionPage(response, null);
         }
 
         if (json.has("drives")) {

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Height.
+	 * 
      */
     @SerializedName("height")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Left.
+	 * 
      */
     @SerializedName("left")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Top.
+	 * 
      */
     @SerializedName("top")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Width.
+	 * 
      */
     @SerializedName("width")
     @Expose
@@ -70,6 +75,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Axes.
+	 * 
      */
     @SerializedName("axes")
     @Expose
@@ -77,6 +83,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Labels.
+	 * 
      */
     @SerializedName("dataLabels")
     @Expose
@@ -84,6 +91,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
+	 * 
      */
     @SerializedName("format")
     @Expose
@@ -91,6 +99,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Legend.
+	 * 
      */
     @SerializedName("legend")
     @Expose
@@ -98,11 +107,13 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Series.
+	 * 
      */
     public transient WorkbookChartSeriesCollectionPage series;
 
     /**
      * The Title.
+	 * 
      */
     @SerializedName("title")
     @Expose
@@ -110,6 +121,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
+	 * 
      */
     @SerializedName("worksheet")
     @Expose

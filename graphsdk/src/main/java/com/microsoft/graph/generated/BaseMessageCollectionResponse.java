@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -31,7 +31,7 @@ public class BaseMessageCollectionResponse implements IJsonBackedObject {
      */
     @SerializedName("value")
     @Expose
-    public List<Message> value;
+    public java.util.List<Message> value;
 
     /**
      * The url to the next page of this collection, or null

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Created By.
+	 * 
      */
     @SerializedName("createdBy")
     @Expose
@@ -52,6 +53,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
+	 * 
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -59,6 +61,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The File.
+	 * 
      */
     @SerializedName("file")
     @Expose
@@ -66,6 +69,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The File System Info.
+	 * 
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -73,6 +77,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Folder.
+	 * 
      */
     @SerializedName("folder")
     @Expose
@@ -80,6 +85,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Id.
+	 * 
      */
     @SerializedName("id")
     @Expose
@@ -87,6 +93,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
+	 * 
      */
     @SerializedName("lastModifiedBy")
     @Expose
@@ -94,6 +101,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
+	 * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -101,6 +109,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -108,6 +117,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Package.
+	 * 
      */
     @SerializedName("package")
     @Expose
@@ -115,13 +125,23 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Parent Reference.
+	 * 
      */
     @SerializedName("parentReference")
     @Expose
     public ItemReference parentReference;
 
     /**
+     * The Shared.
+	 * 
+     */
+    @SerializedName("shared")
+    @Expose
+    public Shared shared;
+
+    /**
      * The Sharepoint Ids.
+	 * 
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -129,6 +149,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Size.
+	 * 
      */
     @SerializedName("size")
     @Expose
@@ -136,6 +157,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Special Folder.
+	 * 
      */
     @SerializedName("specialFolder")
     @Expose
@@ -143,6 +165,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Web Dav Url.
+	 * 
      */
     @SerializedName("webDavUrl")
     @Expose
@@ -150,6 +173,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Web Url.
+	 * 
      */
     @SerializedName("webUrl")
     @Expose

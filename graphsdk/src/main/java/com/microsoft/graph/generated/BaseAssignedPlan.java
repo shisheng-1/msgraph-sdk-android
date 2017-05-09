@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Assigned Date Time.
+	 * 
      */
     @SerializedName("assignedDateTime")
     @Expose
@@ -52,6 +53,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
+	 * 
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -59,6 +61,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
+	 * 
      */
     @SerializedName("service")
     @Expose
@@ -66,6 +69,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service Plan Id.
+	 * 
      */
     @SerializedName("servicePlanId")
     @Expose

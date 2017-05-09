@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The rate.
+	 * 
      */
     @SerializedName("rate")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The per.
+	 * 
      */
     @SerializedName("per")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The nper.
+	 * 
      */
     @SerializedName("nper")
     @Expose
@@ -48,6 +51,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The pv.
+	 * 
      */
     @SerializedName("pv")
     @Expose
@@ -55,6 +59,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The fv.
+	 * 
      */
     @SerializedName("fv")
     @Expose
@@ -62,6 +67,7 @@ public class BaseWorkbookFunctionsPpmtBody {
 
     /**
      * The type.
+	 * 
      */
     @SerializedName("type")
     @Expose

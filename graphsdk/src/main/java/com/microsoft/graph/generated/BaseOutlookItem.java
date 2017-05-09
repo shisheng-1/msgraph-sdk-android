@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
+	 * 
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -42,6 +43,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
+	 * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -49,6 +51,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
+	 * 
      */
     @SerializedName("changeKey")
     @Expose
@@ -56,10 +59,11 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
+	 * 
      */
     @SerializedName("categories")
     @Expose
-    public List<String> categories;
+    public java.util.List<String> categories;
 
 
     /**

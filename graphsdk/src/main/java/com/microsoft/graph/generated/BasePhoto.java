@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Camera Make.
+	 * 
      */
     @SerializedName("cameraMake")
     @Expose
@@ -52,6 +53,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Camera Model.
+	 * 
      */
     @SerializedName("cameraModel")
     @Expose
@@ -59,6 +61,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Exposure Denominator.
+	 * 
      */
     @SerializedName("exposureDenominator")
     @Expose
@@ -66,38 +69,43 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Exposure Numerator.
+	 * 
      */
     @SerializedName("exposureNumerator")
     @Expose
     public Double exposureNumerator;
 
     /**
-     * The Focal Length.
-     */
-    @SerializedName("focalLength")
-    @Expose
-    public Double focalLength;
-
-    /**
      * The FNumber.
+	 * 
      */
     @SerializedName("fNumber")
     @Expose
     public Double fNumber;
 
     /**
-     * The Taken Date Time.
+     * The Focal Length.
+	 * 
      */
-    @SerializedName("takenDateTime")
+    @SerializedName("focalLength")
     @Expose
-    public java.util.Calendar takenDateTime;
+    public Double focalLength;
 
     /**
      * The Iso.
+	 * 
      */
     @SerializedName("iso")
     @Expose
     public Integer iso;
+
+    /**
+     * The Taken Date Time.
+	 * 
+     */
+    @SerializedName("takenDateTime")
+    @Expose
+    public java.util.Calendar takenDateTime;
 
 
     /**

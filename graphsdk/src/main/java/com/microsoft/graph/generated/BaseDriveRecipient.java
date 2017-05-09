@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -44,21 +44,24 @@ public class BaseDriveRecipient implements IJsonBackedObject {
     }
 
     /**
-     * The Email.
-     */
-    @SerializedName("email")
-    @Expose
-    public String email;
-
-    /**
      * The Alias.
+	 * 
      */
     @SerializedName("alias")
     @Expose
     public String alias;
 
     /**
+     * The Email.
+	 * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
      * The Object Id.
+	 * 
      */
     @SerializedName("objectId")
     @Expose
