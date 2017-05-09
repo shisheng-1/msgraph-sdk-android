@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
+	 * 
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -42,6 +43,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Birthday.
+	 * 
      */
     @SerializedName("birthday")
     @Expose
@@ -49,6 +51,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The File As.
+	 * 
      */
     @SerializedName("fileAs")
     @Expose
@@ -56,6 +59,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -63,6 +67,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Given Name.
+	 * 
      */
     @SerializedName("givenName")
     @Expose
@@ -70,6 +75,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Initials.
+	 * 
      */
     @SerializedName("initials")
     @Expose
@@ -77,6 +83,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Middle Name.
+	 * 
      */
     @SerializedName("middleName")
     @Expose
@@ -84,6 +91,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Nick Name.
+	 * 
      */
     @SerializedName("nickName")
     @Expose
@@ -91,6 +99,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Surname.
+	 * 
      */
     @SerializedName("surname")
     @Expose
@@ -98,6 +107,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Title.
+	 * 
      */
     @SerializedName("title")
     @Expose
@@ -105,6 +115,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Given Name.
+	 * 
      */
     @SerializedName("yomiGivenName")
     @Expose
@@ -112,6 +123,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Surname.
+	 * 
      */
     @SerializedName("yomiSurname")
     @Expose
@@ -119,6 +131,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Company Name.
+	 * 
      */
     @SerializedName("yomiCompanyName")
     @Expose
@@ -126,6 +139,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Generation.
+	 * 
      */
     @SerializedName("generation")
     @Expose
@@ -133,20 +147,23 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Email Addresses.
+	 * 
      */
     @SerializedName("emailAddresses")
     @Expose
-    public List<EmailAddress> emailAddresses;
+    public java.util.List<EmailAddress> emailAddresses;
 
     /**
      * The Im Addresses.
+	 * 
      */
     @SerializedName("imAddresses")
     @Expose
-    public List<String> imAddresses;
+    public java.util.List<String> imAddresses;
 
     /**
      * The Job Title.
+	 * 
      */
     @SerializedName("jobTitle")
     @Expose
@@ -154,6 +171,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Company Name.
+	 * 
      */
     @SerializedName("companyName")
     @Expose
@@ -161,6 +179,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Department.
+	 * 
      */
     @SerializedName("department")
     @Expose
@@ -168,6 +187,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Office Location.
+	 * 
      */
     @SerializedName("officeLocation")
     @Expose
@@ -175,6 +195,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Profession.
+	 * 
      */
     @SerializedName("profession")
     @Expose
@@ -182,6 +203,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Business Home Page.
+	 * 
      */
     @SerializedName("businessHomePage")
     @Expose
@@ -189,6 +211,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Assistant Name.
+	 * 
      */
     @SerializedName("assistantName")
     @Expose
@@ -196,6 +219,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Manager.
+	 * 
      */
     @SerializedName("manager")
     @Expose
@@ -203,13 +227,15 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Home Phones.
+	 * 
      */
     @SerializedName("homePhones")
     @Expose
-    public List<String> homePhones;
+    public java.util.List<String> homePhones;
 
     /**
      * The Mobile Phone.
+	 * 
      */
     @SerializedName("mobilePhone")
     @Expose
@@ -217,13 +243,15 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Business Phones.
+	 * 
      */
     @SerializedName("businessPhones")
     @Expose
-    public List<String> businessPhones;
+    public java.util.List<String> businessPhones;
 
     /**
      * The Home Address.
+	 * 
      */
     @SerializedName("homeAddress")
     @Expose
@@ -231,6 +259,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Business Address.
+	 * 
      */
     @SerializedName("businessAddress")
     @Expose
@@ -238,6 +267,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Other Address.
+	 * 
      */
     @SerializedName("otherAddress")
     @Expose
@@ -245,6 +275,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Spouse Name.
+	 * 
      */
     @SerializedName("spouseName")
     @Expose
@@ -252,6 +283,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Personal Notes.
+	 * 
      */
     @SerializedName("personalNotes")
     @Expose
@@ -259,28 +291,33 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Children.
+	 * 
      */
     @SerializedName("children")
     @Expose
-    public List<String> children;
+    public java.util.List<String> children;
 
     /**
      * The Extensions.
+	 * 
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Photo.
+	 * 
      */
     @SerializedName("photo")
     @Expose

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class WorkbookFunctionsHypGeom_DistRequestBuilder extends BaseWorkbookFun
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsHypGeom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsHypGeom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, sampleS, numberSample, populationS, numberPop, cumulative);
     }
 }

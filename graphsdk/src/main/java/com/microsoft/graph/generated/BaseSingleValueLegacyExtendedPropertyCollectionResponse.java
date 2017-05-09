@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -31,7 +31,7 @@ public class BaseSingleValueLegacyExtendedPropertyCollectionResponse implements 
      */
     @SerializedName("value")
     @Expose
-    public List<SingleValueLegacyExtendedProperty> value;
+    public java.util.List<SingleValueLegacyExtendedProperty> value;
 
     /**
      * The url to the next page of this collection, or null

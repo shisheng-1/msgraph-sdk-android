@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Bold.
+	 * 
      */
     @SerializedName("bold")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
+	 * 
      */
     @SerializedName("color")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Italic.
+	 * 
      */
     @SerializedName("italic")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
+	 * 
      */
     @SerializedName("size")
     @Expose
@@ -70,6 +75,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Underline.
+	 * 
      */
     @SerializedName("underline")
     @Expose

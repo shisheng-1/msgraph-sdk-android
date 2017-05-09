@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Password.
+	 * 
      */
     @SerializedName("password")
     @Expose
@@ -52,6 +53,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Force Change Password Next Sign In.
+	 * 
      */
     @SerializedName("forceChangePasswordNextSignIn")
     @Expose

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * The class for the Base Attendee.
  */
-public class BaseAttendee extends Recipient implements IJsonBackedObject {
+public class BaseAttendee extends AttendeeBase implements IJsonBackedObject {
 
 
     public BaseAttendee() {
@@ -35,17 +35,11 @@ public class BaseAttendee extends Recipient implements IJsonBackedObject {
 
     /**
      * The Status.
+	 * 
      */
     @SerializedName("status")
     @Expose
     public ResponseStatus status;
-
-    /**
-     * The Type.
-     */
-    @SerializedName("type")
-    @Expose
-    public AttendeeType type;
 
 
     /**

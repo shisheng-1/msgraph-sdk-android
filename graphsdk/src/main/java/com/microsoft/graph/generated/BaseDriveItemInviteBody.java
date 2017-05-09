@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -26,28 +26,8 @@ import com.google.gson.annotations.*;
 public class BaseDriveItemInviteBody {
 
     /**
-     * The require Sign In.
-     */
-    @SerializedName("requireSignIn")
-    @Expose
-    public Boolean requireSignIn;
-
-    /**
-     * The roles.
-     */
-    @SerializedName("roles")
-    @Expose
-    public List<String> roles;
-
-    /**
-     * The send Invitation.
-     */
-    @SerializedName("sendInvitation")
-    @Expose
-    public Boolean sendInvitation;
-
-    /**
      * The message.
+	 * 
      */
     @SerializedName("message")
     @Expose
@@ -55,10 +35,35 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The recipients.
+	 * 
      */
     @SerializedName("recipients")
     @Expose
-    public List<DriveRecipient> recipients;
+    public java.util.List<DriveRecipient> recipients;
+
+    /**
+     * The require Sign In.
+	 * 
+     */
+    @SerializedName("requireSignIn")
+    @Expose
+    public Boolean requireSignIn;
+
+    /**
+     * The roles.
+	 * 
+     */
+    @SerializedName("roles")
+    @Expose
+    public java.util.List<String> roles;
+
+    /**
+     * The send Invitation.
+	 * 
+     */
+    @SerializedName("sendInvitation")
+    @Expose
+    public Boolean sendInvitation;
 
 
     /**

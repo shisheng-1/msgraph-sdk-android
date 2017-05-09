@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsF_DistBody {
 
     /**
      * The x.
+	 * 
      */
     @SerializedName("x")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsF_DistBody {
 
     /**
      * The deg Freedom1.
+	 * 
      */
     @SerializedName("degFreedom1")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsF_DistBody {
 
     /**
      * The deg Freedom2.
+	 * 
      */
     @SerializedName("degFreedom2")
     @Expose
@@ -48,6 +51,7 @@ public class BaseWorkbookFunctionsF_DistBody {
 
     /**
      * The cumulative.
+	 * 
      */
     @SerializedName("cumulative")
     @Expose

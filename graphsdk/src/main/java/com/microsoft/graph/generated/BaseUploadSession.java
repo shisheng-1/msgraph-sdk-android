@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -44,14 +44,8 @@ public class BaseUploadSession implements IJsonBackedObject {
     }
 
     /**
-     * The Upload Url.
-     */
-    @SerializedName("uploadUrl")
-    @Expose
-    public String uploadUrl;
-
-    /**
      * The Expiration Date Time.
+	 * 
      */
     @SerializedName("expirationDateTime")
     @Expose
@@ -59,10 +53,19 @@ public class BaseUploadSession implements IJsonBackedObject {
 
     /**
      * The Next Expected Ranges.
+	 * 
      */
     @SerializedName("nextExpectedRanges")
     @Expose
-    public List<String> nextExpectedRanges;
+    public java.util.List<String> nextExpectedRanges;
+
+    /**
+     * The Upload Url.
+	 * 
+     */
+    @SerializedName("uploadUrl")
+    @Expose
+    public String uploadUrl;
 
 
     /**

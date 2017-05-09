@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
+	 * 
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -42,6 +43,7 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -49,21 +51,25 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Contacts.
+	 * 
      */
     public transient ContactCollectionPage contacts;
 
     /**
      * The Child Folders.
+	 * 
      */
     public transient ContactFolderCollectionPage childFolders;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -42,6 +43,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
+	 * 
      */
     @SerializedName("color")
     @Expose
@@ -49,6 +51,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
+	 * 
      */
     @SerializedName("changeKey")
     @Expose
@@ -56,21 +59,25 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Events.
+	 * 
      */
     public transient EventCollectionPage events;
 
     /**
      * The Calendar View.
+	 * 
      */
     public transient EventCollectionPage calendarView;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

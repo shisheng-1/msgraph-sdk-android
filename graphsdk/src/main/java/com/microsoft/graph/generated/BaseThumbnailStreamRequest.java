@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import java.io.*;
 
@@ -35,7 +35,7 @@ public class BaseThumbnailStreamRequest extends BaseStreamRequest<Thumbnail> imp
     public BaseThumbnailStreamRequest(
                          final String requestUrl,
                          final IBaseClient client,
-                         final List<Option> requestOptions,
+                         final java.util.List<Option> requestOptions,
                          final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

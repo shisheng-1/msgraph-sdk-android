@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Id.
+	 * 
      */
     @SerializedName("contentId")
     @Expose
@@ -42,6 +43,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Location.
+	 * 
      */
     @SerializedName("contentLocation")
     @Expose
@@ -49,6 +51,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Bytes.
+	 * 
      */
     @SerializedName("contentBytes")
     @Expose

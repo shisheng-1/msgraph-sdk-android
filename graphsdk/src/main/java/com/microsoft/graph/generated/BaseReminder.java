@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event Id.
+	 * 
      */
     @SerializedName("eventId")
     @Expose
@@ -52,6 +53,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event Start Time.
+	 * 
      */
     @SerializedName("eventStartTime")
     @Expose
@@ -59,6 +61,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event End Time.
+	 * 
      */
     @SerializedName("eventEndTime")
     @Expose
@@ -66,6 +69,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Change Key.
+	 * 
      */
     @SerializedName("changeKey")
     @Expose
@@ -73,6 +77,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event Subject.
+	 * 
      */
     @SerializedName("eventSubject")
     @Expose
@@ -80,6 +85,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event Location.
+	 * 
      */
     @SerializedName("eventLocation")
     @Expose
@@ -87,6 +93,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Event Web Link.
+	 * 
      */
     @SerializedName("eventWebLink")
     @Expose
@@ -94,6 +101,7 @@ public class BaseReminder implements IJsonBackedObject {
 
     /**
      * The Reminder Fire Time.
+	 * 
      */
     @SerializedName("reminderFireTime")
     @Expose

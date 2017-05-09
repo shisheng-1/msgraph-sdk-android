@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Drive Id.
+	 * 
      */
     @SerializedName("driveId")
     @Expose
@@ -52,6 +53,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Id.
+	 * 
      */
     @SerializedName("id")
     @Expose
@@ -59,6 +61,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -66,6 +69,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Path.
+	 * 
      */
     @SerializedName("path")
     @Expose
@@ -73,10 +77,19 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Share Id.
+	 * 
      */
     @SerializedName("shareId")
     @Expose
     public String shareId;
+
+    /**
+     * The Sharepoint Ids.
+	 * 
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
 
 
     /**

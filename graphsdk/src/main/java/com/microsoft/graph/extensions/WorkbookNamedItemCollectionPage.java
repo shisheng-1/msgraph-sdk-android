@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -23,7 +23,7 @@ import java.util.List;
 public class WorkbookNamedItemCollectionPage extends BaseWorkbookNamedItemCollectionPage implements IWorkbookNamedItemCollectionPage {
 
     /**
-     * A collection page for Workbook.
+     * A collection page for WorkbookWorksheet.
      *
      * @param response The serialized BaseWorkbookNamedItemCollectionResponse from the service
      * @param builder The request builder for the next collection page

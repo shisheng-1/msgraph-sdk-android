@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
+	 * 
      */
     @SerializedName("accountEnabled")
     @Expose
@@ -42,13 +43,15 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
+	 * 
      */
     @SerializedName("alternativeSecurityIds")
     @Expose
-    public List<AlternativeSecurityId> alternativeSecurityIds;
+    public java.util.List<AlternativeSecurityId> alternativeSecurityIds;
 
     /**
      * The Approximate Last Sign In Date Time.
+	 * 
      */
     @SerializedName("approximateLastSignInDateTime")
     @Expose
@@ -56,6 +59,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
+	 * 
      */
     @SerializedName("deviceId")
     @Expose
@@ -63,6 +67,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Metadata.
+	 * 
      */
     @SerializedName("deviceMetadata")
     @Expose
@@ -70,6 +75,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Version.
+	 * 
      */
     @SerializedName("deviceVersion")
     @Expose
@@ -77,6 +83,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -84,6 +91,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
+	 * 
      */
     @SerializedName("isCompliant")
     @Expose
@@ -91,6 +99,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
+	 * 
      */
     @SerializedName("isManaged")
     @Expose
@@ -98,6 +107,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
+	 * 
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -105,6 +115,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
+	 * 
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -112,6 +123,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System.
+	 * 
      */
     @SerializedName("operatingSystem")
     @Expose
@@ -119,6 +131,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
+	 * 
      */
     @SerializedName("operatingSystemVersion")
     @Expose
@@ -126,13 +139,15 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
+	 * 
      */
     @SerializedName("physicalIds")
     @Expose
-    public List<String> physicalIds;
+    public java.util.List<String> physicalIds;
 
     /**
      * The Trust Type.
+	 * 
      */
     @SerializedName("trustType")
     @Expose
@@ -140,11 +155,13 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Registered Owners.
+	 * 
      */
     public transient DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
+	 * 
      */
     public transient DirectoryObjectCollectionPage registeredUsers;
 

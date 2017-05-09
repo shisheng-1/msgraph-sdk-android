@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Column Width.
+	 * 
      */
     @SerializedName("columnWidth")
     @Expose
@@ -42,6 +43,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Horizontal Alignment.
+	 * 
      */
     @SerializedName("horizontalAlignment")
     @Expose
@@ -49,6 +51,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Row Height.
+	 * 
      */
     @SerializedName("rowHeight")
     @Expose
@@ -56,6 +59,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Vertical Alignment.
+	 * 
      */
     @SerializedName("verticalAlignment")
     @Expose
@@ -63,6 +67,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Wrap Text.
+	 * 
      */
     @SerializedName("wrapText")
     @Expose
@@ -70,11 +75,13 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Borders.
+	 * 
      */
     public transient WorkbookRangeBorderCollectionPage borders;
 
     /**
      * The Fill.
+	 * 
      */
     @SerializedName("fill")
     @Expose
@@ -82,6 +89,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Font.
+	 * 
      */
     @SerializedName("font")
     @Expose
@@ -89,6 +97,7 @@ public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Protection.
+	 * 
      */
     @SerializedName("protection")
     @Expose

@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Description.
+	 * 
      */
     @SerializedName("description")
     @Expose
@@ -42,6 +43,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -49,6 +51,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Role Template Id.
+	 * 
      */
     @SerializedName("roleTemplateId")
     @Expose
@@ -56,6 +59,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Members.
+	 * 
      */
     public transient DirectoryObjectCollectionPage members;
 

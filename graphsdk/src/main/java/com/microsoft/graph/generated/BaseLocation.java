@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,13 +45,23 @@ public class BaseLocation implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
 
     /**
+     * The Location Email Address.
+	 * 
+     */
+    @SerializedName("locationEmailAddress")
+    @Expose
+    public String locationEmailAddress;
+
+    /**
      * The Address.
+	 * 
      */
     @SerializedName("address")
     @Expose

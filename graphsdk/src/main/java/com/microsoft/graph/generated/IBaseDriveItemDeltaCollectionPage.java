@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 
@@ -23,4 +23,10 @@ import com.google.gson.JsonObject;
  * The interface for the Base Drive Item Delta Collection Page.
  */
 public interface IBaseDriveItemDeltaCollectionPage extends IBaseCollectionPage<DriveItem, IDriveItemDeltaCollectionRequestBuilder> {
+    /**
+     * The deltaLink to make future delta requests
+     *
+     * @return String The deltaLink URL
+     */
+    public String getDeltaLink();
 }

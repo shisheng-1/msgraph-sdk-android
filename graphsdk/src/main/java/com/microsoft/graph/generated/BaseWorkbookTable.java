@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -34,14 +34,56 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
     }
 
     /**
+     * The Highlight First Column.
+	 * 
+     */
+    @SerializedName("highlightFirstColumn")
+    @Expose
+    public Boolean highlightFirstColumn;
+
+    /**
+     * The Highlight Last Column.
+	 * 
+     */
+    @SerializedName("highlightLastColumn")
+    @Expose
+    public Boolean highlightLastColumn;
+
+    /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
     public String name;
 
     /**
+     * The Show Banded Columns.
+	 * 
+     */
+    @SerializedName("showBandedColumns")
+    @Expose
+    public Boolean showBandedColumns;
+
+    /**
+     * The Show Banded Rows.
+	 * 
+     */
+    @SerializedName("showBandedRows")
+    @Expose
+    public Boolean showBandedRows;
+
+    /**
+     * The Show Filter Button.
+	 * 
+     */
+    @SerializedName("showFilterButton")
+    @Expose
+    public Boolean showFilterButton;
+
+    /**
      * The Show Headers.
+	 * 
      */
     @SerializedName("showHeaders")
     @Expose
@@ -49,6 +91,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Totals.
+	 * 
      */
     @SerializedName("showTotals")
     @Expose
@@ -56,6 +99,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Style.
+	 * 
      */
     @SerializedName("style")
     @Expose
@@ -63,16 +107,19 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Columns.
+	 * 
      */
     public transient WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
+	 * 
      */
     public transient WorkbookTableRowCollectionPage rows;
 
     /**
      * The Sort.
+	 * 
      */
     @SerializedName("sort")
     @Expose
@@ -80,6 +127,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
+	 * 
      */
     @SerializedName("worksheet")
     @Expose

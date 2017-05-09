@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -34,14 +34,32 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
     }
 
     /**
+     * The Comment.
+	 * 
+     */
+    @SerializedName("comment")
+    @Expose
+    public String comment;
+
+    /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
     public String name;
 
     /**
+     * The Scope.
+	 * 
+     */
+    @SerializedName("scope")
+    @Expose
+    public String scope;
+
+    /**
      * The Type.
+	 * 
      */
     @SerializedName("type")
     @Expose
@@ -49,6 +67,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Value.
+	 * 
      */
     @SerializedName("value")
     @Expose
@@ -56,10 +75,19 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Visible.
+	 * 
      */
     @SerializedName("visible")
     @Expose
     public Boolean visible;
+
+    /**
+     * The Worksheet.
+	 * 
+     */
+    @SerializedName("worksheet")
+    @Expose
+    public WorkbookWorksheet worksheet;
 
 
     /**

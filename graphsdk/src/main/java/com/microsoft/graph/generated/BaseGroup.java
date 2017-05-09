@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Description.
+	 * 
      */
     @SerializedName("description")
     @Expose
@@ -42,6 +43,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
+	 * 
      */
     @SerializedName("displayName")
     @Expose
@@ -49,13 +51,15 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Types.
+	 * 
      */
     @SerializedName("groupTypes")
     @Expose
-    public List<String> groupTypes;
+    public java.util.List<String> groupTypes;
 
     /**
      * The Mail.
+	 * 
      */
     @SerializedName("mail")
     @Expose
@@ -63,6 +67,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Enabled.
+	 * 
      */
     @SerializedName("mailEnabled")
     @Expose
@@ -70,6 +75,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
+	 * 
      */
     @SerializedName("mailNickname")
     @Expose
@@ -77,6 +83,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
+	 * 
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -84,6 +91,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
+	 * 
      */
     @SerializedName("onPremisesSecurityIdentifier")
     @Expose
@@ -91,6 +99,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
+	 * 
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -98,13 +107,15 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
+	 * 
      */
     @SerializedName("proxyAddresses")
     @Expose
-    public List<String> proxyAddresses;
+    public java.util.List<String> proxyAddresses;
 
     /**
      * The Security Enabled.
+	 * 
      */
     @SerializedName("securityEnabled")
     @Expose
@@ -112,6 +123,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
+	 * 
      */
     @SerializedName("visibility")
     @Expose
@@ -119,6 +131,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Allow External Senders.
+	 * 
      */
     @SerializedName("allowExternalSenders")
     @Expose
@@ -126,6 +139,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Auto Subscribe New Members.
+	 * 
      */
     @SerializedName("autoSubscribeNewMembers")
     @Expose
@@ -133,6 +147,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Subscribed By Mail.
+	 * 
      */
     @SerializedName("isSubscribedByMail")
     @Expose
@@ -140,6 +155,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Unseen Count.
+	 * 
      */
     @SerializedName("unseenCount")
     @Expose
@@ -147,16 +163,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Members.
+	 * 
      */
     public transient DirectoryObjectCollectionPage members;
 
     /**
      * The Member Of.
+	 * 
      */
     public transient DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Created On Behalf Of.
+	 * 
      */
     @SerializedName("createdOnBehalfOf")
     @Expose
@@ -164,16 +183,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
+	 * 
      */
     public transient DirectoryObjectCollectionPage owners;
 
     /**
      * The Threads.
+	 * 
      */
     public transient ConversationThreadCollectionPage threads;
 
     /**
      * The Calendar.
+	 * 
      */
     @SerializedName("calendar")
     @Expose
@@ -181,42 +203,75 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Calendar View.
+	 * 
      */
     public transient EventCollectionPage calendarView;
 
     /**
      * The Events.
+	 * 
      */
     public transient EventCollectionPage events;
 
     /**
      * The Conversations.
+	 * 
      */
     public transient ConversationCollectionPage conversations;
 
     /**
      * The Photo.
+	 * 
      */
     @SerializedName("photo")
     @Expose
     public ProfilePhoto photo;
 
     /**
+     * The Photos.
+	 * 
+     */
+    public transient ProfilePhotoCollectionPage photos;
+
+    /**
      * The Accepted Senders.
+	 * 
      */
     public transient DirectoryObjectCollectionPage acceptedSenders;
 
     /**
      * The Rejected Senders.
+	 * 
      */
     public transient DirectoryObjectCollectionPage rejectedSenders;
 
     /**
      * The Drive.
+	 * 
      */
     @SerializedName("drive")
     @Expose
     public Drive drive;
+
+    /**
+     * The Drives.
+	 * 
+     */
+    public transient DriveCollectionPage drives;
+
+    /**
+     * The Sites.
+	 * 
+     */
+    public transient SiteCollectionPage sites;
+
+    /**
+     * The Planner.
+	 * 
+     */
+    @SerializedName("planner")
+    @Expose
+    public PlannerGroup planner;
 
 
     /**
@@ -368,6 +423,22 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
             conversations = new ConversationCollectionPage(response, null);
         }
 
+        if (json.has("photos")) {
+            final BaseProfilePhotoCollectionResponse response = new BaseProfilePhotoCollectionResponse();
+            if (json.has("photos@odata.nextLink")) {
+                response.nextLink = json.get("photos@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("photos").toString(), JsonObject[].class);
+            final ProfilePhoto[] array = new ProfilePhoto[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfilePhoto.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            photos = new ProfilePhotoCollectionPage(response, null);
+        }
+
         if (json.has("acceptedSenders")) {
             final BaseDirectoryObjectCollectionResponse response = new BaseDirectoryObjectCollectionResponse();
             if (json.has("acceptedSenders@odata.nextLink")) {
@@ -398,6 +469,38 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             rejectedSenders = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("drives")) {
+            final BaseDriveCollectionResponse response = new BaseDriveCollectionResponse();
+            if (json.has("drives@odata.nextLink")) {
+                response.nextLink = json.get("drives@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("drives").toString(), JsonObject[].class);
+            final Drive[] array = new Drive[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Drive.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            drives = new DriveCollectionPage(response, null);
+        }
+
+        if (json.has("sites")) {
+            final BaseSiteCollectionResponse response = new BaseSiteCollectionResponse();
+            if (json.has("sites@odata.nextLink")) {
+                response.nextLink = json.get("sites@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sites").toString(), JsonObject[].class);
+            final Site[] array = new Site[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Site.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            sites = new SiteCollectionPage(response, null);
         }
     }
 }

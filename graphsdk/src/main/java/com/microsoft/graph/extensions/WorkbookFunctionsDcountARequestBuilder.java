@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class WorkbookFunctionsDcountARequestBuilder extends BaseWorkbookFunction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDcountARequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public WorkbookFunctionsDcountARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions, database, field, criteria);
     }
 }

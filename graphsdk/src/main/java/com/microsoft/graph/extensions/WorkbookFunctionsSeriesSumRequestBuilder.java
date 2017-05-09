@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseWorkbookFuncti
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
+    public WorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
         super(requestUrl, client, requestOptions, x, n, m, coefficients);
     }
 }

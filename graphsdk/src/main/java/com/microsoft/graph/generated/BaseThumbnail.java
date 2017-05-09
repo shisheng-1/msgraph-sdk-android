@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,13 +45,23 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Height.
+	 * 
      */
     @SerializedName("height")
     @Expose
     public Integer height;
 
     /**
+     * The Source Item Id.
+	 * 
+     */
+    @SerializedName("sourceItemId")
+    @Expose
+    public String sourceItemId;
+
+    /**
      * The Url.
+	 * 
      */
     @SerializedName("url")
     @Expose
@@ -59,6 +69,7 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Width.
+	 * 
      */
     @SerializedName("width")
     @Expose

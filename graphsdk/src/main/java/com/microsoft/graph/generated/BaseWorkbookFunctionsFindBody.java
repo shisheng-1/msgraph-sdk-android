@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.*;
@@ -27,6 +27,7 @@ public class BaseWorkbookFunctionsFindBody {
 
     /**
      * The find Text.
+	 * 
      */
     @SerializedName("findText")
     @Expose
@@ -34,6 +35,7 @@ public class BaseWorkbookFunctionsFindBody {
 
     /**
      * The within Text.
+	 * 
      */
     @SerializedName("withinText")
     @Expose
@@ -41,6 +43,7 @@ public class BaseWorkbookFunctionsFindBody {
 
     /**
      * The start Num.
+	 * 
      */
     @SerializedName("startNum")
     @Expose

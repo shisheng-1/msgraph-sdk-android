@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Type.
+	 * 
      */
     @SerializedName("type")
     @Expose
@@ -52,6 +53,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Identity Provider.
+	 * 
      */
     @SerializedName("identityProvider")
     @Expose
@@ -59,6 +61,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Key.
+	 * 
      */
     @SerializedName("key")
     @Expose

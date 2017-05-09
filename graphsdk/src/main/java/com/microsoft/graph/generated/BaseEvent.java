@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -35,6 +35,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start Time Zone.
+	 * 
      */
     @SerializedName("originalStartTimeZone")
     @Expose
@@ -42,6 +43,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original End Time Zone.
+	 * 
      */
     @SerializedName("originalEndTimeZone")
     @Expose
@@ -49,6 +51,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Status.
+	 * 
      */
     @SerializedName("responseStatus")
     @Expose
@@ -56,6 +59,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The ICal UId.
+	 * 
      */
     @SerializedName("iCalUId")
     @Expose
@@ -63,6 +67,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Reminder Minutes Before Start.
+	 * 
      */
     @SerializedName("reminderMinutesBeforeStart")
     @Expose
@@ -70,6 +75,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Reminder On.
+	 * 
      */
     @SerializedName("isReminderOn")
     @Expose
@@ -77,6 +83,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
+	 * 
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -84,6 +91,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
+	 * 
      */
     @SerializedName("subject")
     @Expose
@@ -91,6 +99,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
+	 * 
      */
     @SerializedName("body")
     @Expose
@@ -98,6 +107,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
+	 * 
      */
     @SerializedName("bodyPreview")
     @Expose
@@ -105,6 +115,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
+	 * 
      */
     @SerializedName("importance")
     @Expose
@@ -112,6 +123,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
+	 * 
      */
     @SerializedName("sensitivity")
     @Expose
@@ -119,6 +131,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Start.
+	 * 
      */
     @SerializedName("start")
     @Expose
@@ -126,6 +139,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start.
+	 * 
      */
     @SerializedName("originalStart")
     @Expose
@@ -133,6 +147,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The End.
+	 * 
      */
     @SerializedName("end")
     @Expose
@@ -140,6 +155,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Location.
+	 * 
      */
     @SerializedName("location")
     @Expose
@@ -147,6 +163,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is All Day.
+	 * 
      */
     @SerializedName("isAllDay")
     @Expose
@@ -154,6 +171,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Cancelled.
+	 * 
      */
     @SerializedName("isCancelled")
     @Expose
@@ -161,6 +179,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Organizer.
+	 * 
      */
     @SerializedName("isOrganizer")
     @Expose
@@ -168,6 +187,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Recurrence.
+	 * 
      */
     @SerializedName("recurrence")
     @Expose
@@ -175,6 +195,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Requested.
+	 * 
      */
     @SerializedName("responseRequested")
     @Expose
@@ -182,6 +203,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Series Master Id.
+	 * 
      */
     @SerializedName("seriesMasterId")
     @Expose
@@ -189,6 +211,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
+	 * 
      */
     @SerializedName("showAs")
     @Expose
@@ -196,6 +219,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
+	 * 
      */
     @SerializedName("type")
     @Expose
@@ -203,13 +227,15 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attendees.
+	 * 
      */
     @SerializedName("attendees")
     @Expose
-    public List<Attendee> attendees;
+    public java.util.List<Attendee> attendees;
 
     /**
      * The Organizer.
+	 * 
      */
     @SerializedName("organizer")
     @Expose
@@ -217,6 +243,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
+	 * 
      */
     @SerializedName("webLink")
     @Expose
@@ -224,6 +251,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting Url.
+	 * 
      */
     @SerializedName("onlineMeetingUrl")
     @Expose
@@ -231,6 +259,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Calendar.
+	 * 
      */
     @SerializedName("calendar")
     @Expose
@@ -238,26 +267,31 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Instances.
+	 * 
      */
     public transient EventCollectionPage instances;
 
     /**
      * The Extensions.
+	 * 
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The Attachments.
+	 * 
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Single Value Extended Properties.
+	 * 
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
+	 * 
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

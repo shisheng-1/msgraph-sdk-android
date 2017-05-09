@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * The class for the Base Shared Drive Item.
  */
-public class BaseSharedDriveItem extends Entity implements IJsonBackedObject {
+public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
     public BaseSharedDriveItem() {
@@ -35,6 +35,7 @@ public class BaseSharedDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
+	 * 
      */
     @SerializedName("name")
     @Expose
@@ -42,22 +43,41 @@ public class BaseSharedDriveItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
+	 * 
      */
     @SerializedName("owner")
     @Expose
     public IdentitySet owner;
 
     /**
+     * The Drive Item.
+	 * 
+     */
+    @SerializedName("driveItem")
+    @Expose
+    public DriveItem driveItem;
+
+    /**
+     * The Items.
+	 * 
+     */
+    public transient DriveItemCollectionPage items;
+
+    /**
      * The Root.
+	 * 
      */
     @SerializedName("root")
     @Expose
     public DriveItem root;
 
     /**
-     * The Items.
+     * The Site.
+	 * 
      */
-    public transient DriveItemCollectionPage items;
+    @SerializedName("site")
+    @Expose
+    public Site site;
 
 
     /**

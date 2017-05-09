@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -45,6 +45,7 @@ public class BaseSharepointIds implements IJsonBackedObject {
 
     /**
      * The List Id.
+	 * 
      */
     @SerializedName("listId")
     @Expose
@@ -52,6 +53,7 @@ public class BaseSharepointIds implements IJsonBackedObject {
 
     /**
      * The List Item Id.
+	 * 
      */
     @SerializedName("listItemId")
     @Expose
@@ -59,6 +61,7 @@ public class BaseSharepointIds implements IJsonBackedObject {
 
     /**
      * The List Item Unique Id.
+	 * 
      */
     @SerializedName("listItemUniqueId")
     @Expose
@@ -66,13 +69,23 @@ public class BaseSharepointIds implements IJsonBackedObject {
 
     /**
      * The Site Id.
+	 * 
      */
     @SerializedName("siteId")
     @Expose
     public String siteId;
 
     /**
+     * The Site Url.
+	 * 
+     */
+    @SerializedName("siteUrl")
+    @Expose
+    public String siteUrl;
+
+    /**
      * The Web Id.
+	 * 
      */
     @SerializedName("webId")
     @Expose
