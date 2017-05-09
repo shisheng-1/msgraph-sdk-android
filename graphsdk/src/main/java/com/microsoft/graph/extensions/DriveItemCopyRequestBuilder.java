@@ -13,7 +13,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -29,7 +29,7 @@ public class DriveItemCopyRequestBuilder extends BaseDriveItemCopyRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final String name, final ItemReference parentReference) {
+    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions, name, parentReference);
     }
 }
