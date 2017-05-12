@@ -62,4 +62,14 @@ class MockRequest implements IHttpRequest {
     @Override
     public void addHeader(final String header, final String value) {
     }
+
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        // Don't set it for Mock request.
+    }
+
+    @Override
+    public boolean getUseCaches() {
+        return false;
+    }
 }

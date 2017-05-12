@@ -60,6 +60,8 @@ public class UrlConnection implements IConnection {
             mConnection.addRequestProperty(header.getName(), header.getValue());
         }
 
+        mConnection.setUseCaches(request.getUseCaches());
+
         try {
             mConnection.setRequestMethod(request.getHttpMethod().toString());
         } catch (final ProtocolException ignored) {

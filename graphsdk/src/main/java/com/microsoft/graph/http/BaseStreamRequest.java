@@ -137,6 +137,26 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
+     * Sets useCaches parameter to cache the response.
+     *
+     * @param useCaches The value of useCaches.
+     */
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        mBaseRequest.setUseCaches(useCaches);
+    }
+
+    /**
+     * Gets useCaches parameter.
+     *
+     * @return The value of useCaches.
+     */
+    @Override
+    public boolean getUseCaches() {
+        return mBaseRequest.getUseCaches();
+    }
+
+    /**
      * Gets the headers.
      *
      * @return The headers.
