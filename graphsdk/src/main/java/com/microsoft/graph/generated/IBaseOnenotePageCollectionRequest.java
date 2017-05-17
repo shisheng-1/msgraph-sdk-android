@@ -26,9 +26,9 @@ public interface IBaseOnenotePageCollectionRequest {
 
     IOnenotePageCollectionPage get() throws ClientException;
 
-    void post(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback);
+    void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback);
 
-    OnenotePage post(final OnenotePage newOnenotePage) throws ClientException;
+    OnenotePage post(final byte[] newOnenotePage) throws ClientException;
 
     /**
      * Sets the expand clause for the request
