@@ -56,14 +56,14 @@ public class BaseWorkbookRangeViewCollectionRequest extends BaseCollectionReques
     public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookRangeView, callback);
     }
 
     public WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookRangeView);
     }
 

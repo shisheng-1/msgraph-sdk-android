@@ -56,14 +56,14 @@ public class BaseDeviceCollectionRequest extends BaseCollectionRequest<BaseDevic
     public void post(final Device newDevice, final ICallback<Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDevice, callback);
     }
 
     public Device post(final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDevice);
     }
 

@@ -56,14 +56,14 @@ public class BaseSectionGroupCollectionRequest extends BaseCollectionRequest<Bas
     public void post(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSectionGroup, callback);
     }
 
     public SectionGroup post(final SectionGroup newSectionGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSectionGroup);
     }
 

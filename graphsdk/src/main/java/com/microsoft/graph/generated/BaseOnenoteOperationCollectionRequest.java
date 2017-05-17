@@ -56,14 +56,14 @@ public class BaseOnenoteOperationCollectionRequest extends BaseCollectionRequest
     public void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newOnenoteOperation, callback);
     }
 
     public OnenoteOperation post(final OnenoteOperation newOnenoteOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newOnenoteOperation);
     }
 
