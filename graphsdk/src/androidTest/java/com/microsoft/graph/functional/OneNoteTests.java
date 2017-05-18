@@ -24,11 +24,18 @@ import com.microsoft.graph.options.QueryOption;
 
 import org.junit.*;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.math.BigInteger;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -49,7 +56,7 @@ public class OneNoteTests extends AndroidTestCase {
         testBase = new TestBase();
         testNotebook = testBase.graphClient.getMe().getOnenote().getNotebooks("1-525fe350-0199-4c02-879d-e5b142ae8632").buildRequest().get();
         testSection = testBase.graphClient.getMe().getOnenote().getNotebooks(testNotebook.id).getSections().buildRequest().get().getCurrentPage().get(0);
-        testPage = testBase.graphClient.getMe().getOnenote().getPages().buildRequest().get().getCurrentPage().get(0);
+        //testPage = testBase.graphClient.getMe().getOnenote().getPages().buildRequest().get().getCurrentPage().get(0);
 
         // For copy scenarios
         testNotebook2 = testBase.graphClient.getMe().getOnenote().getNotebooks("1-491df90f-b45b-477f-b297-032f000e6f1e").buildRequest().get();
@@ -208,45 +215,78 @@ public class OneNoteTests extends AndroidTestCase {
     }
 
     @Test
-    public void testMultipartMimetype(){
+    public void testMultipartPost(){
         String multipartBoundary = "part_" + new BigInteger(130, new SecureRandom()).toString();
-        String content = "--" + multipartBoundary + "\n" +
-                "Content-Disposition:form-data; name=\"Presentation\"\n" +
-                "Content-Type: text/html\n" +
-                "\n" +
-                "<!DOCTYPE html>\n" +
-                "<html lang=\"en-US\">\n" +
-                "<head>\n" +
-                "<title>Page1</title>\n" +
-                "<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\n" +
-                "</head>\n" +
-                "<body>\n" +
-                "<p>hello</p>" +
-//                "\t\t<p>\n" +
-//                "\t\t\t<img src=\"name:image\" />\n" +
-//                "\t\t</p>\n" +
-//                "\t\t<p>\n" +
-//                "\t\t\t<object data=\"name:attachment\" data-attachment=\"document.pdf\" />\n" +
-//                "\t\t</p>\n" +
-                "</body>\n" +
-                "</html>\n" +
-                //"\n" +
-//                multipartBoundary + "\n" +
-//                "Content-Disposition:form-data; name=\"image\"\n" +
-//                "Content-type:image/jpeg\n" +
-//                "\n" +
-//                "FromFile=\"C:\\hamilton.jpg\"\n" +
-//                "\n" +
-//                multipartBoundary + "\n" +
-//                "Content-Disposition:form-data; name=\"attachment\"\n" +
-//                "Content-type:application/pdf\n" +
-//                "\n" +
-//                "FromFile=\"C:\\document.pdf\"\n" +
-//                "\n" +
-                "--" + multipartBoundary + "--";
-        byte[] pageStream = content.getBytes();
-        List<Option> options = new ArrayList<Option>();
-        options.add(new HeaderOption("Content-Type", "multipart/form-data;boundary=\"" + multipartBoundary + "\""));
-        OnenotePage newPage = testBase.graphClient.getMe().getOnenote().getSections(testSection.id).getPages().buildRequest(options).post(pageStream);
+        try {
+            String html =
+                "--" + multipartBoundary + "\r\n" +
+                        "Content-Disposition:form-data; name=\"Presentation\"" + "\r\n" +
+                        "Content-Type: text/html" + "\r\n" +
+                        "\r\n" +
+                        "<!DOCTYPE html>\r\n" +
+                        "<html lang=\"en-US\">\r\n" +
+                        "<head>\r\n" +
+                        "<title>Test Multipart Page</title>\r\n" +
+                        "<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
+                        "</head>\r\n" +
+                        "<body>\r\n" +
+                        "<p>\r\n" +
+                        "<img src=\"name:image\" />\r\n" +
+                        "</p>\r\n" +
+                        "<p>\r\n" +
+                        "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+                        "\r\n" +
+                        "</body>\r\n" +
+                        "</html>\r\n" +
+                        "\r\n" +
+                        "--" + multipartBoundary + "\r\n" +
+                        "Content-Disposition:form-data; name=\"image\"\r\n" +
+                        "Content-Type: image/jpeg\r\n\r\n";
+            String doc = "\r\n\r\n" +
+                    "--" + multipartBoundary + "\r\n" +
+                    "Content-Disposition:form-data; name=\"attachment\"\r\n" +
+                    "Content-Type:application/pdf\r\n\r\n";
+
+            String end = "\r\n\r\n" +
+                    "--" + multipartBoundary + "--";
+
+            InputStream imageStream = this.getClass().getClassLoader().getResourceAsStream("hamilton.jpg");
+            byte[] imgArray = getByteArray(imageStream);
+
+            InputStream docStream = this.getClass().getClassLoader().getResourceAsStream("document.pdf");
+            byte[] docArray = getByteArray(docStream);
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            out.write(html.getBytes());
+            out.write(imgArray);
+            out.write(doc.getBytes());
+            out.write(docArray);
+            out.write(end.getBytes());
+
+            byte finalData[] = out.toByteArray();
+
+            List<Option> options = new ArrayList<Option>();
+            options.add(new HeaderOption("Content-Type", "multipart/form-data; boundary=\"" + multipartBoundary + "\""));
+            OnenotePage newPage = testBase.graphClient.getMe().getOnenote().getSections(testSection.id).getPages().buildRequest(options).post(finalData);
+            assertNotNull(newPage);
+        } catch (Exception e) {
+            Assert.fail("Unable to write to output stream");
+        }
+    }
+
+    public byte[] getByteArray(InputStream in) {
+        try {
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+            int nRead;
+            byte[] data = new byte[16384];
+            while ((nRead = in.read(data, 0, data.length)) != -1) {
+                buffer.write(data, 0, nRead);
+            }
+            buffer.flush();
+            return buffer.toByteArray();
+        } catch (Exception e) {
+            Assert.fail("Unable to open document");
+        }
+        return null;
     }
 }
