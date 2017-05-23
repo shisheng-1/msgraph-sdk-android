@@ -5,17 +5,20 @@ import android.test.suitebuilder.annotation.Suppress;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.extensions.ExtensionSchemaProperty;
 import com.microsoft.graph.extensions.Group;
 import com.microsoft.graph.extensions.GroupDeltaCollectionPage;
 import com.microsoft.graph.extensions.IGroupDeltaCollectionPage;
 import com.microsoft.graph.extensions.IGroupDeltaCollectionRequest;
 import com.microsoft.graph.extensions.IGroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.extensions.Extension;
+import com.microsoft.graph.extensions.SchemaExtension;
 //import com.microsoft.graph.extensions.IUserGetMailTipsCollectionPage;
 //import com.microsoft.graph.extensions.MailTips;
 //import com.microsoft.graph.extensions.MailTipsType;
 //import com.microsoft.graph.extensions.RecipientScopeType;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,6 +56,60 @@ public class ODataTests extends AndroidTestCase {
 //        assertEquals(extension.getAdditionalDataManager().get("theme"), newExtension.getAdditionalDataManager().get("theme"));
 //
 //        testBase.graphClient.getMe().getExtensions(newExtension.id).buildRequest().delete();
+    }
+
+    @Test
+    public void testSchemaExtensions() {
+        SchemaExtension extension = new SchemaExtension();
+        extension.id = "schematest";
+        extension.description = "Android Graph SDK test";
+        List<String> targets = new ArrayList<>();
+        targets.add("Group");
+        extension.targetTypes = targets;
+
+        ExtensionSchemaProperty prop = new ExtensionSchemaProperty();
+        prop.name = "courseId";
+        prop.type = "Integer";
+
+        ExtensionSchemaProperty prop2 = new ExtensionSchemaProperty();
+        prop2.name = "courseName";
+        prop2.type = "String";
+
+        List<ExtensionSchemaProperty> properties = new ArrayList<>();
+        properties.add(prop);
+        properties.add(prop2);
+        extension.properties = properties;
+
+        SchemaExtension newExtension = testBase.graphClient.getSchemaExtensions().buildRequest().post(extension);
+        assertEquals(extension.description, newExtension.description);
+
+        SchemaExtension patchExtension = new SchemaExtension();
+        List<ExtensionSchemaProperty> patchProperties = new ArrayList<>();
+        ExtensionSchemaProperty patchProperty = new ExtensionSchemaProperty();
+        patchProperty.name = "newItem";
+        patchProperty.type = "String";
+        patchProperties.add(prop);
+        patchProperties.add(prop2);
+        patchProperties.add(patchProperty);
+
+        patchExtension.properties = patchProperties;
+
+        testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().patch(patchExtension);
+        SchemaExtension updatedExtension = testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().get();
+
+        boolean foundUpdatedProperty = false;
+        for (ExtensionSchemaProperty updatedProperty : updatedExtension.properties) {
+            if (updatedProperty.name.equals(patchProperty.name)) {
+                assertEquals(patchProperty.type, updatedProperty.type);
+                foundUpdatedProperty = true;
+                break;
+            }
+        }
+        if (!foundUpdatedProperty) {
+            Assert.fail("Patch failed on Schema Extension");
+        }
+
+        testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().delete();
     }
 
     @Test

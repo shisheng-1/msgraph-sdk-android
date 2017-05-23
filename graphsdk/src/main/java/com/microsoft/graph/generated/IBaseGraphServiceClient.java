@@ -188,6 +188,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IContractRequestBuilder getContracts(final String id);
 
     /**
+     * Gets the collection of SchemaExtensions objects.
+     *
+     * @return The request builder for the collection of SchemaExtensions objects
+     */
+    ISchemaExtensionCollectionRequestBuilder getSchemaExtensions();
+
+    /**
+     * Gets a single SchemaExtensions.
+     *
+     * @param id The id of the SchemaExtensions to retrieve.
+     * @return The request builder for the SchemaExtensions object
+     */
+    ISchemaExtensionRequestBuilder getSchemaExtensions(final String id);
+
+    /**
      * Gets the collection of Drives objects.
      *
      * @return The request builder for the collection of Drives objects

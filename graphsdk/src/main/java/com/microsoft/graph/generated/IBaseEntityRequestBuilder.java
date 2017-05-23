@@ -69,6 +69,7 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IPlannerUserRequestBuilder plannerUser();
 
+    ISchemaExtensionRequestBuilder schemaExtension();
 
     IAttachmentRequestBuilder attachment();
 
@@ -195,5 +196,7 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     IPlannerPlanDetailsRequestBuilder plannerPlanDetails();
 
     IOnenoteEntityBaseModelRequestBuilder onenoteEntityBaseModel();
+
+    IOperationRequestBuilder operation();
 
 }

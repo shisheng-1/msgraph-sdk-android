@@ -35,7 +35,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Assigned Plans.
-	 * 
+	 * The collection of service plans associated with the tenant. Not nullable.
      */
     @SerializedName("assignedPlans")
     @Expose
@@ -75,7 +75,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
-	 * 
+	 * The display name for the tenant.
      */
     @SerializedName("displayName")
     @Expose
@@ -83,7 +83,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Marketing Notification Emails.
-	 * 
+	 * Not nullable.
      */
     @SerializedName("marketingNotificationEmails")
     @Expose
@@ -123,7 +123,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Provisioned Plans.
-	 * 
+	 * Not nullable.
      */
     @SerializedName("provisionedPlans")
     @Expose
@@ -163,7 +163,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Technical Notification Mails.
-	 * 
+	 * Not nullable.
      */
     @SerializedName("technicalNotificationMails")
     @Expose
@@ -171,11 +171,17 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Verified Domains.
-	 * 
+	 * The collection of domains associated with this tenant. Not nullable.
      */
     @SerializedName("verifiedDomains")
     @Expose
     public java.util.List<VerifiedDomain> verifiedDomains;
+
+    /**
+     * The Extensions.
+	 * 
+     */
+    public transient ExtensionCollectionPage extensions;
 
 
     /**
@@ -214,5 +220,21 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
         mSerializer = serializer;
         mRawObject = json;
 
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
+        }
     }
 }
