@@ -291,6 +291,7 @@ public class DefaultHttpProvider implements IHttpProvider {
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
                     mLogger.logDebug("Handling accepted response");
+                    return null;
                 }
 
                 in = new BufferedInputStream(connection.getInputStream());
