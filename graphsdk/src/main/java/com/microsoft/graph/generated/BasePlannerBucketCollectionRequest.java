@@ -56,14 +56,14 @@ public class BasePlannerBucketCollectionRequest extends BaseCollectionRequest<Ba
     public void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPlannerBucket, callback);
     }
 
     public PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPlannerBucket);
     }
 

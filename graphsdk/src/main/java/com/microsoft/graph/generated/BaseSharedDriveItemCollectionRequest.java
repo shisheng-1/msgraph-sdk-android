@@ -56,14 +56,14 @@ public class BaseSharedDriveItemCollectionRequest extends BaseCollectionRequest<
     public void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSharedDriveItem, callback);
     }
 
     public SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSharedDriveItem);
     }
 

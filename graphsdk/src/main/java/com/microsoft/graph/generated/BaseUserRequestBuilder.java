@@ -103,6 +103,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     public ILicenseDetailsRequestBuilder getLicenseDetails(final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails") + "/" + id, getClient(), null);
     }
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
     public IMessageCollectionRequestBuilder getMessages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
@@ -207,6 +214,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
      */
     public IPlannerUserRequestBuilder getPlanner() {
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Onenote.
+     */
+    public IOnenoteRequestBuilder getOnenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
     public IUserAssignLicenseRequestBuilder getAssignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {

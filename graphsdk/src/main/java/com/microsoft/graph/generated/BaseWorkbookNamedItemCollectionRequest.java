@@ -56,14 +56,14 @@ public class BaseWorkbookNamedItemCollectionRequest extends BaseCollectionReques
     public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookNamedItem, callback);
     }
 
     public WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookNamedItem);
     }
 
