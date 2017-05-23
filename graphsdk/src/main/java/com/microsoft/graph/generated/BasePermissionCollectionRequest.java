@@ -56,14 +56,14 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
     public void post(final Permission newPermission, final ICallback<Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPermission, callback);
     }
 
     public Permission post(final Permission newPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPermission);
     }
 

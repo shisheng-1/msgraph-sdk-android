@@ -92,6 +92,11 @@ public abstract class BaseRequest implements IHttpRequest {
     private final Class mResponseClass;
 
     /**
+     * Value to pass to setUseCaches in connection.
+     */
+    private boolean mUseCaches;
+
+    /**
      * Create the request.
      *
      * @param requestUrl    The url to make the request against.
@@ -142,7 +147,7 @@ public abstract class BaseRequest implements IHttpRequest {
         final Uri.Builder uriBuilder = baseUrl.buildUpon();
 
         for (final QueryOption option : mQueryOptions) {
-            uriBuilder.appendQueryParameter(option.getName(), option.getValue());
+            uriBuilder.appendQueryParameter(option.getName(), option.getValue().toString());
         }
 
         try {
@@ -163,7 +168,11 @@ public abstract class BaseRequest implements IHttpRequest {
                 requestUrl.append(option.getName());
                 requestUrl.append("=");
                 if (option.getValue() != null) {
-                    requestUrl.append("'" + option.getValue() + "'");
+                    if (option.getValue() instanceof String) {
+                        requestUrl.append("'" + option.getValue() + "'");
+                    } else {
+                        requestUrl.append(option.getValue());
+                    }
                 } else {
                     requestUrl.append("null");
                 }
@@ -207,6 +216,26 @@ public abstract class BaseRequest implements IHttpRequest {
     @Override
     public void addHeader(final String header, final String value) {
         mHeadersOptions.add(new HeaderOption(header, value));
+    }
+
+    /**
+     * Sets useCaches parameter to cache the response.
+     *
+     * @param useCaches The value of useCaches.
+     */
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        mUseCaches = useCaches;
+    }
+
+    /**
+     * Gets useCaches parameter.
+     *
+     * @return The value of useCaches.
+     */
+    @Override
+    public boolean getUseCaches() {
+        return mUseCaches;
     }
 
     /**

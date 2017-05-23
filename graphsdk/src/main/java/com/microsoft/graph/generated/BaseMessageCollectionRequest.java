@@ -56,14 +56,14 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
     public void post(final Message newMessage, final ICallback<Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMessage, callback);
     }
 
     public Message post(final Message newMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMessage);
     }
 

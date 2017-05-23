@@ -56,14 +56,14 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
     public void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newCalendarGroup, callback);
     }
 
     public CalendarGroup post(final CalendarGroup newCalendarGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newCalendarGroup);
     }
 

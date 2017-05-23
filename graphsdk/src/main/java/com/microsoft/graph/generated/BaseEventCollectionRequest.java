@@ -56,14 +56,14 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
     public void post(final Event newEvent, final ICallback<Event> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newEvent, callback);
     }
 
     public Event post(final Event newEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newEvent);
     }
 

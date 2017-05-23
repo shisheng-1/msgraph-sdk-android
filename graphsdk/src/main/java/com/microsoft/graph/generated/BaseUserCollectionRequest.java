@@ -56,14 +56,14 @@ public class BaseUserCollectionRequest extends BaseCollectionRequest<BaseUserCol
     public void post(final User newUser, final ICallback<User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newUser, callback);
     }
 
     public User post(final User newUser) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newUser);
     }
 

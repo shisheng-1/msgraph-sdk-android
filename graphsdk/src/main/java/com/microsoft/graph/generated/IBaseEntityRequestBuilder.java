@@ -33,6 +33,8 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectRequestBuilder directoryObject();
 
+    IExtensionRequestBuilder extension();
+
     IDomainRequestBuilder domain();
 
     IDomainDnsRecordRequestBuilder domainDnsRecord();
@@ -53,6 +55,8 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IPlannerGroupRequestBuilder plannerGroup();
 
+    IOnenoteRequestBuilder onenote();
+
     ISubscribedSkuRequestBuilder subscribedSku();
 
     IMailFolderRequestBuilder mailFolder();
@@ -65,13 +69,12 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IPlannerUserRequestBuilder plannerUser();
 
+
     IAttachmentRequestBuilder attachment();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueLegacyExtendedProperty();
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueLegacyExtendedProperty();
-
-    IExtensionRequestBuilder extension();
 
     IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride();
 
@@ -190,5 +193,7 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     IPlannerBucketTaskBoardTaskFormatRequestBuilder plannerBucketTaskBoardTaskFormat();
 
     IPlannerPlanDetailsRequestBuilder plannerPlanDetails();
+
+    IOnenoteEntityBaseModelRequestBuilder onenoteEntityBaseModel();
 
 }

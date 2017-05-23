@@ -30,6 +30,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
+import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
 import java.io.BufferedInputStream;
@@ -38,6 +39,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -226,6 +228,7 @@ public class DefaultHttpProvider implements IHttpProvider {
 
             try {
                 mLogger.logDebug("Request Method " + request.getHttpMethod().toString());
+                List<HeaderOption> requestHeaders = request.getHeaders();
 
                 final byte[] bytesToWrite;
                 if (serializable == null) {
@@ -233,13 +236,21 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else if (serializable instanceof byte[]) {
                     mLogger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
-                    connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
+
+                    // If the user hasn't specified a Content-Type for the request
+                    if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
+                        connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
+                    }
                     connection.setContentLength(bytesToWrite.length);
                 } else {
                     mLogger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = mSerializer.serializeObject(serializable);
                     bytesToWrite = serializeObject.getBytes();
-                    connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
+
+                    // If the user hasn't specified a Content-Type for the request
+                    if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
+                        connection.addRequestHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
+                    }
                     connection.setContentLength(bytesToWrite.length);
                 }
 
@@ -393,5 +404,22 @@ public class DefaultHttpProvider implements IHttpProvider {
         final String endOfFile = "\\A";
         final Scanner scanner = new Scanner(input, httpStreamEncoding).useDelimiter(endOfFile);
         return scanner.next();
+    }
+
+    /**
+     * Searches for the given header in a list of HeaderOptions
+     *
+     * @param headers The list of headers to search through
+     * @param header The header name to search for
+     *
+     * @return true if the header has already been set
+     */
+    private Boolean hasHeader(List<HeaderOption> headers, String header) {
+        for (HeaderOption option : headers) {
+            if (option.getName() == header) {
+                return true;
+            }
+        }
+        return false;
     }
 }

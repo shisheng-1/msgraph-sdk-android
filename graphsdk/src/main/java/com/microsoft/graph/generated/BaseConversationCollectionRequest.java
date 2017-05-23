@@ -56,14 +56,14 @@ public class BaseConversationCollectionRequest extends BaseCollectionRequest<Bas
     public void post(final Conversation newConversation, final ICallback<Conversation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newConversation, callback);
     }
 
     public Conversation post(final Conversation newConversation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newConversation);
     }
 

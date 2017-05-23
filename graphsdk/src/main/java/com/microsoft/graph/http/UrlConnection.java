@@ -57,8 +57,10 @@ public class UrlConnection implements IConnection {
         mConnection = (HttpURLConnection) request.getRequestUrl().openConnection();
 
         for (final HeaderOption header : request.getHeaders()) {
-            mConnection.addRequestProperty(header.getName(), header.getValue());
+            mConnection.addRequestProperty(header.getName(), header.getValue().toString());
         }
+
+        mConnection.setUseCaches(request.getUseCaches());
 
         try {
             mConnection.setRequestMethod(request.getHttpMethod().toString());

@@ -145,6 +145,26 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
+     * Sets useCaches parameter to cache the response.
+     *
+     * @param useCaches The value of useCaches.
+     */
+    @Override
+    public void setUseCaches(boolean useCaches) {
+        mBaseRequest.setUseCaches(useCaches);
+    }
+
+    /**
+     * Gets useCaches parameter.
+     *
+     * @return The value of useCaches.
+     */
+    @Override
+    public boolean getUseCaches() {
+        return mBaseRequest.getUseCaches();
+    }
+
+    /**
      * Gets the full list of options for this request.
      *
      * @return The full list of options for this request.

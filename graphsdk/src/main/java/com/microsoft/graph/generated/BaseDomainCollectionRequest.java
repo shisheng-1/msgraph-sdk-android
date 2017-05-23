@@ -56,14 +56,14 @@ public class BaseDomainCollectionRequest extends BaseCollectionRequest<BaseDomai
     public void post(final Domain newDomain, final ICallback<Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDomain, callback);
     }
 
     public Domain post(final Domain newDomain) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDomain);
     }
 

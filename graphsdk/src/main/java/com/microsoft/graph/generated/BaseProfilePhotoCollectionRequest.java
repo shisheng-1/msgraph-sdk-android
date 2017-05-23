@@ -56,14 +56,14 @@ public class BaseProfilePhotoCollectionRequest extends BaseCollectionRequest<Bas
     public void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newProfilePhoto, callback);
     }
 
     public ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newProfilePhoto);
     }
 
