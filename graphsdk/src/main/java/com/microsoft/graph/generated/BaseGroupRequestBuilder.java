@@ -75,6 +75,13 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     public IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
     public IConversationThreadCollectionRequestBuilder getThreads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
@@ -165,6 +172,13 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
      */
     public IPlannerGroupRequestBuilder getPlanner() {
         return new PlannerGroupRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Onenote.
+     */
+    public IOnenoteRequestBuilder getOnenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
     public IGroupSubscribeByMailRequestBuilder getSubscribeByMail() {

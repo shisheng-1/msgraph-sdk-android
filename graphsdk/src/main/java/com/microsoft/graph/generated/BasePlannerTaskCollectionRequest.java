@@ -56,14 +56,14 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
     public void post(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPlannerTask, callback);
     }
 
     public PlannerTask post(final PlannerTask newPlannerTask) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newPlannerTask);
     }
 

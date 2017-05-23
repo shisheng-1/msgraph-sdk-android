@@ -56,14 +56,14 @@ public class BaseContractCollectionRequest extends BaseCollectionRequest<BaseCon
     public void post(final Contract newContract, final ICallback<Contract> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newContract, callback);
     }
 
     public Contract post(final Contract newContract) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newContract);
     }
 

@@ -56,14 +56,14 @@ public class BaseDirectoryRoleCollectionRequest extends BaseCollectionRequest<Ba
     public void post(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDirectoryRole, callback);
     }
 
     public DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDirectoryRole);
     }
 

@@ -56,14 +56,14 @@ public class BaseSubscribedSkuCollectionRequest extends BaseCollectionRequest<Ba
     public void post(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSubscribedSku, callback);
     }
 
     public SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSubscribedSku);
     }
 

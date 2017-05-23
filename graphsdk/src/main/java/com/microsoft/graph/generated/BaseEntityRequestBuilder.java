@@ -52,6 +52,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("directoryObject"), getClient(), null);
     }
 
+    public IExtensionRequestBuilder extension() {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extension"), getClient(), null);
+    }
+
     public IDomainRequestBuilder domain() {
         return new DomainRequestBuilder(getRequestUrlWithAdditionalSegment("domain"), getClient(), null);
     }
@@ -92,6 +96,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new PlannerGroupRequestBuilder(getRequestUrlWithAdditionalSegment("plannerGroup"), getClient(), null);
     }
 
+    public IOnenoteRequestBuilder onenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
     public ISubscribedSkuRequestBuilder subscribedSku() {
         return new SubscribedSkuRequestBuilder(getRequestUrlWithAdditionalSegment("subscribedSku"), getClient(), null);
     }
@@ -126,10 +134,6 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueLegacyExtendedProperty() {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueLegacyExtendedProperty"), getClient(), null);
-    }
-
-    public IExtensionRequestBuilder extension() {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extension"), getClient(), null);
     }
 
     public IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride() {
@@ -366,5 +370,13 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     public IPlannerPlanDetailsRequestBuilder plannerPlanDetails() {
         return new PlannerPlanDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("plannerPlanDetails"), getClient(), null);
+    }
+
+    public IOnenoteEntityBaseModelRequestBuilder onenoteEntityBaseModel() {
+        return new OnenoteEntityBaseModelRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteEntityBaseModel"), getClient(), null);
+    }
+
+    public IOperationRequestBuilder operation() {
+        return new OperationRequestBuilder(getRequestUrlWithAdditionalSegment("operation"), getClient(), null);
     }
 }
