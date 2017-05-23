@@ -6,42 +6,33 @@ import android.test.suitebuilder.annotation.Suppress;
 import com.microsoft.graph.extensions.INotebookCollectionPage;
 import com.microsoft.graph.extensions.INotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.extensions.IOnenotePageCollectionPage;
-import com.microsoft.graph.extensions.IOnenoteResourceCollectionPage;
 import com.microsoft.graph.extensions.IOnenoteSectionCollectionPage;
 import com.microsoft.graph.extensions.ISectionGroupCollectionPage;
 import com.microsoft.graph.extensions.Notebook;
-import com.microsoft.graph.extensions.Onenote;
 import com.microsoft.graph.extensions.OnenoteOperation;
 import com.microsoft.graph.extensions.OnenotePage;
 import com.microsoft.graph.extensions.OnenotePagePreview;
-import com.microsoft.graph.extensions.OnenoteResource;
+import com.microsoft.graph.extensions.OnenotePatchActionType;
+import com.microsoft.graph.extensions.OnenotePatchContentCommand;
+import com.microsoft.graph.extensions.OnenotePatchInsertPosition;
 import com.microsoft.graph.extensions.OnenoteSection;
 import com.microsoft.graph.extensions.SectionGroup;
-import com.microsoft.graph.extensions.User;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 
 import org.junit.*;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.math.BigInteger;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Suppress
+@Suppress
 public class OneNoteTests extends AndroidTestCase {
 
     private TestBase testBase;
@@ -56,7 +47,7 @@ public class OneNoteTests extends AndroidTestCase {
         testBase = new TestBase();
         testNotebook = testBase.graphClient.getMe().getOnenote().getNotebooks("1-525fe350-0199-4c02-879d-e5b142ae8632").buildRequest().get();
         testSection = testBase.graphClient.getMe().getOnenote().getNotebooks(testNotebook.id).getSections().buildRequest().get().getCurrentPage().get(0);
-        //testPage = testBase.graphClient.getMe().getOnenote().getPages().buildRequest().get().getCurrentPage().get(0);
+        testPage = testBase.graphClient.getMe().getOnenote().getPages().buildRequest().get().getCurrentPage().get(0);
 
         // For copy scenarios
         testNotebook2 = testBase.graphClient.getMe().getOnenote().getNotebooks("1-491df90f-b45b-477f-b297-032f000e6f1e").buildRequest().get();
@@ -272,6 +263,18 @@ public class OneNoteTests extends AndroidTestCase {
         } catch (Exception e) {
             Assert.fail("Unable to write to output stream");
         }
+    }
+
+    @Test
+    public void testPatchContent() {
+        List<OnenotePatchContentCommand> commands = new ArrayList<>();
+        OnenotePatchContentCommand command = new OnenotePatchContentCommand();
+        command.target = "body";
+        command.action = OnenotePatchActionType.Append;
+        command.position = OnenotePatchInsertPosition.After;
+        command.content = "<img src=\"https://en.wikipedia.org/wiki/File:Alexander_Hamilton_portrait_by_John_Trumbull_1806.jpg\" alt=\"New image from a URL\" />";
+        commands.add(command);
+        testBase.graphClient.getMe().getOnenote().getPages(testPage.id).getOnenotePatchContent(commands).buildRequest().post();
     }
 
     public byte[] getByteArray(InputStream in) {
