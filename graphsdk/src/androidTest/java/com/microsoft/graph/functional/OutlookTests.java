@@ -4,15 +4,12 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.Suppress;
 
 //import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
-import com.microsoft.graph.extensions.EmailAddress;
-import com.microsoft.graph.extensions.IDirectoryObjectCollectionPage;
-import com.microsoft.graph.extensions.IDriveItemCollectionPage;
-import com.microsoft.graph.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.extensions.IGraphServiceClient;
-import com.microsoft.graph.extensions.Message;
-import com.microsoft.graph.extensions.Recipient;
-import com.microsoft.graph.extensions.User;
+import com.microsoft.graph.extensions.*;
 
+import org.junit.Assert;
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.Duration;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,5 +37,23 @@ public class OutlookTests extends AndroidTestCase {
         recipients.add(r);
         message.toRecipients = recipients;
         testBase.graphClient.getMe().getSendMail(message, true).buildRequest().post();
+    }
+
+    public void testGetFindMeetingTimes() {
+        TestBase testBase = new TestBase();
+        List<AttendeeBase> attendees = new ArrayList<>();
+        AttendeeBase attendeeBase = new AttendeeBase();
+        EmailAddress email = new EmailAddress();
+        email.address = "katiej@mod810997.onmicrosoft.com";
+        attendeeBase.emailAddress = email;
+        attendees.add(attendeeBase);
+        try {
+            Duration duration = DatatypeFactory.newInstance().newDuration("PT30M");
+            MeetingTimeSuggestionsResult result = testBase.graphClient.getMe().getFindMeetingTimes(attendees, null, null, duration, 10, true, false, 10.0).buildRequest().post();
+            assertNotNull(result);
+        } catch (Exception e) {
+            Assert.fail("Duration could not be created from String");
+        }
+
     }
 }
