@@ -3,28 +3,16 @@ package com.microsoft.graph.functional;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.Suppress;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.extensions.ExtensionSchemaProperty;
-import com.microsoft.graph.extensions.Group;
-import com.microsoft.graph.extensions.GroupDeltaCollectionPage;
-import com.microsoft.graph.extensions.IGroupDeltaCollectionPage;
-import com.microsoft.graph.extensions.IGroupDeltaCollectionRequest;
-import com.microsoft.graph.extensions.IGroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.extensions.Extension;
 import com.microsoft.graph.extensions.SchemaExtension;
-//import com.microsoft.graph.extensions.IUserGetMailTipsCollectionPage;
-//import com.microsoft.graph.extensions.MailTips;
-//import com.microsoft.graph.extensions.MailTipsType;
-//import com.microsoft.graph.extensions.RecipientScopeType;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.List;
 
 @Suppress
@@ -38,10 +26,10 @@ public class ODataTests extends AndroidTestCase {
 
         // There's a current limitation of two extensions per user. If there's two extensions in the collection,
         // delete the latest one
-//        List<Extension> extensions = testBase.graphClient.getMe().getExtensions().buildRequest().get().getCurrentPage();
-//        if (extensions.size() >= 2) {
-//            testBase.graphClient.getMe().getExtensions(extensions.get(1).id).buildRequest().delete();
-//        }
+        List<Extension> extensions = testBase.graphClient.getMe().getExtensions().buildRequest().get().getCurrentPage();
+        if (extensions.size() >= 2) {
+            testBase.graphClient.getMe().getExtensions(extensions.get(1).id).buildRequest().delete();
+        }
     }
 
     @Test
@@ -50,12 +38,10 @@ public class ODataTests extends AndroidTestCase {
 
         extension.getAdditionalDataManager().put("theme", new JsonPrimitive("dark"));
         extension.getAdditionalDataManager().put("extensionName", new JsonPrimitive("Extension 1"));
+        Extension newExtension = testBase.graphClient.getMe().getExtensions().buildRequest().post(extension);
+        assertEquals(extension.getAdditionalDataManager().get("theme"), newExtension.getAdditionalDataManager().get("theme"));
 
-//        Extension newExtension = testBase.graphClient.getMe().getExtensions().buildRequest().post(extension);
-//
-//        assertEquals(extension.getAdditionalDataManager().get("theme"), newExtension.getAdditionalDataManager().get("theme"));
-//
-//        testBase.graphClient.getMe().getExtensions(newExtension.id).buildRequest().delete();
+        testBase.graphClient.getMe().getExtensions(newExtension.id).buildRequest().delete();
     }
 
     @Test

@@ -26,6 +26,9 @@ import com.microsoft.graph.extensions.PlannerTaskDetails;
 import com.microsoft.graph.extensions.User;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 
+import org.junit.After;
+import org.junit.Test;
+
 import java.util.Calendar;
 import java.util.UUID;
 
@@ -56,6 +59,7 @@ public class PlannerTests extends AndroidTestCase {
         planTask = testBase.graphClient.getPlanner().getTasks().buildRequest().post(newTask);
     }
 
+    @Test
     public void testPostTask() {
         PlannerTask newTask = new PlannerTask();
         newTask.title = "Test1";
@@ -66,27 +70,32 @@ public class PlannerTests extends AndroidTestCase {
         assertNotNull(task);
     }
 
+    @Test
     public void testBucketTaskBoardFormat() {
         PlannerBucketTaskBoardTaskFormat format = testBase.graphClient.getPlanner().getTasks(planTask.id).getBucketTaskBoardFormat().buildRequest().get();
         assertNotNull(format);
     }
 
+    @Test
     public void testAssignedToTaskBoardFormat() {
         PlannerAssignedToTaskBoardTaskFormat format = testBase.graphClient.getPlanner().getTasks(planTask.id).getAssignedToTaskBoardFormat().buildRequest().get();
         assertNotNull(format);
     }
 
+    @Test
     public void testProgressTaskBoardFormat() {
         PlannerProgressTaskBoardTaskFormat format = testBase.graphClient.getPlanner().getTasks(planTask.id).getProgressTaskBoardFormat().buildRequest().get();
         assertNotNull(format);
     }
 
+    @Test
     public void testGetTaskDetails() {
         PlannerTaskDetails details = testBase.graphClient.getPlanner().getTasks(planTask.id).getDetails().buildRequest().get();
         assertNotNull(details);
     }
 
     // https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/plannerAssignments
+    @Test
     public void testUpdateTask() {
         PlannerTask task = new PlannerTask();
 
@@ -116,6 +125,7 @@ public class PlannerTests extends AndroidTestCase {
         assertNotNull(createdAssignment);
     }
 
+    @Test
     public void testUpdateTaskDetailsChecklist() {
         PlannerTaskDetails details = new PlannerTaskDetails();
         String uuid = UUID.randomUUID().toString();
@@ -163,6 +173,7 @@ public class PlannerTests extends AndroidTestCase {
     }
 
     // Fails due to delay from service
+    @Test
      public void testUpdateTaskDetailsReferences() {
         try {
             PlannerTaskDetails details = new PlannerTaskDetails();
@@ -199,6 +210,7 @@ public class PlannerTests extends AndroidTestCase {
         }
     }
 
+    @Test
     public void testUpdateTaskCompletion() {
         PlannerTask task = new PlannerTask();
         task.percentComplete = 50;
@@ -212,6 +224,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(task.percentComplete, updatedTask.percentComplete);
     }
 
+    @Test
     public void testUpdateTaskStartDate() {
         PlannerTask task = new PlannerTask();
         task.startDateTime = Calendar.getInstance();
@@ -225,6 +238,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(task.startDateTime, updatedTask.startDateTime);
     }
 
+    @Test
     public void testUpdateTaskDueDate() {
         PlannerTask task = new PlannerTask();
         task.dueDateTime = Calendar.getInstance();
@@ -238,6 +252,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(task.dueDateTime, updatedTask.dueDateTime);
     }
 
+    @Test
     public void testUpdateTaskCategories() {
         PlannerTask task = new PlannerTask();
 
@@ -266,6 +281,7 @@ public class PlannerTests extends AndroidTestCase {
         assertNotNull(appliedCategories);
     }
 
+    @Test
     public void testUpdatePlanDetails() {
         PlannerPlanDetails planDetails = new PlannerPlanDetails();
         PlannerCategoryDescriptions descriptions = new PlannerCategoryDescriptions();
@@ -282,6 +298,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(planDetails.categoryDescriptions.category2, updatedPlanDetails.categoryDescriptions.category2);
     }
 
+    @Test
     public void testDeleteTask() {
         PlannerTask newTask = new PlannerTask();
         newTask.title = "Delete Me";
@@ -295,6 +312,7 @@ public class PlannerTests extends AndroidTestCase {
         req.delete();
     }
 
+    @Test
     public void testCreateBucket() {
         PlannerBucket newBucket = new PlannerBucket();
         newBucket.name = "Create Bucket Test";
@@ -304,6 +322,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(newBucket.name, createdBucket.name);
     }
 
+    @Test
     public void testUpdateBucket() {
         PlannerBucket patchBucket = new PlannerBucket();
         patchBucket.name = "RenamedBucket";
@@ -323,6 +342,7 @@ public class PlannerTests extends AndroidTestCase {
         req2.patch(patchBucket);
     }
 
+    @Test
     public void testDeleteBucket() {
         PlannerBucket newBucket = new PlannerBucket();
         newBucket.name = "Delete Me";
@@ -336,6 +356,7 @@ public class PlannerTests extends AndroidTestCase {
     }
 
     // Fails due to service issue
+    @Test
     public void testUpdateAssignedToTaskBoardFormat() {
         User me = testBase.graphClient.getMe().buildRequest().get();
         Gson gson = new Gson();
@@ -356,6 +377,7 @@ public class PlannerTests extends AndroidTestCase {
         assertEquals(taskBoard.orderHintsByAssignee, newFormat.orderHintsByAssignee);
     }
 
+    @After
     public void tearDown() {
         //This may have updated since we last saw it
         PlannerTask task = testBase.graphClient.getPlanner().getTasks(planTask.id).buildRequest().get();
@@ -368,11 +390,11 @@ public class PlannerTests extends AndroidTestCase {
         bucketReq.addHeader("If-Match", getEtag(bucket.getRawObject()));
         bucketReq.delete();
 
-//Fails with 403 Forbidden
-//        PlannerPlan plan = testBase.graphClient.getPlanner().getPlans(planId).buildRequest().get();
-//        IPlannerPlanRequest planReq = testBase.graphClient.getPlanner().getPlans(planId).buildRequest();
-//        planReq.addHeader("If-Match", getEtag(plan.getRawObject()));
-//        planReq.delete();
+        //Fails with 403 Forbidden
+        // PlannerPlan plan = testBase.graphClient.getPlanner().getPlans(planId).buildRequest().get();
+        // IPlannerPlanRequest planReq = testBase.graphClient.getPlanner().getPlans(planId).buildRequest();
+        // planReq.addHeader("If-Match", getEtag(plan.getRawObject()));
+        // planReq.delete();
     }
 
     public String getEtag(JsonObject obj) {

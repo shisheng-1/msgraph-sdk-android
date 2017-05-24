@@ -5,11 +5,14 @@ import android.test.suitebuilder.annotation.Suppress;
 
 import com.microsoft.graph.extensions.Subscription;
 
+import org.junit.Test;
+
 import java.util.Calendar;
 
 @Suppress
 public class WebhooksTests extends AndroidTestCase {
 
+    @Test
     public void testCreateSubscription() {
         TestBase testBase = new TestBase();
         Subscription sub = new Subscription();
