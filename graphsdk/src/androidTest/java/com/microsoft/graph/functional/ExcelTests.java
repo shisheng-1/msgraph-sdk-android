@@ -6,6 +6,7 @@ import android.test.AndroidTestCase;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.extensions.DriveItem;
 import com.microsoft.graph.extensions.File;
 import com.microsoft.graph.extensions.IDirectoryObjectCollectionPage;
@@ -28,33 +29,22 @@ public class ExcelTests extends AndroidTestCase {
     public void setUp()
     {
         testBase = new TestBase();
-        fileId = createTestFile("_excelTestResourceAndroid.xlsx");
-
     }
-
-    public String createTestFile(String fileName)
-    {
-        try {
-            DriveItem excelWorkbook = new DriveItem();
-            excelWorkbook.name = fileName;
-            excelWorkbook.file = new File();
-
-            DriveItem driveItem = testBase.graphClient.getMe().getDrive().getRoot().getChildren().buildRequest().post(excelWorkbook);
-            return driveItem.id;
-        }
-        catch (GraphServiceException ex) {
-            // File could not be created successfully
-        }
-        return null;
-    }
-
 
     public void testCreateNamedItem() {
-//        JsonObject range = new JsonObject();
-//        range.addProperty("address", "Sheet1!A1");
-//        WorkbookNamedItem item = testBase.graphClient.getMe().getDrive().getItems("015U5LKCVICVSIQ6DKOVELGXD3WAEHMMAI").getWorkbook().getNames().getAdd("named-range", range, "Comment").buildRequest().post();
-//        assertNotNull(item);
-//        assertEquals("named-range", item.name);
+        JsonObject range = new JsonObject();
+        range.addProperty("address", "Sheet1!A1");
+        WorkbookNamedItem item = testBase.graphClient
+                .getMe()
+                .getDrive()
+                .getItems("015U5LKCVICVSIQ6DKOVELGXD3WAEHMMAI")
+                .getWorkbook()
+                .getNames()
+                .getAdd("testNamedRange", new JsonPrimitive("Sheet1!A1"), "Comment")
+                .buildRequest()
+                .post();
+        assertNotNull(item);
+        assertEquals("testNamedRange", item.name);
     }
 
     public void testGetNamedItems() {
