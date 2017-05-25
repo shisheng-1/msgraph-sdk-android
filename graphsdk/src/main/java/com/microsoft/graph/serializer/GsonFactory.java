@@ -40,6 +40,9 @@ import java.util.Calendar;
 import java.util.EnumSet;
 import java.util.GregorianCalendar;
 
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.Duration;
+
 /**
  * Produce Gson instances that can parse http responses.
  */
@@ -183,6 +186,28 @@ final class GsonFactory {
             }
         };
 
+        final JsonSerializer<Duration> durationJsonSerializer = new JsonSerializer<Duration>() {
+            @Override
+            public JsonElement serialize(final Duration src,
+                                         final Type typeOfSrc,
+                                         final JsonSerializationContext context) {
+                return new JsonPrimitive(src.toString());
+            }
+        };
+
+        final JsonDeserializer<Duration> durationJsonDeserializer = new JsonDeserializer<Duration>() {
+            @Override
+            public Duration deserialize(final JsonElement json,
+                                       final Type typeOfT,
+                                       final JsonDeserializationContext context) throws JsonParseException {
+                try {
+                    return DatatypeFactory.newInstance().newDuration(json.toString());
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+        };
+
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
@@ -195,6 +220,8 @@ final class GsonFactory {
                 .registerTypeAdapter(DateOnly.class, dateJsonDeserializer)
                 .registerTypeAdapter(EnumSet.class, enumSetJsonSerializer)
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
+                .registerTypeAdapter(Duration.class, durationJsonSerializer)
+                .registerTypeAdapter(Duration.class, durationJsonDeserializer)
                 .registerTypeAdapterFactory(new FallBackEnumTypeAdapter())
                 .create();
     }
