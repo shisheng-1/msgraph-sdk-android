@@ -7,6 +7,7 @@ import android.test.suitebuilder.annotation.Suppress;
 import com.microsoft.graph.extensions.*;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
@@ -39,12 +40,24 @@ public class OutlookTests extends AndroidTestCase {
         testBase.graphClient.getMe().getSendMail(message, true).buildRequest().post();
     }
 
+    @Test
     public void testGetFindMeetingTimes() {
         TestBase testBase = new TestBase();
+
+        // Get the first user in the tenant
+        User me = testBase.graphClient.getMe().buildRequest().get();
+        IUserCollectionPage users = testBase.graphClient.getUsers().buildRequest().get();
+        User tenantUser = users.getCurrentPage().get(0);
+
+        //Ensure that the user grabbed is not the logged-in user
+        if (tenantUser.mail.equals(me.mail)) {
+            tenantUser = users.getCurrentPage().get(1);
+        }
+
         List<AttendeeBase> attendees = new ArrayList<>();
         AttendeeBase attendeeBase = new AttendeeBase();
         EmailAddress email = new EmailAddress();
-        email.address = "katiej@mod810997.onmicrosoft.com";
+        email.address = tenantUser.mail;
         attendeeBase.emailAddress = email;
         attendees.add(attendeeBase);
         try {
