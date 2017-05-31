@@ -87,6 +87,8 @@ For a more detailed documentation see:
 * [Handling Open Types, PATCH support with `null` values](docs/opentypes.md)
 * [Collections](docs/collections.md)
 * [Errors](docs/errors.md)
+* [Making Custom Requests](docs/custom-queries.md)
+* [Known Issues](docs/known-issues.md)
 * [Contributions](docs/contributions.md)
 
 ## 5. Issues
