@@ -69,33 +69,37 @@ public class ODataTests extends AndroidTestCase {
         SchemaExtension newExtension = testBase.graphClient.getSchemaExtensions().buildRequest().post(extension);
         assertEquals(extension.description, newExtension.description);
 
-        SchemaExtension patchExtension = new SchemaExtension();
-        List<ExtensionSchemaProperty> patchProperties = new ArrayList<>();
-        ExtensionSchemaProperty patchProperty = new ExtensionSchemaProperty();
-        patchProperty.name = "newItem";
-        patchProperty.type = "String";
-        patchProperties.add(prop);
-        patchProperties.add(prop2);
-        patchProperties.add(patchProperty);
+        try {
+            SchemaExtension patchExtension = new SchemaExtension();
+            List<ExtensionSchemaProperty> patchProperties = new ArrayList<>();
+            ExtensionSchemaProperty patchProperty = new ExtensionSchemaProperty();
+            patchProperty.name = "newItem";
+            patchProperty.type = "String";
+            patchProperties.add(prop);
+            patchProperties.add(prop2);
+            patchProperties.add(patchProperty);
 
-        patchExtension.properties = patchProperties;
+            patchExtension.properties = patchProperties;
 
-        testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().patch(patchExtension);
-        SchemaExtension updatedExtension = testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().get();
+            testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().patch(patchExtension);
+            SchemaExtension updatedExtension = testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().get();
 
-        boolean foundUpdatedProperty = false;
-        for (ExtensionSchemaProperty updatedProperty : updatedExtension.properties) {
-            if (updatedProperty.name.equals(patchProperty.name)) {
-                assertEquals(patchProperty.type, updatedProperty.type);
-                foundUpdatedProperty = true;
-                break;
+            boolean foundUpdatedProperty = false;
+            for (ExtensionSchemaProperty updatedProperty : updatedExtension.properties) {
+                if (updatedProperty.name.equals(patchProperty.name)) {
+                    assertEquals(patchProperty.type, updatedProperty.type);
+                    foundUpdatedProperty = true;
+                    break;
+                }
             }
-        }
-        if (!foundUpdatedProperty) {
+            if (!foundUpdatedProperty) {
+                Assert.fail("Patch failed on Schema Extension");
+            }
+        } catch (Exception e) {
             Assert.fail("Patch failed on Schema Extension");
+        } finally {
+            testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().delete();
         }
-
-        testBase.graphClient.getSchemaExtensions(newExtension.id).buildRequest().delete();
     }
 
     @Test
