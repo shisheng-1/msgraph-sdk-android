@@ -124,6 +124,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("plannerUser"), getClient(), null);
     }
 
+    public ISchemaExtensionRequestBuilder schemaExtension() {
+        return new SchemaExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("schemaExtension"), getClient(), null);
+    }
+
     public IAttachmentRequestBuilder attachment() {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachment"), getClient(), null);
     }

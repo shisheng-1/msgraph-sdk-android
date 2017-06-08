@@ -3,6 +3,13 @@ package com.microsoft.graph.functional;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.Suppress;
 
+import com.microsoft.graph.extensions.EmailAddress;
+import com.microsoft.graph.extensions.Message;
+import com.microsoft.graph.extensions.Recipient;
+import com.microsoft.graph.extensions.User;
+
+import org.junit.Test;
+
 //import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
 import com.microsoft.graph.extensions.*;
 
@@ -12,18 +19,20 @@ import org.junit.Test;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.List;
 
 @Suppress
 public class OutlookTests extends AndroidTestCase {
 
+    @Test
     public void testQueryDeletedItems() {
         TestBase testBase = new TestBase();
         //IDirectoryDeletedItemsCollectionPage deletedItems = testBase.graphClient.getDirectory().getDeletedItemsByType("microsoft.graph.group").buildRequest().get();
         //assertNotNull(deletedItems);
     }
 
+    @Test
     public void testSendMail() {
         TestBase testBase = new TestBase();
         User me = testBase.graphClient.getMe().buildRequest().get();

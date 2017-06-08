@@ -255,6 +255,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of SchemaExtensions objects.
+     *
+     * @return The request builder for the collection of SchemaExtensions objects
+     */
+    public ISchemaExtensionCollectionRequestBuilder getSchemaExtensions() {
+        return new SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single SchemaExtensions.
+     *
+     * @param id The id of the SchemaExtensions to retrieve.
+     * @return The request builder for the SchemaExtensions object
+     */
+    public ISchemaExtensionRequestBuilder getSchemaExtensions(final String id) {
+        return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of Drives objects.
      *
      * @return The request builder for the collection of Drives objects
