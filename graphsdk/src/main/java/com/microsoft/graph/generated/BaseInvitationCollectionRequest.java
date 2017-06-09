@@ -56,14 +56,14 @@ public class BaseInvitationCollectionRequest extends BaseCollectionRequest<BaseI
     public void post(final Invitation newInvitation, final ICallback<Invitation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newInvitation, callback);
     }
 
     public Invitation post(final Invitation newInvitation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newInvitation);
     }
 

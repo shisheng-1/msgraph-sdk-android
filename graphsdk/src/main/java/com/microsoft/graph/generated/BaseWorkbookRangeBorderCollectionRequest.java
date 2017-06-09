@@ -56,14 +56,14 @@ public class BaseWorkbookRangeBorderCollectionRequest extends BaseCollectionRequ
     public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookRangeBorder, callback);
     }
 
     public WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookRangeBorder);
     }
 

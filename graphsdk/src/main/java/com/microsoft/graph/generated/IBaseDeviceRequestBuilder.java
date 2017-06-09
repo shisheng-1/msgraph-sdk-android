@@ -39,4 +39,8 @@ public interface IBaseDeviceRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder getRegisteredUsers(final String id);
 
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
+
 }

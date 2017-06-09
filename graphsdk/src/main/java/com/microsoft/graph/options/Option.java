@@ -35,14 +35,14 @@ public class Option {
     /**
      * The value of the option.
      */
-    private final String mValue;
+    private final Object mValue;
 
     /**
      * Creates an option object.
      * @param name The name of the option.
      * @param value The value of the option.
      */
-    protected Option(final String name, final String value) {
+    protected Option(final String name, final Object value) {
         mName = name;
         mValue = value;
     }
@@ -59,7 +59,7 @@ public class Option {
      * Gets the value of the option.
      * @return The value of the option.
      */
-    public String getValue() {
+    public Object getValue() {
         return mValue;
     }
 }

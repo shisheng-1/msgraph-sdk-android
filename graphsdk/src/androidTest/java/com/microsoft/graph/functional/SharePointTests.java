@@ -31,7 +31,6 @@ public class SharePointTests extends AndroidTestCase {
         requestOptions.add(new QueryOption("search", "Contoso"));
         ISiteCollectionPage sites = testBase.graphClient.getSites().buildRequest(requestOptions).get();
         testSite = sites.getCurrentPage().get(0);
-
     }
 
     @Test

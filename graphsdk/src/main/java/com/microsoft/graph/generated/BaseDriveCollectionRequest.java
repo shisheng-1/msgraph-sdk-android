@@ -56,14 +56,14 @@ public class BaseDriveCollectionRequest extends BaseCollectionRequest<BaseDriveC
     public void post(final Drive newDrive, final ICallback<Drive> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDrive, callback);
     }
 
     public Drive post(final Drive newDrive) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDrive);
     }
 

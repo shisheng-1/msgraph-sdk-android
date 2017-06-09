@@ -1,6 +1,6 @@
 # Making Custom Calls to Graph
 
-The Graph SDK attempts to enable all available scenarios through Microsoft Graph. There are times, however, through errors or custom Graph functionality, that makes calling the desired endpoint is not possible through the provided requests and builders.
+The Graph SDK attempts to enable all available scenarios through Microsoft Graph. There are times, however, through errors or custom Graph functionality, that makes calling the desired endpoint not possible through the provided requests and builders.
 
 ## Creating a custom request
 You can extend BaseRequest to create a custom request:
