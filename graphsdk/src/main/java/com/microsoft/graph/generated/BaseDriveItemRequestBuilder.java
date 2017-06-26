@@ -84,16 +84,16 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
         return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
 
-    public IDriveItemCreateLinkRequestBuilder getCreateLink(final String scope, final String type) {
-        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, scope, type);
+    public IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope) {
+        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope);
     }
 
     public IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item) {
         return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
     }
 
-    public IDriveItemInviteCollectionRequestBuilder getInvite(final String message, final java.util.List<DriveRecipient> recipients, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation) {
-        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, message, recipients, requireSignIn, roles, sendInvitation);
+    public IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
+        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
