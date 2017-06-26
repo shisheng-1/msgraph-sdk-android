@@ -93,7 +93,7 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     public IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
-        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
+        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, message, recipients, requireSignIn, roles, sendInvitation);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
