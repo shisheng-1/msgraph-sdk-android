@@ -21,7 +21,6 @@ import java.util.EnumSet;
  * The interface for the Base Onenote Resource Stream Request Builder.
  */
 public interface IBaseOnenoteResourceStreamRequestBuilder extends IRequestBuilder {
-
     /**
      * Creates the request
      */
@@ -31,10 +30,5 @@ public interface IBaseOnenoteResourceStreamRequestBuilder extends IRequestBuilde
      * Creates the request with specific options instead of the existing options
      */
     IOnenoteResourceStreamRequest buildRequest(final java.util.List<Option> requestOptions);
-
-    IOnenoteResourceStreamRequestBuilder getContent();
-
-
-
 
 }

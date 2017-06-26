@@ -31,8 +31,6 @@ public interface IBaseOnenoteResourceRequestBuilder extends IRequestBuilder {
      */
     IOnenoteResourceRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IOnenoteResourceStreamRequestBuilder getMsgraph_Content();
-
     IOnenoteResourceStreamRequestBuilder getContent();
 
 }
