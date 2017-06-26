@@ -147,7 +147,7 @@ public abstract class BaseRequest implements IHttpRequest {
         final Uri.Builder uriBuilder = baseUrl.buildUpon();
 
         for (final QueryOption option : mQueryOptions) {
-            uriBuilder.appendQueryParameter(option.getName(), option.getValue());
+            uriBuilder.appendQueryParameter(option.getName(), option.getValue().toString());
         }
 
         try {
@@ -168,7 +168,11 @@ public abstract class BaseRequest implements IHttpRequest {
                 requestUrl.append(option.getName());
                 requestUrl.append("=");
                 if (option.getValue() != null) {
-                    requestUrl.append("'" + option.getValue() + "'");
+                    if (option.getValue() instanceof String) {
+                        requestUrl.append("'" + option.getValue() + "'");
+                    } else {
+                        requestUrl.append(option.getValue());
+                    }
                 } else {
                     requestUrl.append("null");
                 }

@@ -32,7 +32,7 @@ public class QueryOption extends Option {
      * @param name The name of the query parameter.
      * @param value The value of the query parameter.
      */
-    public QueryOption(final String name, final String value) {
+    public QueryOption(final String name, final Object value) {
         super(name, value);
     }
 }

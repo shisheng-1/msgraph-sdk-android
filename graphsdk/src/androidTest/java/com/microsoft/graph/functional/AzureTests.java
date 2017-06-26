@@ -33,6 +33,7 @@ public class AzureTests extends AndroidTestCase {
 //        assertNotNull(administrativeUnits);
     }
 
+    @Test
     public void testCreateAdministrativeUnit() {
 //        AdministrativeUnit adminUnit = new AdministrativeUnit();
 //        adminUnit.displayName = "Test admin unit";

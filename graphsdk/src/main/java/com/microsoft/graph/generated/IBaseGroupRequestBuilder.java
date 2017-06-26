@@ -48,6 +48,10 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id);
 
+    IExtensionCollectionRequestBuilder getExtensions();
+
+    IExtensionRequestBuilder getExtensions(final String id);
+
     IConversationThreadCollectionRequestBuilder getThreads();
 
     IConversationThreadRequestBuilder getThreads(final String id);
@@ -103,6 +107,11 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
      * Gets the request builder for PlannerGroup.
      */
     IPlannerGroupRequestBuilder getPlanner();
+
+    /**
+     * Gets the request builder for Onenote.
+     */
+    IOnenoteRequestBuilder getOnenote();
     IGroupSubscribeByMailRequestBuilder getSubscribeByMail();
     IGroupUnsubscribeByMailRequestBuilder getUnsubscribeByMail();
     IGroupAddFavoriteRequestBuilder getAddFavorite();

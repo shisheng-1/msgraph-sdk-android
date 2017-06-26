@@ -47,4 +47,11 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
         return new OrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    public IExtensionCollectionRequestBuilder getExtensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder getExtensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
 }

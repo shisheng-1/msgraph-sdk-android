@@ -56,14 +56,14 @@ public class BaseWorkbookChartPointCollectionRequest extends BaseCollectionReque
     public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookChartPoint, callback);
     }
 
     public WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookChartPoint);
     }
 

@@ -56,14 +56,14 @@ public class BaseExtensionCollectionRequest extends BaseCollectionRequest<BaseEx
     public void post(final Extension newExtension, final ICallback<Extension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newExtension, callback);
     }
 
     public Extension post(final Extension newExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newExtension);
     }
 

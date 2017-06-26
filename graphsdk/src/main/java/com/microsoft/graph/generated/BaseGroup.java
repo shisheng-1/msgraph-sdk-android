@@ -188,6 +188,12 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     public transient DirectoryObjectCollectionPage owners;
 
     /**
+     * The Extensions.
+	 * 
+     */
+    public transient ExtensionCollectionPage extensions;
+
+    /**
      * The Threads.
 	 * 
      */
@@ -273,6 +279,14 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     @Expose
     public PlannerGroup planner;
 
+    /**
+     * The Onenote.
+	 * 
+     */
+    @SerializedName("onenote")
+    @Expose
+    public Onenote onenote;
+
 
     /**
      * The raw representation of this class
@@ -357,6 +371,22 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             owners = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("threads")) {
