@@ -50,10 +50,10 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
 
     IDriveItemStreamRequestBuilder getContent();
     IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference);
-    IDriveItemCreateLinkRequestBuilder getCreateLink(final String scope, final String type);
+    IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope);
     IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item);
 
-    IDriveItemInviteCollectionRequestBuilder getInvite(final String message, final java.util.List<DriveRecipient> recipients, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation);
+    IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients);
 
     IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
 

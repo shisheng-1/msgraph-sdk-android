@@ -62,12 +62,8 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
-    public IOnenotePageStreamRequestBuilder getMsgraph_Content() {
-        return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
-    }
-
     public IOnenotePageStreamRequestBuilder getContent() {
-        return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+        return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
     public IOnenotePageOnenotePatchContentRequestBuilder getOnenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {

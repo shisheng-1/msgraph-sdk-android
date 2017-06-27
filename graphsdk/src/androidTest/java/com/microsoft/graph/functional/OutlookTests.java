@@ -63,7 +63,7 @@ public class OutlookTests extends AndroidTestCase {
             tenantUser = users.getCurrentPage().get(1);
         }
 
-        List<AttendeeBase> attendees = new ArrayList<>();
+        ArrayList<AttendeeBase> attendees = new ArrayList<AttendeeBase>();
         AttendeeBase attendeeBase = new AttendeeBase();
         EmailAddress email = new EmailAddress();
         email.address = tenantUser.mail;

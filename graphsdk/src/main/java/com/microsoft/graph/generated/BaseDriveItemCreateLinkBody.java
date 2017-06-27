@@ -26,20 +26,20 @@ import com.google.gson.annotations.*;
 public class BaseDriveItemCreateLinkBody {
 
     /**
-     * The scope.
-	 * 
-     */
-    @SerializedName("scope")
-    @Expose
-    public String scope;
-
-    /**
      * The type.
 	 * 
      */
     @SerializedName("type")
     @Expose
     public String type;
+
+    /**
+     * The scope.
+	 * 
+     */
+    @SerializedName("scope")
+    @Expose
+    public String scope;
 
 
     /**
