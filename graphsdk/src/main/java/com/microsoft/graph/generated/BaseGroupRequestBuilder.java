@@ -75,6 +75,13 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     public IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
+    public IGroupSettingCollectionRequestBuilder getSettings() {
+        return new GroupSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    public IGroupSettingRequestBuilder getSettings(final String id) {
+        return new GroupSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    }
     public IExtensionCollectionRequestBuilder getExtensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }

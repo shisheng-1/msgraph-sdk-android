@@ -45,7 +45,7 @@ public class BaseDeleted implements IJsonBackedObject {
 
     /**
      * The State.
-	 * 
+	 * Represents the state of the deleted item.
      */
     @SerializedName("state")
     @Expose

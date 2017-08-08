@@ -45,7 +45,7 @@ public class BaseFolder implements IJsonBackedObject {
 
     /**
      * The Child Count.
-	 * 
+	 * Number of children contained immediately within this container.
      */
     @SerializedName("childCount")
     @Expose

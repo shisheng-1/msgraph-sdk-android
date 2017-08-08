@@ -28,4 +28,8 @@ public interface IBaseMessageCollectionRequestBuilder extends IRequestBuilder {
 
     IMessageRequestBuilder byId(final String id);
 
+
+    IMessageDeltaCollectionRequestBuilder getDelta();
+
+	IMessageDeltaCollectionRequestBuilder getDelta(final String deltaLink);
 }

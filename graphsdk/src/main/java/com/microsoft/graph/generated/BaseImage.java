@@ -45,7 +45,7 @@ public class BaseImage implements IJsonBackedObject {
 
     /**
      * The Height.
-	 * 
+	 * Optional. Height of the image, in pixels. Read-only.
      */
     @SerializedName("height")
     @Expose
@@ -53,7 +53,7 @@ public class BaseImage implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * 
+	 * Optional. Width of the image, in pixels. Read-only.
      */
     @SerializedName("width")
     @Expose

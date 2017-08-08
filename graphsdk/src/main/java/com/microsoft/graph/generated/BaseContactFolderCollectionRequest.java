@@ -56,14 +56,14 @@ public class BaseContactFolderCollectionRequest extends BaseCollectionRequest<Ba
     public void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newContactFolder, callback);
     }
 
     public ContactFolder post(final ContactFolder newContactFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest()
+            .buildRequest(getBaseRequest().getOptions())
             .post(newContactFolder);
     }
 

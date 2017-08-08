@@ -44,4 +44,12 @@ public class BaseContactFolderCollectionRequestBuilder extends BaseRequestBuilde
     public IContactFolderRequestBuilder byId(final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
+
+    public IContactFolderDeltaCollectionRequestBuilder getDelta() {
+        return new ContactFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IContactFolderDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+        return new ContactFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

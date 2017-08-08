@@ -44,4 +44,12 @@ public class BaseMailFolderCollectionRequestBuilder extends BaseRequestBuilder i
     public IMailFolderRequestBuilder byId(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
+
+    public IMailFolderDeltaCollectionRequestBuilder getDelta() {
+        return new MailFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IMailFolderDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+        return new MailFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

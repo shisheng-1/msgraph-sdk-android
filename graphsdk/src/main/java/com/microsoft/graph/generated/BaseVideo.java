@@ -45,7 +45,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Bitrate.
-	 * 
+	 * Bit rate of the video in bits per second.
      */
     @SerializedName("bitrate")
     @Expose
@@ -53,7 +53,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Duration.
-	 * 
+	 * Duration of the file in milliseconds.
      */
     @SerializedName("duration")
     @Expose
@@ -61,7 +61,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Height.
-	 * 
+	 * Height of the video, in pixels.
      */
     @SerializedName("height")
     @Expose
@@ -69,7 +69,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * 
+	 * Width of the video, in pixels.
      */
     @SerializedName("width")
     @Expose

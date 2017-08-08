@@ -28,4 +28,8 @@ public interface IBaseContactFolderCollectionRequestBuilder extends IRequestBuil
 
     IContactFolderRequestBuilder byId(final String id);
 
+
+    IContactFolderDeltaCollectionRequestBuilder getDelta();
+
+	IContactFolderDeltaCollectionRequestBuilder getDelta(final String deltaLink);
 }

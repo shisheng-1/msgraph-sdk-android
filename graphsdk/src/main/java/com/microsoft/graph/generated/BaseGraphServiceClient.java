@@ -198,6 +198,44 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of GroupSettings objects.
+     *
+     * @return The request builder for the collection of GroupSettings objects
+     */
+    public IGroupSettingCollectionRequestBuilder getGroupSettings() {
+        return new GroupSettingCollectionRequestBuilder(getServiceRoot() + "/groupSettings", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single GroupSettings.
+     *
+     * @param id The id of the GroupSettings to retrieve.
+     * @return The request builder for the GroupSettings object
+     */
+    public IGroupSettingRequestBuilder getGroupSettings(final String id) {
+        return new GroupSettingRequestBuilder(getServiceRoot() + "/groupSettings/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of GroupSettingTemplates objects.
+     *
+     * @return The request builder for the collection of GroupSettingTemplates objects
+     */
+    public IGroupSettingTemplateCollectionRequestBuilder getGroupSettingTemplates() {
+        return new GroupSettingTemplateCollectionRequestBuilder(getServiceRoot() + "/groupSettingTemplates", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single GroupSettingTemplates.
+     *
+     * @param id The id of the GroupSettingTemplates to retrieve.
+     * @return The request builder for the GroupSettingTemplates object
+     */
+    public IGroupSettingTemplateRequestBuilder getGroupSettingTemplates(final String id) {
+        return new GroupSettingTemplateRequestBuilder(getServiceRoot() + "/groupSettingTemplates/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of SubscribedSkus objects.
      *
      * @return The request builder for the collection of SubscribedSkus objects

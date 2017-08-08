@@ -143,6 +143,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IOrganizationRequestBuilder getOrganization(final String id);
 
     /**
+     * Gets the collection of GroupSettings objects.
+     *
+     * @return The request builder for the collection of GroupSettings objects
+     */
+    IGroupSettingCollectionRequestBuilder getGroupSettings();
+
+    /**
+     * Gets a single GroupSettings.
+     *
+     * @param id The id of the GroupSettings to retrieve.
+     * @return The request builder for the GroupSettings object
+     */
+    IGroupSettingRequestBuilder getGroupSettings(final String id);
+
+    /**
+     * Gets the collection of GroupSettingTemplates objects.
+     *
+     * @return The request builder for the collection of GroupSettingTemplates objects
+     */
+    IGroupSettingTemplateCollectionRequestBuilder getGroupSettingTemplates();
+
+    /**
+     * Gets a single GroupSettingTemplates.
+     *
+     * @param id The id of the GroupSettingTemplates to retrieve.
+     * @return The request builder for the GroupSettingTemplates object
+     */
+    IGroupSettingTemplateRequestBuilder getGroupSettingTemplates(final String id);
+
+    /**
      * Gets the collection of SubscribedSkus objects.
      *
      * @return The request builder for the collection of SubscribedSkus objects

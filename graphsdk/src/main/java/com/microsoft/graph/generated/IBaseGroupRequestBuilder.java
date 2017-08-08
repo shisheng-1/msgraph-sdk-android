@@ -48,6 +48,10 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id);
 
+    IGroupSettingCollectionRequestBuilder getSettings();
+
+    IGroupSettingRequestBuilder getSettings(final String id);
+
     IExtensionCollectionRequestBuilder getExtensions();
 
     IExtensionRequestBuilder getExtensions(final String id);
