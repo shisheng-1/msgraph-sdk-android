@@ -76,6 +76,10 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
     }
 
+    public IGroupSettingTemplateRequestBuilder groupSettingTemplate() {
+        return new GroupSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("groupSettingTemplate"), getClient(), null);
+    }
+
     public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder getCheckMemberGroups(final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);
     }

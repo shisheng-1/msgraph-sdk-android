@@ -35,7 +35,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-	 * 
+	 * true if the account is enabled; otherwise, false. Required.
      */
     @SerializedName("accountEnabled")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
-	 * 
+	 * The any operator is required for filter expressions on multi-valued properties. Not nullable. Required.
      */
     @SerializedName("alternativeSecurityIds")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-	 * 
+	 * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("approximateLastSignInDateTime")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-	 * 
+	 * Unique client specified GUID to represent the device. Required.
      */
     @SerializedName("deviceId")
     @Expose
@@ -83,7 +83,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * 
+	 * The display name for the device. Required.
      */
     @SerializedName("displayName")
     @Expose
@@ -91,7 +91,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-	 * 
+	 * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false.
      */
     @SerializedName("isCompliant")
     @Expose
@@ -99,7 +99,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-	 * 
+	 * true if the device is managed by a Mobile Device Management (MDM) app such as Intune; otherwise, false.
      */
     @SerializedName("isManaged")
     @Expose
@@ -107,7 +107,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-	 * 
+	 * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -115,7 +115,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-	 * 
+	 * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -123,7 +123,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System.
-	 * 
+	 * The type of operating system on the device. Required.
      */
     @SerializedName("operatingSystem")
     @Expose
@@ -131,7 +131,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-	 * 
+	 * The version of the operating system on the device. Required.
      */
     @SerializedName("operatingSystemVersion")
     @Expose
@@ -139,7 +139,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-	 * 
+	 * Not nullable.
      */
     @SerializedName("physicalIds")
     @Expose
@@ -155,15 +155,21 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Registered Owners.
-	 * 
+	 * Users that are registered owners of the device. Read-only. Nullable.
      */
     public transient DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
-	 * 
+	 * Users that are registered users of the device. Read-only. Nullable.
      */
     public transient DirectoryObjectCollectionPage registeredUsers;
+
+    /**
+     * The Extensions.
+	 * The collection of open extensions defined for the device. Read-only. Nullable.
+     */
+    public transient ExtensionCollectionPage extensions;
 
 
     /**
@@ -233,6 +239,22 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             registeredUsers = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final BaseExtensionCollectionResponse response = new BaseExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
     }
 }

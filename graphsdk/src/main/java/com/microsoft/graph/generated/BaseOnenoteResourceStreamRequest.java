@@ -25,7 +25,7 @@ import java.io.*;
 public class BaseOnenoteResourceStreamRequest extends BaseStreamRequest<OnenoteResource> implements IBaseOnenoteResourceStreamRequest {
 
     /**
-     * The request for this OnenoteResource
+     * The request for this OnenoteResourceStream
      *
      * @param requestUrl The request url
      * @param client The service client

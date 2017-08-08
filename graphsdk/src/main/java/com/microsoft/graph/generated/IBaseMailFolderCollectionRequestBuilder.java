@@ -28,4 +28,8 @@ public interface IBaseMailFolderCollectionRequestBuilder extends IRequestBuilder
 
     IMailFolderRequestBuilder byId(final String id);
 
+
+    IMailFolderDeltaCollectionRequestBuilder getDelta();
+
+	IMailFolderDeltaCollectionRequestBuilder getDelta(final String deltaLink);
 }

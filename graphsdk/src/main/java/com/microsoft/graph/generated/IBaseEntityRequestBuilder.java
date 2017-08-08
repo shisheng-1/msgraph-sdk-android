@@ -41,6 +41,8 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     ILicenseDetailsRequestBuilder licenseDetails();
 
+    IGroupSettingRequestBuilder groupSetting();
+
     IConversationThreadRequestBuilder conversationThread();
 
     ICalendarRequestBuilder calendar();

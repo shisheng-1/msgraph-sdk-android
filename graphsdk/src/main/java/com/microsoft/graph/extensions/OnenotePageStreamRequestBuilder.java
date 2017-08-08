@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class OnenotePageStreamRequestBuilder extends BaseOnenotePageStreamRequestBuilder implements IOnenotePageStreamRequestBuilder {
 
     /**
-     * The request builder for the OnenotePage
+     * The request builder for the OnenotePageStream
      *
      * @param requestUrl The request url
      * @param client The service client

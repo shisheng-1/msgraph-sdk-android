@@ -34,8 +34,16 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
     }
 
     /**
+     * The Display Name.
+	 * The full title for the site. Read-only.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
      * The Root.
-	 * 
+	 * If present, indicates that this is the root site in the site collection. Read-only.
      */
     @SerializedName("root")
     @Expose
@@ -43,7 +51,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-	 * 
+	 * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -51,23 +59,15 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Site Collection.
-	 * 
+	 * Provides details about the site's site collection. Available only on the root site. Read-only.
      */
     @SerializedName("siteCollection")
     @Expose
     public SiteCollection siteCollection;
 
     /**
-     * The Title.
-	 * 
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
      * The Drive.
-	 * 
+	 * The default drive (document library) for this site.
      */
     @SerializedName("drive")
     @Expose
@@ -75,15 +75,23 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drives.
-	 * 
+	 * The collection of drives (document libraries) under this site.
      */
     public transient DriveCollectionPage drives;
 
     /**
      * The Sites.
-	 * 
+	 * The collection of the sub-sites under this site.
      */
     public transient SiteCollectionPage sites;
+
+    /**
+     * The Onenote.
+	 * Calls the OneNote service for notebook related operations.
+     */
+    @SerializedName("onenote")
+    @Expose
+    public Onenote onenote;
 
 
     /**

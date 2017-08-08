@@ -25,7 +25,7 @@ import java.io.*;
 public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage> implements IBaseOnenotePageStreamRequest {
 
     /**
-     * The request for this OnenotePage
+     * The request for this OnenotePageStream
      *
      * @param requestUrl The request url
      * @param client The service client

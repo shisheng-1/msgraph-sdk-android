@@ -44,4 +44,12 @@ public class BaseMessageCollectionRequestBuilder extends BaseRequestBuilder impl
     public IMessageRequestBuilder byId(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
+
+    public IMessageDeltaCollectionRequestBuilder getDelta() {
+        return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IMessageDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+        return new MessageDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

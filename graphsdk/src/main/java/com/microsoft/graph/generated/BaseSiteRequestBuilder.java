@@ -69,6 +69,13 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
+    /**
+     * Gets the request builder for Onenote.
+     */
+    public IOnenoteRequestBuilder getOnenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
     public ISiteGetByPathRequestBuilder getGetByPath(final String path) {
         return new SiteGetByPathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByPath"), getClient(), null, path);
     }

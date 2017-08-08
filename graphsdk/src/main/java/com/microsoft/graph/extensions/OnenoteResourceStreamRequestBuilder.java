@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class OnenoteResourceStreamRequestBuilder extends BaseOnenoteResourceStreamRequestBuilder implements IOnenoteResourceStreamRequestBuilder {
 
     /**
-     * The request builder for the OnenoteResource
+     * The request builder for the OnenoteResourceStream
      *
      * @param requestUrl The request url
      * @param client The service client
