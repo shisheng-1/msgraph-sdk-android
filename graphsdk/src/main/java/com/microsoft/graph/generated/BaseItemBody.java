@@ -45,7 +45,7 @@ public class BaseItemBody implements IJsonBackedObject {
 
     /**
      * The Content Type.
-	 * 
+	 * The type of the content. Possible values are Text and HTML.
      */
     @SerializedName("contentType")
     @Expose
@@ -53,7 +53,7 @@ public class BaseItemBody implements IJsonBackedObject {
 
     /**
      * The Content.
-	 * 
+	 * The content of the item.
      */
     @SerializedName("content")
     @Expose

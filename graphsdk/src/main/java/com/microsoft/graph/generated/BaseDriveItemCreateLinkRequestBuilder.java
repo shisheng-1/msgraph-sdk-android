@@ -28,10 +28,10 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String scope, final String type) {
+    public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String type, final String scope) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("scope", scope);
         mBodyParams.put("type", type);
+        mBodyParams.put("scope", scope);
     }
 
     /**
@@ -56,12 +56,12 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
                 requestOptions
         );
 
-        if (hasParameter("scope")) {
-            request.mBody.scope = getParameter("scope");
-        }
-
         if (hasParameter("type")) {
             request.mBody.type = getParameter("type");
+        }
+
+        if (hasParameter("scope")) {
+            request.mBody.scope = getParameter("scope");
         }
 
         return request;

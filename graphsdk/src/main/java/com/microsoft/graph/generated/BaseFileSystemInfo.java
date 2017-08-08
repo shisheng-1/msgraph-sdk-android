@@ -45,7 +45,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-	 * 
+	 * The UTC date and time the file was created on a client.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -61,7 +61,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-	 * 
+	 * The UTC date and time the file was last modified on a client.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

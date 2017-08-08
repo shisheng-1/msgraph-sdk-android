@@ -26,22 +26,6 @@ import com.google.gson.annotations.*;
 public class BaseDriveItemInviteBody {
 
     /**
-     * The message.
-	 * 
-     */
-    @SerializedName("message")
-    @Expose
-    public String message;
-
-    /**
-     * The recipients.
-	 * 
-     */
-    @SerializedName("recipients")
-    @Expose
-    public java.util.List<DriveRecipient> recipients;
-
-    /**
      * The require Sign In.
 	 * 
      */
@@ -64,6 +48,22 @@ public class BaseDriveItemInviteBody {
     @SerializedName("sendInvitation")
     @Expose
     public Boolean sendInvitation;
+
+    /**
+     * The message.
+	 * 
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
+
+    /**
+     * The recipients.
+	 * 
+     */
+    @SerializedName("recipients")
+    @Expose
+    public java.util.List<DriveRecipient> recipients;
 
 
     /**

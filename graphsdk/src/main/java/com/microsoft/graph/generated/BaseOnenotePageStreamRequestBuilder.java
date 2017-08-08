@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder implements IBaseOnenotePageStreamRequestBuilder {
 
     /**
-     * The request builder for the OnenotePage
+     * The request builder for the OnenotePageStream
      *
      * @param requestUrl The request url
      * @param client The service client
@@ -41,41 +41,10 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
     public IOnenotePageStreamRequest buildRequest(final java.util.List<Option> requestOptions) {
         return new OnenotePageStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    /**
-     * Gets the request builder for OnenoteSection.
-     */
-    public IOnenoteSectionRequestBuilder getParentSection() {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for Notebook.
-     */
-    public INotebookRequestBuilder getParentNotebook() {
-        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
-    }
-
-    public IOnenotePageStreamRequestBuilder getContent() {
-        return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
-    }
-
-
-
-    public IOnenotePageOnenotePatchContentRequestBuilder getOnenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
-        return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
-    }
-
-    public IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String groupId) {
-        return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId);
-    }
-
-    public IOnenotePagePreviewRequestBuilder getPreview() {
-        return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
-    }
 }

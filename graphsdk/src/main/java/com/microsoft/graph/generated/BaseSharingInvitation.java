@@ -45,7 +45,7 @@ public class BaseSharingInvitation implements IJsonBackedObject {
 
     /**
      * The Email.
-	 * 
+	 * The email address provided for the recipient of the sharing invitation. Read-only.
      */
     @SerializedName("email")
     @Expose
@@ -53,7 +53,7 @@ public class BaseSharingInvitation implements IJsonBackedObject {
 
     /**
      * The Invited By.
-	 * 
+	 * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      */
     @SerializedName("invitedBy")
     @Expose
@@ -69,7 +69,7 @@ public class BaseSharingInvitation implements IJsonBackedObject {
 
     /**
      * The Sign In Required.
-	 * 
+	 * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      */
     @SerializedName("signInRequired")
     @Expose

@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class BaseOnenoteResourceStreamRequestBuilder extends BaseRequestBuilder implements IBaseOnenoteResourceStreamRequestBuilder {
 
     /**
-     * The request builder for the OnenoteResource
+     * The request builder for the OnenoteResourceStream
      *
      * @param requestUrl The request url
      * @param client The service client
@@ -41,15 +41,10 @@ public class BaseOnenoteResourceStreamRequestBuilder extends BaseRequestBuilder 
     }
 
     /**
-     * Creates the request with specific options instead of the existing options
+     * Creates the request with specific requestOptions instead of the existing requestOptions
      */
     public IOnenoteResourceStreamRequest buildRequest(final java.util.List<Option> requestOptions) {
         return new OnenoteResourceStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
-
-    public IOnenoteResourceStreamRequestBuilder getContent() {
-        return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
-    }
-
 
 }

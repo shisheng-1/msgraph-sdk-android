@@ -21,7 +21,6 @@ import java.util.EnumSet;
  * The interface for the Base Onenote Page Stream Request Builder.
  */
 public interface IBaseOnenotePageStreamRequestBuilder extends IRequestBuilder {
-
     /**
      * Creates the request
      */
@@ -31,23 +30,5 @@ public interface IBaseOnenotePageStreamRequestBuilder extends IRequestBuilder {
      * Creates the request with specific options instead of the existing options
      */
     IOnenotePageStreamRequest buildRequest(final java.util.List<Option> requestOptions);
-
-    /**
-     * Gets the request builder for OnenoteSection.
-     */
-    IOnenoteSectionRequestBuilder getParentSection();
-
-    /**
-     * Gets the request builder for Notebook.
-     */
-    INotebookRequestBuilder getParentNotebook();
-
-    IOnenotePageStreamRequestBuilder getContent();
-
-
-
-    IOnenotePageOnenotePatchContentRequestBuilder getOnenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
-    IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String groupId);
-    IOnenotePagePreviewRequestBuilder getPreview();
 
 }

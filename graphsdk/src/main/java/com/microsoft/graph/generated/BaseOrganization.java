@@ -179,7 +179,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Extensions.
-	 * 
+	 * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
     public transient ExtensionCollectionPage extensions;
 

@@ -45,7 +45,7 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
 
     /**
      * The Code.
-	 * 
+	 * The error code.
      */
     @SerializedName("code")
     @Expose
@@ -53,7 +53,7 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
 
     /**
      * The Message.
-	 * 
+	 * The error message.
      */
     @SerializedName("message")
     @Expose

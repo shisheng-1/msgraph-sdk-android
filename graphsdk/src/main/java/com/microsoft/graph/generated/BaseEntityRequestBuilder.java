@@ -68,6 +68,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails"), getClient(), null);
     }
 
+    public IGroupSettingRequestBuilder groupSetting() {
+        return new GroupSettingRequestBuilder(getRequestUrlWithAdditionalSegment("groupSetting"), getClient(), null);
+    }
+
     public IConversationThreadRequestBuilder conversationThread() {
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("conversationThread"), getClient(), null);
     }

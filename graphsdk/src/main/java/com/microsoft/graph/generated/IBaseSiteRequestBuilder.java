@@ -43,6 +43,11 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     ISiteCollectionRequestBuilder getSites();
 
     ISiteRequestBuilder getSites(final String id);
+
+    /**
+     * Gets the request builder for Onenote.
+     */
+    IOnenoteRequestBuilder getOnenote();
     ISiteGetByPathRequestBuilder getGetByPath(final String path);
 
 }
