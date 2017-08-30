@@ -87,7 +87,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @param logger The logger
          * @return the instance of this builder
          */
-        private Builder logger(final ILogger logger) {
+        public Builder logger(final ILogger logger) {
             mClient.setLogger(logger);
             return this;
         }
