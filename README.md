@@ -22,6 +22,9 @@ dependency {
 }
 ```
 
+### 1.2 Enable ProGuard
+The nature of the Graph API is such that the SDK needs quite a large set of classes to describe its functionality. You will need to ensure that [ProGuard](https://developer.android.com/studio/build/shrink-code.html) is enabled on your project. Otherwise, you will incur long build times for functionality that is not necessary relevant to your particular application. If you are still hitting the 64k method limit, you can also enable [multidexing](https://developer.android.com/studio/build/multidex.html).
+
 ## 2. Getting started
 
 ### 2.1 Register your application
