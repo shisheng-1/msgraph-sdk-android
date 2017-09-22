@@ -45,7 +45,7 @@ public class BaseSettingValue implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * Name of the setting (as defined by the groupSettingTemplate).
+     * Name of the setting (as defined by the groupSettingTemplate).
      */
     @SerializedName("name")
     @Expose
@@ -53,7 +53,7 @@ public class BaseSettingValue implements IJsonBackedObject {
 
     /**
      * The Value.
-	 * Value of the setting.
+     * Value of the setting.
      */
     @SerializedName("value")
     @Expose

@@ -45,7 +45,7 @@ public class BaseOnenotePagePreviewLinks implements IJsonBackedObject {
 
     /**
      * The Preview Image Url.
-	 * 
+     * 
      */
     @SerializedName("previewImageUrl")
     @Expose

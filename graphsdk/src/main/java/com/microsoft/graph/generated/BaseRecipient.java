@@ -45,7 +45,7 @@ public class BaseRecipient implements IJsonBackedObject {
 
     /**
      * The Email Address.
-	 * The recipient's email address.
+     * The recipient's email address.
      */
     @SerializedName("emailAddress")
     @Expose

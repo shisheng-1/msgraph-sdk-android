@@ -45,7 +45,7 @@ public class BaseSiteCollection implements IJsonBackedObject {
 
     /**
      * The Hostname.
-	 * The hostname for the site collection. Read-only.
+     * The hostname for the site collection. Read-only.
      */
     @SerializedName("hostname")
     @Expose

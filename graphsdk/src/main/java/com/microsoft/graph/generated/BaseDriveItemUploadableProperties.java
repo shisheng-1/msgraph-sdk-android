@@ -45,7 +45,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Description.
-	 * 
+     * 
      */
     @SerializedName("description")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The File System Info.
-	 * 
+     * 
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -61,7 +61,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose

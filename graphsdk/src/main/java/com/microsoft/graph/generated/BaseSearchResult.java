@@ -45,7 +45,7 @@ public class BaseSearchResult implements IJsonBackedObject {
 
     /**
      * The On Click Telemetry Url.
-	 * A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.
+     * A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.
      */
     @SerializedName("onClickTelemetryUrl")
     @Expose

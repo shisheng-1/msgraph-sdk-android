@@ -45,7 +45,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -53,7 +53,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Identity Provider.
-	 * 
+     * 
      */
     @SerializedName("identityProvider")
     @Expose
@@ -61,7 +61,7 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     /**
      * The Key.
-	 * 
+     * 
      */
     @SerializedName("key")
     @Expose

@@ -45,7 +45,7 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Set.
-	 * 
+     * 
      */
     @SerializedName("set")
     @Expose
