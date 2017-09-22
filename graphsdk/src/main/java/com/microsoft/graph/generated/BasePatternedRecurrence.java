@@ -45,7 +45,7 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Pattern.
-	 * 
+     * 
      */
     @SerializedName("pattern")
     @Expose
@@ -53,7 +53,7 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Range.
-	 * 
+     * 
      */
     @SerializedName("range")
     @Expose

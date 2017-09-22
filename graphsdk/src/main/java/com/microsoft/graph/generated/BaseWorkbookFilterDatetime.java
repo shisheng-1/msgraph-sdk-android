@@ -45,7 +45,7 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Date.
-	 * 
+     * 
      */
     @SerializedName("date")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Specificity.
-	 * 
+     * 
      */
     @SerializedName("specificity")
     @Expose

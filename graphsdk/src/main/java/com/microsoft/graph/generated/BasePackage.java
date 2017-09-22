@@ -45,7 +45,7 @@ public class BasePackage implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose

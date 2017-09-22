@@ -45,7 +45,7 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Capabilities.
-	 * 
+     * 
      */
     @SerializedName("capabilities")
     @Expose
@@ -53,7 +53,7 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Is Default.
-	 * 
+     * 
      */
     @SerializedName("isDefault")
     @Expose
@@ -61,7 +61,7 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Is Initial.
-	 * 
+     * 
      */
     @SerializedName("isInitial")
     @Expose
@@ -69,7 +69,7 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -77,7 +77,7 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
