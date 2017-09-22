@@ -45,7 +45,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Password.
-	 * 
+     * 
      */
     @SerializedName("password")
     @Expose
@@ -53,7 +53,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Force Change Password Next Sign In.
-	 * 
+     * 
      */
     @SerializedName("forceChangePasswordNextSignIn")
     @Expose

@@ -60,6 +60,14 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
+    public IListRequestBuilder list() {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
+    }
+
+    public IListItemRequestBuilder listItem() {
+        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    }
+
     public ISharedDriveItemRequestBuilder sharedDriveItem() {
         return new SharedDriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("sharedDriveItem"), getClient(), null);
     }

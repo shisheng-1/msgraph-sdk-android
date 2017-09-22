@@ -45,7 +45,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Ascending.
-	 * 
+     * 
      */
     @SerializedName("ascending")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose
@@ -61,7 +61,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Data Option.
-	 * 
+     * 
      */
     @SerializedName("dataOption")
     @Expose
@@ -69,7 +69,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Icon.
-	 * 
+     * 
      */
     @SerializedName("icon")
     @Expose
@@ -77,7 +77,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Key.
-	 * 
+     * 
      */
     @SerializedName("key")
     @Expose
@@ -85,7 +85,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Sort On.
-	 * 
+     * 
      */
     @SerializedName("sortOn")
     @Expose

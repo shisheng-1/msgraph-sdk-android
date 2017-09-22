@@ -45,7 +45,7 @@ public class BaseAssignedLicense implements IJsonBackedObject {
 
     /**
      * The Disabled Plans.
-	 * A collection of the unique identifiers for plans that have been disabled.
+     * A collection of the unique identifiers for plans that have been disabled.
      */
     @SerializedName("disabledPlans")
     @Expose
@@ -53,7 +53,7 @@ public class BaseAssignedLicense implements IJsonBackedObject {
 
     /**
      * The Sku Id.
-	 * The unique identifier for the SKU.
+     * The unique identifier for the SKU.
      */
     @SerializedName("skuId")
     @Expose

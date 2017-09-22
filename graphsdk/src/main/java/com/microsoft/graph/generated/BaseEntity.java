@@ -45,7 +45,7 @@ public class BaseEntity implements IJsonBackedObject {
 
     /**
      * The Id.
-	 * Read-only.
+     * Read-only.
      */
     @SerializedName("id")
     @Expose

@@ -45,7 +45,7 @@ public class BaseDiagnostic implements IJsonBackedObject {
 
     /**
      * The Message.
-	 * 
+     * 
      */
     @SerializedName("message")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDiagnostic implements IJsonBackedObject {
 
     /**
      * The Url.
-	 * 
+     * 
      */
     @SerializedName("url")
     @Expose
