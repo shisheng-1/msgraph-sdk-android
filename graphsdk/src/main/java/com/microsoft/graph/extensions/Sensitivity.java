@@ -31,7 +31,7 @@ public enum Sensitivity
     /**
     * private
     */
-    msgraph_private,
+    PRIVATE,
     /**
     * confidential
     */
