@@ -102,6 +102,8 @@ For known issues, see [issues](https://github.com/MicrosoftGraph/sdk-android/iss
 
 The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](docs/contributions.md).
 
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
 ## 7. Supported Android Versions
 The Microsoft Graph SDK for Android library is supported at runtime for [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater. To build the sdk you need to install Android API revision 23 or greater.
 
