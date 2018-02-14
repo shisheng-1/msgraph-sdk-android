@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseWorkbookFilterCriteria() {
-        oDataType = "microsoft.graph.workbookFilterCriteria";
     }
 
     /**

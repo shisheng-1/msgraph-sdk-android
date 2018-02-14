@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseOnenotePage extends OnenoteEntitySchemaObjectModel implements IJsonBackedObject {
 
 
-    public BaseOnenotePage() {
-        oDataType = "microsoft.graph.onenotePage";
-    }
-
     /**
      * The Title.
      * The title of the page.

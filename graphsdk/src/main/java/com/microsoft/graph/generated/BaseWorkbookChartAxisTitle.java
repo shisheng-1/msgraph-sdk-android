@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartAxisTitle extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartAxisTitle() {
-        oDataType = "microsoft.graph.workbookChartAxisTitle";
-    }
-
     /**
      * The Text.
      * 

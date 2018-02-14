@@ -31,8 +31,6 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
      */
     IMessageRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IEventMessageRequestBuilder eventMessage();
-
     IAttachmentCollectionRequestBuilder getAttachments();
 
     IAttachmentRequestBuilder getAttachments(final String id);

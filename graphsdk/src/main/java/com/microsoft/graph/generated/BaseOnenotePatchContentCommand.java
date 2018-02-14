@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseOnenotePatchContentCommand() {
-        oDataType = "microsoft.graph.onenotePatchContentCommand";
     }
 
     /**

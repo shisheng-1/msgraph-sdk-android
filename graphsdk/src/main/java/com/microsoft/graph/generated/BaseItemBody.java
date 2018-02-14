@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseItemBody implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseItemBody implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseItemBody() {
-        oDataType = "microsoft.graph.itemBody";
     }
 
     /**

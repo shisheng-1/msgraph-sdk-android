@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseLookupColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseLookupColumn implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseLookupColumn() {
-        oDataType = "microsoft.graph.lookupColumn";
     }
 
     /**

@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookFormatProtection extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookFormatProtection() {
-        oDataType = "microsoft.graph.workbookFormatProtection";
-    }
-
     /**
      * The Formula Hidden.
      * 

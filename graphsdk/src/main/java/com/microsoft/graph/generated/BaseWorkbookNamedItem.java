@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookNamedItem() {
-        oDataType = "microsoft.graph.workbookNamedItem";
-    }
-
     /**
      * The Comment.
      * 

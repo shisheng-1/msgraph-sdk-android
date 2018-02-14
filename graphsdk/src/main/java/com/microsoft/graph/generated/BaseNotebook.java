@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBackedObject {
 
 
-    public BaseNotebook() {
-        oDataType = "microsoft.graph.notebook";
-    }
-
     /**
      * The Is Default.
      * Indicates whether this is the user's default notebook. Read-only.

@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
 
-    public BaseColumnDefinition() {
-        oDataType = "microsoft.graph.columnDefinition";
-    }
-
     /**
      * The Boolean.
      * 

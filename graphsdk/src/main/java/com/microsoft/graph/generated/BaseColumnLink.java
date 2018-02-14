@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseColumnLink extends Entity implements IJsonBackedObject {
 
 
-    public BaseColumnLink() {
-        oDataType = "microsoft.graph.columnLink";
-    }
-
     /**
      * The Name.
      * 

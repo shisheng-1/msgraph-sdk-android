@@ -31,8 +31,4 @@ public interface IBaseOnenoteEntitySchemaObjectModelRequestBuilder extends IRequ
      */
     IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IOnenoteEntityHierarchyModelRequestBuilder onenoteEntityHierarchyModel();
-
-    IOnenotePageRequestBuilder onenotePage();
-
 }

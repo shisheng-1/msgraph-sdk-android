@@ -29,10 +29,6 @@ import java.util.Map;
 public class BasePlanner extends Entity implements IJsonBackedObject {
 
 
-    public BasePlanner() {
-        oDataType = "microsoft.graph.planner";
-    }
-
     /**
      * The Tasks.
      * Read-only. Nullable. Returns a collection of the specified tasks
