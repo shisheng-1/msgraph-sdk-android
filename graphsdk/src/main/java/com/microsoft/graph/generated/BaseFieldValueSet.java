@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseFieldValueSet extends Entity implements IJsonBackedObject {
 
 
-    public BaseFieldValueSet() {
-        oDataType = "microsoft.graph.fieldValueSet";
-    }
-
 
     /**
      * The raw representation of this class

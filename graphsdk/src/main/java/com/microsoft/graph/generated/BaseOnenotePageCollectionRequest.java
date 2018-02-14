@@ -53,14 +53,14 @@ public class BaseOnenotePageCollectionRequest extends BaseCollectionRequest<Base
         return buildFromResponse(response);
     }
 
-    public void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback) {
+    public void post(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getOptions())
             .post(newOnenotePage, callback);
     }
 
-    public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
+    public OnenotePage post(final OnenotePage newOnenotePage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenotePageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getOptions())

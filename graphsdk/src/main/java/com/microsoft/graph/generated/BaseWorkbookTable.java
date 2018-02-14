@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookTable() {
-        oDataType = "microsoft.graph.workbookTable";
-    }
-
     /**
      * The Highlight First Column.
      * 

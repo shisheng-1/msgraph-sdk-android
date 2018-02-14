@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartGridlinesFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartGridlinesFormat() {
-        oDataType = "microsoft.graph.workbookChartGridlinesFormat";
-    }
-
     /**
      * The Line.
      * 

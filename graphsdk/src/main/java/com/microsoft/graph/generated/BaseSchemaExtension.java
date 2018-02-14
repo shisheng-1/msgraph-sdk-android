@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
 
-    public BaseSchemaExtension() {
-        oDataType = "microsoft.graph.schemaExtension";
-    }
-
     /**
      * The Description.
      * Description for the schema extension.

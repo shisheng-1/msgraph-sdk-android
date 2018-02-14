@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartLegendFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartLegendFormat() {
-        oDataType = "microsoft.graph.workbookChartLegendFormat";
-    }
-
     /**
      * The Fill.
      * 

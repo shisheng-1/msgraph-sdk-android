@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseBooleanColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseBooleanColumn implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseBooleanColumn() {
-        oDataType = "microsoft.graph.booleanColumn";
     }
 
 

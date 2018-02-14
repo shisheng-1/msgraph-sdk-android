@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartAxes extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartAxes() {
-        oDataType = "microsoft.graph.workbookChartAxes";
-    }
-
     /**
      * The Category Axis.
      * 
