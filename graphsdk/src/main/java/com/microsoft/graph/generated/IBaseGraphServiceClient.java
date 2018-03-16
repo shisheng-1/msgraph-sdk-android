@@ -323,6 +323,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IInvitationRequestBuilder getInvitations(final String id);
 
     /**
+     * Gets the collection of GroupLifecyclePolicies objects.
+     *
+     * @return The request builder for the collection of GroupLifecyclePolicies objects
+     */
+    IGroupLifecyclePolicyCollectionRequestBuilder getGroupLifecyclePolicies();
+
+    /**
+     * Gets a single GroupLifecyclePolicies.
+     *
+     * @param id The id of the GroupLifecyclePolicies to retrieve.
+     * @return The request builder for the GroupLifecyclePolicies object
+     */
+    IGroupLifecyclePolicyRequestBuilder getGroupLifecyclePolicies(final String id);
+
+    /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the User.
@@ -342,5 +357,19 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Planner.
      */
     IPlannerRequestBuilder getPlanner();
+
+    /**
+     * Gets GraphServiceRequestBuilder.
+     *
+     * @return the ReportRoot.
+     */
+    IReportRootRequestBuilder getReports();
+
+    /**
+     * Gets GraphServiceRequestBuilder.
+     *
+     * @return the EducationRoot.
+     */
+    IEducationRootRequestBuilder getEducation();
 
 }

@@ -29,7 +29,7 @@ import java.util.Map;
 public class BasePersonType implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BasePersonType implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePersonType() {
-        oDataType = "microsoft.graph.personType";
-    }
-
     /**
      * The Class.
-     * 
+     * The type of data source, such as Person.
      */
     @SerializedName("class")
     @Expose
@@ -53,7 +49,7 @@ public class BasePersonType implements IJsonBackedObject {
 
     /**
      * The Subclass.
-     * 
+     * The secondary type of data source, such as OrganizationUser.
      */
     @SerializedName("subclass")
     @Expose

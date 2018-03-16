@@ -29,13 +29,9 @@ import java.util.Map;
 public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
 
-    public BaseColumnDefinition() {
-        oDataType = "microsoft.graph.columnDefinition";
-    }
-
     /**
      * The Boolean.
-     * 
+     * This column stores boolean values.
      */
     @SerializedName("boolean")
     @Expose
@@ -43,7 +39,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Calculated.
-     * 
+     * This column's data is calculated based on other columns.
      */
     @SerializedName("calculated")
     @Expose
@@ -51,7 +47,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Choice.
-     * 
+     * This column stores data from a list of choices.
      */
     @SerializedName("choice")
     @Expose
@@ -59,7 +55,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Group.
-     * 
+     * For site columns, the name of the group this column belongs to. Helps organize related columns.
      */
     @SerializedName("columnGroup")
     @Expose
@@ -67,7 +63,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * 
+     * This column stores currency values.
      */
     @SerializedName("currency")
     @Expose
@@ -75,7 +71,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Date Time.
-     * 
+     * This column stores DateTime values.
      */
     @SerializedName("dateTime")
     @Expose
@@ -83,7 +79,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Default Value.
-     * 
+     * The default value for this column.
      */
     @SerializedName("defaultValue")
     @Expose
@@ -91,7 +87,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The user-facing description of the column.
      */
     @SerializedName("description")
     @Expose
@@ -99,7 +95,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The user-facing name of the column.
      */
     @SerializedName("displayName")
     @Expose
@@ -107,7 +103,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Enforce Unique Values.
-     * 
+     * If true, no two list items may have the same value for this column.
      */
     @SerializedName("enforceUniqueValues")
     @Expose
@@ -115,7 +111,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * 
+     * Specifies whether the column is displayed in the user interface.
      */
     @SerializedName("hidden")
     @Expose
@@ -123,7 +119,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Indexed.
-     * 
+     * Specifies whether the column values can used for sorting and searching.
      */
     @SerializedName("indexed")
     @Expose
@@ -131,7 +127,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Lookup.
-     * 
+     * This column's data is looked up from another source in the site.
      */
     @SerializedName("lookup")
     @Expose
@@ -139,7 +135,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
      */
     @SerializedName("name")
     @Expose
@@ -147,7 +143,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Number.
-     * 
+     * This column stores number values.
      */
     @SerializedName("number")
     @Expose
@@ -155,7 +151,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Or Group.
-     * 
+     * This column stores Person or Group values.
      */
     @SerializedName("personOrGroup")
     @Expose
@@ -163,7 +159,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Read Only.
-     * 
+     * Specifies whether the column values can be modified.
      */
     @SerializedName("readOnly")
     @Expose
@@ -171,7 +167,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Required.
-     * 
+     * Specifies whether the column value is not optional.
      */
     @SerializedName("required")
     @Expose
@@ -179,7 +175,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
-     * 
+     * This column stores text values.
      */
     @SerializedName("text")
     @Expose

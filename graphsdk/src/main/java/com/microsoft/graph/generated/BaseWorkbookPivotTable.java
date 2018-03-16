@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookPivotTable extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookPivotTable() {
-        oDataType = "microsoft.graph.workbookPivotTable";
-    }
-
     /**
      * The Name.
      * Name of the PivotTable.

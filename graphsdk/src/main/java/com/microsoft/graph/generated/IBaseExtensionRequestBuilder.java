@@ -31,6 +31,4 @@ public interface IBaseExtensionRequestBuilder extends IRequestBuilder {
      */
     IExtensionRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IOpenTypeExtensionRequestBuilder openTypeExtension();
-
 }

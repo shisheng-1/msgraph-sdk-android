@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartLegend() {
-        oDataType = "microsoft.graph.workbookChartLegend";
-    }
-
     /**
      * The Overlay.
      * 

@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
 
-    public BaseOutlookItem() {
-        oDataType = "microsoft.graph.outlookItem";
-    }
-
     /**
      * The Created Date Time.
      * 

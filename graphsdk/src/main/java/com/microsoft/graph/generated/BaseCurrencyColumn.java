@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseCurrencyColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BaseCurrencyColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseCurrencyColumn() {
-        oDataType = "microsoft.graph.currencyColumn";
-    }
-
     /**
      * The Locale.
-     * 
+     * Specifies the locale from which to infer the currency symbol.
      */
     @SerializedName("locale")
     @Expose

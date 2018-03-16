@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseWorkbookChartAxisFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartAxisFormat() {
-        oDataType = "microsoft.graph.workbookChartAxisFormat";
-    }
-
     /**
      * The Font.
      * 

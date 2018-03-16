@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookSessionInfo() {
-        oDataType = "microsoft.graph.workbookSessionInfo";
-    }
-
     /**
      * The Id.
-     * 
+     * Id of the workbook session.
      */
     @SerializedName("id")
     @Expose
@@ -53,7 +49,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Persist Changes.
-     * 
+     * true for persistent session. false for non-persistent session (view mode)
      */
     @SerializedName("persistChanges")
     @Expose

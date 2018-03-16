@@ -26,6 +26,22 @@ import com.google.gson.annotations.*;
 public class BaseNotebookCopyNotebookBody {
 
     /**
+     * The site Collection Id.
+     * 
+     */
+    @SerializedName("siteCollectionId")
+    @Expose
+    public String siteCollectionId;
+
+    /**
+     * The site Id.
+     * 
+     */
+    @SerializedName("siteId")
+    @Expose
+    public String siteId;
+
+    /**
      * The group Id.
      * 
      */

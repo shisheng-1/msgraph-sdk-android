@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
 
-    public BaseSchemaExtension() {
-        oDataType = "microsoft.graph.schemaExtension";
-    }
-
     /**
      * The Description.
      * Description for the schema extension.
@@ -67,7 +63,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * The appId of the application that created the schema extension. Read-only.
+     * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
      */
     @SerializedName("owner")
     @Expose

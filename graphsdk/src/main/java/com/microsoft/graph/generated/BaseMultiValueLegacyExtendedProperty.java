@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseMultiValueLegacyExtendedProperty extends Entity implements IJsonBackedObject {
 
 
-    public BaseMultiValueLegacyExtendedProperty() {
-        oDataType = "microsoft.graph.multiValueLegacyExtendedProperty";
-    }
-
     /**
      * The Value.
      * 
