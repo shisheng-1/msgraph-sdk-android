@@ -94,7 +94,7 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
      * @param newOnenotePage The new object to create
      * @param callback The callback to be called after success or failure.
      */
-    public void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback) {
+    public void post(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback) {
         send(HttpMethod.POST, callback, newOnenotePage);
     }
 
@@ -104,7 +104,7 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
      * @return The created OnenotePage
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
+    public OnenotePage post(final OnenotePage newOnenotePage) throws ClientException {
         return send(HttpMethod.POST, newOnenotePage);
     }
 

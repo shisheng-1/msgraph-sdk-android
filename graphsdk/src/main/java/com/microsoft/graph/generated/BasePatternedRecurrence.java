@@ -29,7 +29,7 @@ import java.util.Map;
 public class BasePatternedRecurrence implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePatternedRecurrence() {
-        oDataType = "microsoft.graph.patternedRecurrence";
-    }
-
     /**
      * The Pattern.
-     * 
+     * The frequency of an event.
      */
     @SerializedName("pattern")
     @Expose
@@ -53,7 +49,7 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Range.
-     * 
+     * The duration of an event.
      */
     @SerializedName("range")
     @Expose

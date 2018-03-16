@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseCalendarGroup extends Entity implements IJsonBackedObject {
 
 
-    public BaseCalendarGroup() {
-        oDataType = "microsoft.graph.calendarGroup";
-    }
-
     /**
      * The Name.
      * The group name.

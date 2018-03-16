@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseFileSystemInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseFileSystemInfo() {
-        oDataType = "microsoft.graph.fileSystemInfo";
     }
 
     /**
@@ -53,7 +49,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * The Last Accessed Date Time.
-     * 
+     * The UTC date and time the file was last accessed. Available for the recent file list only.
      */
     @SerializedName("lastAccessedDateTime")
     @Expose

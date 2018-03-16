@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseOperation extends Entity implements IJsonBackedObject {
 
 
-    public BaseOperation() {
-        oDataType = "microsoft.graph.operation";
-    }
-
     /**
      * The Status.
      * 

@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseGroup() {
-        oDataType = "microsoft.graph.group";
-    }
-
     /**
      * The Classification.
      * 
@@ -40,6 +36,14 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("classification")
     @Expose
     public String classification;
+
+    /**
+     * The Created Date Time.
+     * The date and time the group was created.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -120,6 +124,14 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("proxyAddresses")
     @Expose
     public java.util.List<String> proxyAddresses;
+
+    /**
+     * The Renewed Date Time.
+     * 
+     */
+    @SerializedName("renewedDateTime")
+    @Expose
+    public java.util.Calendar renewedDateTime;
 
     /**
      * The Security Enabled.
@@ -300,6 +312,12 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onenote")
     @Expose
     public Onenote onenote;
+
+    /**
+     * The Group Lifecycle Policies.
+     * 
+     */
+    public transient GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
 
 
     /**
@@ -561,6 +579,22 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             sites = new SiteCollectionPage(response, null);
+        }
+
+        if (json.has("groupLifecyclePolicies")) {
+            final BaseGroupLifecyclePolicyCollectionResponse response = new BaseGroupLifecyclePolicyCollectionResponse();
+            if (json.has("groupLifecyclePolicies@odata.nextLink")) {
+                response.nextLink = json.get("groupLifecyclePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("groupLifecyclePolicies").toString(), JsonObject[].class);
+            final GroupLifecyclePolicy[] array = new GroupLifecyclePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), GroupLifecyclePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            groupLifecyclePolicies = new GroupLifecyclePolicyCollectionPage(response, null);
         }
     }
 }

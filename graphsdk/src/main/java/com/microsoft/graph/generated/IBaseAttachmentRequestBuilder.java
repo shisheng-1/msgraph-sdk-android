@@ -31,10 +31,4 @@ public interface IBaseAttachmentRequestBuilder extends IRequestBuilder {
      */
     IAttachmentRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IFileAttachmentRequestBuilder fileAttachment();
-
-    IItemAttachmentRequestBuilder itemAttachment();
-
-    IReferenceAttachmentRequestBuilder referenceAttachment();
-
 }

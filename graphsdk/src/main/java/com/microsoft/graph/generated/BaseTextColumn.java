@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseTextColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BaseTextColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseTextColumn() {
-        oDataType = "microsoft.graph.textColumn";
-    }
-
     /**
      * The Allow Multiple Lines.
-     * 
+     * Whether to allow multiple lines of text.
      */
     @SerializedName("allowMultipleLines")
     @Expose
@@ -53,7 +49,7 @@ public class BaseTextColumn implements IJsonBackedObject {
 
     /**
      * The Append Changes To Existing Text.
-     * 
+     * Whether updates to this column should replace existing text, or append to it.
      */
     @SerializedName("appendChangesToExistingText")
     @Expose
@@ -61,7 +57,7 @@ public class BaseTextColumn implements IJsonBackedObject {
 
     /**
      * The Lines For Editing.
-     * 
+     * The size of the text box.
      */
     @SerializedName("linesForEditing")
     @Expose
@@ -69,7 +65,7 @@ public class BaseTextColumn implements IJsonBackedObject {
 
     /**
      * The Max Length.
-     * 
+     * The maximum number of characters for the value.
      */
     @SerializedName("maxLength")
     @Expose
@@ -77,7 +73,7 @@ public class BaseTextColumn implements IJsonBackedObject {
 
     /**
      * The Text Type.
-     * 
+     * The type of text being stored. Must be one of plain or richText
      */
     @SerializedName("textType")
     @Expose

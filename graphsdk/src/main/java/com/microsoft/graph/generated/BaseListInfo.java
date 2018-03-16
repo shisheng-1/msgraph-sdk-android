@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseListInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,13 +39,9 @@ public class BaseListInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseListInfo() {
-        oDataType = "microsoft.graph.listInfo";
-    }
-
     /**
      * The Content Types Enabled.
-     * 
+     * If true, indicates that content types are enabled for this list.
      */
     @SerializedName("contentTypesEnabled")
     @Expose
@@ -53,7 +49,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * 
+     * If true, indicates that the list is not normally visible in the SharePoint user experience.
      */
     @SerializedName("hidden")
     @Expose
@@ -61,7 +57,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * The Template.
-     * 
+     * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      */
     @SerializedName("template")
     @Expose

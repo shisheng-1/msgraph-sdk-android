@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseSharepointIds implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseSharepointIds implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseSharepointIds() {
-        oDataType = "microsoft.graph.sharepointIds";
     }
 
     /**
@@ -61,7 +57,7 @@ public class BaseSharepointIds implements IJsonBackedObject {
 
     /**
      * The List Item Unique Id.
-     * The unique identifier (guid) for the item within OneDrive for Busienss or a SharePoint site.
+     * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
      */
     @SerializedName("listItemUniqueId")
     @Expose

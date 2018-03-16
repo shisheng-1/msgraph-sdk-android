@@ -47,10 +47,6 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
         return new MessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IEventMessageRequestBuilder eventMessage() {
-        return new EventMessageRequestBuilder(getRequestUrlWithAdditionalSegment("eventMessage"), getClient(), null);
-    }
     public IAttachmentCollectionRequestBuilder getAttachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }

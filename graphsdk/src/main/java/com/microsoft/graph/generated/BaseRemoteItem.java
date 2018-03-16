@@ -29,7 +29,7 @@ import java.util.Map;
 public class BaseRemoteItem implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -37,10 +37,6 @@ public class BaseRemoteItem implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager getAdditionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseRemoteItem() {
-        oDataType = "microsoft.graph.remoteItem";
     }
 
     /**
@@ -157,7 +153,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Special Folder.
-     * If the current item is also available as a special folder, this facet is returned. Read-only.
+     * 
      */
     @SerializedName("specialFolder")
     @Expose

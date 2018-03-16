@@ -29,10 +29,6 @@ import java.util.Map;
 public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseDriveItem() {
-        oDataType = "microsoft.graph.driveItem";
-    }
-
     /**
      * The Audio.
      * Audio metadata, if the item is an audio file. Read-only.
@@ -207,7 +203,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Thumbnails.
-     * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
+     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      */
     public transient ThumbnailSetCollectionPage thumbnails;
 
