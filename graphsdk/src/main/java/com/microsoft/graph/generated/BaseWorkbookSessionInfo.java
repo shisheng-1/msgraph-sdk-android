@@ -41,7 +41,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Id of the workbook session.
      */
     @SerializedName("id")
     @Expose
@@ -49,7 +49,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Persist Changes.
-     * 
+     * true for persistent session. false for non-persistent session (view mode)
      */
     @SerializedName("persistChanges")
     @Expose

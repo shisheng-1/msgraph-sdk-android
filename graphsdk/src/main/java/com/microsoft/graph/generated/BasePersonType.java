@@ -41,7 +41,7 @@ public class BasePersonType implements IJsonBackedObject {
 
     /**
      * The Class.
-     * 
+     * The type of data source, such as Person.
      */
     @SerializedName("class")
     @Expose
@@ -49,7 +49,7 @@ public class BasePersonType implements IJsonBackedObject {
 
     /**
      * The Subclass.
-     * 
+     * The secondary type of data source, such as OrganizationUser.
      */
     @SerializedName("subclass")
     @Expose

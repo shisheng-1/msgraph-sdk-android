@@ -41,7 +41,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
 
     /**
      * The Default.
-     * 
+     * Whether this is the default Content Type
      */
     @SerializedName("default")
     @Expose
@@ -49,7 +49,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
 
     /**
      * The Position.
-     * 
+     * Specifies the position in which the Content Type appears in the selection UI.
      */
     @SerializedName("position")
     @Expose

@@ -41,7 +41,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Audio Bits Per Sample.
-     * 
+     * Number of audio bits per sample.
      */
     @SerializedName("audioBitsPerSample")
     @Expose
@@ -49,7 +49,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Audio Channels.
-     * 
+     * Number of audio channels.
      */
     @SerializedName("audioChannels")
     @Expose
@@ -57,7 +57,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Audio Format.
-     * 
+     * Name of the audio format (AAC, MP3, etc.).
      */
     @SerializedName("audioFormat")
     @Expose
@@ -65,7 +65,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Audio Samples Per Second.
-     * 
+     * Number of audio samples per second.
      */
     @SerializedName("audioSamplesPerSecond")
     @Expose
@@ -89,7 +89,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Four CC.
-     * 
+     * "Four character code" name of the video format.
      */
     @SerializedName("fourCC")
     @Expose

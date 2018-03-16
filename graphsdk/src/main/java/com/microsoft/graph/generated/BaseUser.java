@@ -71,7 +71,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated.
+     * The company name which the user is associated. Read-only.
      */
     @SerializedName("companyName")
     @Expose

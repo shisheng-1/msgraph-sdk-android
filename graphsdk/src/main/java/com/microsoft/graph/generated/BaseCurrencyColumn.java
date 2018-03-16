@@ -41,7 +41,7 @@ public class BaseCurrencyColumn implements IJsonBackedObject {
 
     /**
      * The Locale.
-     * 
+     * Specifies the locale from which to infer the currency symbol.
      */
     @SerializedName("locale")
     @Expose

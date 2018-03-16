@@ -49,7 +49,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * The Last Accessed Date Time.
-     * 
+     * The UTC date and time the file was last accessed. Available for the recent file list only.
      */
     @SerializedName("lastAccessedDateTime")
     @Expose

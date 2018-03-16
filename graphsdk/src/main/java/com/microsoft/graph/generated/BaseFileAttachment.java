@@ -47,7 +47,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Bytes.
-     * The binary contents of the file.
+     * The base64-encoded contents of the file.
      */
     @SerializedName("contentBytes")
     @Expose

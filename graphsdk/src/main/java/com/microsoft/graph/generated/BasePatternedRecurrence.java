@@ -41,7 +41,7 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Pattern.
-     * 
+     * The frequency of an event.
      */
     @SerializedName("pattern")
     @Expose
@@ -49,7 +49,7 @@ public class BasePatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Range.
-     * 
+     * The duration of an event.
      */
     @SerializedName("range")
     @Expose

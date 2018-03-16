@@ -31,7 +31,7 @@ public class BaseColumnLink extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the column  in this content type.
      */
     @SerializedName("name")
     @Expose

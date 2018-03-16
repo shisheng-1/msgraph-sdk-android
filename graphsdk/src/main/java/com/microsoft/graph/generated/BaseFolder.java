@@ -49,7 +49,7 @@ public class BaseFolder implements IJsonBackedObject {
 
     /**
      * The View.
-     * 
+     * A collection of properties defining the recommended view for the folder.
      */
     @SerializedName("view")
     @Expose
