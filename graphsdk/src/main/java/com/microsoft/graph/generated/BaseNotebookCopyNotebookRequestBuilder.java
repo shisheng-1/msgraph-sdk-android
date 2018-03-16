@@ -28,10 +28,8 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String siteCollectionId, final String siteId, final String groupId, final String renameAs, final String notebookFolder) {
+    public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("siteCollectionId", siteCollectionId);
-        mBodyParams.put("siteId", siteId);
         mBodyParams.put("groupId", groupId);
         mBodyParams.put("renameAs", renameAs);
         mBodyParams.put("notebookFolder", notebookFolder);
@@ -58,14 +56,6 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
                 getClient(),
                 requestOptions
         );
-
-        if (hasParameter("siteCollectionId")) {
-            request.mBody.siteCollectionId = getParameter("siteCollectionId");
-        }
-
-        if (hasParameter("siteId")) {
-            request.mBody.siteId = getParameter("siteId");
-        }
 
         if (hasParameter("groupId")) {
             request.mBody.groupId = getParameter("groupId");

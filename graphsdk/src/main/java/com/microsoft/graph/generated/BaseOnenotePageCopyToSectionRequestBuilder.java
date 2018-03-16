@@ -28,11 +28,9 @@ public class BaseOnenotePageCopyToSectionRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenotePageCopyToSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String id, final String siteCollectionId, final String siteId, final String groupId) {
+    public BaseOnenotePageCopyToSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String id, final String groupId) {
         super(requestUrl, client, requestOptions);
         mBodyParams.put("id", id);
-        mBodyParams.put("siteCollectionId", siteCollectionId);
-        mBodyParams.put("siteId", siteId);
         mBodyParams.put("groupId", groupId);
     }
 
@@ -60,14 +58,6 @@ public class BaseOnenotePageCopyToSectionRequestBuilder extends BaseActionReques
 
         if (hasParameter("id")) {
             request.mBody.id = getParameter("id");
-        }
-
-        if (hasParameter("siteCollectionId")) {
-            request.mBody.siteCollectionId = getParameter("siteCollectionId");
-        }
-
-        if (hasParameter("siteId")) {
-            request.mBody.siteId = getParameter("siteId");
         }
 
         if (hasParameter("groupId")) {

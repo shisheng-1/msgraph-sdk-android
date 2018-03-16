@@ -69,11 +69,11 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
 
-    public IOnenoteSectionCopyToNotebookRequestBuilder getCopyToNotebook(final String id, final String siteCollectionId, final String siteId, final String groupId, final String renameAs) {
-        return new OnenoteSectionCopyToNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToNotebook"), getClient(), null, id, siteCollectionId, siteId, groupId, renameAs);
+    public IOnenoteSectionCopyToNotebookRequestBuilder getCopyToNotebook(final String id, final String groupId, final String renameAs) {
+        return new OnenoteSectionCopyToNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToNotebook"), getClient(), null, id, groupId, renameAs);
     }
 
-    public IOnenoteSectionCopyToSectionGroupRequestBuilder getCopyToSectionGroup(final String id, final String siteCollectionId, final String siteId, final String groupId, final String renameAs) {
-        return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, siteCollectionId, siteId, groupId, renameAs);
+    public IOnenoteSectionCopyToSectionGroupRequestBuilder getCopyToSectionGroup(final String id, final String groupId, final String renameAs) {
+        return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, groupId, renameAs);
     }
 }

@@ -70,8 +70,8 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
-    public IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String siteCollectionId, final String siteId, final String groupId) {
-        return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, siteCollectionId, siteId, groupId);
+    public IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String groupId) {
+        return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId);
     }
 
     public IOnenotePagePreviewRequestBuilder getPreview() {

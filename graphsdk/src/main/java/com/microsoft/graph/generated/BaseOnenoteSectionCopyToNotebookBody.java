@@ -34,22 +34,6 @@ public class BaseOnenoteSectionCopyToNotebookBody {
     public String id;
 
     /**
-     * The site Collection Id.
-     * 
-     */
-    @SerializedName("siteCollectionId")
-    @Expose
-    public String siteCollectionId;
-
-    /**
-     * The site Id.
-     * 
-     */
-    @SerializedName("siteId")
-    @Expose
-    public String siteId;
-
-    /**
      * The group Id.
      * 
      */
