@@ -110,6 +110,14 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
     public Photo photo;
 
     /**
+     * The Publication.
+     * 
+     */
+    @SerializedName("publication")
+    @Expose
+    public PublicationFacet publication;
+
+    /**
      * The Remote Item.
      * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
      */
@@ -208,6 +216,12 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
     public transient ThumbnailSetCollectionPage thumbnails;
 
     /**
+     * The Versions.
+     * 
+     */
+    public transient DriveItemVersionCollectionPage versions;
+
+    /**
      * The Workbook.
      * 
      */
@@ -299,6 +313,22 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             thumbnails = new ThumbnailSetCollectionPage(response, null);
+        }
+
+        if (json.has("versions")) {
+            final BaseDriveItemVersionCollectionResponse response = new BaseDriveItemVersionCollectionResponse();
+            if (json.has("versions@odata.nextLink")) {
+                response.nextLink = json.get("versions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("versions").toString(), JsonObject[].class);
+            final DriveItemVersion[] array = new DriveItemVersion[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItemVersion.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            versions = new DriveItemVersionCollectionPage(response, null);
         }
     }
 }

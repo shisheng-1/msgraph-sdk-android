@@ -36,5 +36,6 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
     IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getGetMemberGroups(final Boolean securityEnabledOnly);
 
     IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getGetMemberObjects(final Boolean securityEnabledOnly);
+    IDirectoryObjectRestoreRequestBuilder getRestore();
 
 }

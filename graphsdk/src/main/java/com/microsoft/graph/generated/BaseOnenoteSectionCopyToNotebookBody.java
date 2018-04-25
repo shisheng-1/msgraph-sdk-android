@@ -49,6 +49,22 @@ public class BaseOnenoteSectionCopyToNotebookBody {
     @Expose
     public String renameAs;
 
+    /**
+     * The site Collection Id.
+     * 
+     */
+    @SerializedName("siteCollectionId")
+    @Expose
+    public String siteCollectionId;
+
+    /**
+     * The site Id.
+     * 
+     */
+    @SerializedName("siteId")
+    @Expose
+    public String siteId;
+
 
     /**
      * The raw representation of this class

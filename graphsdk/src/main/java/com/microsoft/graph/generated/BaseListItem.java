@@ -61,6 +61,12 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
     @Expose
     public FieldValueSet fields;
 
+    /**
+     * The Versions.
+     * 
+     */
+    public transient ListItemVersionCollectionPage versions;
+
 
     /**
      * The raw representation of this class
@@ -98,5 +104,21 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
         mSerializer = serializer;
         mRawObject = json;
 
+
+        if (json.has("versions")) {
+            final BaseListItemVersionCollectionResponse response = new BaseListItemVersionCollectionResponse();
+            if (json.has("versions@odata.nextLink")) {
+                response.nextLink = json.get("versions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("versions").toString(), JsonObject[].class);
+            final ListItemVersion[] array = new ListItemVersion[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ListItemVersion.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            versions = new ListItemVersionCollectionPage(response, null);
+        }
     }
 }

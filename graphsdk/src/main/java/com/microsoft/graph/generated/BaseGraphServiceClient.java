@@ -456,6 +456,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets GraphServiceRequestBuilder.
      *
+     * @return the Directory.
+     */
+    public IDirectoryRequestBuilder getDirectory() {
+        return new DirectoryRequestBuilder(getServiceRoot() + "/directory", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets GraphServiceRequestBuilder.
+     *
      * @return the Drive.
      */
     public IDriveRequestBuilder getDrive() {

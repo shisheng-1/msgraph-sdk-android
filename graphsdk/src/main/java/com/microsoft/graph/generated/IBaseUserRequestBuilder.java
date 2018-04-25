@@ -68,6 +68,11 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     IExtensionRequestBuilder getExtensions(final String id);
 
+    /**
+     * Gets the request builder for OutlookUser.
+     */
+    IOutlookUserRequestBuilder getOutlook();
+
     IMessageCollectionRequestBuilder getMessages();
 
     IMessageRequestBuilder getMessages(final String id);
@@ -141,6 +146,10 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
      * Gets the request builder for Onenote.
      */
     IOnenoteRequestBuilder getOnenote();
+
+    IUserActivityCollectionRequestBuilder getActivities();
+
+    IUserActivityRequestBuilder getActivities(final String id);
     IUserAssignLicenseRequestBuilder getAssignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder getChangePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder getSendMail(final Message message, final Boolean saveToSentItems);
