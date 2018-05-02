@@ -75,6 +75,13 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     public IThumbnailSetRequestBuilder getThumbnails(final String id) {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails") + "/" + id, getClient(), null);
     }
+    public IDriveItemVersionCollectionRequestBuilder getVersions() {
+        return new DriveItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    }
+
+    public IDriveItemVersionRequestBuilder getVersions(final String id) {
+        return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Workbook.

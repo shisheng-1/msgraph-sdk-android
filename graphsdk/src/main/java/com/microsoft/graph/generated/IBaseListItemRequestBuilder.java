@@ -41,4 +41,8 @@ public interface IBaseListItemRequestBuilder extends IRequestBuilder {
      */
     IFieldValueSetRequestBuilder getFields();
 
+    IListItemVersionCollectionRequestBuilder getVersions();
+
+    IListItemVersionRequestBuilder getVersions(final String id);
+
 }

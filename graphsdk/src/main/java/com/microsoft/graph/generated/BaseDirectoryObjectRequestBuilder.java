@@ -59,4 +59,8 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
     public IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getGetMemberObjects(final Boolean securityEnabledOnly) {
         return new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberObjects"), getClient(), null, securityEnabledOnly);
     }
+
+    public IDirectoryObjectRestoreRequestBuilder getRestore() {
+        return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
+    }
 }

@@ -110,6 +110,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     public IExtensionRequestBuilder getExtensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for OutlookUser.
+     */
+    public IOutlookUserRequestBuilder getOutlook() {
+        return new OutlookUserRequestBuilder(getRequestUrlWithAdditionalSegment("outlook"), getClient(), null);
+    }
     public IMessageCollectionRequestBuilder getMessages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
@@ -228,6 +235,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
      */
     public IOnenoteRequestBuilder getOnenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+    public IUserActivityCollectionRequestBuilder getActivities() {
+        return new UserActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
+    }
+
+    public IUserActivityRequestBuilder getActivities(final String id) {
+        return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
 
     public IUserAssignLicenseRequestBuilder getAssignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {

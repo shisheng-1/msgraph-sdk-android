@@ -48,6 +48,10 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
 
     IThumbnailSetRequestBuilder getThumbnails(final String id);
 
+    IDriveItemVersionCollectionRequestBuilder getVersions();
+
+    IDriveItemVersionRequestBuilder getVersions(final String id);
+
     /**
      * Gets the request builder for Workbook.
      */
