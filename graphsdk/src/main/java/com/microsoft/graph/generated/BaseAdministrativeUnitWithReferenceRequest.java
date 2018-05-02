@@ -53,6 +53,22 @@ public class BaseAdministrativeUnitWithReferenceRequest extends BaseRequest impl
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<AdministrativeUnit> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+		send(HttpMethod.PATCH, callback, sourceAdministrativeUnit);
+	}
+
+	public AdministrativeUnit patch(final AdministrativeUnit sourceAdministrativeUnit) throws ClientException {
+		return send(HttpMethod.PATCH, sourceAdministrativeUnit);
+	}
+
     /**
      * Sets the select clause for the request
      *

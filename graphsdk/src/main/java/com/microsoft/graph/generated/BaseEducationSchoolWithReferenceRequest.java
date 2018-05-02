@@ -53,6 +53,22 @@ public class BaseEducationSchoolWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<EducationSchool> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final EducationSchool sourceEducationSchool, final ICallback<EducationSchool> callback) {
+		send(HttpMethod.PATCH, callback, sourceEducationSchool);
+	}
+
+	public EducationSchool patch(final EducationSchool sourceEducationSchool) throws ClientException {
+		return send(HttpMethod.PATCH, sourceEducationSchool);
+	}
+
     /**
      * Sets the select clause for the request
      *
