@@ -15,10 +15,10 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-android:1.2.+')
+    compile('com.microsoft.graph:msgraph-sdk-android:1.7.0')
 
     // Include the gson dependency
-    compile('com.google.code.gson:gson:2.3.1')
+    compile('com.google.code.gson:gson:2.8.5')
 }
 ```
 
