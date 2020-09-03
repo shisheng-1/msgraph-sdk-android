@@ -1,3 +1,8 @@
+# Deprecated use the Java SDK instead.
+⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠
+This repository and library is not being maintained anymore, for any Android project, use the [Java SDK](https://github.com/microsoftgraph/msgraph-sdk-java) instead.
+
+
 # Get started with the Microsoft Graph SDK for Android
 
 [ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)
